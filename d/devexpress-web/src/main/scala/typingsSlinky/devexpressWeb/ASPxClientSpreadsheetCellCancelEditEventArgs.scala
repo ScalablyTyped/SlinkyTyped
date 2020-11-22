@@ -16,6 +16,11 @@ trait ASPxClientSpreadsheetCellCancelEditEventArgs extends ASPxClientEventArgs {
   var columnIndex: Double = js.native
   
   /**
+    * Specifies the text displayed in the processed cell.
+    */
+  var displayText: String = js.native
+  
+  /**
     * Gets the active cell's formula.
     */
   var formula: String = js.native
@@ -38,8 +43,15 @@ trait ASPxClientSpreadsheetCellCancelEditEventArgs extends ASPxClientEventArgs {
 object ASPxClientSpreadsheetCellCancelEditEventArgs {
   
   @scala.inline
-  def apply(columnIndex: Double, formula: String, rowIndex: Double, sheetName: String, value: String): ASPxClientSpreadsheetCellCancelEditEventArgs = {
-    val __obj = js.Dynamic.literal(columnIndex = columnIndex.asInstanceOf[js.Any], formula = formula.asInstanceOf[js.Any], rowIndex = rowIndex.asInstanceOf[js.Any], sheetName = sheetName.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
+  def apply(
+    columnIndex: Double,
+    displayText: String,
+    formula: String,
+    rowIndex: Double,
+    sheetName: String,
+    value: String
+  ): ASPxClientSpreadsheetCellCancelEditEventArgs = {
+    val __obj = js.Dynamic.literal(columnIndex = columnIndex.asInstanceOf[js.Any], displayText = displayText.asInstanceOf[js.Any], formula = formula.asInstanceOf[js.Any], rowIndex = rowIndex.asInstanceOf[js.Any], sheetName = sheetName.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[ASPxClientSpreadsheetCellCancelEditEventArgs]
   }
   
@@ -60,6 +72,9 @@ object ASPxClientSpreadsheetCellCancelEditEventArgs {
     
     @scala.inline
     def setColumnIndex(value: Double): Self = this.set("columnIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDisplayText(value: String): Self = this.set("displayText", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFormula(value: String): Self = this.set("formula", value.asInstanceOf[js.Any])

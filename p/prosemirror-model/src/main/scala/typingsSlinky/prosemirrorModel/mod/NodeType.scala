@@ -123,6 +123,11 @@ class NodeType[S /* <: Schema[_, _] */] () extends js.Object {
   def createChecked(attrs: Null, content: ProsemirrorNode[S], marks: js.Array[Mark[S]]): ProsemirrorNode[S] = js.native
   
   /**
+    * Tells you whether this node type has any required attributes.
+    */
+  def hasRequiredAttrs(): Boolean = js.native
+  
+  /**
     * True if this node type has inline content.
     */
   var inlineContent: Boolean = js.native

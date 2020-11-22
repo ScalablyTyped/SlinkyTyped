@@ -5,13 +5,14 @@ import typingsSlinky.babylonjs.anon.Delta
 import typingsSlinky.babylonjs.anon.FaceId
 import typingsSlinky.babylonjs.anon.PositionFunction
 import typingsSlinky.babylonjs.materialMod.Material
-import typingsSlinky.babylonjs.mathVectorMod.Vector3
 import typingsSlinky.babylonjs.meshMod.Mesh
 import typingsSlinky.babylonjs.multiMaterialMod.MultiMaterial
+import typingsSlinky.babylonjs.pickingInfoMod.PickingInfo
 import typingsSlinky.babylonjs.sceneMod.IDisposable
 import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.solidParticleMod.DepthSortedParticle
 import typingsSlinky.babylonjs.solidParticleMod.SolidParticle
+import typingsSlinky.babylonjs.solidParticleMod.SolidParticleVertex
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -244,6 +245,8 @@ object solidParticleSystemMod extends js.Object {
       */
     var _sortParticlesByMaterial: js.Any = js.native
     
+    var _tmpVertex: js.Any = js.native
+    
     /**
       * Unrotate the fixed normals in case the mesh was built with pre-rotated particles, ex : use of positionFunction in addShape()
       * @hidden
@@ -268,7 +271,7 @@ object solidParticleSystemMod extends js.Object {
     
     /**
       * Adds some particles to the SPS from the model shape. Returns the shape id.
-      * Please read the doc : http://doc.babylonjs.com/how_to/Solid_Particle_System#create-an-immutable-sps
+      * Please read the doc : https://doc.babylonjs.com/how_to/Solid_Particle_System#create-an-immutable-sps
       * @param mesh is any Mesh object that will be used as a model for the solid particles.
       * @param nb (positive integer) the number of particles to be created from this model
       * @param options {positionFunction} is an optional javascript function to called for each particle on SPS creation.
@@ -462,7 +465,7 @@ object solidParticleSystemMod extends js.Object {
     /**
       * This function does nothing. It may be overwritten to set all the particle first values.
       * The SPS doesn't call this function, you may have to call it by your own.
-      * doc : http://doc.babylonjs.com/how_to/Solid_Particle_System#particle-management
+      * doc : https://doc.babylonjs.com/how_to/Solid_Particle_System#particle-management
       */
     def initParticles(): Unit = js.native
     
@@ -475,23 +478,23 @@ object solidParticleSystemMod extends js.Object {
     
     /**
       * Gets whether the SPS as always visible or not
-      * doc : http://doc.babylonjs.com/how_to/Solid_Particle_System#sps-visibility
+      * doc : https://doc.babylonjs.com/how_to/Solid_Particle_System#sps-visibility
       */
     def isAlwaysVisible: Boolean = js.native
     /**
       * Sets the SPS as always visible or not
-      * doc : http://doc.babylonjs.com/how_to/Solid_Particle_System#sps-visibility
+      * doc : https://doc.babylonjs.com/how_to/Solid_Particle_System#sps-visibility
       */
     def isAlwaysVisible_=(`val`: Boolean): Unit = js.native
     
     /**
       * Gets if the SPS visibility box as locked or not. This enables/disables the underlying mesh bounding box updates.
-      * doc : http://doc.babylonjs.com/how_to/Solid_Particle_System#sps-visibility
+      * doc : https://doc.babylonjs.com/how_to/Solid_Particle_System#sps-visibility
       */
     def isVisibilityBoxLocked: Boolean = js.native
     /**
       * Sets the SPS visibility box as locked or not. This enables/disables the underlying mesh bounding box updates.
-      * doc : http://doc.babylonjs.com/how_to/Solid_Particle_System#sps-visibility
+      * doc : https://doc.babylonjs.com/how_to/Solid_Particle_System#sps-visibility
       */
     def isVisibilityBoxLocked_=(`val`: Boolean): Unit = js.native
     
@@ -534,12 +537,37 @@ object solidParticleSystemMod extends js.Object {
     var particles: js.Array[SolidParticle] = js.native
     
     /**
+      * This array is populated when the SPS is set as 'pickable'
+      * Each key of this array is a submesh index.
+      * Each element of this array is a second array defined like this :
+      * Each key of this second array is a `faceId` value that you can get from a pickResult object.
+      * Each element of this second array is an object `{idx: int, faceId: int}`.
+      * `idx` is the picked particle index in the `SPS.particles` array
+      * `faceId` is the picked face index counted within this particle.
+      * It's better to use the method SPS.pickedParticle(pickingInfo) rather than using directly this array.
+      * Please read : https://doc.babylonjs.com/how_to/Solid_Particle_System#pickable-particles
+      */
+    var pickedBySubMesh: js.Array[js.Array[FaceId]] = js.native
+    
+    /** Returns an object {idx: numbern faceId: number} for the picked particle from the passed pickingInfo object.
+      * idx is the particle index in the SPS
+      * faceId is the picked face index counted within this particle.
+      * Returns null if the pickInfo can't identify a picked particle.
+      * @param pickingInfo (PickingInfo object)
+      * @returns {idx: number, faceId: number} or null
+      */
+    def pickedParticle(pickingInfo: PickingInfo): Nullable[FaceId] = js.native
+    
+    /**
       * This array is populated when the SPS is set as 'pickable'.
       * Each key of this array is a `faceId` value that you can get from a pickResult object.
       * Each element of this array is an object `{idx: int, faceId: int}`.
       * `idx` is the picked particle index in the `SPS.particles` array
       * `faceId` is the picked face index counted within this particle.
-      * Please read : http://doc.babylonjs.com/how_to/Solid_Particle_System#pickable-particles
+      * This array is the first element of the pickedBySubMesh array : sps.pickBySubMesh[0].
+      * It's not pertinent to use it when using a SPS with the support for MultiMaterial enabled.
+      * Use the method SPS.pickedParticle(pickingInfo) instead.
+      * Please read : https://doc.babylonjs.com/how_to/Solid_Particle_System#pickable-particles
       */
     var pickedParticles: js.Array[FaceId] = js.native
     
@@ -559,7 +587,7 @@ object solidParticleSystemMod extends js.Object {
     /**
       * This function does nothing. It may be overwritten to recycle a particle.
       * The SPS doesn't call this function, you may have to call it by your own.
-      * doc : http://doc.babylonjs.com/how_to/Solid_Particle_System#particle-management
+      * doc : https://doc.babylonjs.com/how_to/Solid_Particle_System#particle-management
       * @param particle The particle to recycle
       * @returns the recycled particle
       */
@@ -567,7 +595,7 @@ object solidParticleSystemMod extends js.Object {
     
     /**
       * Visibilty helper : Recomputes the visible size according to the mesh bounding box
-      * doc : http://doc.babylonjs.com/how_to/Solid_Particle_System#sps-visibility
+      * doc : https://doc.babylonjs.com/how_to/Solid_Particle_System#sps-visibility
       * @returns the SPS.
       */
     def refreshVisibleSize(): SolidParticleSystem = js.native
@@ -613,14 +641,14 @@ object solidParticleSystemMod extends js.Object {
       * Visibility helper : Sets the size of a visibility box, this sets the underlying mesh bounding box.
       * @param size the size (float) of the visibility box
       * note : this doesn't lock the SPS mesh bounding box.
-      * doc : http://doc.babylonjs.com/how_to/Solid_Particle_System#sps-visibility
+      * doc : https://doc.babylonjs.com/how_to/Solid_Particle_System#sps-visibility
       */
     def setVisibilityBox(size: Double): Unit = js.native
     
     /**
       * Updates a particle : this function should  be overwritten by the user.
       * It is called on each particle by `setParticles()`. This is the place to code each particle behavior.
-      * doc : http://doc.babylonjs.com/how_to/Solid_Particle_System#particle-management
+      * doc : https://doc.babylonjs.com/how_to/Solid_Particle_System#particle-management
       * @example : just set a particle position or velocity and recycle conditions
       * @param particle The particle to update
       * @returns the updated particle
@@ -631,13 +659,13 @@ object solidParticleSystemMod extends js.Object {
       * Updates a vertex of a particle : it can be overwritten by the user.
       * This will be called on each vertex particle by `setParticles()` if `computeParticleVertex` is set to true only.
       * @param particle the current particle
-      * @param vertex the current index of the current particle
+      * @param vertex the current vertex of the current particle : a SolidParticleVertex object
       * @param pt the index of the current vertex in the particle shape
-      * doc : http://doc.babylonjs.com/how_to/Solid_Particle_System#update-each-particle-shape
-      * @example : just set a vertex particle position
-      * @returns the updated vertex
+      * doc : https://doc.babylonjs.com/how_to/Solid_Particle_System#update-each-particle-shape
+      * @example : just set a vertex particle position or color
+      * @returns the sps
       */
-    def updateParticleVertex(particle: SolidParticle, vertex: Vector3, pt: Double): Vector3 = js.native
+    def updateParticleVertex(particle: SolidParticle, vertex: SolidParticleVertex, pt: Double): SolidParticleSystem = js.native
     
     /**
       * Gets if the SPS uses the model materials for its own multimaterial.
@@ -646,7 +674,7 @@ object solidParticleSystemMod extends js.Object {
     
     /**
       * This empty object is intended to store some SPS specific or temporary values in order to lower the Garbage Collector activity.
-      * Please read : http://doc.babylonjs.com/how_to/Solid_Particle_System#garbage-collector-concerns
+      * Please read : https://doc.babylonjs.com/how_to/Solid_Particle_System#garbage-collector-concerns
       */
     var vars: js.Any = js.native
   }

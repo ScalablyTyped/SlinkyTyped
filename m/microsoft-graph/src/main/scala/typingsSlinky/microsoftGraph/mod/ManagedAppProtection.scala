@@ -56,16 +56,16 @@ trait ManagedAppProtection extends ManagedAppPolicy {
   var minimumPinLength: js.UndefOr[Double] = js.native
   
   // Versions less than the specified version will block the managed app from accessing company data.
-  var minimumRequiredAppVersion: js.UndefOr[String] = js.native
+  var minimumRequiredAppVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Versions less than the specified version will block the managed app from accessing company data.
-  var minimumRequiredOsVersion: js.UndefOr[String] = js.native
+  var minimumRequiredOsVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Versions less than the specified version will result in warning message on the managed app.
-  var minimumWarningAppVersion: js.UndefOr[String] = js.native
+  var minimumWarningAppVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Versions less than the specified version will result in warning message on the managed app from accessing company data.
-  var minimumWarningOsVersion: js.UndefOr[String] = js.native
+  var minimumWarningOsVersion: js.UndefOr[NullableOption[String]] = js.native
   
   // Indicates whether organizational credentials are required for app use.
   var organizationalCredentialsRequired: js.UndefOr[Boolean] = js.native
@@ -205,28 +205,40 @@ object ManagedAppProtection {
     def deleteMinimumPinLength: Self = this.set("minimumPinLength", js.undefined)
     
     @scala.inline
-    def setMinimumRequiredAppVersion(value: String): Self = this.set("minimumRequiredAppVersion", value.asInstanceOf[js.Any])
+    def setMinimumRequiredAppVersion(value: NullableOption[String]): Self = this.set("minimumRequiredAppVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMinimumRequiredAppVersion: Self = this.set("minimumRequiredAppVersion", js.undefined)
     
     @scala.inline
-    def setMinimumRequiredOsVersion(value: String): Self = this.set("minimumRequiredOsVersion", value.asInstanceOf[js.Any])
+    def setMinimumRequiredAppVersionNull: Self = this.set("minimumRequiredAppVersion", null)
+    
+    @scala.inline
+    def setMinimumRequiredOsVersion(value: NullableOption[String]): Self = this.set("minimumRequiredOsVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMinimumRequiredOsVersion: Self = this.set("minimumRequiredOsVersion", js.undefined)
     
     @scala.inline
-    def setMinimumWarningAppVersion(value: String): Self = this.set("minimumWarningAppVersion", value.asInstanceOf[js.Any])
+    def setMinimumRequiredOsVersionNull: Self = this.set("minimumRequiredOsVersion", null)
+    
+    @scala.inline
+    def setMinimumWarningAppVersion(value: NullableOption[String]): Self = this.set("minimumWarningAppVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMinimumWarningAppVersion: Self = this.set("minimumWarningAppVersion", js.undefined)
     
     @scala.inline
-    def setMinimumWarningOsVersion(value: String): Self = this.set("minimumWarningOsVersion", value.asInstanceOf[js.Any])
+    def setMinimumWarningAppVersionNull: Self = this.set("minimumWarningAppVersion", null)
+    
+    @scala.inline
+    def setMinimumWarningOsVersion(value: NullableOption[String]): Self = this.set("minimumWarningOsVersion", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMinimumWarningOsVersion: Self = this.set("minimumWarningOsVersion", js.undefined)
+    
+    @scala.inline
+    def setMinimumWarningOsVersionNull: Self = this.set("minimumWarningOsVersion", null)
     
     @scala.inline
     def setOrganizationalCredentialsRequired(value: Boolean): Self = this.set("organizationalCredentialsRequired", value.asInstanceOf[js.Any])

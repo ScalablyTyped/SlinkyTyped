@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object mod extends js.Object {
   
-  def default(o: js.Any): Boolean = js.native
+  def isPlainObject(o: js.Any): Boolean = js.native
 }

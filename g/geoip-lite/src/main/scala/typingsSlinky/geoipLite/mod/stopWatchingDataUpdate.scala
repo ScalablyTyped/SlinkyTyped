@@ -9,4 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object stopWatchingDataUpdate extends js.Object {
   
   def apply(): Unit = js.native
+  def apply(cb: AsyncCallback): Unit = js.native
 }

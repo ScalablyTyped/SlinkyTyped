@@ -22,7 +22,7 @@ trait PartialPlotMarkerAutocolorscale extends js.Object {
   
   var color: js.UndefOr[typingsSlinky.plotlyJs.mod.Color | js.Array[typingsSlinky.plotlyJs.mod.Color]] = js.native
   
-  var colorbar: js.UndefOr[PartialColorBarBgcolor] = js.native
+  var colorbar: js.UndefOr[PartialColorBar] = js.native
   
   var colors: js.UndefOr[js.Array[typingsSlinky.plotlyJs.mod.Color]] = js.native
   
@@ -117,7 +117,7 @@ object PartialPlotMarkerAutocolorscale {
     def deleteColor: Self = this.set("color", js.undefined)
     
     @scala.inline
-    def setColorbar(value: PartialColorBarBgcolor): Self = this.set("colorbar", value.asInstanceOf[js.Any])
+    def setColorbar(value: PartialColorBar): Self = this.set("colorbar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColorbar: Self = this.set("colorbar", js.undefined)

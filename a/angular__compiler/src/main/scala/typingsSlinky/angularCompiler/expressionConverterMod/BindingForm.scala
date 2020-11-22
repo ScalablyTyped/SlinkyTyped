@@ -15,6 +15,11 @@ object BindingForm extends js.Object {
   def apply(value: Double): js.UndefOr[BindingForm with Double] = js.native
   
   @js.native
+  sealed trait Expression extends BindingForm
+  /* 2 */ @js.native
+  object Expression extends TopLevel[Expression with Double]
+  
+  @js.native
   sealed trait General extends BindingForm
   /* 0 */ @js.native
   object General extends TopLevel[General with Double]

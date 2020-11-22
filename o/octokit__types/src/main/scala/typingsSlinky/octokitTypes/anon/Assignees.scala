@@ -49,7 +49,7 @@ trait Assignees extends js.Object {
   
   var merged_at: String = js.native
   
-  var milestone: Closedissues = js.native
+  var milestone: Closedat = js.native
   
   var node_id: String = js.native
   
@@ -102,7 +102,7 @@ object Assignees {
     locked: Boolean,
     merge_commit_sha: String,
     merged_at: String,
-    milestone: Closedissues,
+    milestone: Closedat,
     node_id: String,
     number: Double,
     patch_url: String,
@@ -206,7 +206,7 @@ object Assignees {
     def setMerged_at(value: String): Self = this.set("merged_at", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMilestone(value: Closedissues): Self = this.set("milestone", value.asInstanceOf[js.Any])
+    def setMilestone(value: Closedat): Self = this.set("milestone", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNode_id(value: String): Self = this.set("node_id", value.asInstanceOf[js.Any])

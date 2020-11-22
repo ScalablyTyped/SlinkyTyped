@@ -17,5 +17,5 @@ trait It extends ItBase {
   @JSName("skip")
   var skip_Original: ItBase = js.native
   
-  def todo(testName: TestName, rest: js.Any*): Unit = js.native
+  def todo(testName: TestName): Unit = js.native
 }

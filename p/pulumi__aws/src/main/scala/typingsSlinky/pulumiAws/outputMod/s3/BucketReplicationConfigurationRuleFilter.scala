@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BucketReplicationConfigurationRuleFilter extends js.Object {
   
   /**
-    * Object keyname prefix that identifies subset of objects to which the rule applies.
+    * Object keyname prefix that identifies subset of objects to which the rule applies. Must be less than or equal to 1024 characters in length.
     */
   var prefix: js.UndefOr[String] = js.native
   

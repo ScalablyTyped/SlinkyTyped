@@ -12,7 +12,7 @@ object issueWebpackErrorMod extends js.Object {
   
   @js.native
   class IssueWebpackError protected () extends Error {
-    def this(message: String, context: String, issue: Issue) = this()
+    def this(message: String, issue: Issue) = this()
     
     val file: js.UndefOr[String] = js.native
     

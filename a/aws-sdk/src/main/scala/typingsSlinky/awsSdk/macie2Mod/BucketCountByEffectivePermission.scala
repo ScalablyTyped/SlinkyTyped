@@ -21,6 +21,11 @@ trait BucketCountByEffectivePermission extends js.Object {
     * The total number of buckets that allow the general public to have write access to the bucket.
     */
   var publiclyWritable: js.UndefOr[long] = js.native
+  
+  /**
+    * The total number of buckets that Amazon Macie wasn't able to evaluate permissions settings for. Macie can't determine whether these buckets are publicly accessible.
+    */
+  var unknown: js.UndefOr[long] = js.native
 }
 object BucketCountByEffectivePermission {
   
@@ -62,5 +67,11 @@ object BucketCountByEffectivePermission {
     
     @scala.inline
     def deletePubliclyWritable: Self = this.set("publiclyWritable", js.undefined)
+    
+    @scala.inline
+    def setUnknown(value: long): Self = this.set("unknown", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUnknown: Self = this.set("unknown", js.undefined)
   }
 }

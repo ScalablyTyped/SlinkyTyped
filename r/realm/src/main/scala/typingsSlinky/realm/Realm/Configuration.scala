@@ -1,6 +1,5 @@
 package typingsSlinky.realm.Realm
 
-import typingsSlinky.realm.anon.PartialSyncConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -36,7 +35,7 @@ trait Configuration extends js.Object {
   
   var shouldCompactOnLaunch: js.UndefOr[js.Function2[/* totalBytes */ Double, /* usedBytes */ Double, Boolean]] = js.native
   
-  var sync: js.UndefOr[PartialSyncConfiguration] = js.native
+  var sync: js.UndefOr[SyncConfiguration] = js.native
 }
 object Configuration {
   
@@ -142,7 +141,7 @@ object Configuration {
     def deleteShouldCompactOnLaunch: Self = this.set("shouldCompactOnLaunch", js.undefined)
     
     @scala.inline
-    def setSync(value: PartialSyncConfiguration): Self = this.set("sync", value.asInstanceOf[js.Any])
+    def setSync(value: SyncConfiguration): Self = this.set("sync", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSync: Self = this.set("sync", js.undefined)

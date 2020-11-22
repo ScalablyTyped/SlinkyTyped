@@ -1,7 +1,7 @@
 package typingsSlinky.reactVisibilitySensor.mod
 
-import org.scalajs.dom.raw.HTMLElement
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactVisibilitySensor.anon.IsVisible
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,9 +11,9 @@ trait Props extends js.Object {
   
   var active: js.UndefOr[Boolean] = js.native
   
-  var children: js.UndefOr[ReactElement | ChildFunction] = js.native
+  var children: js.UndefOr[ReactElement | (js.Function1[/* args */ IsVisible, ReactElement])] = js.native
   
-  var containment: js.UndefOr[HTMLElement] = js.native
+  var containment: js.UndefOr[js.Any] = js.native
   
   var delayedCall: js.UndefOr[Boolean] = js.native
   
@@ -74,16 +74,16 @@ object Props {
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setChildrenFunction1(value: /* arg */ ChildFunctionArg => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
+    def setChildrenFunction1(value: /* args */ IsVisible => ReactElement): Self = this.set("children", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setChildren(value: ReactElement | ChildFunction): Self = this.set("children", value.asInstanceOf[js.Any])
+    def setChildren(value: ReactElement | (js.Function1[/* args */ IsVisible, ReactElement])): Self = this.set("children", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
     
     @scala.inline
-    def setContainment(value: HTMLElement): Self = this.set("containment", value.asInstanceOf[js.Any])
+    def setContainment(value: js.Any): Self = this.set("containment", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteContainment: Self = this.set("containment", js.undefined)

@@ -24,6 +24,12 @@ trait Props extends js.Object {
   
   var children: ReactElement | (js.Function1[/* status */ Status, ReactElement]) = js.native
   
+  /**
+    * Class name to be applied to the element independent of the
+    * sticky state.
+    */
+  var className: js.UndefOr[String] = js.native
+  
   /** Enable the use of CSS3 transforms (`true` by default). */
   var enableTransforms: js.UndefOr[Boolean] = js.native
   
@@ -107,6 +113,12 @@ object Props {
     
     @scala.inline
     def deleteChildren: Self = this.set("children", js.undefined)
+    
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
     def setEnableTransforms(value: Boolean): Self = this.set("enableTransforms", value.asInstanceOf[js.Any])

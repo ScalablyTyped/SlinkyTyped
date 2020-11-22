@@ -1,7 +1,7 @@
 package typingsSlinky.next.apiUtilsMod
 
-import typingsSlinky.next.utilsMod.NextApiRequest
-import typingsSlinky.next.utilsMod.NextApiResponse
+import typingsSlinky.next.libUtilsMod.NextApiRequest
+import typingsSlinky.next.libUtilsMod.NextApiResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

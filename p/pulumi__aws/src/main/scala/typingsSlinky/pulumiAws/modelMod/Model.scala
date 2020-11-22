@@ -28,22 +28,22 @@ class Model protected () extends CustomResource {
   val apiId: Output_[String] = js.native
   
   /**
-    * The content-type for the model, for example, `application/json`.
+    * The content-type for the model, for example, `application/json`. Must be between 1 and 256 characters in length.
     */
   val contentType: Output_[String] = js.native
   
   /**
-    * The description of the model.
+    * The description of the model. Must be between 1 and 128 characters in length.
     */
   val description: Output_[js.UndefOr[String]] = js.native
   
   /**
-    * The name of the model. Must be alphanumeric.
+    * The name of the model. Must be alphanumeric. Must be between 1 and 128 characters in length.
     */
   val name: Output_[String] = js.native
   
   /**
-    * The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model.
+    * The schema for the model. This should be a [JSON schema draft 4](https://tools.ietf.org/html/draft-zyp-json-schema-04) model. Must be less than or equal to 32768 characters in length.
     */
   val schema: Output_[String] = js.native
 }

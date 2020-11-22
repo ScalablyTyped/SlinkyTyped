@@ -20,7 +20,7 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
     
     /**
       * Gets the current alpha mode
-      * @see http://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered
+      * @see https://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered
       * @returns the current alpha mode
       */
     def getAlphaMode(): Double = js.native
@@ -44,7 +44,7 @@ object babylonjsEnginesThinEngineAugmentingMod extends js.Object {
       * Sets the current alpha mode
       * @param mode defines the mode to use (one of the Engine.ALPHA_XXX)
       * @param noDepthWriteChange defines if depth writing state should remains unchanged (false by default)
-      * @see http://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered
+      * @see https://doc.babylonjs.com/resources/transparency_and_how_meshes_are_rendered
       */
     def setAlphaMode(mode: Double): Unit = js.native
     def setAlphaMode(mode: Double, noDepthWriteChange: Boolean): Unit = js.native

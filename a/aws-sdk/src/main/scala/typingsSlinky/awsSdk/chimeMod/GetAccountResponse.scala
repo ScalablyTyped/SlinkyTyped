@@ -7,9 +7,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GetAccountResponse extends js.Object {
   
-  /**
-    * The Amazon Chime account details.
-    */
   var Account: js.UndefOr[typingsSlinky.awsSdk.chimeMod.Account] = js.native
 }
 object GetAccountResponse {

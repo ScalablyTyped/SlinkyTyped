@@ -5,6 +5,7 @@ import typingsSlinky.naverWhale.whale.cookies.SameSiteStatus
 import typingsSlinky.naverWhale.whale.idle.IdleState
 import typingsSlinky.naverWhale.whale.omnibox.OnInputEnteredDisposition
 import typingsSlinky.naverWhale.whale.runtime.RequestUpdateCheckStatus
+import typingsSlinky.naverWhale.whale.storage.AreaName
 import typingsSlinky.naverWhale.whale.webRequest.ResourceType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -61,10 +62,16 @@ object naverWhaleStrings {
   def loading: loading = "loading".asInstanceOf[loading]
   
   @scala.inline
+  def local: local = "local".asInstanceOf[local]
+  
+  @scala.inline
   def locked: locked = "locked".asInstanceOf[locked]
   
   @scala.inline
   def main_frame: main_frame = "main_frame".asInstanceOf[main_frame]
+  
+  @scala.inline
+  def managed: managed = "managed".asInstanceOf[managed]
   
   @scala.inline
   def media: media = "media".asInstanceOf[media]
@@ -116,6 +123,9 @@ object naverWhaleStrings {
   
   @scala.inline
   def sub_frame: sub_frame = "sub_frame".asInstanceOf[sub_frame]
+  
+  @scala.inline
+  def sync: sync = "sync".asInstanceOf[sync]
   
   @scala.inline
   def throttled: throttled = "throttled".asInstanceOf[throttled]
@@ -181,10 +191,16 @@ object naverWhaleStrings {
   sealed trait loading extends js.Object
   
   @js.native
+  sealed trait local extends AreaName
+  
+  @js.native
   sealed trait locked extends IdleState
   
   @js.native
   sealed trait main_frame extends ResourceType
+  
+  @js.native
+  sealed trait managed extends AreaName
   
   @js.native
   sealed trait media extends ResourceType
@@ -236,6 +252,9 @@ object naverWhaleStrings {
   
   @js.native
   sealed trait sub_frame extends ResourceType
+  
+  @js.native
+  sealed trait sync extends AreaName
   
   @js.native
   sealed trait throttled extends RequestUpdateCheckStatus

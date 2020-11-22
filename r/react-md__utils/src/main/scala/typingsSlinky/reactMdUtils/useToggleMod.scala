@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useToggleMod extends js.Object {
   
-  def default(defaultToggled: js.Function0[Boolean]): ReturnValue = js.native
-  def default(defaultToggled: Boolean): ReturnValue = js.native
+  def useToggle(defaultToggled: js.Function0[Boolean]): ReturnValue = js.native
+  def useToggle(defaultToggled: Boolean): ReturnValue = js.native
   
   type Disable = js.Function0[Unit]
   

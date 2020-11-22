@@ -34,8 +34,7 @@ package object mod {
   type EndCallback = js.Function1[/* error */ typingsSlinky.mongodb.mod.MongoError, scala.Unit]
   
   // TypeScript Omit (Exclude to be specific) does not work for objects with an "any" indexed type
-  type EnhancedOmit[T, K] = (// T has indexed type e.g. { _id: string; [k: string]: any; } or it is "any"
-  typingsSlinky.mongodb.mod.Omit[T, K]) | T
+  type EnhancedOmit[T, K] = (typingsSlinky.mongodb.mod.Omit[T, K]) | T
   
   /**
     * This is similar to Parameters but will work with a type which is
@@ -74,6 +73,8 @@ package object mod {
   {readonly [ key in mongodb.mongodb.KeysOfOtherType<TSchema, FieldType> ]:? never}
     */ typingsSlinky.mongodb.mongodbStrings.NotAcceptedFields with org.scalablytyped.runtime.TopLevel[js.Any]
   
+  type NumericTypes = scala.Double | typingsSlinky.bson.mod.Decimal128 | typingsSlinky.bson.mod.Double | typingsSlinky.bson.mod.Int32 | typingsSlinky.bson.mod.Long
+  
   type ObjectQuerySelector[T] = typingsSlinky.mongodb.mod.QuerySelector[T] | (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ key in keyof T ]:? mongodb.mongodb.QuerySelector<T[key]>}
     */ typingsSlinky.mongodb.mongodbStrings.ObjectQuerySelector with org.scalablytyped.runtime.TopLevel[T])
@@ -83,7 +84,9 @@ package object mod {
   
   type OnlyFieldsOfType[TSchema, FieldType, AssignableType] = (typingsSlinky.mongodb.mod.AcceptedFields[TSchema, FieldType, AssignableType]) with (typingsSlinky.mongodb.mod.NotAcceptedFields[TSchema, FieldType]) with typingsSlinky.mongodb.mod.DotAndArrayNotation[AssignableType]
   
-  type OptionalId[TSchema /* <: typingsSlinky.mongodb.anon.`0` */] = typingsSlinky.mongodb.mod.WithId[TSchema] | ((typingsSlinky.mongodb.mod.EnhancedOmit[TSchema, typingsSlinky.mongodb.mongodbStrings._id]) with typingsSlinky.mongodb.anon.`2`[TSchema])
+  type OptionalId[TSchema /* <: typingsSlinky.mongodb.anon.`0` */] = (// a Schema provided but _id type is not ObjectId
+  typingsSlinky.mongodb.mod.WithId[TSchema]) | ((// a Schema with ObjectId _id type or "any" or "indexed type" provided
+  typingsSlinky.mongodb.mod.EnhancedOmit[TSchema, typingsSlinky.mongodb.mongodbStrings._id]) with typingsSlinky.mongodb.anon.`2`[TSchema])
   
   type PullAllOperator[TSchema] = typingsSlinky.mongodb.mongodbStrings.PullAllOperator with org.scalablytyped.runtime.TopLevel[TSchema] with (typingsSlinky.mongodb.mod.NotAcceptedFields[TSchema, js.Array[_]]) with org.scalablytyped.runtime.StringDictionary[js.Array[_]]
   
@@ -100,7 +103,13 @@ package object mod {
   // array types can be searched using their element type
   type RegExpForString[T] = T | js.RegExp
   
+  type SchemaMember[T, V] = (/* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in keyof T ]:? V}
+    */ typingsSlinky.mongodb.mongodbStrings.SchemaMember with org.scalablytyped.runtime.TopLevel[js.Any]) | org.scalablytyped.runtime.StringDictionary[V]
+  
   type SetFields[TSchema] = typingsSlinky.mongodb.mongodbStrings.SetFields with org.scalablytyped.runtime.TopLevel[js.Any] with (typingsSlinky.mongodb.mod.NotAcceptedFields[TSchema, js.UndefOr[js.Array[_]]]) with (org.scalablytyped.runtime.StringDictionary[typingsSlinky.mongodb.mod.AddToSetOperators[_] | js.Any])
+  
+  type SortOptionObject[T] = typingsSlinky.mongodb.mod.SchemaMember[T, scala.Double | typingsSlinky.mongodb.anon.Meta]
   
   type Unpacked[Type] = Type
   

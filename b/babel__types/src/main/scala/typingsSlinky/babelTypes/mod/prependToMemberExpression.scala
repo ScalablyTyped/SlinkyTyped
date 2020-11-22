@@ -1,6 +1,6 @@
 package typingsSlinky.babelTypes.mod
 
-import typingsSlinky.babelTypes.anon.PickMemberExpressionobjec
+import typingsSlinky.babelTypes.anon.PickMemberExpressionobjecObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object prependToMemberExpression extends js.Object {
   
-  def apply[T /* <: PickMemberExpressionobjec */](member: T, prepend: Expression): T = js.native
+  def apply[T /* <: PickMemberExpressionobjecObject */](member: T, prepend: Expression): T = js.native
 }

@@ -1,11 +1,11 @@
 package typingsSlinky.officeUiFabricReact.documentCardImageTypesMod
 
 import slinky.core.facade.ReactRef
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.iconTypesMod.IIconProps
 import typingsSlinky.officeUiFabricReact.imageTypesMod.ImageFit
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.baseComponentTypesMod.IBaseProps
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import scala.scalajs.js

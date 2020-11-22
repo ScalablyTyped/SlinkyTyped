@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object supportsColor {
   
-  type SupportsColor = scala.Boolean with typingsSlinky.supportsColor.mod.supportsColor.Level
+  type SupportsColor = typingsSlinky.supportsColor.supportsColorBooleans.`false` with typingsSlinky.supportsColor.mod.supportsColor.Level
 }

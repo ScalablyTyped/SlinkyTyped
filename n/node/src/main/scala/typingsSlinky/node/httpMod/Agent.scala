@@ -25,6 +25,8 @@ class Agent () extends js.Object {
   
   var maxSockets: Double = js.native
   
+  var maxTotalSockets: Double = js.native
+  
   val requests: ReadOnlyDict[js.Array[IncomingMessage]] = js.native
   
   val sockets: ReadOnlyDict[js.Array[Socket]] = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`10`
+import typingsSlinky.octokitTypes.anon.`9`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +11,7 @@ trait ReactionsDeleteForPullRequestCommentEndpoint extends js.Object {
   
   var comment_id: Double = js.native
   
-  var mediaType: `10` = js.native
+  var mediaType: `9` = js.native
   
   var owner: String = js.native
   
@@ -22,7 +22,7 @@ trait ReactionsDeleteForPullRequestCommentEndpoint extends js.Object {
 object ReactionsDeleteForPullRequestCommentEndpoint {
   
   @scala.inline
-  def apply(comment_id: Double, mediaType: `10`, owner: String, reaction_id: Double, repo: String): ReactionsDeleteForPullRequestCommentEndpoint = {
+  def apply(comment_id: Double, mediaType: `9`, owner: String, reaction_id: Double, repo: String): ReactionsDeleteForPullRequestCommentEndpoint = {
     val __obj = js.Dynamic.literal(comment_id = comment_id.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], reaction_id = reaction_id.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReactionsDeleteForPullRequestCommentEndpoint]
   }
@@ -46,7 +46,7 @@ object ReactionsDeleteForPullRequestCommentEndpoint {
     def setComment_id(value: Double): Self = this.set("comment_id", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `10`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `9`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])

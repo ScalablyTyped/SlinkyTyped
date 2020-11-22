@@ -1,6 +1,5 @@
 package typingsSlinky.mockAwsS3.mod
 
-import typingsSlinky.awsSdk.configMod.ConfigurationOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,5 +12,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   */
 class TokenFileWebIdentityCredentials ()
   extends typingsSlinky.awsSdk.mod.TokenFileWebIdentityCredentials {
-  def this(clientConfig: ConfigurationOptions) = this()
+  def this(clientConfig: typingsSlinky.awsSdk.configBaseMod.ConfigurationOptions) = this()
 }

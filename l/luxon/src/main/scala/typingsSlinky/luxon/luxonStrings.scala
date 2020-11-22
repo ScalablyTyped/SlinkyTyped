@@ -54,6 +54,9 @@ object luxonStrings {
   def DATE_MED: DATE_MED = "DATE_MED".asInstanceOf[DATE_MED]
   
   @scala.inline
+  def DATE_MED_WITH_WEEKDAY: DATE_MED_WITH_WEEKDAY = "DATE_MED_WITH_WEEKDAY".asInstanceOf[DATE_MED_WITH_WEEKDAY]
+  
+  @scala.inline
   def DATE_SHORT: DATE_SHORT = "DATE_SHORT".asInstanceOf[DATE_SHORT]
   
   @scala.inline
@@ -555,6 +558,9 @@ object luxonStrings {
   
   @js.native
   sealed trait DATE_MED extends js.Object
+  
+  @js.native
+  sealed trait DATE_MED_WITH_WEEKDAY extends js.Object
   
   @js.native
   sealed trait DATE_SHORT extends js.Object

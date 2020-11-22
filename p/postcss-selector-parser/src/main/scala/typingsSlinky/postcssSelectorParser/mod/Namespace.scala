@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait Namespace[Value /* <: js.UndefOr[String] */]
-  extends Base[Value, js.UndefOr[Container[String]]] {
+  extends Base[Value, js.UndefOr[Container[String, Node]]] {
   
   /**
     *  namespace prefix.

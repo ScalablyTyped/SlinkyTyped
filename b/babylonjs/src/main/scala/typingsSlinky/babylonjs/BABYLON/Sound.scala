@@ -1,7 +1,9 @@
 package typingsSlinky.babylonjs.BABYLON
 
 import org.scalajs.dom.raw.AudioBuffer
+import org.scalajs.dom.raw.AudioBufferSourceNode
 import org.scalajs.dom.raw.AudioNode
+import org.scalajs.dom.raw.GainNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -89,7 +91,7 @@ trait Sound extends js.Object {
   /**
     * Attach the sound to a dedicated mesh
     * @param transformNode The transform node to connect the sound with
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music#attaching-a-sound-to-a-mesh
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#attaching-a-sound-to-a-mesh
     */
   def attachToMesh(transformNode: TransformNode): Unit = js.native
   
@@ -105,8 +107,13 @@ trait Sound extends js.Object {
   def connectToSoundTrackAudioNode(soundTrackAudioNode: AudioNode): Unit = js.native
   
   /**
+    * Gets the current time for the sound.
+    */
+  def currentTime: Double = js.native
+  
+  /**
     * Detach the sound from the previously attached mesh
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music#attaching-a-sound-to-a-mesh
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#attaching-a-sound-to-a-mesh
     */
   def detachFromMesh(): Unit = js.native
   
@@ -135,7 +142,7 @@ trait Sound extends js.Object {
   
   /**
     * Define the distance attenuation model the sound will follow.
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
     */
   var distanceModel: String = js.native
   
@@ -144,6 +151,18 @@ trait Sound extends js.Object {
     * @returns the audio buffer
     */
   def getAudioBuffer(): Nullable[AudioBuffer] = js.native
+  
+  /**
+    * Gets the WebAudio GainNode, gives you precise control over the gain of instances of this Sound.
+    * @returns the gain node
+    */
+  def getSoundGain(): Nullable[GainNode] = js.native
+  
+  /**
+    * Gets the WebAudio AudioBufferSourceNode, lets you keep track of and stop instances of this Sound.
+    * @returns the source node
+    */
+  def getSoundSource(): Nullable[AudioBufferSourceNode] = js.native
   
   /**
     * Gets the volume of the sound.
@@ -174,9 +193,14 @@ trait Sound extends js.Object {
   
   /**
     * Define the max distance the sound should be heard (intensity just became 0 at this point).
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
     */
   var maxDistance: Double = js.native
+  
+  /**
+    * Gets or sets an object used to store user defined information for the sound.
+    */
+  var metadata: js.Any = js.native
   
   /**
     * The name of the sound in the scene.
@@ -216,13 +240,13 @@ trait Sound extends js.Object {
   
   /**
     * Define the reference distance the sound should be heard perfectly.
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
     */
   var refDistance: Double = js.native
   
   /**
     * Define the roll off factor of spatial sounds.
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
     */
   var rolloffFactor: Double = js.native
   
@@ -235,7 +259,7 @@ trait Sound extends js.Object {
   /**
     * Sets a new custom attenuation function for the sound.
     * @param callback Defines the function used for the attenuation
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-your-own-custom-attenuation-function
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-your-own-custom-attenuation-function
     */
   def setAttenuationFunction(
     callback: js.Function5[
@@ -295,7 +319,7 @@ trait Sound extends js.Object {
   
   /**
     * Does this sound enables spatial sound.
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
     */
   var spatialSound: Boolean = js.native
   
@@ -309,14 +333,14 @@ trait Sound extends js.Object {
   /**
     * Switch the panning model to Equal Power:
     * Represents the equal-power panning algorithm, generally regarded as simple and efficient. equalpower is the default value.
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
     */
   def switchPanningModelToEqualPower(): Unit = js.native
   
   /**
     * Switch the panning model to HRTF:
     * Renders a stereo output of higher quality than equalpower — it uses a convolution with measured impulse responses from human subjects.
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-a-spatial-3d-sound
     */
   def switchPanningModelToHRTF(): Unit = js.native
   
@@ -332,7 +356,7 @@ trait Sound extends js.Object {
   /**
     * Does the sound use a custom attenuation curve to simulate the falloff
     * happening when the source gets further away from the camera.
-    * @see http://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-your-own-custom-attenuation-function
+    * @see https://doc.babylonjs.com/how_to/playing_sounds_and_music#creating-your-own-custom-attenuation-function
     */
   var useCustomAttenuation: Boolean = js.native
 }

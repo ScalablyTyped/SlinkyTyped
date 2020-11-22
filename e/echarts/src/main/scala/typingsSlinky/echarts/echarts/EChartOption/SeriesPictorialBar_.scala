@@ -1,12 +1,12 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
 import typingsSlinky.echarts.anon.AnimationDelay
+import typingsSlinky.echarts.anon.AnimationDelayAnimationDelayUpdate
 import typingsSlinky.echarts.anon.AnimationDelayUpdate
 import typingsSlinky.echarts.anon.AnimationDuration
-import typingsSlinky.echarts.anon.AnimationDurationAnimationDurationUpdate
 import typingsSlinky.echarts.anon.BorderRadius
 import typingsSlinky.echarts.anon.BorderType
-import typingsSlinky.echarts.anon.`18`
+import typingsSlinky.echarts.anon.`17`
 import typingsSlinky.echarts.anon.`8`
 import typingsSlinky.echarts.echarts.EChartOption.SeriesPictorialBar.DataObject
 import scala.scalajs.js
@@ -154,7 +154,7 @@ trait SeriesPictorialBar_ extends js.Object {
     * "cubicOut"
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.animationEasingUpdate
     */
-  var animationEasingUpdate: js.UndefOr[`18`] = js.native
+  var animationEasingUpdate: js.UndefOr[`17`] = js.native
   
   /**
     * Whether to set graphic number threshold to animation.
@@ -526,7 +526,7 @@ trait SeriesPictorialBar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.hoverAnimation
     */
-  var hoverAnimation: js.UndefOr[AnimationDurationAnimationDurationUpdate] = js.native
+  var hoverAnimation: js.UndefOr[AnimationDelayAnimationDelayUpdate] = js.native
   
   /**
     * Component ID, not specified by default.
@@ -1278,7 +1278,7 @@ object SeriesPictorialBar_ {
     def deleteAnimationEasing: Self = this.set("animationEasing", js.undefined)
     
     @scala.inline
-    def setAnimationEasingUpdate(value: `18`): Self = this.set("animationEasingUpdate", value.asInstanceOf[js.Any])
+    def setAnimationEasingUpdate(value: `17`): Self = this.set("animationEasingUpdate", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAnimationEasingUpdate: Self = this.set("animationEasingUpdate", js.undefined)
@@ -1366,7 +1366,7 @@ object SeriesPictorialBar_ {
     def deleteEncode: Self = this.set("encode", js.undefined)
     
     @scala.inline
-    def setHoverAnimation(value: AnimationDurationAnimationDurationUpdate): Self = this.set("hoverAnimation", value.asInstanceOf[js.Any])
+    def setHoverAnimation(value: AnimationDelayAnimationDelayUpdate): Self = this.set("hoverAnimation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHoverAnimation: Self = this.set("hoverAnimation", js.undefined)

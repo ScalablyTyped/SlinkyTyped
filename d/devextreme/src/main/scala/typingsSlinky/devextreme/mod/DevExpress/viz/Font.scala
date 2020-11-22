@@ -7,19 +7,29 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Font extends js.Object {
   
-  /** @name Font.color */
+  /**
+    * [descr:Font.color]
+    */
   var color: js.UndefOr[String] = js.native
   
-  /** @name Font.family */
+  /**
+    * [descr:Font.family]
+    */
   var family: js.UndefOr[String] = js.native
   
-  /** @name Font.opacity */
+  /**
+    * [descr:Font.opacity]
+    */
   var opacity: js.UndefOr[Double] = js.native
   
-  /** @name Font.size */
+  /**
+    * [descr:Font.size]
+    */
   var size: js.UndefOr[String | Double] = js.native
   
-  /** @name Font.weight */
+  /**
+    * [descr:Font.weight]
+    */
   var weight: js.UndefOr[Double] = js.native
 }
 object Font {

@@ -28,6 +28,8 @@ trait leantrueOmitQueryFindOneA extends js.Object {
   
   var omitUndefined: js.UndefOr[Boolean] = js.native
   
+  var overwrite: js.UndefOr[Boolean] = js.native
+  
   var projection: js.UndefOr[js.Any] = js.native
   
   var rawResult: js.UndefOr[Boolean] = js.native
@@ -120,6 +122,12 @@ object leantrueOmitQueryFindOneA {
     
     @scala.inline
     def deleteOmitUndefined: Self = this.set("omitUndefined", js.undefined)
+    
+    @scala.inline
+    def setOverwrite(value: Boolean): Self = this.set("overwrite", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverwrite: Self = this.set("overwrite", js.undefined)
     
     @scala.inline
     def setProjection(value: js.Any): Self = this.set("projection", value.asInstanceOf[js.Any])

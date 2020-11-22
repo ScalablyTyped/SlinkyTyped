@@ -14,6 +14,8 @@ package object interfaceMod {
     slinky.core.facade.ReactElement
   ]
   
+  type TabBarExtraContent = slinky.core.facade.ReactElement | typingsSlinky.rcTabs.interfaceMod.TabBarExtraMap
+  
   type TabOffsetMap = typingsSlinky.std.Map[typingsSlinky.react.mod.Key, typingsSlinky.rcTabs.interfaceMod.TabOffset]
   
   type TabSizeMap = typingsSlinky.std.Map[typingsSlinky.react.mod.Key, typingsSlinky.rcTabs.anon.Height]

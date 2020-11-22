@@ -48,12 +48,12 @@ trait DBEngineVersion extends js.Object {
   var Status: js.UndefOr[String] = js.native
   
   /**
-    *  A list of the character sets supported by this engine for the CharacterSetName parameter of the CreateDBInstance action. 
+    * A list of the character sets supported by this engine for the CharacterSetName parameter of the CreateDBInstance operation. 
     */
   var SupportedCharacterSets: js.UndefOr[SupportedCharacterSetsList] = js.native
   
   /**
-    * A list of the supported DB engine modes.   global engine mode only applies for global database clusters created with Aurora MySQL version 5.6.10a. For higher Aurora MySQL versions, the clusters in a global database use provisioned engine mode.  
+    * A list of the supported DB engine modes.
     */
   var SupportedEngineModes: js.UndefOr[EngineModeList] = js.native
   
@@ -61,6 +61,11 @@ trait DBEngineVersion extends js.Object {
     *  A list of features supported by the DB engine. Supported feature names include the following.    s3Import  
     */
   var SupportedFeatureNames: js.UndefOr[FeatureNameList] = js.native
+  
+  /**
+    * A list of the character sets supported by the Oracle DB engine for the NcharCharacterSetName parameter of the CreateDBInstance operation. 
+    */
+  var SupportedNcharCharacterSets: js.UndefOr[SupportedCharacterSetsList] = js.native
   
   /**
     * A list of the time zones supported by this engine for the Timezone parameter of the CreateDBInstance action. 
@@ -192,6 +197,15 @@ object DBEngineVersion {
     
     @scala.inline
     def deleteSupportedFeatureNames: Self = this.set("SupportedFeatureNames", js.undefined)
+    
+    @scala.inline
+    def setSupportedNcharCharacterSetsVarargs(value: CharacterSet*): Self = this.set("SupportedNcharCharacterSets", js.Array(value :_*))
+    
+    @scala.inline
+    def setSupportedNcharCharacterSets(value: SupportedCharacterSetsList): Self = this.set("SupportedNcharCharacterSets", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSupportedNcharCharacterSets: Self = this.set("SupportedNcharCharacterSets", js.undefined)
     
     @scala.inline
     def setSupportedTimezonesVarargs(value: Timezone*): Self = this.set("SupportedTimezones", js.Array(value :_*))

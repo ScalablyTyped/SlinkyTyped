@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("esri/widgets/Slider", JSImport.Namespace)
 @js.native
 /**
-  * A slider widget that can be used for filtering data, or gathering numeric input from a user. The slider can have multiple thumbs, and provides you with the ability to format labels and control user input.
+  * A slider widget that can be used for filtering data, or gathering numeric input from a user.
   *
   * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Slider.html)
   */

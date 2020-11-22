@@ -9,6 +9,8 @@ trait MlGetJobStats extends Generic {
   
   var allow_no_jobs: js.UndefOr[Boolean] = js.native
   
+  var allow_no_match: js.UndefOr[Boolean] = js.native
+  
   var job_id: js.UndefOr[String] = js.native
 }
 object MlGetJobStats {
@@ -39,6 +41,12 @@ object MlGetJobStats {
     
     @scala.inline
     def deleteAllow_no_jobs: Self = this.set("allow_no_jobs", js.undefined)
+    
+    @scala.inline
+    def setAllow_no_match(value: Boolean): Self = this.set("allow_no_match", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAllow_no_match: Self = this.set("allow_no_match", js.undefined)
     
     @scala.inline
     def setJob_id(value: String): Self = this.set("job_id", value.asInstanceOf[js.Any])

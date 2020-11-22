@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/core/build/lib/is_valid_path", JSImport.Namespace)
+@JSImport("@jest/core/build/lib/isValidPath", JSImport.Namespace)
 @js.native
 object isValidPathMod extends js.Object {
   

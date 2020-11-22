@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object setLambdaHandler extends js.Object {
   
-  def apply[T](handler: js.Function1[/* repeated */ js.Any, T]): T = js.native
+  def apply[T /* <: js.Function1[/* repeated */ js.Any, _] */](handler: T): T = js.native
 }

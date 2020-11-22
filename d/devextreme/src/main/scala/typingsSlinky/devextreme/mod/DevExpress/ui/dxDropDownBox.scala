@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxDropDownBox extends dxDropDownEditor {
   
-  /** @name DataHelperMixin.getDataSource() */
+  /**
+    * [descr:DataHelperMixin.getDataSource()]
+    */
   def getDataSource(): DataSource = js.native
 }

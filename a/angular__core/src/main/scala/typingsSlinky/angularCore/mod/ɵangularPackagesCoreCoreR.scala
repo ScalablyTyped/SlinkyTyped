@@ -6,8 +6,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("@angular/core", "\u0275angular_packages_core_core_r")
 @js.native
-object ɵangularPackagesCoreCoreR extends js.Object {
+class ɵangularPackagesCoreCoreR () extends IterableDifferFactory {
   
-  def apply(): String = js.native
-  def apply(locale: String): String = js.native
+  def supports(): Boolean = js.native
+  def supports(obj: js.Object): Boolean = js.native
 }

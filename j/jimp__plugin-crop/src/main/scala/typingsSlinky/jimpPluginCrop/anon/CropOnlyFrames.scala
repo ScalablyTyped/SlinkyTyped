@@ -11,6 +11,8 @@ trait CropOnlyFrames extends js.Object {
   
   var cropSymmetric: js.UndefOr[Boolean] = js.native
   
+  var ignoreSides: js.UndefOr[East] = js.native
+  
   var leaveBorder: js.UndefOr[Double] = js.native
   
   var tolerance: js.UndefOr[Double] = js.native
@@ -49,6 +51,12 @@ object CropOnlyFrames {
     
     @scala.inline
     def deleteCropSymmetric: Self = this.set("cropSymmetric", js.undefined)
+    
+    @scala.inline
+    def setIgnoreSides(value: East): Self = this.set("ignoreSides", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIgnoreSides: Self = this.set("ignoreSides", js.undefined)
     
     @scala.inline
     def setLeaveBorder(value: Double): Self = this.set("leaveBorder", value.asInstanceOf[js.Any])

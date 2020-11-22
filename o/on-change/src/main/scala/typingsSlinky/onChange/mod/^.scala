@@ -1,6 +1,8 @@
 package typingsSlinky.onChange.mod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.onChange.anon.OptionspathAsArrayfalseun
+import typingsSlinky.onChange.anon.OptionspathAsArraytrue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,12 +30,13 @@ object ^ extends js.Object {
   		}
   	};
   	let i = 0;
-  	const watchedObject = onChange(object, function (path, value, previousValue) {
+  	const watchedObject = onChange(object, function (path, value, previousValue, name) {
   		console.log('Object changed:', ++i);
   		console.log('this:', this);
   		console.log('path:', path);
   		console.log('value:', value);
   		console.log('previousValue:', previousValue);
+  		console.log('name:', name);
   	});
   	watchedObject.foo = true;
   	//=> 'Object changed: 1'
@@ -50,6 +53,7 @@ object ^ extends js.Object {
   	//=> 'path: "foo"'
   	//=> 'value: true'
   	//=> 'previousValue: false'
+  	//=> 'name: undefined'
   	watchedObject.a.b[0].c = true;
   	//=> 'Object changed: 2'
   	//=> 'this: {
@@ -65,6 +69,24 @@ object ^ extends js.Object {
   	//=> 'path: "a.b.0.c"'
   	//=> 'value: true'
   	//=> 'previousValue: false'
+  	//=> 'name: undefined'
+  	watchedObject.a.b.push(3);
+  	//=> 'Object changed: 3'
+  	//=> 'this: {
+  	//   	foo: true,
+  	//   	a: {
+  	//   		b: [
+  	//   			{
+  	//   				c: true
+  	//   			},
+  	//   			3
+  	//   		]
+  	//   	}
+  	//   }'
+  	//=> 'path: "a.b"'
+  	//=> 'value: [{c: true}, 3]'
+  	//=> 'previousValue: [{c: true}]'
+  	//=> 'name: "push"'
   	// Access the original object
   	onChange.target(watchedObject).foo = false;
   	// Callback isn't called
@@ -76,24 +98,39 @@ object ^ extends js.Object {
   	*/
   def apply[ObjectType /* <: StringDictionary[js.Any] */](
     `object`: ObjectType,
-    onChange: js.ThisFunction3[
+    onChange: js.ThisFunction4[
       /* this */ ObjectType, 
       /* path */ String, 
       /* value */ js.Any, 
       /* previousValue */ js.Any, 
+      /* name */ String, 
       Unit
     ]
   ): ObjectType = js.native
   def apply[ObjectType /* <: StringDictionary[js.Any] */](
     `object`: ObjectType,
-    onChange: js.ThisFunction3[
+    onChange: js.ThisFunction4[
       /* this */ ObjectType, 
       /* path */ String, 
       /* value */ js.Any, 
       /* previousValue */ js.Any, 
+      /* name */ String, 
       Unit
     ],
-    options: Options
+    options: OptionspathAsArrayfalseun
+  ): ObjectType = js.native
+  // Overload that returns an Array as path when pathAsArray is true
+  def apply[ObjectType /* <: StringDictionary[js.Any] */](
+    `object`: ObjectType,
+    onChange: js.ThisFunction4[
+      /* this */ ObjectType, 
+      /* path */ js.Array[String | js.Symbol], 
+      /* value */ js.Any, 
+      /* previousValue */ js.Any, 
+      /* name */ String, 
+      Unit
+    ],
+    options: OptionspathAsArraytrue
   ): ObjectType = js.native
   
   /**
@@ -102,6 +139,7 @@ object ^ extends js.Object {
   	*/
   def target[ObjectType /* <: StringDictionary[js.Any] */](`object`: ObjectType): ObjectType = js.native
   
+   // eslint-disable-line @typescript-eslint/method-signature-style
   /**
   	Cancels all future callbacks on a watched object.
   	@param object - Object that is already being watched for changes.

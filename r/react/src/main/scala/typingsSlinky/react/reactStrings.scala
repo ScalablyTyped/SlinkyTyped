@@ -1,5 +1,6 @@
 package typingsSlinky.react
 
+import typingsSlinky.react.mod.HTMLAttributeReferrerPolicy
 import typingsSlinky.react.mod.SuspenseListRevealOrder
 import typingsSlinky.react.mod.SuspenseListTailMode
 import scala.scalajs.js
@@ -34,6 +35,9 @@ object reactStrings {
   
   @scala.inline
   def additions: additions = "additions".asInstanceOf[additions]
+  
+  @scala.inline
+  def `additions removals`: `additions removals` = ("additions removals").asInstanceOf[`additions removals`]
   
   @scala.inline
   def `additions text`: `additions text` = ("additions text").asInstanceOf[`additions text`]
@@ -216,6 +220,9 @@ object reactStrings {
   def dl: dl = "dl".asInstanceOf[dl]
   
   @scala.inline
+  def done: done = "done".asInstanceOf[done]
+  
+  @scala.inline
   def dt: dt = "dt".asInstanceOf[dt]
   
   @scala.inline
@@ -232,6 +239,9 @@ object reactStrings {
   
   @scala.inline
   def embed: embed = "embed".asInstanceOf[embed]
+  
+  @scala.inline
+  def enter: enter = "enter".asInstanceOf[enter]
   
   @scala.inline
   def evenodd: evenodd = "evenodd".asInstanceOf[evenodd]
@@ -340,6 +350,9 @@ object reactStrings {
   
   @scala.inline
   def g: g = "g".asInstanceOf[g]
+  
+  @scala.inline
+  def go: go = "go".asInstanceOf[go]
   
   @scala.inline
   def grammar: grammar = "grammar".asInstanceOf[grammar]
@@ -528,10 +541,16 @@ object reactStrings {
   def nav: nav = "nav".asInstanceOf[nav]
   
   @scala.inline
+  def next: next = "next".asInstanceOf[next]
+  
+  @scala.inline
   def no: no = "no".asInstanceOf[no]
   
   @scala.inline
   def `no-referrer`: `no-referrer` = "no-referrer".asInstanceOf[`no-referrer`]
+  
+  @scala.inline
+  def `no-referrer-when-downgrade`: `no-referrer-when-downgrade` = "no-referrer-when-downgrade".asInstanceOf[`no-referrer-when-downgrade`]
   
   @scala.inline
   def noindex: noindex = "noindex".asInstanceOf[noindex]
@@ -568,6 +587,9 @@ object reactStrings {
   
   @scala.inline
   def origin: origin = "origin".asInstanceOf[origin]
+  
+  @scala.inline
+  def `origin-when-cross-origin`: `origin-when-cross-origin` = "origin-when-cross-origin".asInstanceOf[`origin-when-cross-origin`]
   
   @scala.inline
   def other: other = "other".asInstanceOf[other]
@@ -612,6 +634,9 @@ object reactStrings {
   def pre: pre = "pre".asInstanceOf[pre]
   
   @scala.inline
+  def previous: previous = "previous".asInstanceOf[previous]
+  
+  @scala.inline
   def progress: progress = "progress".asInstanceOf[progress]
   
   @scala.inline
@@ -628,6 +653,12 @@ object reactStrings {
   
   @scala.inline
   def removals: removals = "removals".asInstanceOf[removals]
+  
+  @scala.inline
+  def `removals additions`: `removals additions` = ("removals additions").asInstanceOf[`removals additions`]
+  
+  @scala.inline
+  def `removals text`: `removals text` = ("removals text").asInstanceOf[`removals text`]
   
   @scala.inline
   def replace: replace = "replace".asInstanceOf[replace]
@@ -657,6 +688,9 @@ object reactStrings {
   def sRGB: sRGB = "sRGB".asInstanceOf[sRGB]
   
   @scala.inline
+  def `same-origin`: `same-origin` = "same-origin".asInstanceOf[`same-origin`]
+  
+  @scala.inline
   def samp: samp = "samp".asInstanceOf[samp]
   
   @scala.inline
@@ -670,6 +704,9 @@ object reactStrings {
   
   @scala.inline
   def select: select = "select".asInstanceOf[select]
+  
+  @scala.inline
+  def send: send = "send".asInstanceOf[send]
   
   @scala.inline
   def slot: slot = "slot".asInstanceOf[slot]
@@ -694,6 +731,12 @@ object reactStrings {
   
   @scala.inline
   def stop: stop = "stop".asInstanceOf[stop]
+  
+  @scala.inline
+  def `strict-origin`: `strict-origin` = "strict-origin".asInstanceOf[`strict-origin`]
+  
+  @scala.inline
+  def `strict-origin-when-cross-origin`: `strict-origin-when-cross-origin` = "strict-origin-when-cross-origin".asInstanceOf[`strict-origin-when-cross-origin`]
   
   @scala.inline
   def strong: strong = "strong".asInstanceOf[strong]
@@ -748,6 +791,12 @@ object reactStrings {
   
   @scala.inline
   def text: text = "text".asInstanceOf[text]
+  
+  @scala.inline
+  def `text additions`: `text additions` = ("text additions").asInstanceOf[`text additions`]
+  
+  @scala.inline
+  def `text removals`: `text removals` = ("text removals").asInstanceOf[`text removals`]
   
   @scala.inline
   def `text-after-edge`: `text-after-edge` = "text-after-edge".asInstanceOf[`text-after-edge`]
@@ -855,7 +904,7 @@ object reactStrings {
   sealed trait WeakValidationMap extends js.Object
   
   @js.native
-  sealed trait _empty extends js.Object
+  sealed trait _empty extends HTMLAttributeReferrerPolicy
   
   @js.native
   sealed trait a_ extends js.Object
@@ -865,6 +914,9 @@ object reactStrings {
   
   @js.native
   sealed trait additions extends js.Object
+  
+  @js.native
+  sealed trait `additions removals` extends js.Object
   
   @js.native
   sealed trait `additions text` extends js.Object
@@ -1051,6 +1103,9 @@ object reactStrings {
   sealed trait dl extends js.Object
   
   @js.native
+  sealed trait done extends js.Object
+  
+  @js.native
   sealed trait dt extends js.Object
   
   @js.native
@@ -1067,6 +1122,9 @@ object reactStrings {
   
   @js.native
   sealed trait embed extends js.Object
+  
+  @js.native
+  sealed trait enter extends js.Object
   
   @js.native
   sealed trait evenodd extends js.Object
@@ -1177,6 +1235,9 @@ object reactStrings {
   
   @js.native
   sealed trait g extends js.Object
+  
+  @js.native
+  sealed trait go extends js.Object
   
   @js.native
   sealed trait grammar extends js.Object
@@ -1367,10 +1428,16 @@ object reactStrings {
   sealed trait nav extends js.Object
   
   @js.native
+  sealed trait next extends js.Object
+  
+  @js.native
   sealed trait no extends js.Object
   
   @js.native
-  sealed trait `no-referrer` extends js.Object
+  sealed trait `no-referrer` extends HTMLAttributeReferrerPolicy
+  
+  @js.native
+  sealed trait `no-referrer-when-downgrade` extends HTMLAttributeReferrerPolicy
   
   @js.native
   sealed trait noindex extends js.Object
@@ -1406,7 +1473,10 @@ object reactStrings {
   sealed trait option extends js.Object
   
   @js.native
-  sealed trait origin extends js.Object
+  sealed trait origin extends HTMLAttributeReferrerPolicy
+  
+  @js.native
+  sealed trait `origin-when-cross-origin` extends HTMLAttributeReferrerPolicy
   
   @js.native
   sealed trait other extends js.Object
@@ -1451,6 +1521,9 @@ object reactStrings {
   sealed trait pre extends js.Object
   
   @js.native
+  sealed trait previous extends js.Object
+  
+  @js.native
   sealed trait progress extends js.Object
   
   @js.native
@@ -1467,6 +1540,12 @@ object reactStrings {
   
   @js.native
   sealed trait removals extends js.Object
+  
+  @js.native
+  sealed trait `removals additions` extends js.Object
+  
+  @js.native
+  sealed trait `removals text` extends js.Object
   
   @js.native
   sealed trait replace extends js.Object
@@ -1496,6 +1575,9 @@ object reactStrings {
   sealed trait sRGB extends js.Object
   
   @js.native
+  sealed trait `same-origin` extends HTMLAttributeReferrerPolicy
+  
+  @js.native
   sealed trait samp extends js.Object
   
   @js.native
@@ -1509,6 +1591,9 @@ object reactStrings {
   
   @js.native
   sealed trait select extends js.Object
+  
+  @js.native
+  sealed trait send extends js.Object
   
   @js.native
   sealed trait slot extends js.Object
@@ -1533,6 +1618,12 @@ object reactStrings {
   
   @js.native
   sealed trait stop extends js.Object
+  
+  @js.native
+  sealed trait `strict-origin` extends HTMLAttributeReferrerPolicy
+  
+  @js.native
+  sealed trait `strict-origin-when-cross-origin` extends HTMLAttributeReferrerPolicy
   
   @js.native
   sealed trait strong extends js.Object
@@ -1587,6 +1678,12 @@ object reactStrings {
   
   @js.native
   sealed trait text extends js.Object
+  
+  @js.native
+  sealed trait `text additions` extends js.Object
+  
+  @js.native
+  sealed trait `text removals` extends js.Object
   
   @js.native
   sealed trait `text-after-edge` extends js.Object
@@ -1645,7 +1742,7 @@ object reactStrings {
   sealed trait ul extends js.Object
   
   @js.native
-  sealed trait `unsafe-url` extends js.Object
+  sealed trait `unsafe-url` extends HTMLAttributeReferrerPolicy
   
   @js.native
   sealed trait update extends js.Object

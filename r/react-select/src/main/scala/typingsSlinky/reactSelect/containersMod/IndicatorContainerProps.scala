@@ -37,6 +37,9 @@ trait IndicatorContainerProps[OptionType /* <: OptionTypeBase */] extends js.Obj
   
   var hasValue: Boolean = js.native
   
+  /** Whether the component is disabled */
+  var isDisabled: Boolean = js.native
+  
   var isMulti: Boolean = js.native
   
   /** Whether the text should be rendered right to left. */

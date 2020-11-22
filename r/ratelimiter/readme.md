@@ -1,7 +1,7 @@
 
 # Scala.js typings for ratelimiter
 
-Typings are for version 2.1.1
+Typings are for version 3.4
 
 ## Library description:
 abstract rate limiter backed by redis

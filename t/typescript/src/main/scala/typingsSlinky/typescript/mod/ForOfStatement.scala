@@ -10,12 +10,12 @@ trait ForOfStatement
      with ForInOrOfStatement
      with HasInitializer {
   
-  var awaitModifier: js.UndefOr[AwaitKeywordToken] = js.native
+  val awaitModifier: js.UndefOr[AwaitKeywordToken] = js.native
   
-  var expression: Expression = js.native
+  val expression: Expression = js.native
   
-  var initializer: ForInitializer = js.native
+  val initializer: ForInitializer = js.native
   
   @JSName("kind")
-  var kind_ForOfStatement: typingsSlinky.typescript.mod.SyntaxKind.ForOfStatement = js.native
+  val kind_ForOfStatement: typingsSlinky.typescript.mod.SyntaxKind.ForOfStatement = js.native
 }

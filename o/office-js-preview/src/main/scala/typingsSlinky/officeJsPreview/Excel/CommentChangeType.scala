@@ -10,8 +10,7 @@ sealed trait CommentChangeType extends js.Object
   *
   * Represents how the comments in the event were changed.
   *
-  * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-  * @beta
+  * [Api set: ExcelApi 1.12]
   */
 @JSGlobal("Excel.CommentChangeType")
 @js.native

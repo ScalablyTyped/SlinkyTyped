@@ -11,8 +11,6 @@ trait ExtentProperties extends GeometryProperties {
     * The maximum possible `m` value in an extent envelope.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#mmax)
-    *
-    * @default undefined
     */
   var mmax: js.UndefOr[Double] = js.native
   
@@ -20,8 +18,6 @@ trait ExtentProperties extends GeometryProperties {
     * The minimum possible `m` value of an extent envelope.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#mmin)
-    *
-    * @default undefined
     */
   var mmin: js.UndefOr[Double] = js.native
   
@@ -29,8 +25,6 @@ trait ExtentProperties extends GeometryProperties {
     * The maximum X-coordinate of an extent envelope.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#xmax)
-    *
-    * @default 0
     */
   var xmax: js.UndefOr[Double] = js.native
   
@@ -38,8 +32,6 @@ trait ExtentProperties extends GeometryProperties {
     * The minimum X-coordinate of an extent envelope.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#xmin)
-    *
-    * @default 0
     */
   var xmin: js.UndefOr[Double] = js.native
   
@@ -47,8 +39,6 @@ trait ExtentProperties extends GeometryProperties {
     * The maximum Y-coordinate of an extent envelope.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#ymax)
-    *
-    * @default 0
     */
   var ymax: js.UndefOr[Double] = js.native
   
@@ -56,28 +46,20 @@ trait ExtentProperties extends GeometryProperties {
     * The minimum Y-coordinate of an extent envelope.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#ymin)
-    *
-    * @default 0
     */
   var ymin: js.UndefOr[Double] = js.native
   
   /**
     * The maximum possible `z`, or elevation, value in an extent envelope.
-    * > **Z-values** defined in a geographic or metric coordinate system are expressed in meters. However, in local scenes that use a projected coordinate system, vertical units are assumed to be the same as the horizontal units specified by the service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#zmax)
-    *
-    * @default undefined
     */
   var zmax: js.UndefOr[Double] = js.native
   
   /**
     * The minimum possible `z`, or elevation, value of an extent envelope.
-    * > **Z-values** defined in a geographic or metric coordinate system are expressed in meters. However, in local scenes that use a projected coordinate system, vertical units are assumed to be the same as the horizontal units specified by the service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-geometry-Extent.html#zmin)
-    *
-    * @default undefined
     */
   var zmin: js.UndefOr[Double] = js.native
 }

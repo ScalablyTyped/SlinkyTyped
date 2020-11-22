@@ -28,6 +28,9 @@ object Slider {
        with StBuildingComponent[tag.type, typingsSlinky.reactNativeElements.mod.Slider] {
     
     @scala.inline
+    def allowTouchTrack(value: Boolean): this.type = set("allowTouchTrack", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def animateTransitions(value: Boolean): this.type = set("animateTransitions", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -74,6 +77,9 @@ object Slider {
     
     @scala.inline
     def styleNull: this.type = set("style", null)
+    
+    @scala.inline
+    def thumbProps(value: js.Any): this.type = set("thumbProps", value.asInstanceOf[js.Any])
     
     @scala.inline
     def thumbStyle(value: StyleProp[ViewStyle]): this.type = set("thumbStyle", value.asInstanceOf[js.Any])

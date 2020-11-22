@@ -18,7 +18,7 @@ trait LaunchTemplateSpecification extends js.Object {
   var launchTemplateName: js.UndefOr[String] = js.native
   
   /**
-    * The version number of the launch template. Default: The default version of the launch template.
+    * The version number of the launch template, $Latest, or $Default. If the value is $Latest, the latest version of the launch template is used. If the value is $Default, the default version of the launch template is used. Default: $Default.
     */
   var version: js.UndefOr[String] = js.native
 }

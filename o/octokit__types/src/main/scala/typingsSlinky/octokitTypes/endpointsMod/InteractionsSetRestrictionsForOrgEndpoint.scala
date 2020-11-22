@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`5`
+import typingsSlinky.octokitTypes.anon.`4`
 import typingsSlinky.octokitTypes.octokitTypesStrings.collaborators_only
 import typingsSlinky.octokitTypes.octokitTypesStrings.contributors_only
 import typingsSlinky.octokitTypes.octokitTypesStrings.existing_users
@@ -17,7 +17,7 @@ trait InteractionsSetRestrictionsForOrgEndpoint extends js.Object {
     */
   var limit: existing_users | contributors_only | collaborators_only = js.native
   
-  var mediaType: `5` = js.native
+  var mediaType: `4` = js.native
   
   @JSName("org")
   var org_ : String = js.native
@@ -25,7 +25,7 @@ trait InteractionsSetRestrictionsForOrgEndpoint extends js.Object {
 object InteractionsSetRestrictionsForOrgEndpoint {
   
   @scala.inline
-  def apply(limit: existing_users | contributors_only | collaborators_only, mediaType: `5`, org_ : String): InteractionsSetRestrictionsForOrgEndpoint = {
+  def apply(limit: existing_users | contributors_only | collaborators_only, mediaType: `4`, org_ : String): InteractionsSetRestrictionsForOrgEndpoint = {
     val __obj = js.Dynamic.literal(limit = limit.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any])
     __obj.updateDynamic("org")(org_.asInstanceOf[js.Any])
     __obj.asInstanceOf[InteractionsSetRestrictionsForOrgEndpoint]
@@ -50,7 +50,7 @@ object InteractionsSetRestrictionsForOrgEndpoint {
     def setLimit(value: existing_users | contributors_only | collaborators_only): Self = this.set("limit", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `5`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `4`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOrg_(value: String): Self = this.set("org", value.asInstanceOf[js.Any])

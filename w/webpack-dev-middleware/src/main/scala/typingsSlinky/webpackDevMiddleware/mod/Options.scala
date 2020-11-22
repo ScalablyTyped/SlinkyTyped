@@ -64,7 +64,7 @@ trait Options extends js.Object {
   var mimeTypes: js.UndefOr[MimeTypeMap | OverrideMimeTypeMap | Null] = js.native
   
   /** The public path that the middleware is bound to */
-  var publicPath: String = js.native
+  var publicPath: js.UndefOr[String] = js.native
   
   /** Allows users to provide a custom reporter to handle logging within the module */
   var reporter: js.UndefOr[Reporter | Null] = js.native
@@ -91,8 +91,8 @@ trait Options extends js.Object {
 object Options {
   
   @scala.inline
-  def apply(publicPath: String): Options = {
-    val __obj = js.Dynamic.literal(publicPath = publicPath.asInstanceOf[js.Any])
+  def apply(): Options = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[Options]
   }
   
@@ -110,9 +110,6 @@ object Options {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
-    
-    @scala.inline
-    def setPublicPath(value: String): Self = this.set("publicPath", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setFilename(value: String): Self = this.set("filename", value.asInstanceOf[js.Any])
@@ -179,6 +176,12 @@ object Options {
     
     @scala.inline
     def setMimeTypesNull: Self = this.set("mimeTypes", null)
+    
+    @scala.inline
+    def setPublicPath(value: String): Self = this.set("publicPath", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePublicPath: Self = this.set("publicPath", js.undefined)
     
     @scala.inline
     def setReporter(value: (/* middlewareOptions */ Options, /* reporterOptions */ ReporterOptions) => Unit): Self = this.set("reporter", js.Any.fromFunction2(value))

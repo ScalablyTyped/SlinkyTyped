@@ -78,7 +78,7 @@ trait IEditableTextProps
   var onConfirm: js.UndefOr[js.Function1[/* value */ String, Unit]] = js.native
   
   /** Callback invoked after the user enters edit mode. */
-  var onEdit: js.UndefOr[js.Function1[/* value */ String, Unit]] = js.native
+  var onEdit: js.UndefOr[js.Function1[/* value */ js.UndefOr[String], Unit]] = js.native
   
   /**
     * Placeholder text when there is no value.
@@ -204,7 +204,7 @@ object IEditableTextProps {
     def deleteOnConfirm: Self = this.set("onConfirm", js.undefined)
     
     @scala.inline
-    def setOnEdit(value: /* value */ String => Unit): Self = this.set("onEdit", js.Any.fromFunction1(value))
+    def setOnEdit(value: /* value */ js.UndefOr[String] => Unit): Self = this.set("onEdit", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnEdit: Self = this.set("onEdit", js.undefined)

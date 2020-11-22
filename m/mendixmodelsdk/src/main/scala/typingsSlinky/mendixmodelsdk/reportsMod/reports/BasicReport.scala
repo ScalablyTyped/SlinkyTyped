@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.reportsMod.reports
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -30,12 +31,13 @@ import typingsSlinky.mendixmodelsdk.pagesMod.pages.TemplateGridContents
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.VerticalFlow
 import typingsSlinky.mendixmodelsdk.pagesMod.pages.WebLayoutContent
 import typingsSlinky.mendixmodelsdk.reportsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/report-grid relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/report-grid relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/reports", "reports.BasicReport")
 @js.native
@@ -45,8 +47,8 @@ class BasicReport protected () extends ReportWidget {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def aggregates: IList[BasicReportAggregate] = js.native
@@ -55,9 +57,6 @@ class BasicReport protected () extends ReportWidget {
   
   def isPagingEnabled: Boolean = js.native
   def isPagingEnabled_=(newValue: Boolean): Unit = js.native
-  
-  @JSName("model")
-  var model_FBasicReport: IModel = js.native
   
   def pageSize: Double = js.native
   def pageSize_=(newValue: Double): Unit = js.native

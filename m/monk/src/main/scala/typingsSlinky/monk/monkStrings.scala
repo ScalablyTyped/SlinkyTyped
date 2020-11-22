@@ -15,6 +15,9 @@ object monkStrings {
   def DEFAULT: DEFAULT = "DEFAULT".asInstanceOf[DEFAULT]
   
   @scala.inline
+  def FindOptions: FindOptions = "FindOptions".asInstanceOf[FindOptions]
+  
+  @scala.inline
   def GSSAPI: GSSAPI = "GSSAPI".asInstanceOf[GSSAPI]
   
   @scala.inline
@@ -61,6 +64,9 @@ object monkStrings {
   
   @js.native
   sealed trait DEFAULT extends js.Object
+  
+  @js.native
+  sealed trait FindOptions extends js.Object
   
   @js.native
   sealed trait GSSAPI extends js.Object

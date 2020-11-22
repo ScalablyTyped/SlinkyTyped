@@ -11,6 +11,8 @@ trait Down extends js.Object {
   var color: js.UndefOr[ColorType] = js.native
   
   var down: js.UndefOr[js.Any] = js.native
+  
+  var up: js.UndefOr[js.Any] = js.native
 }
 object Down {
   
@@ -46,5 +48,11 @@ object Down {
     
     @scala.inline
     def deleteDown: Self = this.set("down", js.undefined)
+    
+    @scala.inline
+    def setUp(value: js.Any): Self = this.set("up", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteUp: Self = this.set("up", js.undefined)
   }
 }

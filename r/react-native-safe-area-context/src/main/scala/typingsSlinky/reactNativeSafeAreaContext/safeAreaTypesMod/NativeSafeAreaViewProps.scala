@@ -2,6 +2,7 @@ package typingsSlinky.reactNativeSafeAreaContext.safeAreaTypesMod
 
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -9,7 +10,6 @@ import typingsSlinky.reactNative.mod.AccessibilityState
 import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
@@ -33,7 +33,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined react-native.react-native.ViewProps & {  children :react.react.ReactNode | undefined,   mode :'padding' | 'margin' | undefined,   edges :std.Array<react-native-safe-area-context.react-native-safe-area-context/lib/typescript/src/SafeArea.types.Edge> | undefined} */
+/* Inlined react-native.react-native.ViewProps & {  children :react.react.ReactNode | undefined,   mode :'padding' | 'margin' | undefined,   edges :std.ReadonlyArray<react-native-safe-area-context.react-native-safe-area-context/lib/typescript/src/SafeArea.types.Edge> | undefined} */
 @js.native
 trait NativeSafeAreaViewProps extends js.Object {
   
@@ -64,7 +64,7 @@ trait NativeSafeAreaViewProps extends js.Object {
   var accessibilityHint: js.UndefOr[String] = js.native
   
   /**
-    * https://facebook.github.io/react-native/docs/accessibility#accessibilityignoresinvertcolorsios
+    * https://reactnative.dev/docs/accessibility#accessibilityignoresinvertcolorsios
     * @platform ios
     */
   var accessibilityIgnoresInvertColors: js.UndefOr[Boolean] = js.native
@@ -219,7 +219,7 @@ trait NativeSafeAreaViewProps extends js.Object {
     *
     * {nativeEvent: { layout: {x, y, width, height}}}.
     */
-  var onLayout: js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]] = js.native
+  var onLayout: js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]] = js.native
   
   /**
     * When accessible is true, the system will invoke this function when the user performs the magic tap gesture.
@@ -619,7 +619,7 @@ object NativeSafeAreaViewProps {
     def deleteOnAccessibilityTap: Self = this.set("onAccessibilityTap", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: /* event */ LayoutChangeEvent => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
+    def setOnLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): Self = this.set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)

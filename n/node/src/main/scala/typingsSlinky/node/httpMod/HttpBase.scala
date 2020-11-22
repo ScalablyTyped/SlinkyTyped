@@ -23,6 +23,13 @@ trait HttpBase extends js.Object {
     */
   var maxHeadersCount: Double | Null = js.native
   
+  /**
+    * Sets the timeout value in milliseconds for receiving the entire request from the client.
+    * @default 0
+    * {@link https://nodejs.org/api/http.html#http_server_requesttimeout}
+    */
+  var requestTimeout: Double = js.native
+  
   def setTimeout(): this.type = js.native
   def setTimeout(callback: js.Function0[Unit]): this.type = js.native
   def setTimeout(msecs: js.UndefOr[scala.Nothing], callback: js.Function0[Unit]): this.type = js.native

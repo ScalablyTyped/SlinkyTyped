@@ -21,7 +21,7 @@ trait CalendarEvent_ extends js.Object {
   /**
     * _Adds a recurrence rule._
     *
-    * Recurrence rules specify when the reminder should be repeated. See the documentation of RecurrenceRule for more information on creating rules.
+    * Recurrence rules specify when the event or reminder should be repeated. See the documentation of RecurrenceRule for more information on creating rules.
     * @param recurrenceRule - Recurrence rule to add to the reminder.
     * @see https://docs.scriptable.app/calendarevent/#-addrecurrencerule
     */

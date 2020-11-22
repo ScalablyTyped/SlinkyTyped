@@ -10,17 +10,17 @@ trait DeleteEventRequest extends js.Object {
   /**
     * The ID of the event to delete.
     */
-  var eventId: String = js.native
+  var eventId: identifier = js.native
   
   /**
     * The name of the event type.
     */
-  var eventTypeName: String = js.native
+  var eventTypeName: identifier = js.native
 }
 object DeleteEventRequest {
   
   @scala.inline
-  def apply(eventId: String, eventTypeName: String): DeleteEventRequest = {
+  def apply(eventId: identifier, eventTypeName: identifier): DeleteEventRequest = {
     val __obj = js.Dynamic.literal(eventId = eventId.asInstanceOf[js.Any], eventTypeName = eventTypeName.asInstanceOf[js.Any])
     __obj.asInstanceOf[DeleteEventRequest]
   }
@@ -41,9 +41,9 @@ object DeleteEventRequest {
     }
     
     @scala.inline
-    def setEventId(value: String): Self = this.set("eventId", value.asInstanceOf[js.Any])
+    def setEventId(value: identifier): Self = this.set("eventId", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setEventTypeName(value: String): Self = this.set("eventTypeName", value.asInstanceOf[js.Any])
+    def setEventTypeName(value: identifier): Self = this.set("eventTypeName", value.asInstanceOf[js.Any])
   }
 }

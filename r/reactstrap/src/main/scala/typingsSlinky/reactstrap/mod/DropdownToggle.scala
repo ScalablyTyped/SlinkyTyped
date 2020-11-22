@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "DropdownToggle")
+@JSImport("reactstrap/es", "DropdownToggle")
 @js.native
-class DropdownToggle[T] ()
+class DropdownToggle ()
   extends Component[DropdownToggleProps, js.Object, js.Any]

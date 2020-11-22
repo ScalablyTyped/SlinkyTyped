@@ -45,6 +45,11 @@ trait PodSecurityContext extends js.Object {
   var seLinuxOptions: SELinuxOptions = js.native
   
   /**
+    * The seccomp options to use by the containers in this pod.
+    */
+  var seccompProfile: SeccompProfile = js.native
+  
+  /**
     * A list of groups applied to the first process run in each container, in addition to the container's primary GID.  If unspecified, no groups will be added to any container.
     */
   var supplementalGroups: js.Array[Double] = js.native
@@ -69,11 +74,12 @@ object PodSecurityContext {
     runAsNonRoot: Boolean,
     runAsUser: Double,
     seLinuxOptions: SELinuxOptions,
+    seccompProfile: SeccompProfile,
     supplementalGroups: js.Array[Double],
     sysctls: js.Array[Sysctl],
     windowsOptions: WindowsSecurityContextOptions
   ): PodSecurityContext = {
-    val __obj = js.Dynamic.literal(fsGroup = fsGroup.asInstanceOf[js.Any], fsGroupChangePolicy = fsGroupChangePolicy.asInstanceOf[js.Any], runAsGroup = runAsGroup.asInstanceOf[js.Any], runAsNonRoot = runAsNonRoot.asInstanceOf[js.Any], runAsUser = runAsUser.asInstanceOf[js.Any], seLinuxOptions = seLinuxOptions.asInstanceOf[js.Any], supplementalGroups = supplementalGroups.asInstanceOf[js.Any], sysctls = sysctls.asInstanceOf[js.Any], windowsOptions = windowsOptions.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(fsGroup = fsGroup.asInstanceOf[js.Any], fsGroupChangePolicy = fsGroupChangePolicy.asInstanceOf[js.Any], runAsGroup = runAsGroup.asInstanceOf[js.Any], runAsNonRoot = runAsNonRoot.asInstanceOf[js.Any], runAsUser = runAsUser.asInstanceOf[js.Any], seLinuxOptions = seLinuxOptions.asInstanceOf[js.Any], seccompProfile = seccompProfile.asInstanceOf[js.Any], supplementalGroups = supplementalGroups.asInstanceOf[js.Any], sysctls = sysctls.asInstanceOf[js.Any], windowsOptions = windowsOptions.asInstanceOf[js.Any])
     __obj.asInstanceOf[PodSecurityContext]
   }
   
@@ -109,6 +115,9 @@ object PodSecurityContext {
     
     @scala.inline
     def setSeLinuxOptions(value: SELinuxOptions): Self = this.set("seLinuxOptions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSeccompProfile(value: SeccompProfile): Self = this.set("seccompProfile", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSupplementalGroupsVarargs(value: Double*): Self = this.set("supplementalGroups", js.Array(value :_*))

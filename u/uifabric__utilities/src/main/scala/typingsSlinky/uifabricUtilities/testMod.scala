@@ -24,5 +24,5 @@ object testMod extends js.Object {
     fn: js.Function0[Unit]
   ): Unit = js.native
   
-  def setRenderSpy(wrapper: ReactWrapper[js.Object, js.Object, ReactComponentClass[js.Object]]): SinonSpy = js.native
+  def setRenderSpy(wrapper: ReactWrapper[js.Object, js.Object, ReactComponentClass[js.Object]]): SinonSpy[js.Array[_], _] = js.native
 }

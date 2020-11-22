@@ -18,7 +18,7 @@ object IPixelMultiLineGeometry {
   @scala.inline
   def apply(
     equals: IPixelGeometry => Boolean,
-    events: IEventManager,
+    events: IEventManager[js.Object],
     getBounds: () => js.Array[js.Array[Double]] | Null,
     getClosest: js.Array[Double] => js.Object,
     getCoordinates: () => js.Array[js.Array[js.Array[Double]]],

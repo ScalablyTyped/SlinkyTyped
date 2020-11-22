@@ -23,6 +23,9 @@ trait RouteState extends js.Object {
     */
   val destinationCidrBlock: js.UndefOr[Input[String]] = js.native
   
+  /**
+    * Indicates how the Client VPN route was added. Will be `add-route` for routes created by this resource.
+    */
   val origin: js.UndefOr[Input[String]] = js.native
   
   /**
@@ -30,6 +33,9 @@ trait RouteState extends js.Object {
     */
   val targetVpcSubnetId: js.UndefOr[Input[String]] = js.native
   
+  /**
+    * The type of the route.
+    */
   val `type`: js.UndefOr[Input[String]] = js.native
 }
 object RouteState {

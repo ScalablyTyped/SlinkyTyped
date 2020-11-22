@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LambdaActivity extends js.Object {
   
   /**
-    * The number of messages passed to the Lambda function for processing. The AWS Lambda function must be able to process all of these messages within five minutes, which is the maximum timeout duration for Lambda functions.
+    * The number of messages passed to the Lambda function for processing. The Lambda function must be able to process all of these messages within five minutes, which is the maximum timeout duration for Lambda functions.
     */
   var batchSize: ActivityBatchSize = js.native
   
@@ -18,7 +18,7 @@ trait LambdaActivity extends js.Object {
   var lambdaName: LambdaName = js.native
   
   /**
-    * The name of the 'lambda' activity.
+    * The name of the lambda activity.
     */
   var name: ActivityName = js.native
   

@@ -1,7 +1,7 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
 import typingsSlinky.octokitTypes.anon.Avatarurl
-import typingsSlinky.octokitTypes.anon.Closedissues
+import typingsSlinky.octokitTypes.anon.Closedat
 import typingsSlinky.octokitTypes.anon.Color
 import typingsSlinky.octokitTypes.anon.Commits
 import typingsSlinky.octokitTypes.anon.Label
@@ -75,7 +75,7 @@ trait PullsCreateResponseData extends js.Object {
   
   var merged_by: Avatarurl = js.native
   
-  var milestone: Closedissues = js.native
+  var milestone: Closedat = js.native
   
   var node_id: String = js.native
   
@@ -142,7 +142,7 @@ object PullsCreateResponseData {
     merged: Boolean,
     merged_at: String,
     merged_by: Avatarurl,
-    milestone: Closedissues,
+    milestone: Closedat,
     node_id: String,
     number: Double,
     patch_url: String,
@@ -278,7 +278,7 @@ object PullsCreateResponseData {
     def setMerged_by(value: Avatarurl): Self = this.set("merged_by", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMilestone(value: Closedissues): Self = this.set("milestone", value.asInstanceOf[js.Any])
+    def setMilestone(value: Closedat): Self = this.set("milestone", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setNode_id(value: String): Self = this.set("node_id", value.asInstanceOf[js.Any])

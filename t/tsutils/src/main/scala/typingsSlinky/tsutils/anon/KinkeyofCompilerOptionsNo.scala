@@ -14,6 +14,7 @@ import typingsSlinky.tsutils.tsutilsStrings.composite
 import typingsSlinky.tsutils.tsutilsStrings.declaration
 import typingsSlinky.tsutils.tsutilsStrings.declarationDir
 import typingsSlinky.tsutils.tsutilsStrings.declarationMap
+import typingsSlinky.tsutils.tsutilsStrings.disableReferencedProjectLoad
 import typingsSlinky.tsutils.tsutilsStrings.disableSizeLimit
 import typingsSlinky.tsutils.tsutilsStrings.disableSolutionSearching
 import typingsSlinky.tsutils.tsutilsStrings.disableSourceOfProjectReferenceRedirect
@@ -32,6 +33,8 @@ import typingsSlinky.tsutils.tsutilsStrings.inlineSources
 import typingsSlinky.tsutils.tsutilsStrings.isolatedModules
 import typingsSlinky.tsutils.tsutilsStrings.jsx
 import typingsSlinky.tsutils.tsutilsStrings.jsxFactory
+import typingsSlinky.tsutils.tsutilsStrings.jsxFragmentFactory
+import typingsSlinky.tsutils.tsutilsStrings.jsxImportSource
 import typingsSlinky.tsutils.tsutilsStrings.keyofStringsOnly
 import typingsSlinky.tsutils.tsutilsStrings.lib
 import typingsSlinky.tsutils.tsutilsStrings.locale
@@ -52,6 +55,7 @@ import typingsSlinky.tsutils.tsutilsStrings.noImplicitUseStrict
 import typingsSlinky.tsutils.tsutilsStrings.noLib
 import typingsSlinky.tsutils.tsutilsStrings.noResolve
 import typingsSlinky.tsutils.tsutilsStrings.noStrictGenericChecks
+import typingsSlinky.tsutils.tsutilsStrings.noUncheckedIndexedAccess
 import typingsSlinky.tsutils.tsutilsStrings.noUnusedLocals
 import typingsSlinky.tsutils.tsutilsStrings.noUnusedParameters
 import typingsSlinky.tsutils.tsutilsStrings.out
@@ -120,6 +124,8 @@ trait KinkeyofCompilerOptionsNo extends js.Object {
   
   var declarationMap: js.UndefOr[typingsSlinky.tsutils.tsutilsStrings.declarationMap] = js.native
   
+  var disableReferencedProjectLoad: js.UndefOr[typingsSlinky.tsutils.tsutilsStrings.disableReferencedProjectLoad] = js.native
+  
   var disableSizeLimit: js.UndefOr[typingsSlinky.tsutils.tsutilsStrings.disableSizeLimit] = js.native
   
   var disableSolutionSearching: js.UndefOr[typingsSlinky.tsutils.tsutilsStrings.disableSolutionSearching] = js.native
@@ -155,6 +161,10 @@ trait KinkeyofCompilerOptionsNo extends js.Object {
   var jsx: js.UndefOr[typingsSlinky.tsutils.tsutilsStrings.jsx] = js.native
   
   var jsxFactory: js.UndefOr[typingsSlinky.tsutils.tsutilsStrings.jsxFactory] = js.native
+  
+  var jsxFragmentFactory: js.UndefOr[typingsSlinky.tsutils.tsutilsStrings.jsxFragmentFactory] = js.native
+  
+  var jsxImportSource: js.UndefOr[typingsSlinky.tsutils.tsutilsStrings.jsxImportSource] = js.native
   
   var keyofStringsOnly: js.UndefOr[typingsSlinky.tsutils.tsutilsStrings.keyofStringsOnly] = js.native
   
@@ -195,6 +205,8 @@ trait KinkeyofCompilerOptionsNo extends js.Object {
   var noResolve: js.UndefOr[typingsSlinky.tsutils.tsutilsStrings.noResolve] = js.native
   
   var noStrictGenericChecks: js.UndefOr[typingsSlinky.tsutils.tsutilsStrings.noStrictGenericChecks] = js.native
+  
+  var noUncheckedIndexedAccess: js.UndefOr[typingsSlinky.tsutils.tsutilsStrings.noUncheckedIndexedAccess] = js.native
   
   var noUnusedLocals: js.UndefOr[typingsSlinky.tsutils.tsutilsStrings.noUnusedLocals] = js.native
   
@@ -368,6 +380,12 @@ object KinkeyofCompilerOptionsNo {
     def deleteDeclarationMap: Self = this.set("declarationMap", js.undefined)
     
     @scala.inline
+    def setDisableReferencedProjectLoad(value: disableReferencedProjectLoad): Self = this.set("disableReferencedProjectLoad", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableReferencedProjectLoad: Self = this.set("disableReferencedProjectLoad", js.undefined)
+    
+    @scala.inline
     def setDisableSizeLimit(value: disableSizeLimit): Self = this.set("disableSizeLimit", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -474,6 +492,18 @@ object KinkeyofCompilerOptionsNo {
     
     @scala.inline
     def deleteJsxFactory: Self = this.set("jsxFactory", js.undefined)
+    
+    @scala.inline
+    def setJsxFragmentFactory(value: jsxFragmentFactory): Self = this.set("jsxFragmentFactory", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJsxFragmentFactory: Self = this.set("jsxFragmentFactory", js.undefined)
+    
+    @scala.inline
+    def setJsxImportSource(value: jsxImportSource): Self = this.set("jsxImportSource", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJsxImportSource: Self = this.set("jsxImportSource", js.undefined)
     
     @scala.inline
     def setKeyofStringsOnly(value: keyofStringsOnly): Self = this.set("keyofStringsOnly", value.asInstanceOf[js.Any])
@@ -594,6 +624,12 @@ object KinkeyofCompilerOptionsNo {
     
     @scala.inline
     def deleteNoStrictGenericChecks: Self = this.set("noStrictGenericChecks", js.undefined)
+    
+    @scala.inline
+    def setNoUncheckedIndexedAccess(value: noUncheckedIndexedAccess): Self = this.set("noUncheckedIndexedAccess", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNoUncheckedIndexedAccess: Self = this.set("noUncheckedIndexedAccess", js.undefined)
     
     @scala.inline
     def setNoUnusedLocals(value: noUnusedLocals): Self = this.set("noUnusedLocals", value.asInstanceOf[js.Any])

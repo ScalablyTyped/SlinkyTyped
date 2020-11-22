@@ -150,7 +150,7 @@ object mod extends js.Object {
   
   @js.native
   class PgLiteral protected () extends default {
-    def this(str: String) = this()
+    def this(value: String) = this()
   }
   /* static members */
   @js.native

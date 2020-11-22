@@ -13,22 +13,18 @@ trait Workflow extends Accessor {
     * Cancels the active workflow.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-Workflow.html#cancel)
-    *
-    *
     */
   def cancel(): Unit = js.native
   
   /**
-    * Call this method when the workflow is considered finished. This method is used to help process the editing results.
+    * Call this method when the workflow is considered finished.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-Workflow.html#commit)
-    *
-    *
     */
   def commit(): Unit = js.native
   
   /**
-    * Shared workflow data.  Can be either [CreateWorkflowData](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-CreateWorkflowData.html) or [UpdateWorkflowData](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-UpdateWorkflowData.html).
+    * Shared workflow data.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-Workflow.html#data)
     */
@@ -52,8 +48,6 @@ trait Workflow extends Accessor {
     * Moves to the next step in the workflow.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-Workflow.html#next)
-    *
-    *
     */
   def next(): Unit = js.native
   
@@ -61,8 +55,6 @@ trait Workflow extends Accessor {
     * Moves to the previous step in the workflow.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-Workflow.html#previous)
-    *
-    *
     */
   def previous(): Unit = js.native
   
@@ -70,8 +62,6 @@ trait Workflow extends Accessor {
     * Resets the workflow.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-Workflow.html#reset)
-    *
-    *
     */
   def reset(): Unit = js.native
   
@@ -79,8 +69,6 @@ trait Workflow extends Accessor {
     * Starts the workflow.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-Workflow.html#start)
-    *
-    *
     */
   def start(): Unit = js.native
   
@@ -88,8 +76,6 @@ trait Workflow extends Accessor {
     * Indicates whether the workflow is considered active.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-Workflow.html#started)
-    *
-    * @default false
     */
   val started: Boolean = js.native
   
@@ -102,13 +88,6 @@ trait Workflow extends Accessor {
   
   /**
     * Value indicating the workflow type.
-    *
-    * Possible Value | Description | Example
-    * ---------------|------------|----------
-    * create | Indicated in the widget via the `Add feature` option. This allows the end user to create new features in the feature service. | ![combinedcreate](https://developers.arcgis.com/javascript/assets/img/apiref/widgets/editor_combined_create.png)
-    * update | Indicated in the widget via the `Edit feature` option. This allows the end user to update and/or delete features in the feature service. | ![combinedupdate](https://developers.arcgis.com/javascript/assets/img/apiref/widgets/editor_combined_update.png)
-    *
-    * > These workflows are only enabled if the feature service allows these operations. For example, if a feature service is only enabled to allow updates, `Add features` is not enabled.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Editor-Workflow.html#type)
     */

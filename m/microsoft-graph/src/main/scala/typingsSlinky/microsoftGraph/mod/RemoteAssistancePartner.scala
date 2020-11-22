@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RemoteAssistancePartner extends Entity {
   
   // Display name of the partner.
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   // Timestamp of the last request sent to Intune by the TEM partner.
   var lastConnectionDateTime: js.UndefOr[String] = js.native
@@ -17,7 +17,7 @@ trait RemoteAssistancePartner extends Entity {
   var onboardingStatus: js.UndefOr[RemoteAssistanceOnboardingStatus] = js.native
   
   // URL of the partner's onboarding portal, where an administrator can configure their Remote Assistance service.
-  var onboardingUrl: js.UndefOr[String] = js.native
+  var onboardingUrl: js.UndefOr[NullableOption[String]] = js.native
 }
 object RemoteAssistancePartner {
   
@@ -43,10 +43,13 @@ object RemoteAssistancePartner {
     }
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
+    
+    @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
     
     @scala.inline
     def setLastConnectionDateTime(value: String): Self = this.set("lastConnectionDateTime", value.asInstanceOf[js.Any])
@@ -61,9 +64,12 @@ object RemoteAssistancePartner {
     def deleteOnboardingStatus: Self = this.set("onboardingStatus", js.undefined)
     
     @scala.inline
-    def setOnboardingUrl(value: String): Self = this.set("onboardingUrl", value.asInstanceOf[js.Any])
+    def setOnboardingUrl(value: NullableOption[String]): Self = this.set("onboardingUrl", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnboardingUrl: Self = this.set("onboardingUrl", js.undefined)
+    
+    @scala.inline
+    def setOnboardingUrlNull: Self = this.set("onboardingUrl", null)
   }
 }

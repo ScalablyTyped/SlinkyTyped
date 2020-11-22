@@ -48,7 +48,7 @@ trait ModifyClusterMessage extends js.Object {
   var ElasticIp: js.UndefOr[String] = js.native
   
   /**
-    * Indicates whether the cluster is encrypted. If the value is encrypted (true) and you provide a value for the KmsKeyId parameter, we encrypt the cluster with the provided KmsKeyId. If you don't provide a KmsKeyId, we encrypt with the default key. In the China region we use legacy encryption if you specify that the cluster is encrypted. If the value is not encrypted (false), then the cluster is decrypted. 
+    * Indicates whether the cluster is encrypted. If the value is encrypted (true) and you provide a value for the KmsKeyId parameter, we encrypt the cluster with the provided KmsKeyId. If you don't provide a KmsKeyId, we encrypt with the default key.  If the value is not encrypted (false), then the cluster is decrypted. 
     */
   var Encrypted: js.UndefOr[BooleanOptional] = js.native
   

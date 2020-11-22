@@ -2,7 +2,7 @@ package typingsSlinky.awsSdk.schemasMod
 
 import typingsSlinky.awsSdk.anon.DescribeCodeBindingReques
 import typingsSlinky.awsSdk.awsSdkStrings.codeBindingExists
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -183,6 +183,20 @@ trait Schemas extends Service {
     params: DescribeSchemaRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeSchemaResponse, Unit]
   ): Request[DescribeSchemaResponse, AWSError] = js.native
+  
+  /**
+    * 
+    */
+  def exportSchema(): Request[ExportSchemaResponse, AWSError] = js.native
+  def exportSchema(callback: js.Function2[/* err */ AWSError, /* data */ ExportSchemaResponse, Unit]): Request[ExportSchemaResponse, AWSError] = js.native
+  /**
+    * 
+    */
+  def exportSchema(params: ExportSchemaRequest): Request[ExportSchemaResponse, AWSError] = js.native
+  def exportSchema(
+    params: ExportSchemaRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ExportSchemaResponse, Unit]
+  ): Request[ExportSchemaResponse, AWSError] = js.native
   
   /**
     * Get the code binding source URI.

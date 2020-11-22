@@ -1,7 +1,7 @@
 package typingsSlinky.officeUiFabricReact.maskedTextFieldMod
 
+import typingsSlinky.officeUiFabricReact.textFieldTypesMod.IMaskedTextFieldProps
 import typingsSlinky.officeUiFabricReact.textFieldTypesMod.ITextField
-import typingsSlinky.officeUiFabricReact.textFieldTypesMod.ITextFieldProps
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,12 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("office-ui-fabric-react/lib/components/TextField/MaskedTextField/MaskedTextField", "MaskedTextField")
 @js.native
 class MaskedTextField protected ()
-  extends Component[ITextFieldProps, IMaskedTextFieldState, js.Any]
+  extends Component[IMaskedTextFieldProps, IMaskedTextFieldState, js.Any]
      with ITextField {
-  def this(props: ITextFieldProps) = this()
+  def this(props: IMaskedTextFieldProps) = this()
   
   @JSName("UNSAFE_componentWillReceiveProps")
-  def UNSAFE_componentWillReceiveProps_MMaskedTextField(newProps: ITextFieldProps): Unit = js.native
+  def UNSAFE_componentWillReceiveProps_MMaskedTextField(newProps: IMaskedTextFieldProps): Unit = js.native
   
   /** The stored selection data prior to input change events. */
   var _changeSelectionData: js.Any = js.native
@@ -68,5 +68,5 @@ class MaskedTextField protected ()
 @js.native
 object MaskedTextField extends js.Object {
   
-  var defaultProps: ITextFieldProps = js.native
+  var defaultProps: IMaskedTextFieldProps = js.native
 }

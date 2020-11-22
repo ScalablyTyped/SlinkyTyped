@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap", "PopoverHeader")
+@JSImport("reactstrap/es", "PopoverHeader")
 @js.native
-class PopoverHeader[T] ()
+class PopoverHeader ()
   extends Component[PopoverHeaderProps, js.Object, js.Any]

@@ -8,6 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DotsProps extends js.Object {
   
+  var className: js.UndefOr[String] = js.native
+  
   var number: js.UndefOr[Double] = js.native
   
   var onChange: js.UndefOr[js.Function1[/* value */ Double, Unit]] = js.native
@@ -40,6 +42,12 @@ object DotsProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
     def setNumber(value: Double): Self = this.set("number", value.asInstanceOf[js.Any])

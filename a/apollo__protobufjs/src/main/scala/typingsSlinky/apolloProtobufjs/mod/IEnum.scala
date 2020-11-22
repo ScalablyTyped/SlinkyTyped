@@ -9,15 +9,15 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IEnum extends AnyNestedObject {
   
   /** Enum options */
-  var options: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var options: js.UndefOr[StringDictionary[js.UndefOr[js.Any]]] = js.native
   
   /** Enum values */
-  var values: StringDictionary[Double] = js.native
+  var values: StringDictionary[js.UndefOr[Double]] = js.native
 }
 object IEnum {
   
   @scala.inline
-  def apply(values: StringDictionary[Double]): IEnum = {
+  def apply(values: StringDictionary[js.UndefOr[Double]]): IEnum = {
     val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEnum]
   }
@@ -38,10 +38,10 @@ object IEnum {
     }
     
     @scala.inline
-    def setValues(value: StringDictionary[Double]): Self = this.set("values", value.asInstanceOf[js.Any])
+    def setValues(value: StringDictionary[js.UndefOr[Double]]): Self = this.set("values", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOptions(value: StringDictionary[js.Any]): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: StringDictionary[js.UndefOr[js.Any]]): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOptions: Self = this.set("options", js.undefined)

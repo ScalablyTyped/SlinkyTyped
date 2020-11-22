@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createComma extends js.Object {
   
+  /** @deprecated Use `factory.createComma` or the factory supplied by your transformation context instead. */
   def apply(left: Expression, right: Expression): Expression = js.native
 }

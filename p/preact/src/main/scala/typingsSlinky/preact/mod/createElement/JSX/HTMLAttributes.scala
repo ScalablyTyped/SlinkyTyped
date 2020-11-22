@@ -1,6 +1,5 @@
 package typingsSlinky.preact.mod.createElement.JSX
 
-import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.EventTarget
 import typingsSlinky.preact.mod.ClassAttributes
 import typingsSlinky.preact.preactStrings.`lazy`
@@ -53,7 +52,7 @@ trait HTMLAttributes[RefType /* <: EventTarget */]
   
   var autofocus: js.UndefOr[Boolean] = js.native
   
-  var capture: js.UndefOr[Boolean] = js.native
+  var capture: js.UndefOr[Boolean | String] = js.native
   
   var cellPadding: js.UndefOr[Double | String] = js.native
   
@@ -284,7 +283,7 @@ trait HTMLAttributes[RefType /* <: EventTarget */]
   
   var step: js.UndefOr[Double | String] = js.native
   
-  var style: js.UndefOr[String | (StringDictionary[String | Double])] = js.native
+  var style: js.UndefOr[String | typingsSlinky.preact.jsxMod.JSXInternal.CSSProperties] = js.native
   
   var summary: js.UndefOr[String] = js.native
   
@@ -420,7 +419,7 @@ object HTMLAttributes {
     def deleteAutoPlay: Self = this.set("autoPlay", js.undefined)
     
     @scala.inline
-    def setCapture(value: Boolean): Self = this.set("capture", value.asInstanceOf[js.Any])
+    def setCapture(value: Boolean | String): Self = this.set("capture", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCapture: Self = this.set("capture", js.undefined)
@@ -1104,7 +1103,7 @@ object HTMLAttributes {
     def deleteStep: Self = this.set("step", js.undefined)
     
     @scala.inline
-    def setStyle(value: String | (StringDictionary[String | Double])): Self = this.set("style", value.asInstanceOf[js.Any])
+    def setStyle(value: String | typingsSlinky.preact.jsxMod.JSXInternal.CSSProperties): Self = this.set("style", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)

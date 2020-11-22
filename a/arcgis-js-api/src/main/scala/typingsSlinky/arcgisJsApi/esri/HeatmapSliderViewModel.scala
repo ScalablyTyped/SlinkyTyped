@@ -11,8 +11,6 @@ trait HeatmapSliderViewModel extends SmartMappingSliderViewModel {
     * Generates the color ramp gradient rendered on the slider.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-smartMapping-HeatmapSlider-HeatmapSliderViewModel.html#getStopInfo)
-    *
-    *
     */
   def getStopInfo(): js.Array[HeatmapSliderViewModelStopInfo] = js.native
   

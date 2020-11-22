@@ -40,7 +40,7 @@ trait BootstrapOptions extends js.Object {
     * coalesced and the change detection will be triggered multiple times.
     * And if this option be set to true, the change detection will be
     * triggered async by scheduling a animation frame. So in the case above,
-    * the change detection will only be trigged once.
+    * the change detection will only be triggered once.
     */
   var ngZoneEventCoalescing: js.UndefOr[Boolean] = js.native
 }

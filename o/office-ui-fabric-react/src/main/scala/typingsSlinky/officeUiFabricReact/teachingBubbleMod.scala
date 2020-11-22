@@ -2,7 +2,6 @@ package typingsSlinky.officeUiFabricReact
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.officeUiFabricReact.anon.CalloutProps
-import typingsSlinky.officeUiFabricReact.anon.HasCondensedHeadline
 import typingsSlinky.officeUiFabricReact.teachingBubbleTypesMod.ITeachingBubbleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,11 +31,5 @@ object teachingBubbleMod extends js.Object {
   class TeachingBubbleContentBase protected ()
     extends typingsSlinky.officeUiFabricReact.teachingBubbleContentBaseMod.TeachingBubbleContentBase {
     def this(props: ITeachingBubbleProps) = this()
-  }
-  /* static members */
-  @js.native
-  object TeachingBubbleContentBase extends js.Object {
-    
-    var defaultProps: HasCondensedHeadline = js.native
   }
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.BooleanLiteral
+import typingsSlinky.babelTraverse.babelTraverseStrings.VariableDeclarator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `127` extends js.Object {
   
-  var `type`: BooleanLiteral = js.native
+  var `type`: VariableDeclarator = js.native
 }
 object `127` {
   
   @scala.inline
-  def apply(`type`: BooleanLiteral): `127` = {
+  def apply(`type`: VariableDeclarator): `127` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`127`]
@@ -35,6 +35,6 @@ object `127` {
     }
     
     @scala.inline
-    def setType(value: BooleanLiteral): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: VariableDeclarator): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

@@ -7,12 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait IEventEmitter extends js.Object {
   
-  var events: IEventManager = js.native
+  var events: IEventManager[js.Object] = js.native
 }
 object IEventEmitter {
   
   @scala.inline
-  def apply(events: IEventManager): IEventEmitter = {
+  def apply(events: IEventManager[js.Object]): IEventEmitter = {
     val __obj = js.Dynamic.literal(events = events.asInstanceOf[js.Any])
     __obj.asInstanceOf[IEventEmitter]
   }
@@ -33,6 +33,6 @@ object IEventEmitter {
     }
     
     @scala.inline
-    def setEvents(value: IEventManager): Self = this.set("events", value.asInstanceOf[js.Any])
+    def setEvents(value: IEventManager[js.Object]): Self = this.set("events", value.asInstanceOf[js.Any])
   }
 }

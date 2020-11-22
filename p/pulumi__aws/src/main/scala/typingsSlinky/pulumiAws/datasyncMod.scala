@@ -4,6 +4,8 @@ import typingsSlinky.pulumiAws.agentMod.AgentArgs
 import typingsSlinky.pulumiAws.agentMod.AgentState
 import typingsSlinky.pulumiAws.efsLocationMod.EfsLocationArgs
 import typingsSlinky.pulumiAws.efsLocationMod.EfsLocationState
+import typingsSlinky.pulumiAws.locationFsxWindowsMod.LocationFsxWindowsArgs
+import typingsSlinky.pulumiAws.locationFsxWindowsMod.LocationFsxWindowsState
 import typingsSlinky.pulumiAws.locationSmbMod.LocationSmbArgs
 import typingsSlinky.pulumiAws.locationSmbMod.LocationSmbState
 import typingsSlinky.pulumiAws.nfsLocationMod.NfsLocationArgs
@@ -99,6 +101,44 @@ object datasyncMod extends js.Object {
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/datasync/efsLocation.EfsLocation */ Boolean = js.native
+  }
+  
+  @js.native
+  class LocationFsxWindows protected ()
+    extends typingsSlinky.pulumiAws.locationFsxWindowsMod.LocationFsxWindows {
+    /**
+      * Create a LocationFsxWindows resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: LocationFsxWindowsArgs) = this()
+    def this(name: String, args: LocationFsxWindowsArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object LocationFsxWindows extends js.Object {
+    
+    /**
+      * Get an existing LocationFsxWindows resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.locationFsxWindowsMod.LocationFsxWindows = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.locationFsxWindowsMod.LocationFsxWindows = js.native
+    def get(name: String, id: Input[ID], state: LocationFsxWindowsState): typingsSlinky.pulumiAws.locationFsxWindowsMod.LocationFsxWindows = js.native
+    def get(name: String, id: Input[ID], state: LocationFsxWindowsState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.locationFsxWindowsMod.LocationFsxWindows = js.native
+    
+    /**
+      * Returns true if the given object is an instance of LocationFsxWindows.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/datasync/locationFsxWindows.LocationFsxWindows */ Boolean = js.native
   }
   
   @js.native

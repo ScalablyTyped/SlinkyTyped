@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class CellFormatter () extends js.Object {
   
-  def fromRaw(rawData: js.Any, model: Model[_, ModelSetOptions]): js.Any = js.native
+  def fromRaw(rawData: js.Any, model: Model[_, ModelSetOptions, js.Object]): js.Any = js.native
   
-  def toRaw(formattedData: js.Any, model: Model[_, ModelSetOptions]): js.Any = js.native
+  def toRaw(formattedData: js.Any, model: Model[_, ModelSetOptions, js.Object]): js.Any = js.native
 }

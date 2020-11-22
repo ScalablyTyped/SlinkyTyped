@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LaunchTemplate extends js.Object {
   
   /**
-    * The launch template to use. You must specify either the launch template ID or launch template name in the request.
+    * The launch template to use.
     */
   var LaunchTemplateSpecification: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.LaunchTemplateSpecification] = js.native
   
   /**
-    * Any parameters that you specify override the same parameters in the launch template. Currently, the only supported override is instance type. You can specify between 1 and 20 instance types. If not provided, Amazon EC2 Auto Scaling will use the instance type specified in the launch template to launch instances. 
+    * Any parameters that you specify override the same parameters in the launch template. If not provided, Amazon EC2 Auto Scaling uses the instance type specified in the launch template when it launches an instance. 
     */
   var Overrides: js.UndefOr[typingsSlinky.awsSdk.autoscalingMod.Overrides] = js.native
 }

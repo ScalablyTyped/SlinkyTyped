@@ -1,10 +1,12 @@
 package typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.javaactionsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,8 +29,8 @@ class ListType protected () extends Type {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   @JSName("containerAsBasicParameterType")
@@ -39,9 +41,6 @@ class ListType protected () extends Type {
   
   @JSName("containerAsJavaAction")
   def containerAsJavaAction_MListType: JavaAction = js.native
-  
-  @JSName("model")
-  var model_FListType: IModel = js.native
   
   def parameter: EntityType = js.native
   def parameter_=(newValue: EntityType): Unit = js.native

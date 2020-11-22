@@ -9,21 +9,24 @@ import typingsSlinky.astTypes.kindsMod.TSTypeKind
 import typingsSlinky.astTypes.typesMod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.TSType, 'type'> */
+@js.native
 trait TSArrayType
   extends ASTNode
      with NodeKind
      with PrintableKind
      with TSTypeKind {
-  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
-  var elementType: TSTypeKind
-  var loc: js.UndefOr[SourceLocationKind] = js.undefined
-  var `type`: typingsSlinky.astTypes.astTypesStrings.TSArrayType
+  
+  var comments: js.UndefOr[js.Array[CommentKind] | Null] = js.native
+  
+  var elementType: TSTypeKind = js.native
+  
+  var loc: js.UndefOr[SourceLocationKind | Null] = js.native
+  
+  var `type`: typingsSlinky.astTypes.astTypesStrings.TSArrayType = js.native
 }
-
 @JSImport("ast-types/gen/namedTypes", "namedTypes.TSArrayType")
 @js.native
 object TSArrayType extends TopLevel[Type[TSArrayType]]
-

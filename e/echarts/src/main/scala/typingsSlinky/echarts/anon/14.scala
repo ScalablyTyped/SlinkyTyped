@@ -8,20 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait `14` extends js.Object {
   
   /**
-    * Specify the left-top point.
+    * Color of the area.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-map.markArea.data.0
+    * @see https://echarts.apache.org/en/option.html#series-map.data.itemStyle.areaColor
     */
-  var `0`: js.UndefOr[ValueIndex] = js.native
-  
-  /**
-    * Specify the right-bottom point.
-    *
-    *
-    * @see https://echarts.apache.org/en/option.html#series-map.markArea.data.1
-    */
-  var `1`: js.UndefOr[ValueIndex] = js.native
+  var areaColor: js.UndefOr[BorderType] = js.native
 }
 object `14` {
   
@@ -47,15 +39,9 @@ object `14` {
     }
     
     @scala.inline
-    def set0(value: ValueIndex): Self = this.set("0", value.asInstanceOf[js.Any])
+    def setAreaColor(value: BorderType): Self = this.set("areaColor", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def delete0: Self = this.set("0", js.undefined)
-    
-    @scala.inline
-    def set1(value: ValueIndex): Self = this.set("1", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def delete1: Self = this.set("1", js.undefined)
+    def deleteAreaColor: Self = this.set("areaColor", js.undefined)
   }
 }

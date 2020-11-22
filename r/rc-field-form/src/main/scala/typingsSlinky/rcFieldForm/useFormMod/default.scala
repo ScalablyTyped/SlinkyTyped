@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object default extends js.Object {
   
-  def apply(): js.Array[FormInstance] = js.native
-  def apply(form: FormInstance): js.Array[FormInstance] = js.native
+  def apply[Values](): js.Array[FormInstance[Values]] = js.native
+  def apply[Values](form: FormInstance[Values]): js.Array[FormInstance[Values]] = js.native
 }

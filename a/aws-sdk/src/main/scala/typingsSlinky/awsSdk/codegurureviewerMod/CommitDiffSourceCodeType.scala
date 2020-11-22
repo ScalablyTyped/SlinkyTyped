@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait CommitDiffSourceCodeType extends js.Object {
   
   /**
-    *  The SHA of the destination commit. 
+    *  The SHA of the destination commit used to generate a commit diff. 
     */
   var DestinationCommit: js.UndefOr[CommitId] = js.native
   
   /**
-    *  The SHA of the source commit. 
+    *  The SHA of the source commit used to generate a commit diff. 
     */
   var SourceCommit: js.UndefOr[CommitId] = js.native
 }

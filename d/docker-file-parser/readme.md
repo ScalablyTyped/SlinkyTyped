@@ -1,7 +1,7 @@
 
 # Scala.js typings for docker-file-parser
 
-Typings are for version 1.0.4
+Typings are for version 1.0.5
 
 ## Library description:
 Parses a Dockerfile and returns an array of commands.

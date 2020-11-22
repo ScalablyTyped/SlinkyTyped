@@ -25,6 +25,8 @@ package object kinesisanalyticsv2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.READY
     - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
     - typingsSlinky.awsSdk.awsSdkStrings.UPDATING
+    - typingsSlinky.awsSdk.awsSdkStrings.AUTOSCALING
+    - typingsSlinky.awsSdk.awsSdkStrings.FORCE_STOPPING
     - java.lang.String
   */
   type ApplicationStatus = typingsSlinky.awsSdk.kinesisanalyticsv2Mod._ApplicationStatus | java.lang.String
@@ -32,6 +34,8 @@ package object kinesisanalyticsv2Mod {
   type ApplicationSummaries = js.Array[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.ApplicationSummary]
   
   type ApplicationVersionId = scala.Double
+  
+  type AuthorizedUrl = java.lang.String
   
   type BooleanObject = scala.Boolean
   
@@ -194,6 +198,7 @@ package object kinesisanalyticsv2Mod {
     - typingsSlinky.awsSdk.awsSdkStrings.`SQL-1_0`
     - typingsSlinky.awsSdk.awsSdkStrings.`FLINK-1_6`
     - typingsSlinky.awsSdk.awsSdkStrings.`FLINK-1_8`
+    - typingsSlinky.awsSdk.awsSdkStrings.`FLINK-1_11`
     - java.lang.String
   */
   type RuntimeEnvironment = typingsSlinky.awsSdk.kinesisanalyticsv2Mod._RuntimeEnvironment | java.lang.String
@@ -201,6 +206,8 @@ package object kinesisanalyticsv2Mod {
   type SecurityGroupId = java.lang.String
   
   type SecurityGroupIds = js.Array[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.SecurityGroupId]
+  
+  type SessionExpirationDurationInSeconds = scala.Double
   
   type SnapshotName = java.lang.String
   
@@ -232,6 +239,8 @@ package object kinesisanalyticsv2Mod {
   type TextContent = java.lang.String
   
   type Timestamp = js.Date
+  
+  type UrlType = typingsSlinky.awsSdk.awsSdkStrings.FLINK_DASHBOARD_URL | java.lang.String
   
   type VpcConfigurationDescriptions = js.Array[typingsSlinky.awsSdk.kinesisanalyticsv2Mod.VpcConfigurationDescription]
   

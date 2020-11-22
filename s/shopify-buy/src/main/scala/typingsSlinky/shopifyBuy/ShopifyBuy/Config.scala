@@ -9,6 +9,8 @@ trait Config extends js.Object {
   
   var domain: String = js.native
   
+  var language: js.UndefOr[String] = js.native
+  
   var storefrontAccessToken: String = js.native
 }
 object Config {
@@ -39,5 +41,11 @@ object Config {
     
     @scala.inline
     def setStorefrontAccessToken(value: String): Self = this.set("storefrontAccessToken", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLanguage(value: String): Self = this.set("language", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLanguage: Self = this.set("language", js.undefined)
   }
 }

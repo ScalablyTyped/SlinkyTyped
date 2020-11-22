@@ -61,7 +61,7 @@ package object lightsailMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.os_
-    - typingsSlinky.awsSdk.awsSdkStrings.app
+    - typingsSlinky.awsSdk.awsSdkStrings.app_
     - java.lang.String
   */
   type BlueprintType = typingsSlinky.awsSdk.lightsailMod._BlueprintType | java.lang.String
@@ -126,6 +126,81 @@ package object lightsailMod {
   
   type ContactProtocolsList = js.Array[typingsSlinky.awsSdk.lightsailMod.ContactProtocol]
   
+  type ContainerImageList = js.Array[typingsSlinky.awsSdk.lightsailMod.ContainerImage]
+  
+  type ContainerLabel = java.lang.String
+  
+  type ContainerMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.lightsailMod.Container]
+  
+  type ContainerName = java.lang.String
+  
+  type ContainerServiceDeploymentList = js.Array[typingsSlinky.awsSdk.lightsailMod.ContainerServiceDeployment]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVATING
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.INACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - java.lang.String
+  */
+  type ContainerServiceDeploymentState = typingsSlinky.awsSdk.lightsailMod._ContainerServiceDeploymentState | java.lang.String
+  
+  type ContainerServiceList = js.Array[typingsSlinky.awsSdk.lightsailMod.ContainerService]
+  
+  type ContainerServiceLogEventList = js.Array[typingsSlinky.awsSdk.lightsailMod.ContainerServiceLogEvent]
+  
+  type ContainerServiceMetadataEntry = org.scalablytyped.runtime.StringDictionary[java.lang.String]
+  
+  type ContainerServiceMetadataEntryList = js.Array[typingsSlinky.awsSdk.lightsailMod.ContainerServiceMetadataEntry]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CPUUtilization
+    - typingsSlinky.awsSdk.awsSdkStrings.MemoryUtilization
+    - java.lang.String
+  */
+  type ContainerServiceMetricName = typingsSlinky.awsSdk.lightsailMod._ContainerServiceMetricName | java.lang.String
+  
+  type ContainerServiceName = java.lang.String
+  
+  type ContainerServicePowerList = js.Array[typingsSlinky.awsSdk.lightsailMod.ContainerServicePower]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.nano
+    - typingsSlinky.awsSdk.awsSdkStrings.micro
+    - typingsSlinky.awsSdk.awsSdkStrings.small__
+    - typingsSlinky.awsSdk.awsSdkStrings.medium__
+    - typingsSlinky.awsSdk.awsSdkStrings.large__
+    - typingsSlinky.awsSdk.awsSdkStrings.xlarge_
+    - java.lang.String
+  */
+  type ContainerServicePowerName = typingsSlinky.awsSdk.lightsailMod._ContainerServicePowerName | java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.HTTP
+    - typingsSlinky.awsSdk.awsSdkStrings.HTTPS
+    - typingsSlinky.awsSdk.awsSdkStrings.TCP
+    - typingsSlinky.awsSdk.awsSdkStrings.UDP
+    - java.lang.String
+  */
+  type ContainerServiceProtocol = typingsSlinky.awsSdk.lightsailMod._ContainerServiceProtocol | java.lang.String
+  
+  type ContainerServicePublicDomains = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.lightsailMod.ContainerServicePublicDomainsList]
+  
+  type ContainerServicePublicDomainsList = js.Array[java.lang.String]
+  
+  type ContainerServiceScale = scala.Double
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING
+    - typingsSlinky.awsSdk.awsSdkStrings.READY
+    - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
+    - typingsSlinky.awsSdk.awsSdkStrings.UPDATING
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - java.lang.String
+  */
+  type ContainerServiceState = typingsSlinky.awsSdk.lightsailMod._ContainerServiceState | java.lang.String
+  
   type DiskInfoList = js.Array[typingsSlinky.awsSdk.lightsailMod.DiskInfo]
   
   type DiskList = js.Array[typingsSlinky.awsSdk.lightsailMod.Disk]
@@ -185,6 +260,8 @@ package object lightsailMod {
   type DomainValidationRecordList = js.Array[typingsSlinky.awsSdk.lightsailMod.DomainValidationRecord]
   
   type EligibleToRenew = java.lang.String
+  
+  type Environment = org.scalablytyped.runtime.StringDictionary[java.lang.String]
   
   type ExportSnapshotRecordList = js.Array[typingsSlinky.awsSdk.lightsailMod.ExportSnapshotRecord]
   
@@ -482,7 +559,7 @@ package object lightsailMod {
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.Seconds_
-    - typingsSlinky.awsSdk.awsSdkStrings.Microseconds
+    - typingsSlinky.awsSdk.awsSdkStrings.Microseconds_
     - typingsSlinky.awsSdk.awsSdkStrings.Milliseconds_
     - typingsSlinky.awsSdk.awsSdkStrings.Bytes_
     - typingsSlinky.awsSdk.awsSdkStrings.Kilobytes
@@ -516,7 +593,7 @@ package object lightsailMod {
     - typingsSlinky.awsSdk.awsSdkStrings.tcp_
     - typingsSlinky.awsSdk.awsSdkStrings.all__
     - typingsSlinky.awsSdk.awsSdkStrings.udp_
-    - typingsSlinky.awsSdk.awsSdkStrings.icmp
+    - typingsSlinky.awsSdk.awsSdkStrings.icmp_
     - java.lang.String
   */
   type NetworkProtocol = typingsSlinky.awsSdk.lightsailMod._NetworkProtocol | java.lang.String
@@ -602,6 +679,13 @@ package object lightsailMod {
     - typingsSlinky.awsSdk.awsSdkStrings.UpdateDistributionBundle
     - typingsSlinky.awsSdk.awsSdkStrings.CreateCertificate
     - typingsSlinky.awsSdk.awsSdkStrings.DeleteCertificate
+    - typingsSlinky.awsSdk.awsSdkStrings.CreateContainerService
+    - typingsSlinky.awsSdk.awsSdkStrings.UpdateContainerService
+    - typingsSlinky.awsSdk.awsSdkStrings.DeleteContainerService
+    - typingsSlinky.awsSdk.awsSdkStrings.CreateContainerServiceDeployment
+    - typingsSlinky.awsSdk.awsSdkStrings.CreateContainerServiceRegistryLogin
+    - typingsSlinky.awsSdk.awsSdkStrings.RegisterContainerImage
+    - typingsSlinky.awsSdk.awsSdkStrings.DeleteContainerImage
     - java.lang.String
   */
   type OperationType = typingsSlinky.awsSdk.lightsailMod._OperationType | java.lang.String
@@ -636,6 +720,8 @@ package object lightsailMod {
   type PortInfoSourceType = typingsSlinky.awsSdk.lightsailMod._PortInfoSourceType | java.lang.String
   
   type PortList = js.Array[typingsSlinky.awsSdk.lightsailMod.Port]
+  
+  type PortMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.lightsailMod.ContainerServiceProtocol]
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.open__
@@ -726,6 +812,7 @@ package object lightsailMod {
   type ResourceNameList = js.Array[typingsSlinky.awsSdk.lightsailMod.ResourceName]
   
   /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ContainerService
     - typingsSlinky.awsSdk.awsSdkStrings.Instance_
     - typingsSlinky.awsSdk.awsSdkStrings.StaticIp
     - typingsSlinky.awsSdk.awsSdkStrings.KeyPair

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait FindTaskProperties extends TaskProperties {
   
   /**
-    * Specify the geodatabase version to search. Requires ArcGIS Server service 10.1 or greater.
+    * Specify the geodatabase version to search.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-FindTask.html#gdbVersion)
     */

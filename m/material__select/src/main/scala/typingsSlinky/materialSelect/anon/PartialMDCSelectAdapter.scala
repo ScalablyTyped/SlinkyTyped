@@ -14,8 +14,6 @@ trait PartialMDCSelectAdapter extends js.Object {
   
   var addClass: js.UndefOr[js.Function1[/* className */ String, Unit]] = js.native
   
-  var addClassAtIndex: js.UndefOr[js.Function2[/* index */ Double, /* className */ String, Unit]] = js.native
-  
   var addMenuClass: js.UndefOr[js.Function1[/* className */ String, Unit]] = js.native
   
   var closeMenu: js.UndefOr[js.Function0[Unit]] = js.native
@@ -32,8 +30,6 @@ trait PartialMDCSelectAdapter extends js.Object {
   
   var getLabelWidth: js.UndefOr[js.Function0[Double]] = js.native
   
-  var getMenuItemAttr: js.UndefOr[js.Function2[/* menuItem */ Element, /* attr */ String, String | Null]] = js.native
-  
   var getMenuItemCount: js.UndefOr[js.Function0[Double]] = js.native
   
   var getMenuItemTextAtIndex: js.UndefOr[js.Function1[/* index */ Double, String]] = js.native
@@ -42,7 +38,7 @@ trait PartialMDCSelectAdapter extends js.Object {
   
   var getSelectAnchorAttr: js.UndefOr[js.Function1[/* attr */ String, String | Null]] = js.native
   
-  var getSelectedMenuItem: js.UndefOr[js.Function0[Element | Null]] = js.native
+  var getSelectedIndex: js.UndefOr[js.Function0[Double]] = js.native
   
   var hasClass: js.UndefOr[js.Function1[/* className */ String, Boolean]] = js.native
   
@@ -62,15 +58,9 @@ trait PartialMDCSelectAdapter extends js.Object {
   
   var removeClass: js.UndefOr[js.Function1[/* className */ String, Unit]] = js.native
   
-  var removeClassAtIndex: js.UndefOr[js.Function2[/* index */ Double, /* className */ String, Unit]] = js.native
-  
   var removeMenuClass: js.UndefOr[js.Function1[/* className */ String, Unit]] = js.native
   
   var removeSelectAnchorAttr: js.UndefOr[js.Function1[/* attr */ String, Unit]] = js.native
-  
-  var setAttributeAtIndex: js.UndefOr[
-    js.Function3[/* index */ Double, /* attributeName */ String, /* attributeValue */ String, Unit]
-  ] = js.native
   
   var setLabelRequired: js.UndefOr[js.Function1[/* isRequired */ Boolean, Unit]] = js.native
   
@@ -83,6 +73,8 @@ trait PartialMDCSelectAdapter extends js.Object {
   var setRippleCenter: js.UndefOr[js.Function1[/* normalizedX */ Double, Unit]] = js.native
   
   var setSelectAnchorAttr: js.UndefOr[js.Function2[/* attr */ String, /* value */ String, Unit]] = js.native
+  
+  var setSelectedIndex: js.UndefOr[js.Function1[/* index */ Double, Unit]] = js.native
   
   var setSelectedText: js.UndefOr[js.Function1[/* text */ String, Unit]] = js.native
   
@@ -122,12 +114,6 @@ object PartialMDCSelectAdapter {
     
     @scala.inline
     def deleteAddClass: Self = this.set("addClass", js.undefined)
-    
-    @scala.inline
-    def setAddClassAtIndex(value: (/* index */ Double, /* className */ String) => Unit): Self = this.set("addClassAtIndex", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def deleteAddClassAtIndex: Self = this.set("addClassAtIndex", js.undefined)
     
     @scala.inline
     def setAddMenuClass(value: /* className */ String => Unit): Self = this.set("addMenuClass", js.Any.fromFunction1(value))
@@ -178,12 +164,6 @@ object PartialMDCSelectAdapter {
     def deleteGetLabelWidth: Self = this.set("getLabelWidth", js.undefined)
     
     @scala.inline
-    def setGetMenuItemAttr(value: (/* menuItem */ Element, /* attr */ String) => String | Null): Self = this.set("getMenuItemAttr", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def deleteGetMenuItemAttr: Self = this.set("getMenuItemAttr", js.undefined)
-    
-    @scala.inline
     def setGetMenuItemCount(value: () => Double): Self = this.set("getMenuItemCount", js.Any.fromFunction0(value))
     
     @scala.inline
@@ -208,10 +188,10 @@ object PartialMDCSelectAdapter {
     def deleteGetSelectAnchorAttr: Self = this.set("getSelectAnchorAttr", js.undefined)
     
     @scala.inline
-    def setGetSelectedMenuItem(value: () => Element | Null): Self = this.set("getSelectedMenuItem", js.Any.fromFunction0(value))
+    def setGetSelectedIndex(value: () => Double): Self = this.set("getSelectedIndex", js.Any.fromFunction0(value))
     
     @scala.inline
-    def deleteGetSelectedMenuItem: Self = this.set("getSelectedMenuItem", js.undefined)
+    def deleteGetSelectedIndex: Self = this.set("getSelectedIndex", js.undefined)
     
     @scala.inline
     def setHasClass(value: /* className */ String => Boolean): Self = this.set("hasClass", js.Any.fromFunction1(value))
@@ -268,12 +248,6 @@ object PartialMDCSelectAdapter {
     def deleteRemoveClass: Self = this.set("removeClass", js.undefined)
     
     @scala.inline
-    def setRemoveClassAtIndex(value: (/* index */ Double, /* className */ String) => Unit): Self = this.set("removeClassAtIndex", js.Any.fromFunction2(value))
-    
-    @scala.inline
-    def deleteRemoveClassAtIndex: Self = this.set("removeClassAtIndex", js.undefined)
-    
-    @scala.inline
     def setRemoveMenuClass(value: /* className */ String => Unit): Self = this.set("removeMenuClass", js.Any.fromFunction1(value))
     
     @scala.inline
@@ -284,12 +258,6 @@ object PartialMDCSelectAdapter {
     
     @scala.inline
     def deleteRemoveSelectAnchorAttr: Self = this.set("removeSelectAnchorAttr", js.undefined)
-    
-    @scala.inline
-    def setSetAttributeAtIndex(value: (/* index */ Double, /* attributeName */ String, /* attributeValue */ String) => Unit): Self = this.set("setAttributeAtIndex", js.Any.fromFunction3(value))
-    
-    @scala.inline
-    def deleteSetAttributeAtIndex: Self = this.set("setAttributeAtIndex", js.undefined)
     
     @scala.inline
     def setSetLabelRequired(value: /* isRequired */ Boolean => Unit): Self = this.set("setLabelRequired", js.Any.fromFunction1(value))
@@ -326,6 +294,12 @@ object PartialMDCSelectAdapter {
     
     @scala.inline
     def deleteSetSelectAnchorAttr: Self = this.set("setSelectAnchorAttr", js.undefined)
+    
+    @scala.inline
+    def setSetSelectedIndex(value: /* index */ Double => Unit): Self = this.set("setSelectedIndex", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteSetSelectedIndex: Self = this.set("setSelectedIndex", js.undefined)
     
     @scala.inline
     def setSetSelectedText(value: /* text */ String => Unit): Self = this.set("setSelectedText", js.Any.fromFunction1(value))

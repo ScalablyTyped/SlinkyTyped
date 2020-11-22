@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Clipboard extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/clipboard
+  // Docs: https://electronjs.org/docs/api/clipboard
   /**
     * An array of supported formats for the clipboard `type`.
     */

@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.AssignmentExpression
+import typingsSlinky.babelTraverse.babelTraverseStrings.TSEnumMember
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `130` extends js.Object {
   
-  var `type`: AssignmentExpression = js.native
+  var `type`: TSEnumMember = js.native
 }
 object `130` {
   
   @scala.inline
-  def apply(`type`: AssignmentExpression): `130` = {
+  def apply(`type`: TSEnumMember): `130` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`130`]
@@ -35,6 +35,6 @@ object `130` {
     }
     
     @scala.inline
-    def setType(value: AssignmentExpression): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: TSEnumMember): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

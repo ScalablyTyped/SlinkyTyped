@@ -62,7 +62,7 @@ class NgModel protected ()
   
   /**
     * @description
-    * Tracks the name bound to the directive. The parent form
+    * Tracks the name bound to the directive. If a parent form exists, it
     * uses this name as a key to retrieve this control's value.
     */
   @JSName("name")
@@ -77,7 +77,8 @@ class NgModel protected ()
     * as a standalone control.
     *
     * **standalone**: When set to true, the `ngModel` will not register itself with its parent form,
-    * and acts as if it's not in the form. Defaults to false.
+    * and acts as if it's not in the form. Defaults to false. If no parent form exists, this option
+    * has no effect.
     *
     * **updateOn**: Defines the event upon which the form control value and validity update.
     * Defaults to 'change'. Possible values: `'change'` | `'blur'` | `'submit'`.
@@ -93,8 +94,8 @@ class NgModel protected ()
   var update: EventEmitter[_] = js.native
   
   /**
-    * @description
     * Internal reference to the view model value.
+    * @nodoc
     */
   var viewModel: js.Any = js.native
 }

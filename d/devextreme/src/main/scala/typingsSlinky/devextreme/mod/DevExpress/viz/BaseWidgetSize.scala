@@ -4,14 +4,20 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name BaseWidget.Options.size */
+/**
+  * [descr:BaseWidget.Options.size]
+  */
 @js.native
 trait BaseWidgetSize extends js.Object {
   
-  /** @name BaseWidget.Options.size.height */
+  /**
+    * [descr:BaseWidget.Options.size.height]
+    */
   var height: js.UndefOr[Double] = js.native
   
-  /** @name BaseWidget.Options.size.width */
+  /**
+    * [descr:BaseWidget.Options.size.width]
+    */
   var width: js.UndefOr[Double] = js.native
 }
 object BaseWidgetSize {

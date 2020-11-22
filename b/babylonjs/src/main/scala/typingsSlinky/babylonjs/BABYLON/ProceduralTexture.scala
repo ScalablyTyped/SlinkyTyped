@@ -26,9 +26,8 @@ trait ProceduralTexture extends Texture {
   /** @hidden **/
   var _effect: Effect = js.native
   
-  var _engine: js.Any = js.native
-  
-  var _fallbackTexture: js.Any = js.native
+  /** @hidden */
+  var _fallbackTexture: Nullable[Texture] = js.native
   
   var _fallbackTextureUsed: js.Any = js.native
   
@@ -39,6 +38,8 @@ trait ProceduralTexture extends Texture {
   var _fragment: js.Any = js.native
   
   var _frameId: js.Any = js.native
+  
+  var _fullEngine: js.Any = js.native
   
   /** @hidden */
   var _generateMipMaps: Boolean = js.native
@@ -90,17 +91,24 @@ trait ProceduralTexture extends Texture {
   
   /**
     * Get the size the texture is rendering at.
-    * @returns the size (texture is always squared)
+    * @returns the size (on cube texture it is always squared)
     */
-  def getRenderSize(): Double = js.native
-  
-  @JSName("isCube")
-  var isCube_FProceduralTexture: Boolean = js.native
+  def getRenderSize(): RenderTargetTextureSize = js.native
   
   /**
     * Define if the texture is enabled or not (disabled texture will not render)
     */
   var isEnabled: Boolean = js.native
+  
+  /**
+    * Gets or sets the node material used to create this texture (null if the texture was manually created)
+    */
+  var nodeMaterialSource: Nullable[NodeMaterial] = js.native
+  
+  /**
+    * Event raised before the texture is generated
+    */
+  var onBeforeGenerationObservable: Observable[ProceduralTexture] = js.native
   
   /**
     * Callback called when the texture is generated

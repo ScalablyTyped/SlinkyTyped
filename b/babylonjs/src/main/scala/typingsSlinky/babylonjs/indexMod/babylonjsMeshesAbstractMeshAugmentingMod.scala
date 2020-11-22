@@ -52,7 +52,7 @@ object babylonjsMeshesAbstractMeshAugmentingMod extends js.Object {
       * @param force defines the force to apply
       * @param contactPoint defines where to apply the force
       * @returns the current mesh
-      * @see http://doc.babylonjs.com/how_to/using_the_physics_engine
+      * @see https://doc.babylonjs.com/how_to/using_the_physics_engine
       */
     def applyImpulse(
       force: typingsSlinky.babylonjs.mathVectorMod.Vector3,
@@ -66,7 +66,7 @@ object babylonjsMeshesAbstractMeshAugmentingMod extends js.Object {
       * @param maxDepth defines the maximum depth to use (no more than 2 levels by default)
       * @returns the new octree
       * @see https://www.babylonjs-playground.com/#NA4OQ#12
-      * @see http://doc.babylonjs.com/how_to/optimizing_your_scene_with_octrees
+      * @see https://doc.babylonjs.com/how_to/optimizing_your_scene_with_octrees
       */
     def createOrUpdateSubmeshesOctree(): typingsSlinky.babylonjs.octreeMod.Octree[typingsSlinky.babylonjs.subMeshMod.SubMesh] = js.native
     def createOrUpdateSubmeshesOctree(maxCapacity: js.UndefOr[scala.Nothing], maxDepth: Double): typingsSlinky.babylonjs.octreeMod.Octree[typingsSlinky.babylonjs.subMeshMod.SubMesh] = js.native
@@ -80,7 +80,7 @@ object babylonjsMeshesAbstractMeshAugmentingMod extends js.Object {
     
     /**
       * Gets the current physics impostor
-      * @see http://doc.babylonjs.com/features/physics_engine
+      * @see https://doc.babylonjs.com/features/physics_engine
       * @returns a physics impostor or null
       */
     def getPhysicsImpostor(): Nullable[typingsSlinky.babylonjs.physicsImpostorMod.PhysicsImpostor] = js.native
@@ -93,13 +93,13 @@ object babylonjsMeshesAbstractMeshAugmentingMod extends js.Object {
     
     /**
       * Gets or sets whether the mesh is occluded or not, it is used also to set the intial state of the mesh to be occluded or not
-      * @see http://doc.babylonjs.com/features/occlusionquery
+      * @see https://doc.babylonjs.com/features/occlusionquery
       */
     var isOccluded: Boolean = js.native
     
     /**
       * Flag to check the progress status of the query
-      * @see http://doc.babylonjs.com/features/occlusionquery
+      * @see https://doc.babylonjs.com/features/occlusionquery
       */
     var isOcclusionQueryInProgress: Boolean = js.native
     
@@ -107,14 +107,14 @@ object babylonjsMeshesAbstractMeshAugmentingMod extends js.Object {
       * This property determines the type of occlusion query algorithm to run in WebGl, you can use:
       * * AbstractMesh.OCCLUSION_ALGORITHM_TYPE_ACCURATE which is mapped to GL_ANY_SAMPLES_PASSED.
       * * AbstractMesh.OCCLUSION_ALGORITHM_TYPE_CONSERVATIVE (Default Value) which is mapped to GL_ANY_SAMPLES_PASSED_CONSERVATIVE which is a false positive algorithm that is faster than GL_ANY_SAMPLES_PASSED but less accurate.
-      * @see http://doc.babylonjs.com/features/occlusionquery
+      * @see https://doc.babylonjs.com/features/occlusionquery
       */
     var occlusionQueryAlgorithmType: Double = js.native
     
     /**
       * This number indicates the number of allowed retries before stop the occlusion query, this is useful if the occlusion query is taking long time before to the query result is retireved, the query result indicates if the object is visible within the scene or not and based on that Babylon.Js engine decideds to show or hide the object.
       * The default value is -1 which means don't break the query and wait till the result
-      * @see http://doc.babylonjs.com/features/occlusionquery
+      * @see https://doc.babylonjs.com/features/occlusionquery
       */
     var occlusionRetryCount: Double = js.native
     
@@ -123,13 +123,13 @@ object babylonjsMeshesAbstractMeshAugmentingMod extends js.Object {
       * * OCCLUSION_TYPE_NONE (Default Value): this option means no occlusion query whith the Mesh.
       * * OCCLUSION_TYPE_OPTIMISTIC: this option is means use occlusion query and if occlusionRetryCount is reached and the query is broken show the mesh.
       * * OCCLUSION_TYPE_STRICT: this option is means use occlusion query and if occlusionRetryCount is reached and the query is broken restore the last state of the mesh occlusion if the mesh was visible then show the mesh if was hidden then hide don't show.
-      * @see http://doc.babylonjs.com/features/occlusionquery
+      * @see https://doc.babylonjs.com/features/occlusionquery
       */
     var occlusionType: Double = js.native
     
     /**
       * Gets or sets impostor used for physic simulation
-      * @see http://doc.babylonjs.com/features/physics_engine
+      * @see https://doc.babylonjs.com/features/physics_engine
       */
     var physicsImpostor: Nullable[typingsSlinky.babylonjs.physicsImpostorMod.PhysicsImpostor] = js.native
     

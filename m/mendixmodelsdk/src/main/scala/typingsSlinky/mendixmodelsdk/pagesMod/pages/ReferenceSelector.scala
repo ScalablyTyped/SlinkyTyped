@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
@@ -9,13 +10,14 @@ import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayout
 import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.NativeLayoutCallArgument
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.reportsMod.reports.ReportPane
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import typingsSlinky.mendixmodelsdk.textsMod.texts.Text
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/reference-selector relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/reference-selector relevant section in reference guide}
   */
 @JSImport("mendixmodelsdk/dist/gen/pages", "pages.ReferenceSelector")
 @js.native
@@ -25,8 +27,8 @@ class ReferenceSelector protected () extends AssociationWidget {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   /**
@@ -40,9 +42,6 @@ class ReferenceSelector protected () extends AssociationWidget {
   
   def gotoPageSettings: PageSettings = js.native
   def gotoPageSettings_=(newValue: PageSettings): Unit = js.native
-  
-  @JSName("model")
-  var model_FReferenceSelector: IModel = js.native
   
   def renderMode: ReferenceSelectorRenderModeType = js.native
   def renderMode_=(newValue: ReferenceSelectorRenderModeType): Unit = js.native

@@ -1,10 +1,10 @@
 package typingsSlinky.tensorflowTfjsLayers.modelsMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.mod.serialization.Serializable
 import typingsSlinky.tensorflowTfjsCore.serializationMod.ConfigDict
 import typingsSlinky.tensorflowTfjsCore.serializationMod.SerializableConstructor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
 import typingsSlinky.tensorflowTfjsLayers.trainingMod.LayersModel
 import scala.scalajs.js
@@ -34,8 +34,9 @@ class Sequential () extends LayersModel {
     * @exception ValueError In case the `layer` argument has multiple output
     *   tensors, or is already connected somewhere else (forbidden in
     *   `Sequential` models).
+    *
+    * @doc {heading: 'Models', subheading: 'Classes'}
     */
-  /** @doc {heading: 'Models', subheading: 'Classes'} */
   def add(layer: Layer): Unit = js.native
   
   def build(): Unit = js.native

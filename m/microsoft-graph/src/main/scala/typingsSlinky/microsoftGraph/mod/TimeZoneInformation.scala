@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait TimeZoneInformation extends js.Object {
   
   // An identifier for the time zone.
-  var alias: js.UndefOr[String] = js.native
+  var alias: js.UndefOr[NullableOption[String]] = js.native
   
   // A display string that represents the time zone.
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
 }
 object TimeZoneInformation {
   
@@ -37,15 +37,21 @@ object TimeZoneInformation {
     }
     
     @scala.inline
-    def setAlias(value: String): Self = this.set("alias", value.asInstanceOf[js.Any])
+    def setAlias(value: NullableOption[String]): Self = this.set("alias", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAlias: Self = this.set("alias", js.undefined)
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setAliasNull: Self = this.set("alias", null)
+    
+    @scala.inline
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
+    
+    @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
   }
 }

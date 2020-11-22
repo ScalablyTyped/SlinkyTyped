@@ -12,13 +12,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartCommonAxisSettingsStripStyleLabel extends js.Object {
   
-  /** @name dxChart.Options.commonAxisSettings.stripStyle.label.font */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.stripStyle.label.font]
+    */
   var font: js.UndefOr[Font] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.stripStyle.label.horizontalAlignment */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.stripStyle.label.horizontalAlignment]
+    */
   var horizontalAlignment: js.UndefOr[center | left | right] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.stripStyle.label.verticalAlignment */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.stripStyle.label.verticalAlignment]
+    */
   var verticalAlignment: js.UndefOr[bottom | center | top] = js.native
 }
 object dxChartCommonAxisSettingsStripStyleLabel {

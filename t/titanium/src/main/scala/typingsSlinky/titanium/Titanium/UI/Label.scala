@@ -66,7 +66,7 @@ trait Label extends View {
   /**
     * Color of the label text, as a color name or hex triplet.
     */
-  var color: String = js.native
+  var color: String | Color = js.native
   
   /**
     * Causes words in the text that are longer than the view is wide to be ellipsized instead of broken in the middle.
@@ -155,7 +155,7 @@ trait Label extends View {
     * Gets the value of the <Titanium.UI.Label.color> property.
     * @deprecated Access <Titanium.UI.Label.color> instead.
     */
-  def getColor(): String = js.native
+  def getColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Label.ellipsize> property.
@@ -173,7 +173,7 @@ trait Label extends View {
     * Gets the value of the <Titanium.UI.Label.highlightedColor> property.
     * @deprecated Access <Titanium.UI.Label.highlightedColor> instead.
     */
-  def getHighlightedColor(): String = js.native
+  def getHighlightedColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Label.html> property.
@@ -215,7 +215,7 @@ trait Label extends View {
     * Gets the value of the <Titanium.UI.Label.shadowColor> property.
     * @deprecated Access <Titanium.UI.Label.shadowColor> instead.
     */
-  def getShadowColor(): String = js.native
+  def getShadowColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Label.shadowOffset> property.
@@ -262,7 +262,7 @@ trait Label extends View {
   /**
     * Color of the label when in the highlighted state, as a color name or hex triplet.
     */
-  var highlightedColor: String = js.native
+  var highlightedColor: String | Color = js.native
   
   /**
     * Simple HTML formatting.
@@ -338,6 +338,7 @@ trait Label extends View {
     * @deprecated Set the value using <Titanium.UI.Label.color> instead.
     */
   def setColor(color: String): Unit = js.native
+  def setColor(color: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Label.ellipsize> property.
@@ -356,6 +357,7 @@ trait Label extends View {
     * @deprecated Set the value using <Titanium.UI.Label.highlightedColor> instead.
     */
   def setHighlightedColor(highlightedColor: String): Unit = js.native
+  def setHighlightedColor(highlightedColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Label.html> property.
@@ -398,6 +400,7 @@ trait Label extends View {
     * @deprecated Set the value using <Titanium.UI.Label.shadowColor> instead.
     */
   def setShadowColor(shadowColor: String): Unit = js.native
+  def setShadowColor(shadowColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Label.shadowOffset> property.
@@ -446,7 +449,7 @@ trait Label extends View {
   /**
     * Shadow color of the [text](Titanium.UI.Label.text), as a color name or hex triplet.
     */
-  var shadowColor: String = js.native
+  var shadowColor: String | Color = js.native
   
   /**
     * Shadow offset of the [text](Titanium.UI.Label.text), as a dictionary with the properties `x` and `y`.

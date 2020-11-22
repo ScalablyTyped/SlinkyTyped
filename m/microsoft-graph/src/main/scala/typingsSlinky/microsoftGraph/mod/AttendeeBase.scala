@@ -11,7 +11,7 @@ trait AttendeeBase extends Recipient {
     * The type of attendee. The possible values are: required, optional, resource. Currently if the attendee is a person,
     * findMeetingTimes always considers the person is of the Required type.
     */
-  var `type`: js.UndefOr[AttendeeType] = js.native
+  var `type`: js.UndefOr[NullableOption[AttendeeType]] = js.native
 }
 object AttendeeBase {
   
@@ -37,9 +37,12 @@ object AttendeeBase {
     }
     
     @scala.inline
-    def setType(value: AttendeeType): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: NullableOption[AttendeeType]): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
+    
+    @scala.inline
+    def setTypeNull: Self = this.set("type", null)
   }
 }

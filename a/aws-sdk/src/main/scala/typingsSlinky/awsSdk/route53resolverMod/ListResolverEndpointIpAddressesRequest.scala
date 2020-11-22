@@ -13,12 +13,12 @@ trait ListResolverEndpointIpAddressesRequest extends js.Object {
   var MaxResults: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.MaxResults] = js.native
   
   /**
-    * For the first ListResolverEndpointIpAddresses request, omit this value. If the specified resolver endpoint has more than MaxResults IP addresses, you can submit another ListResolverEndpointIpAddresses request to get the next group of IP addresses. In the next request, specify the value of NextToken from the previous response. 
+    * For the first ListResolverEndpointIpAddresses request, omit this value. If the specified Resolver endpoint has more than MaxResults IP addresses, you can submit another ListResolverEndpointIpAddresses request to get the next group of IP addresses. In the next request, specify the value of NextToken from the previous response. 
     */
   var NextToken: js.UndefOr[typingsSlinky.awsSdk.route53resolverMod.NextToken] = js.native
   
   /**
-    * The ID of the resolver endpoint that you want to get IP addresses for.
+    * The ID of the Resolver endpoint that you want to get IP addresses for.
     */
   var ResolverEndpointId: ResourceId = js.native
 }

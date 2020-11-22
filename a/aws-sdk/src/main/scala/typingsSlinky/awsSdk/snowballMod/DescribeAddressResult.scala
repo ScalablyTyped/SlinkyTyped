@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DescribeAddressResult extends js.Object {
   
   /**
-    * The address that you want the Snowball or Snowballs associated with a specific job to be shipped to.
+    * The address that you want the Snow device(s) associated with a specific job to be shipped to.
     */
   var Address: js.UndefOr[typingsSlinky.awsSdk.snowballMod.Address] = js.native
 }

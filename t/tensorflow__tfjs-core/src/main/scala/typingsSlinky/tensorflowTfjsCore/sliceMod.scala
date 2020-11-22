@@ -1,12 +1,8 @@
 package typingsSlinky.tensorflowTfjsCore
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor1D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor2D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor3D
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor4D
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,29 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("@tensorflow/tfjs-core/dist/ops/slice", JSImport.Namespace)
 @js.native
 object sliceMod extends js.Object {
-  
-  val slice1d: js.Function3[/* x */ Tensor1D | TensorLike, /* begin */ Double, /* size */ Double, Tensor1D] = js.native
-  
-  val slice2d: js.Function3[
-    /* x */ Tensor2D | TensorLike, 
-    /* begin */ js.Tuple2[Double, Double], 
-    /* size */ js.Tuple2[Double, Double], 
-    Tensor2D
-  ] = js.native
-  
-  val slice3d: js.Function3[
-    /* x */ Tensor3D | TensorLike, 
-    /* begin */ js.Tuple3[Double, Double, Double], 
-    /* size */ js.Tuple3[Double, Double, Double], 
-    Tensor3D
-  ] = js.native
-  
-  val slice4d: js.Function3[
-    /* x */ Tensor4D | TensorLike, 
-    /* begin */ js.Tuple4[Double, Double, Double, Double], 
-    /* size */ js.Tuple4[Double, Double, Double, Double], 
-    Tensor4D
-  ] = js.native
   
   @js.native
   object slice extends js.Object {

@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-md__states
 
-Typings are for version 2.1.2
+Typings are for version 2.4.2
 
 ## Library description:
 A package for adding the different focus, hover, selected, active, etc states to elements

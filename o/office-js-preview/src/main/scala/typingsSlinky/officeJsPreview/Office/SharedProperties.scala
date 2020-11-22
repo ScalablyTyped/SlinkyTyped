@@ -33,7 +33,9 @@ trait SharedProperties extends js.Object {
   var owner: String = js.native
   
   /**
-    * The target/owner's mailbox. Use with `targetRestUrl` to construct REST operation's URL.
+    * The location of the owner's mailbox for the delegate's access. This location may differ based on the Outlook client.
+    *
+    * Use with `targetRestUrl` to construct the REST operation's URL.
     *
     * Example usage: `targetRestUrl + "/{api_version}/users/" + targetMailbox + "/{REST_operation}"`
     */
@@ -41,7 +43,8 @@ trait SharedProperties extends js.Object {
   
   /**
     * The REST API's base URL (currently https://outlook.office.com/api).
-    * Use with `targetMailbox` to construct REST operation's URL.
+    *
+    * Use with `targetMailbox` to construct the REST operation's URL.
     *
     * Example usage: `targetRestUrl + "/{api_version}/users/" + targetMailbox + "/{REST_operation}"`
     */

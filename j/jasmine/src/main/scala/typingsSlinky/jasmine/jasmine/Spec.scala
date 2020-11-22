@@ -59,17 +59,17 @@ trait Spec
   
   def runs(func: SpecFunction): Spec = js.native
   
-  var spies_ : js.Array[Spy] = js.native
+  var spies_ : js.Array[Spy[Func]] = js.native
   
-  def spyOn(obj: js.Any, methodName: String, ignoreMethodDoesntExist: Boolean): Spy = js.native
+  def spyOn(obj: js.Any, methodName: String, ignoreMethodDoesntExist: Boolean): Spy[Func] = js.native
   
-  def spyOnAllFunctions(`object`: js.Any): Spy = js.native
+  def spyOnAllFunctions(`object`: js.Any): Spy[Func] = js.native
   
-  def spyOnProperty(`object`: js.Any, property: String): Spy = js.native
+  def spyOnProperty(`object`: js.Any, property: String): Spy[Func] = js.native
   @JSName("spyOnProperty")
-  def spyOnProperty_get(`object`: js.Any, property: String, accessType: get): Spy = js.native
+  def spyOnProperty_get(`object`: js.Any, property: String, accessType: get): Spy[Func] = js.native
   @JSName("spyOnProperty")
-  def spyOnProperty_set(`object`: js.Any, property: String, accessType: set): Spy = js.native
+  def spyOnProperty_set(`object`: js.Any, property: String, accessType: set): Spy[Func] = js.native
   
   var suite: Suite = js.native
   

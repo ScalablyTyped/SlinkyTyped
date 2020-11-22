@@ -253,12 +253,12 @@ trait Zone extends js.Object {
     * @param task to run
     * @param applyThis
     * @param applyArgs
-    * @returns {*}
+    * @returns {any} Value from the `task.callback` function.
     */
-  def runTask(task: Task): js.Any = js.native
-  def runTask(task: Task, applyThis: js.UndefOr[scala.Nothing], applyArgs: js.Any): js.Any = js.native
-  def runTask(task: Task, applyThis: js.Any): js.Any = js.native
-  def runTask(task: Task, applyThis: js.Any, applyArgs: js.Any): js.Any = js.native
+  def runTask[T](task: Task): T = js.native
+  def runTask[T](task: Task, applyThis: js.UndefOr[scala.Nothing], applyArgs: js.Any): T = js.native
+  def runTask[T](task: Task, applyThis: js.Any): T = js.native
+  def runTask[T](task: Task, applyThis: js.Any, applyArgs: js.Any): T = js.native
   
   /**
     * Schedule an EventTask.

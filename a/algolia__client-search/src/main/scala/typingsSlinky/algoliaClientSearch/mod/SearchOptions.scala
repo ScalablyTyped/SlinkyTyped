@@ -230,7 +230,7 @@ trait SearchOptions extends js.Object {
   /**
     * List of supported languages with their associated language ISO code.
     *
-    * Apply a set of natural language best practices such asignorePlurals,
+    * Apply a set of natural language best practices such as ignorePlurals,
     * removeStopWords, removeWordsIfNoResults, analyticsTags and ruleContexts.
     */
   val naturalLanguages: js.UndefOr[js.Array[String]] = js.native

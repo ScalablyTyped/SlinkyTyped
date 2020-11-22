@@ -24,15 +24,21 @@ object contentSettings extends js.Object {
   trait StubbedContentSetting extends js.Object {
     
     // Methods
-    def clear(args: js.Any*): js.Any = js.native
+    def clear(
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+    ): js.Any = js.native
     @JSName("clear")
     var clear_Original: SinonChromeStub = js.native
     
     // Methods
-    def get(args: js.Any*): js.Any = js.native
+    def get(
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+    ): js.Any = js.native
     
     // Methods
-    def getResourceIdentifiers(args: js.Any*): js.Any = js.native
+    def getResourceIdentifiers(
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+    ): js.Any = js.native
     @JSName("getResourceIdentifiers")
     var getResourceIdentifiers_Original: SinonChromeStub = js.native
     
@@ -40,7 +46,9 @@ object contentSettings extends js.Object {
     var get_Original: SinonChromeStub = js.native
     
     // Methods
-    def set(args: js.Any*): js.Any = js.native
+    def set(
+      /* import warning: parser.TsParser#functionParam Dropping repeated marker of param args because its type TArgs is not an array type */ args: js.Array[_]
+    ): js.Any = js.native
     @JSName("set")
     var set_Original: SinonChromeStub = js.native
   }

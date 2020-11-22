@@ -7,10 +7,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait WithStatement extends Statement {
   
-  var expression: Expression = js.native
+  val expression: Expression = js.native
   
   @JSName("kind")
-  var kind_WithStatement: typingsSlinky.typescript.mod.SyntaxKind.WithStatement = js.native
+  val kind_WithStatement: typingsSlinky.typescript.mod.SyntaxKind.WithStatement = js.native
   
-  var statement: Statement = js.native
+  val statement: Statement = js.native
 }

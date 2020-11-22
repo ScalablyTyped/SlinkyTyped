@@ -6,6 +6,8 @@ import typingsSlinky.plotlyJs.mod.Calendar
 import typingsSlinky.plotlyJs.mod.Dash
 import typingsSlinky.plotlyJs.mod.ModeBarDefaultButtons
 import typingsSlinky.plotlyJs.mod.PlotType
+import typingsSlinky.plotlyJs.mod.XAxisName
+import typingsSlinky.plotlyJs.mod.YAxisName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -124,6 +126,9 @@ object plotlyJsStrings {
   def bar: bar = "bar".asInstanceOf[bar]
   
   @scala.inline
+  def barpolar: barpolar = "barpolar".asInstanceOf[barpolar]
+  
+  @scala.inline
   def base: base = "base".asInstanceOf[base]
   
   @scala.inline
@@ -149,6 +154,9 @@ object plotlyJsStrings {
   
   @scala.inline
   def body: body = "body".asInstanceOf[body]
+  
+  @scala.inline
+  def both: both = "both".asInstanceOf[both]
   
   @scala.inline
   def bottom: bottom = "bottom".asInstanceOf[bottom]
@@ -202,6 +210,9 @@ object plotlyJsStrings {
   def caption: caption = "caption".asInstanceOf[caption]
   
   @scala.inline
+  def carpet: carpet = "carpet".asInstanceOf[carpet]
+  
+  @scala.inline
   def category: category = "category".asInstanceOf[category]
   
   @scala.inline
@@ -218,6 +229,9 @@ object plotlyJsStrings {
   
   @scala.inline
   def choropleth: choropleth = "choropleth".asInstanceOf[choropleth]
+  
+  @scala.inline
+  def choroplethmapbox: choroplethmapbox = "choroplethmapbox".asInstanceOf[choroplethmapbox]
   
   @scala.inline
   def circle: circle = "circle".asInstanceOf[circle]
@@ -256,6 +270,9 @@ object plotlyJsStrings {
   def colgroup: colgroup = "colgroup".asInstanceOf[colgroup]
   
   @scala.inline
+  def cone: cone = "cone".asInstanceOf[cone]
+  
+  @scala.inline
   def constant: constant = "constant".asInstanceOf[constant]
   
   @scala.inline
@@ -266,6 +283,12 @@ object plotlyJsStrings {
   
   @scala.inline
   def contour: contour = "contour".asInstanceOf[contour]
+  
+  @scala.inline
+  def contourcarpet: contourcarpet = "contourcarpet".asInstanceOf[contourcarpet]
+  
+  @scala.inline
+  def contourgl: contourgl = "contourgl".asInstanceOf[contourgl]
   
   @scala.inline
   def coptic: coptic = "coptic".asInstanceOf[coptic]
@@ -329,6 +352,9 @@ object plotlyJsStrings {
   
   @scala.inline
   def delta: delta = "delta".asInstanceOf[delta]
+  
+  @scala.inline
+  def densitymapbox: densitymapbox = "densitymapbox".asInstanceOf[densitymapbox]
   
   @scala.inline
   def desc: desc = "desc".asInstanceOf[desc]
@@ -398,6 +424,9 @@ object plotlyJsStrings {
   
   @scala.inline
   def ethiopian: ethiopian = "ethiopian".asInstanceOf[ethiopian]
+  
+  @scala.inline
+  def exclusive: exclusive = "exclusive".asInstanceOf[exclusive]
   
   @scala.inline
   def exp: exp = "exp".asInstanceOf[exp]
@@ -589,6 +618,9 @@ object plotlyJsStrings {
   def h6: h6 = "h6".asInstanceOf[h6]
   
   @scala.inline
+  def hard: hard = "hard".asInstanceOf[hard]
+  
+  @scala.inline
   def head: head = "head".asInstanceOf[head]
   
   @scala.inline
@@ -598,6 +630,9 @@ object plotlyJsStrings {
   def heatmap: heatmap = "heatmap".asInstanceOf[heatmap]
   
   @scala.inline
+  def heatmapgl: heatmapgl = "heatmapgl".asInstanceOf[heatmapgl]
+  
+  @scala.inline
   def hebrew: hebrew = "hebrew".asInstanceOf[hebrew]
   
   @scala.inline
@@ -605,6 +640,12 @@ object plotlyJsStrings {
   
   @scala.inline
   def histogram: histogram = "histogram".asInstanceOf[histogram]
+  
+  @scala.inline
+  def histogram2d: histogram2d = "histogram2d".asInstanceOf[histogram2d]
+  
+  @scala.inline
+  def histogram2dcontour: histogram2dcontour = "histogram2dcontour".asInstanceOf[histogram2dcontour]
   
   @scala.inline
   def horizontal: horizontal = "horizontal".asInstanceOf[horizontal]
@@ -664,10 +705,16 @@ object plotlyJsStrings {
   def `implicit`: `implicit` = "implicit".asInstanceOf[`implicit`]
   
   @scala.inline
+  def inclusive: inclusive = "inclusive".asInstanceOf[inclusive]
+  
+  @scala.inline
   def independent: independent = "independent".asInstanceOf[independent]
   
   @scala.inline
   def indicator: indicator = "indicator".asInstanceOf[indicator]
+  
+  @scala.inline
+  def `infer zero`: `infer zero` = ("infer zero").asInstanceOf[`infer zero`]
   
   @scala.inline
   def input: input = "input".asInstanceOf[input]
@@ -679,7 +726,13 @@ object plotlyJsStrings {
   def inside: inside = "inside".asInstanceOf[inside]
   
   @scala.inline
+  def interpolate: interpolate = "interpolate".asInstanceOf[interpolate]
+  
+  @scala.inline
   def islamic: islamic = "islamic".asInstanceOf[islamic]
+  
+  @scala.inline
+  def isosurface: isosurface = "isosurface".asInstanceOf[isosurface]
   
   @scala.inline
   def jalali: jalali = "jalali".asInstanceOf[jalali]
@@ -692,6 +745,9 @@ object plotlyJsStrings {
   
   @scala.inline
   def kbd: kbd = "kbd".asInstanceOf[kbd]
+  
+  @scala.inline
+  def kde: kde = "kde".asInstanceOf[kde]
   
   @scala.inline
   def label: label = "label".asInstanceOf[label]
@@ -889,6 +945,9 @@ object plotlyJsStrings {
   def nav: nav = "nav".asInstanceOf[nav]
   
   @scala.inline
+  def negative: negative = "negative".asInstanceOf[negative]
+  
+  @scala.inline
   def nepali: nepali = "nepali".asInstanceOf[nepali]
   
   @scala.inline
@@ -940,6 +999,9 @@ object plotlyJsStrings {
   def orbitRotation: orbitRotation = "orbitRotation".asInstanceOf[orbitRotation]
   
   @scala.inline
+  def outliers: outliers = "outliers".asInstanceOf[outliers]
+  
+  @scala.inline
   def output: output = "output".asInstanceOf[output]
   
   @scala.inline
@@ -965,6 +1027,9 @@ object plotlyJsStrings {
   
   @scala.inline
   def param: param = "param".asInstanceOf[param]
+  
+  @scala.inline
+  def parcats: parcats = "parcats".asInstanceOf[parcats]
   
   @scala.inline
   def parcoords: parcoords = "parcoords".asInstanceOf[parcoords]
@@ -1072,6 +1137,9 @@ object plotlyJsStrings {
   def plotly_sliderstart: plotly_sliderstart = "plotly_sliderstart".asInstanceOf[plotly_sliderstart]
   
   @scala.inline
+  def plotly_sunburstclick: plotly_sunburstclick = "plotly_sunburstclick".asInstanceOf[plotly_sunburstclick]
+  
+  @scala.inline
   def plotly_transitioning: plotly_transitioning = "plotly_transitioning".asInstanceOf[plotly_transitioning]
   
   @scala.inline
@@ -1100,6 +1168,9 @@ object plotlyJsStrings {
   
   @scala.inline
   def population: population = "population".asInstanceOf[population]
+  
+  @scala.inline
+  def positive: positive = "positive".asInstanceOf[positive]
   
   @scala.inline
   def power: power = "power".asInstanceOf[power]
@@ -1204,6 +1275,9 @@ object plotlyJsStrings {
   def sample: sample = "sample".asInstanceOf[sample]
   
   @scala.inline
+  def sankey: sankey = "sankey".asInstanceOf[sankey]
+  
+  @scala.inline
   def scaled: scaled = "scaled".asInstanceOf[scaled]
   
   @scala.inline
@@ -1211,6 +1285,9 @@ object plotlyJsStrings {
   
   @scala.inline
   def scatter3d: scatter3d = "scatter3d".asInstanceOf[scatter3d]
+  
+  @scala.inline
+  def scattercarpet: scattercarpet = "scattercarpet".asInstanceOf[scattercarpet]
   
   @scala.inline
   def scattergeo: scattergeo = "scattergeo".asInstanceOf[scattergeo]
@@ -1223,6 +1300,9 @@ object plotlyJsStrings {
   
   @scala.inline
   def scatterpolar: scatterpolar = "scatterpolar".asInstanceOf[scatterpolar]
+  
+  @scala.inline
+  def scatterpolargl: scatterpolargl = "scatterpolargl".asInstanceOf[scatterpolargl]
   
   @scala.inline
   def scatterternary: scatterternary = "scatterternary".asInstanceOf[scatterternary]
@@ -1270,6 +1350,9 @@ object plotlyJsStrings {
   def small: small = "small".asInstanceOf[small]
   
   @scala.inline
+  def soft: soft = "soft".asInstanceOf[soft]
+  
+  @scala.inline
   def solid: solid = "solid".asInstanceOf[solid]
   
   @scala.inline
@@ -1285,6 +1368,9 @@ object plotlyJsStrings {
   def spline: spline = "spline".asInstanceOf[spline]
   
   @scala.inline
+  def splom: splom = "splom".asInstanceOf[splom]
+  
+  @scala.inline
   def stack: stack = "stack".asInstanceOf[stack]
   
   @scala.inline
@@ -1295,6 +1381,9 @@ object plotlyJsStrings {
   
   @scala.inline
   def stop: stop = "stop".asInstanceOf[stop]
+  
+  @scala.inline
+  def streamtube: streamtube = "streamtube".asInstanceOf[streamtube]
   
   @scala.inline
   def stretch: stretch = "stretch".asInstanceOf[stretch]
@@ -1328,6 +1417,9 @@ object plotlyJsStrings {
   
   @scala.inline
   def surface: surface = "surface".asInstanceOf[surface]
+  
+  @scala.inline
+  def suspectedoutliers: suspectedoutliers = "suspectedoutliers".asInstanceOf[suspectedoutliers]
   
   @scala.inline
   def svg: svg = "svg".asInstanceOf[svg]
@@ -1546,6 +1638,15 @@ object plotlyJsStrings {
   def view: view = "view".asInstanceOf[view]
   
   @scala.inline
+  def violin: violin = "violin".asInstanceOf[violin]
+  
+  @scala.inline
+  def violins: violins = "violins".asInstanceOf[violins]
+  
+  @scala.inline
+  def volume: volume = "volume".asInstanceOf[volume]
+  
+  @scala.inline
   def waterfall: waterfall = "waterfall".asInstanceOf[waterfall]
   
   @scala.inline
@@ -1555,10 +1656,19 @@ object plotlyJsStrings {
   def webp: webp = "webp".asInstanceOf[webp]
   
   @scala.inline
+  def width: width = "width".asInstanceOf[width]
+  
+  @scala.inline
   def x: x = "x".asInstanceOf[x]
   
   @scala.inline
   def `x unified`: `x unified` = ("x unified").asInstanceOf[`x unified`]
+  
+  @scala.inline
+  def x10: x10 = "x10".asInstanceOf[x10]
+  
+  @scala.inline
+  def x11: x11 = "x11".asInstanceOf[x11]
   
   @scala.inline
   def x2: x2 = "x2".asInstanceOf[x2]
@@ -1613,6 +1723,12 @@ object plotlyJsStrings {
   
   @scala.inline
   def `y unified`: `y unified` = ("y unified").asInstanceOf[`y unified`]
+  
+  @scala.inline
+  def y10: y10 = "y10".asInstanceOf[y10]
+  
+  @scala.inline
+  def y11: y11 = "y11".asInstanceOf[y11]
   
   @scala.inline
   def y2: y2 = "y2".asInstanceOf[y2]
@@ -1837,6 +1953,9 @@ object plotlyJsStrings {
   sealed trait bar extends PlotType
   
   @js.native
+  sealed trait barpolar extends PlotType
+  
+  @js.native
   sealed trait base extends js.Object
   
   @js.native
@@ -1862,6 +1981,9 @@ object plotlyJsStrings {
   
   @js.native
   sealed trait body extends js.Object
+  
+  @js.native
+  sealed trait both extends js.Object
   
   @js.native
   sealed trait bottom extends js.Object
@@ -1915,6 +2037,9 @@ object plotlyJsStrings {
   sealed trait caption extends js.Object
   
   @js.native
+  sealed trait carpet extends PlotType
+  
+  @js.native
   sealed trait category extends AxisType
   
   @js.native
@@ -1931,6 +2056,9 @@ object plotlyJsStrings {
   
   @js.native
   sealed trait choropleth extends PlotType
+  
+  @js.native
+  sealed trait choroplethmapbox extends PlotType
   
   @js.native
   sealed trait circle extends js.Object
@@ -1969,6 +2097,9 @@ object plotlyJsStrings {
   sealed trait colgroup extends js.Object
   
   @js.native
+  sealed trait cone extends PlotType
+  
+  @js.native
   sealed trait constant extends js.Object
   
   @js.native
@@ -1979,6 +2110,12 @@ object plotlyJsStrings {
   
   @js.native
   sealed trait contour extends PlotType
+  
+  @js.native
+  sealed trait contourcarpet extends PlotType
+  
+  @js.native
+  sealed trait contourgl extends PlotType
   
   @js.native
   sealed trait coptic extends Calendar
@@ -2042,6 +2179,9 @@ object plotlyJsStrings {
   
   @js.native
   sealed trait delta extends js.Object
+  
+  @js.native
+  sealed trait densitymapbox extends PlotType
   
   @js.native
   sealed trait desc extends js.Object
@@ -2111,6 +2251,9 @@ object plotlyJsStrings {
   
   @js.native
   sealed trait ethiopian extends Calendar
+  
+  @js.native
+  sealed trait exclusive extends js.Object
   
   @js.native
   sealed trait exp extends js.Object
@@ -2302,6 +2445,9 @@ object plotlyJsStrings {
   sealed trait h6 extends js.Object
   
   @js.native
+  sealed trait hard extends js.Object
+  
+  @js.native
   sealed trait head extends js.Object
   
   @js.native
@@ -2311,6 +2457,9 @@ object plotlyJsStrings {
   sealed trait heatmap extends PlotType
   
   @js.native
+  sealed trait heatmapgl extends PlotType
+  
+  @js.native
   sealed trait hebrew extends Calendar
   
   @js.native
@@ -2318,6 +2467,12 @@ object plotlyJsStrings {
   
   @js.native
   sealed trait histogram extends PlotType
+  
+  @js.native
+  sealed trait histogram2d extends PlotType
+  
+  @js.native
+  sealed trait histogram2dcontour extends PlotType
   
   @js.native
   sealed trait horizontal extends js.Object
@@ -2368,7 +2523,7 @@ object plotlyJsStrings {
   sealed trait iframe extends js.Object
   
   @js.native
-  sealed trait image extends js.Object
+  sealed trait image extends PlotType
   
   @js.native
   sealed trait img extends js.Object
@@ -2377,10 +2532,16 @@ object plotlyJsStrings {
   sealed trait `implicit` extends js.Object
   
   @js.native
+  sealed trait inclusive extends js.Object
+  
+  @js.native
   sealed trait independent extends js.Object
   
   @js.native
   sealed trait indicator extends PlotType
+  
+  @js.native
+  sealed trait `infer zero` extends js.Object
   
   @js.native
   sealed trait input extends js.Object
@@ -2392,7 +2553,13 @@ object plotlyJsStrings {
   sealed trait inside extends js.Object
   
   @js.native
+  sealed trait interpolate extends js.Object
+  
+  @js.native
   sealed trait islamic extends Calendar
+  
+  @js.native
+  sealed trait isosurface extends PlotType
   
   @js.native
   sealed trait jalali extends Calendar
@@ -2405,6 +2572,9 @@ object plotlyJsStrings {
   
   @js.native
   sealed trait kbd extends js.Object
+  
+  @js.native
+  sealed trait kde extends js.Object
   
   @js.native
   sealed trait label extends js.Object
@@ -2602,6 +2772,9 @@ object plotlyJsStrings {
   sealed trait nav extends js.Object
   
   @js.native
+  sealed trait negative extends js.Object
+  
+  @js.native
   sealed trait nepali extends Calendar
   
   @js.native
@@ -2653,6 +2826,9 @@ object plotlyJsStrings {
   sealed trait orbitRotation extends ModeBarDefaultButtons
   
   @js.native
+  sealed trait outliers extends js.Object
+  
+  @js.native
   sealed trait output extends js.Object
   
   @js.native
@@ -2678,6 +2854,9 @@ object plotlyJsStrings {
   
   @js.native
   sealed trait param extends js.Object
+  
+  @js.native
+  sealed trait parcats extends PlotType
   
   @js.native
   sealed trait parcoords extends PlotType
@@ -2785,6 +2964,9 @@ object plotlyJsStrings {
   sealed trait plotly_sliderstart extends js.Object
   
   @js.native
+  sealed trait plotly_sunburstclick extends js.Object
+  
+  @js.native
   sealed trait plotly_transitioning extends js.Object
   
   @js.native
@@ -2813,6 +2995,9 @@ object plotlyJsStrings {
   
   @js.native
   sealed trait population extends js.Object
+  
+  @js.native
+  sealed trait positive extends js.Object
   
   @js.native
   sealed trait power extends js.Object
@@ -2917,6 +3102,9 @@ object plotlyJsStrings {
   sealed trait sample extends js.Object
   
   @js.native
+  sealed trait sankey extends PlotType
+  
+  @js.native
   sealed trait scaled extends js.Object
   
   @js.native
@@ -2924,6 +3112,9 @@ object plotlyJsStrings {
   
   @js.native
   sealed trait scatter3d extends PlotType
+  
+  @js.native
+  sealed trait scattercarpet extends PlotType
   
   @js.native
   sealed trait scattergeo extends PlotType
@@ -2936,6 +3127,9 @@ object plotlyJsStrings {
   
   @js.native
   sealed trait scatterpolar extends PlotType
+  
+  @js.native
+  sealed trait scatterpolargl extends PlotType
   
   @js.native
   sealed trait scatterternary extends PlotType
@@ -2983,6 +3177,9 @@ object plotlyJsStrings {
   sealed trait small extends js.Object
   
   @js.native
+  sealed trait soft extends js.Object
+  
+  @js.native
   sealed trait solid extends Dash
   
   @js.native
@@ -2998,6 +3195,9 @@ object plotlyJsStrings {
   sealed trait spline extends js.Object
   
   @js.native
+  sealed trait splom extends PlotType
+  
+  @js.native
   sealed trait stack extends js.Object
   
   @js.native
@@ -3008,6 +3208,9 @@ object plotlyJsStrings {
   
   @js.native
   sealed trait stop extends js.Object
+  
+  @js.native
+  sealed trait streamtube extends PlotType
   
   @js.native
   sealed trait stretch extends js.Object
@@ -3043,6 +3246,9 @@ object plotlyJsStrings {
   sealed trait surface extends PlotType
   
   @js.native
+  sealed trait suspectedoutliers extends js.Object
+  
+  @js.native
   sealed trait svg extends js.Object
   
   @js.native
@@ -3052,7 +3258,7 @@ object plotlyJsStrings {
   sealed trait symbol extends js.Object
   
   @js.native
-  sealed trait table extends js.Object
+  sealed trait table extends PlotType
   
   @js.native
   sealed trait tableRotation extends ModeBarDefaultButtons
@@ -3259,6 +3465,15 @@ object plotlyJsStrings {
   sealed trait view extends js.Object
   
   @js.native
+  sealed trait violin extends PlotType
+  
+  @js.native
+  sealed trait violins extends js.Object
+  
+  @js.native
+  sealed trait volume extends PlotType
+  
+  @js.native
   sealed trait waterfall extends PlotType
   
   @js.native
@@ -3268,34 +3483,65 @@ object plotlyJsStrings {
   sealed trait webp extends js.Object
   
   @js.native
-  sealed trait x extends AxisName
+  sealed trait width extends js.Object
+  
+  @js.native
+  sealed trait x
+    extends AxisName
+       with XAxisName
   
   @js.native
   sealed trait `x unified` extends js.Object
   
   @js.native
-  sealed trait x2 extends AxisName
+  sealed trait x10
+    extends AxisName
+       with XAxisName
   
   @js.native
-  sealed trait x3 extends AxisName
+  sealed trait x11
+    extends AxisName
+       with XAxisName
   
   @js.native
-  sealed trait x4 extends AxisName
+  sealed trait x2
+    extends AxisName
+       with XAxisName
   
   @js.native
-  sealed trait x5 extends AxisName
+  sealed trait x3
+    extends AxisName
+       with XAxisName
   
   @js.native
-  sealed trait x6 extends AxisName
+  sealed trait x4
+    extends AxisName
+       with XAxisName
   
   @js.native
-  sealed trait x7 extends AxisName
+  sealed trait x5
+    extends AxisName
+       with XAxisName
   
   @js.native
-  sealed trait x8 extends AxisName
+  sealed trait x6
+    extends AxisName
+       with XAxisName
   
   @js.native
-  sealed trait x9 extends AxisName
+  sealed trait x7
+    extends AxisName
+       with XAxisName
+  
+  @js.native
+  sealed trait x8
+    extends AxisName
+       with XAxisName
+  
+  @js.native
+  sealed trait x9
+    extends AxisName
+       with XAxisName
   
   @js.native
   sealed trait xPlussignname extends js.Object
@@ -3322,34 +3568,62 @@ object plotlyJsStrings {
   sealed trait xPlussignyPlussignzPlussigntext extends js.Object
   
   @js.native
-  sealed trait y extends AxisName
+  sealed trait y
+    extends AxisName
+       with YAxisName
   
   @js.native
   sealed trait `y unified` extends js.Object
   
   @js.native
-  sealed trait y2 extends AxisName
+  sealed trait y10
+    extends AxisName
+       with YAxisName
   
   @js.native
-  sealed trait y3 extends AxisName
+  sealed trait y11
+    extends AxisName
+       with YAxisName
   
   @js.native
-  sealed trait y4 extends AxisName
+  sealed trait y2
+    extends AxisName
+       with YAxisName
   
   @js.native
-  sealed trait y5 extends AxisName
+  sealed trait y3
+    extends AxisName
+       with YAxisName
   
   @js.native
-  sealed trait y6 extends AxisName
+  sealed trait y4
+    extends AxisName
+       with YAxisName
   
   @js.native
-  sealed trait y7 extends AxisName
+  sealed trait y5
+    extends AxisName
+       with YAxisName
   
   @js.native
-  sealed trait y8 extends AxisName
+  sealed trait y6
+    extends AxisName
+       with YAxisName
   
   @js.native
-  sealed trait y9 extends AxisName
+  sealed trait y7
+    extends AxisName
+       with YAxisName
+  
+  @js.native
+  sealed trait y8
+    extends AxisName
+       with YAxisName
+  
+  @js.native
+  sealed trait y9
+    extends AxisName
+       with YAxisName
   
   @js.native
   sealed trait yPlussignname extends js.Object

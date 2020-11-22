@@ -9,7 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartTooltip extends BaseChartTooltip {
   
-  /** @name dxChart.Options.tooltip.location */
+  /**
+    * [descr:dxChart.Options.tooltip.location]
+    */
   var location: js.UndefOr[center | edge] = js.native
 }
 object dxChartTooltip {

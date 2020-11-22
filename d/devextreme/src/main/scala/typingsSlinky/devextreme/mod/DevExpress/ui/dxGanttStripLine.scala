@@ -7,16 +7,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxGanttStripLine extends js.Object {
   
-  /** @name dxGanttStripLine.cssClass */
+  /**
+    * [descr:dxGanttStripLine.cssClass]
+    */
   var cssClass: js.UndefOr[String] = js.native
   
-  /** @name dxGanttStripLine.end */
+  /**
+    * [descr:dxGanttStripLine.end]
+    */
   var end: js.UndefOr[js.Date | Double | String | (js.Function0[js.Date | Double | String])] = js.native
   
-  /** @name dxGanttStripLine.start */
+  /**
+    * [descr:dxGanttStripLine.start]
+    */
   var start: js.UndefOr[js.Date | Double | String | (js.Function0[js.Date | Double | String])] = js.native
   
-  /** @name dxGanttStripLine.title */
+  /**
+    * [descr:dxGanttStripLine.title]
+    */
   var title: js.UndefOr[String] = js.native
 }
 object dxGanttStripLine {

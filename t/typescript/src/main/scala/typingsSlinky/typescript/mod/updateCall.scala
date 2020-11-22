@@ -14,6 +14,7 @@ object updateCall extends js.Object {
     typeArguments: js.UndefOr[scala.Nothing],
     argumentsArray: js.Array[Expression]
   ): CallExpression = js.native
+  /** @deprecated Use `factory.updateCall` or the factory supplied by your transformation context instead. */
   def apply(
     node: CallExpression,
     expression: Expression,

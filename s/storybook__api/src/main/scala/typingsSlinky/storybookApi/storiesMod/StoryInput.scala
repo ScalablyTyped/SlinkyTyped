@@ -1,6 +1,9 @@
 package typingsSlinky.storybookApi.storiesMod
 
 import typingsSlinky.storybookApi.anon.DictparameterName
+import typingsSlinky.storybookApi.mod.Args
+import typingsSlinky.storybookApi.mod.StoryId
+import typingsSlinky.storybookApi.mod.StoryKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,30 +11,35 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait StoryInput extends js.Object {
   
+  var args: Args = js.native
+  
   var children: js.Array[String] = js.native
   
   var id: StoryId = js.native
   
   var isLeaf: Boolean = js.native
   
-  var kind: String = js.native
+  var kind: StoryKind = js.native
   
   var name: String = js.native
   
   var parameters: DictparameterName = js.native
+  
+  var refId: js.UndefOr[String] = js.native
 }
 object StoryInput {
   
   @scala.inline
   def apply(
+    args: Args,
     children: js.Array[String],
     id: StoryId,
     isLeaf: Boolean,
-    kind: String,
+    kind: StoryKind,
     name: String,
     parameters: DictparameterName
   ): StoryInput = {
-    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isLeaf = isLeaf.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parameters = parameters.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(args = args.asInstanceOf[js.Any], children = children.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], isLeaf = isLeaf.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parameters = parameters.asInstanceOf[js.Any])
     __obj.asInstanceOf[StoryInput]
   }
   
@@ -51,6 +59,9 @@ object StoryInput {
     }
     
     @scala.inline
+    def setArgs(value: Args): Self = this.set("args", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setChildrenVarargs(value: String*): Self = this.set("children", js.Array(value :_*))
     
     @scala.inline
@@ -63,12 +74,18 @@ object StoryInput {
     def setIsLeaf(value: Boolean): Self = this.set("isLeaf", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setKind(value: String): Self = this.set("kind", value.asInstanceOf[js.Any])
+    def setKind(value: StoryKind): Self = this.set("kind", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setParameters(value: DictparameterName): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRefId(value: String): Self = this.set("refId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRefId: Self = this.set("refId", js.undefined)
   }
 }

@@ -42,7 +42,7 @@ trait Volume extends js.Object {
   var configMap: js.UndefOr[Input[ConfigMapVolumeSource]] = js.native
   
   /**
-    * CSI (Container Storage Interface) represents storage that is handled by an external CSI driver (Alpha feature).
+    * CSI (Container Storage Interface) represents ephemeral storage that is handled by certain external CSI drivers (Beta feature).
     */
   var csi: js.UndefOr[Input[CSIVolumeSource]] = js.native
   
@@ -55,6 +55,24 @@ trait Volume extends js.Object {
     * EmptyDir represents a temporary directory that shares a pod's lifetime. More info: https://kubernetes.io/docs/concepts/storage/volumes#emptydir
     */
   var emptyDir: js.UndefOr[Input[EmptyDirVolumeSource]] = js.native
+  
+  /**
+    * Ephemeral represents a volume that is handled by a cluster storage driver (Alpha feature). The volume's lifecycle is tied to the pod that defines it - it will be created before the pod starts, and deleted when the pod is removed.
+    *
+    * Use this if: a) the volume is only needed while the pod runs, b) features of normal volumes like restoring from snapshot or capacity
+    *    tracking are needed,
+    * c) the storage driver is specified through a storage class, and d) the storage driver supports dynamic volume provisioning through
+    *    a PersistentVolumeClaim (see EphemeralVolumeSource for more
+    *    information on the connection between this volume type
+    *    and PersistentVolumeClaim).
+    *
+    * Use PersistentVolumeClaim or one of the vendor-specific APIs for volumes that persist for longer than the lifecycle of an individual pod.
+    *
+    * Use CSI for light-weight local ephemeral volumes if the CSI driver is meant to be used that way - see the documentation of the driver for more information.
+    *
+    * A pod can use both types of ephemeral volumes and persistent volumes at the same time.
+    */
+  var ephemeral: js.UndefOr[Input[EphemeralVolumeSource]] = js.native
   
   /**
     * FC represents a Fibre Channel resource that is attached to a kubelet's host machine and then exposed to the pod.
@@ -235,6 +253,12 @@ object Volume {
     
     @scala.inline
     def deleteEmptyDir: Self = this.set("emptyDir", js.undefined)
+    
+    @scala.inline
+    def setEphemeral(value: Input[EphemeralVolumeSource]): Self = this.set("ephemeral", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEphemeral: Self = this.set("ephemeral", js.undefined)
     
     @scala.inline
     def setFc(value: Input[FCVolumeSource]): Self = this.set("fc", value.asInstanceOf[js.Any])

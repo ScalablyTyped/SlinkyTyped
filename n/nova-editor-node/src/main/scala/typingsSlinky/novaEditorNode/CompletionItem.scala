@@ -8,7 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait CompletionItem extends js.Object {
   
-  var commitCharacters: js.UndefOr[js.Array[String]] = js.native
+  var additionalTextEdits: js.UndefOr[js.Array[TextEdit]] = js.native
+  
+  var color: js.UndefOr[Color] = js.native
+  
+  var commitChars: js.UndefOr[Charset] = js.native
   
   var detail: js.UndefOr[String] = js.native
   
@@ -18,19 +22,19 @@ trait CompletionItem extends js.Object {
   
   var insertText: js.UndefOr[String] = js.native
   
+  var insertTextFormat: js.UndefOr[InsertTextFormat] = js.native
+  
   var kind: CompletionItemKind = js.native
   
   var label: String = js.native
   
   var range: js.UndefOr[Range] = js.native
-  
-  var tokenize: Boolean = js.native
 }
 object CompletionItem {
   
   @scala.inline
-  def apply(kind: CompletionItemKind, label: String, tokenize: Boolean): CompletionItem = {
-    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any], tokenize = tokenize.asInstanceOf[js.Any])
+  def apply(kind: CompletionItemKind, label: String): CompletionItem = {
+    val __obj = js.Dynamic.literal(kind = kind.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
     __obj.asInstanceOf[CompletionItem]
   }
   
@@ -56,16 +60,25 @@ object CompletionItem {
     def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setTokenize(value: Boolean): Self = this.set("tokenize", value.asInstanceOf[js.Any])
+    def setAdditionalTextEditsVarargs(value: TextEdit*): Self = this.set("additionalTextEdits", js.Array(value :_*))
     
     @scala.inline
-    def setCommitCharactersVarargs(value: String*): Self = this.set("commitCharacters", js.Array(value :_*))
+    def setAdditionalTextEdits(value: js.Array[TextEdit]): Self = this.set("additionalTextEdits", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCommitCharacters(value: js.Array[String]): Self = this.set("commitCharacters", value.asInstanceOf[js.Any])
+    def deleteAdditionalTextEdits: Self = this.set("additionalTextEdits", js.undefined)
     
     @scala.inline
-    def deleteCommitCharacters: Self = this.set("commitCharacters", js.undefined)
+    def setColor(value: Color): Self = this.set("color", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColor: Self = this.set("color", js.undefined)
+    
+    @scala.inline
+    def setCommitChars(value: Charset): Self = this.set("commitChars", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCommitChars: Self = this.set("commitChars", js.undefined)
     
     @scala.inline
     def setDetail(value: String): Self = this.set("detail", value.asInstanceOf[js.Any])
@@ -90,6 +103,12 @@ object CompletionItem {
     
     @scala.inline
     def deleteInsertText: Self = this.set("insertText", js.undefined)
+    
+    @scala.inline
+    def setInsertTextFormat(value: InsertTextFormat): Self = this.set("insertTextFormat", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInsertTextFormat: Self = this.set("insertTextFormat", js.undefined)
     
     @scala.inline
     def setRange(value: Range): Self = this.set("range", value.asInstanceOf[js.Any])

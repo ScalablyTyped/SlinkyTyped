@@ -18,8 +18,13 @@ import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import typingsSlinky.materialUiLab.anon.PartialClassNameMapTreeVi
+import typingsSlinky.materialUiLab.materialUiLabStrings.`additions removals`
 import typingsSlinky.materialUiLab.materialUiLabStrings.`additions text`
 import typingsSlinky.materialUiLab.materialUiLabStrings.`inline`
+import typingsSlinky.materialUiLab.materialUiLabStrings.`removals additions`
+import typingsSlinky.materialUiLab.materialUiLabStrings.`removals text`
+import typingsSlinky.materialUiLab.materialUiLabStrings.`text additions`
+import typingsSlinky.materialUiLab.materialUiLabStrings.`text removals`
 import typingsSlinky.materialUiLab.materialUiLabStrings.additions
 import typingsSlinky.materialUiLab.materialUiLabStrings.all
 import typingsSlinky.materialUiLab.materialUiLabStrings.ascending
@@ -165,7 +170,9 @@ trait TreeViewPropsBase extends js.Object {
   
   var `aria-readonly`: js.UndefOr[Boolean] = js.native
   
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   var `aria-required`: js.UndefOr[Boolean] = js.native
   
@@ -737,7 +744,9 @@ object TreeViewPropsBase {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)

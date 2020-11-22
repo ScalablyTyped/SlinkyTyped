@@ -9,12 +9,12 @@ trait Vpc extends js.Object {
   
   var securityGroupIds: js.Array[String] = js.native
   
-  var subnetIds: js.Array[String] = js.native
+  var subnetIds: js.Array[String] | String = js.native
 }
 object Vpc {
   
   @scala.inline
-  def apply(securityGroupIds: js.Array[String], subnetIds: js.Array[String]): Vpc = {
+  def apply(securityGroupIds: js.Array[String], subnetIds: js.Array[String] | String): Vpc = {
     val __obj = js.Dynamic.literal(securityGroupIds = securityGroupIds.asInstanceOf[js.Any], subnetIds = subnetIds.asInstanceOf[js.Any])
     __obj.asInstanceOf[Vpc]
   }
@@ -44,6 +44,6 @@ object Vpc {
     def setSubnetIdsVarargs(value: String*): Self = this.set("subnetIds", js.Array(value :_*))
     
     @scala.inline
-    def setSubnetIds(value: js.Array[String]): Self = this.set("subnetIds", value.asInstanceOf[js.Any])
+    def setSubnetIds(value: js.Array[String] | String): Self = this.set("subnetIds", value.asInstanceOf[js.Any])
   }
 }

@@ -1,15 +1,16 @@
 package typingsSlinky.astTypes.buildersMod
 
-import typingsSlinky.astTypes.anon.CommentsIdLoc
+import typingsSlinky.astTypes.anon.CommentsId
 import typingsSlinky.astTypes.kindsMod.IdentifierKind
 import typingsSlinky.astTypes.namedTypesMod.namedTypes.TSNamespaceExportDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait TSNamespaceExportDeclarationBuilder extends js.Object {
+  
   def apply(id: IdentifierKind): TSNamespaceExportDeclaration = js.native
-  def from(params: CommentsIdLoc): TSNamespaceExportDeclaration = js.native
+  
+  def from(params: CommentsId): TSNamespaceExportDeclaration = js.native
 }
-

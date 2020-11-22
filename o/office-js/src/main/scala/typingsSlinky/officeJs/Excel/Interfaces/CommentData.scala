@@ -1,6 +1,9 @@
 package typingsSlinky.officeJs.Excel.Interfaces
 
 import typingsSlinky.officeJs.Excel.CommentMention
+import typingsSlinky.officeJs.Excel.ContentType
+import typingsSlinky.officeJs.officeJsStrings.Mention
+import typingsSlinky.officeJs.officeJsStrings.Plain
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -32,6 +35,14 @@ trait CommentData extends js.Object {
     * [Api set: ExcelApi 1.10]
     */
   var content: js.UndefOr[String] = js.native
+  
+  /**
+    *
+    * Gets the content type of the comment.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  var contentType: js.UndefOr[ContentType | Plain | Mention] = js.native
   
   /**
     *
@@ -121,6 +132,12 @@ object CommentData {
     
     @scala.inline
     def deleteContent: Self = this.set("content", js.undefined)
+    
+    @scala.inline
+    def setContentType(value: ContentType | Plain | Mention): Self = this.set("contentType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteContentType: Self = this.set("contentType", js.undefined)
     
     @scala.inline
     def setCreationDate(value: js.Date): Self = this.set("creationDate", value.asInstanceOf[js.Any])

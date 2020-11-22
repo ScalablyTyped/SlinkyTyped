@@ -1,14 +1,14 @@
 organization := "org.scalablytyped.slinky"
 name := "react-dnd-html5-backend"
-version := "11.1.3-2946e7"
+version := "11.1.3-112275"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
   "me.shadaj" %%% "slinky-web" % "0.6.6",
-  "org.scalablytyped.slinky" %%% "dnd-core" % "11.1.3-daccc1",
-  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-13a419",
-  "org.scalablytyped.slinky" %%% "std" % "3.9-38a9bf")
+  "org.scalablytyped.slinky" %%% "dnd-core" % "11.1.3-8ecfa5",
+  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-f9ab72",
+  "org.scalablytyped.slinky" %%% "std" % "4.1-e01533")
 publishArtifact in packageDoc := false
 scalacOptions ++= List("-encoding", "utf-8", "-feature", "-g:notailcalls", "-language:implicitConversions", "-language:higherKinds", "-language:existentials")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))

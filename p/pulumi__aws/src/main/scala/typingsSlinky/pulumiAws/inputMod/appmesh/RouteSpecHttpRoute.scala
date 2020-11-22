@@ -17,6 +17,16 @@ trait RouteSpecHttpRoute extends js.Object {
     * The criteria for determining an HTTP request match.
     */
   var `match`: Input[RouteSpecHttpRouteMatch] = js.native
+  
+  /**
+    * The retry policy.
+    */
+  var retryPolicy: js.UndefOr[Input[RouteSpecHttpRouteRetryPolicy]] = js.native
+  
+  /**
+    * The types of timeouts.
+    */
+  var timeout: js.UndefOr[Input[RouteSpecHttpRouteTimeout]] = js.native
 }
 object RouteSpecHttpRoute {
   
@@ -47,5 +57,17 @@ object RouteSpecHttpRoute {
     
     @scala.inline
     def setMatch(value: Input[RouteSpecHttpRouteMatch]): Self = this.set("match", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setRetryPolicy(value: Input[RouteSpecHttpRouteRetryPolicy]): Self = this.set("retryPolicy", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteRetryPolicy: Self = this.set("retryPolicy", js.undefined)
+    
+    @scala.inline
+    def setTimeout(value: Input[RouteSpecHttpRouteTimeout]): Self = this.set("timeout", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTimeout: Self = this.set("timeout", js.undefined)
   }
 }

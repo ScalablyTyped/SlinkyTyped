@@ -11,7 +11,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/project relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/project relevant section in reference guide}
   */
 /* import warning: transforms.RemoveMultipleInheritance#findNewParents newComments Dropped parents 
 - typingsSlinky.mendixmodelsdk.structuresMod.IStructure because Already inherited
@@ -20,7 +20,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 - typingsSlinky.mendixmodelsdk.unitsMod.IStructuralUnit because Already inherited
 - typingsSlinky.mendixmodelsdk.projectsMod.projects.IProject because var conflicts: id, isLoaded, model, structureTypeName, unit. Inlined projectDocuments, modules, projectConversion, isSystemProject */ @JSImport("mendixmodelsdk/dist/gen/projects", "projects.Project")
 @js.native
-class Project protected () extends StructuralUnit {
+class Project protected () extends StructuralUnit[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
@@ -33,9 +33,6 @@ class Project protected () extends StructuralUnit {
   def isSystemProject_=(newValue: Boolean): Unit = js.native
   @JSName("isSystemProject")
   var isSystemProject_FProject: Boolean = js.native
-  
-  @JSName("model")
-  var model_FProject: IModel = js.native
   
   def modules: IList[IModule] = js.native
   @JSName("modules")

@@ -23,6 +23,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gestalt.gestaltStrings.`align-top-left`
   - typingsSlinky.gestalt.gestaltStrings.`align-top-right`
   - typingsSlinky.gestalt.gestaltStrings.`align-top`
+  - typingsSlinky.gestalt.gestaltStrings.`android-share`
   - typingsSlinky.gestalt.gestaltStrings.`angled-pin`
   - typingsSlinky.gestalt.gestaltStrings.apps
   - typingsSlinky.gestalt.gestaltStrings.`arrow-back`
@@ -47,14 +48,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gestalt.gestaltStrings.`circle-outline`
   - typingsSlinky.gestalt.gestaltStrings.clear
   - typingsSlinky.gestalt.gestaltStrings.clock
+  - typingsSlinky.gestalt.gestaltStrings.code
   - typingsSlinky.gestalt.gestaltStrings.cog
   - typingsSlinky.gestalt.gestaltStrings.compass
   - typingsSlinky.gestalt.gestaltStrings.compose
   - typingsSlinky.gestalt.gestaltStrings.crop
   - typingsSlinky.gestalt.gestaltStrings.dash
+  - typingsSlinky.gestalt.gestaltStrings.`conversion-tag`
+  - typingsSlinky.gestalt.gestaltStrings.`credit-card`
   - typingsSlinky.gestalt.gestaltStrings.`directional-arrow-left`
   - typingsSlinky.gestalt.gestaltStrings.`directional-arrow-right`
   - typingsSlinky.gestalt.gestaltStrings.download
+  - typingsSlinky.gestalt.gestaltStrings.`drag-drop`
   - typingsSlinky.gestalt.gestaltStrings.duplicate
   - typingsSlinky.gestalt.gestaltStrings.edit
   - typingsSlinky.gestalt.gestaltStrings.ellipsis
@@ -112,10 +117,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gestalt.gestaltStrings.people
   - typingsSlinky.gestalt.gestaltStrings.person
   - typingsSlinky.gestalt.gestaltStrings.`person-add`
+  - typingsSlinky.gestalt.gestaltStrings.phone
   - typingsSlinky.gestalt.gestaltStrings.pin
   - typingsSlinky.gestalt.gestaltStrings.`pin-hide`
   - typingsSlinky.gestalt.gestaltStrings.pinterest
   - typingsSlinky.gestalt.gestaltStrings.play
+  - typingsSlinky.gestalt.gestaltStrings.protect
   - typingsSlinky.gestalt.gestaltStrings.refresh
   - typingsSlinky.gestalt.gestaltStrings.`question-mark`
   - typingsSlinky.gestalt.gestaltStrings.remove
@@ -134,9 +141,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.gestalt.gestaltStrings.sound
   - typingsSlinky.gestalt.gestaltStrings.`sort-ascending`
   - typingsSlinky.gestalt.gestaltStrings.`sort-descending`
+  - typingsSlinky.gestalt.gestaltStrings.sparkle
   - typingsSlinky.gestalt.gestaltStrings.speech
   - typingsSlinky.gestalt.gestaltStrings.`speech-ellipsis`
   - typingsSlinky.gestalt.gestaltStrings.star
+  - typingsSlinky.gestalt.gestaltStrings.`star-half`
+  - typingsSlinky.gestalt.gestaltStrings.`story-pin`
   - typingsSlinky.gestalt.gestaltStrings.`switch-account`
   - typingsSlinky.gestalt.gestaltStrings.tag
   - typingsSlinky.gestalt.gestaltStrings.terms
@@ -224,6 +234,9 @@ object Icons {
   def `align-top-right`: typingsSlinky.gestalt.gestaltStrings.`align-top-right` = "align-top-right".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`align-top-right`]
   
   @scala.inline
+  def `android-share`: typingsSlinky.gestalt.gestaltStrings.`android-share` = "android-share".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`android-share`]
+  
+  @scala.inline
   def `angled-pin`: typingsSlinky.gestalt.gestaltStrings.`angled-pin` = "angled-pin".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`angled-pin`]
   
   @scala.inline
@@ -293,6 +306,9 @@ object Icons {
   def clock: typingsSlinky.gestalt.gestaltStrings.clock = "clock".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.clock]
   
   @scala.inline
+  def code: typingsSlinky.gestalt.gestaltStrings.code = "code".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.code]
+  
+  @scala.inline
   def cog: typingsSlinky.gestalt.gestaltStrings.cog = "cog".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.cog]
   
   @scala.inline
@@ -303,6 +319,12 @@ object Icons {
   
   @scala.inline
   def compose: typingsSlinky.gestalt.gestaltStrings.compose = "compose".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.compose]
+  
+  @scala.inline
+  def `conversion-tag`: typingsSlinky.gestalt.gestaltStrings.`conversion-tag` = "conversion-tag".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`conversion-tag`]
+  
+  @scala.inline
+  def `credit-card`: typingsSlinky.gestalt.gestaltStrings.`credit-card` = "credit-card".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`credit-card`]
   
   @scala.inline
   def crop: typingsSlinky.gestalt.gestaltStrings.crop = "crop".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.crop]
@@ -318,6 +340,9 @@ object Icons {
   
   @scala.inline
   def download: typingsSlinky.gestalt.gestaltStrings.download = "download".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.download]
+  
+  @scala.inline
+  def `drag-drop`: typingsSlinky.gestalt.gestaltStrings.`drag-drop` = "drag-drop".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`drag-drop`]
   
   @scala.inline
   def duplicate: typingsSlinky.gestalt.gestaltStrings.duplicate = "duplicate".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.duplicate]
@@ -491,6 +516,9 @@ object Icons {
   def `person-add`: typingsSlinky.gestalt.gestaltStrings.`person-add` = "person-add".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`person-add`]
   
   @scala.inline
+  def phone: typingsSlinky.gestalt.gestaltStrings.phone = "phone".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.phone]
+  
+  @scala.inline
   def pin: typingsSlinky.gestalt.gestaltStrings.pin = "pin".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.pin]
   
   @scala.inline
@@ -501,6 +529,9 @@ object Icons {
   
   @scala.inline
   def play: typingsSlinky.gestalt.gestaltStrings.play = "play".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.play]
+  
+  @scala.inline
+  def protect: typingsSlinky.gestalt.gestaltStrings.protect = "protect".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.protect]
   
   @scala.inline
   def `question-mark`: typingsSlinky.gestalt.gestaltStrings.`question-mark` = "question-mark".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`question-mark`]
@@ -557,6 +588,9 @@ object Icons {
   def sound: typingsSlinky.gestalt.gestaltStrings.sound = "sound".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.sound]
   
   @scala.inline
+  def sparkle: typingsSlinky.gestalt.gestaltStrings.sparkle = "sparkle".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.sparkle]
+  
+  @scala.inline
   def speech: typingsSlinky.gestalt.gestaltStrings.speech = "speech".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.speech]
   
   @scala.inline
@@ -564,6 +598,12 @@ object Icons {
   
   @scala.inline
   def star: typingsSlinky.gestalt.gestaltStrings.star = "star".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.star]
+  
+  @scala.inline
+  def `star-half`: typingsSlinky.gestalt.gestaltStrings.`star-half` = "star-half".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`star-half`]
+  
+  @scala.inline
+  def `story-pin`: typingsSlinky.gestalt.gestaltStrings.`story-pin` = "story-pin".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`story-pin`]
   
   @scala.inline
   def `switch-account`: typingsSlinky.gestalt.gestaltStrings.`switch-account` = "switch-account".asInstanceOf[typingsSlinky.gestalt.gestaltStrings.`switch-account`]

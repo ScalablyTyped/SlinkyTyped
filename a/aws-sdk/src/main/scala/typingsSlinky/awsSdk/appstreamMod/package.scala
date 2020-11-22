@@ -287,6 +287,13 @@ package object appstreamMod {
   */
   type StorageConnectorType = typingsSlinky.awsSdk.appstreamMod._StorageConnectorType | java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.APP
+    - typingsSlinky.awsSdk.awsSdkStrings.DESKTOP
+    - java.lang.String
+  */
+  type StreamView = typingsSlinky.awsSdk.appstreamMod._StreamView | java.lang.String
+  
   type StreamingUrlUserId = java.lang.String
   
   type String = java.lang.String
@@ -328,6 +335,7 @@ package object appstreamMod {
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.STACK_NOT_FOUND
     - typingsSlinky.awsSdk.awsSdkStrings.USER_NAME_NOT_FOUND
+    - typingsSlinky.awsSdk.awsSdkStrings.DIRECTORY_NOT_FOUND
     - typingsSlinky.awsSdk.awsSdkStrings.INTERNAL_ERROR
     - java.lang.String
   */

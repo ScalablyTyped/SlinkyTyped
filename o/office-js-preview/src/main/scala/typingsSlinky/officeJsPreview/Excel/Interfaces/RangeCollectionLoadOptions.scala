@@ -82,7 +82,7 @@ trait RangeCollectionLoadOptions extends js.Object {
   
   /**
     *
-    * For EACH ITEM in the collection: Represents the formula in A1-style notation.
+    * For EACH ITEM in the collection: Represents the formula in A1-style notation. If a cell has no formula, its value is returned instead.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -90,7 +90,7 @@ trait RangeCollectionLoadOptions extends js.Object {
   
   /**
     *
-    * For EACH ITEM in the collection: Represents the formula in A1-style notation, in the user's language and number-formatting locale.  For example, the English "=SUM(A1, 1.5)" formula would become "=SUMME(A1; 1,5)" in German.
+    * For EACH ITEM in the collection: Represents the formula in A1-style notation, in the user's language and number-formatting locale. For example, the English "=SUM(A1, 1.5)" formula would become "=SUMME(A1; 1,5)" in German. If a cell has no formula, its value is returned instead.
     *
     * [Api set: ExcelApi 1.1]
     */
@@ -98,7 +98,7 @@ trait RangeCollectionLoadOptions extends js.Object {
   
   /**
     *
-    * For EACH ITEM in the collection: Represents the formula in R1C1-style notation.
+    * For EACH ITEM in the collection: Represents the formula in R1C1-style notation. If a cell has no formula, its value is returned instead.
     *
     * [Api set: ExcelApi 1.2]
     */
@@ -110,8 +110,7 @@ trait RangeCollectionLoadOptions extends js.Object {
     Returns true if all cells have a spill border, or false if all cells do not have a spill border.
     Returns null if there are cells both with and without spill borders within the range.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var hasSpill: js.UndefOr[Boolean] = js.native
   
@@ -183,8 +182,7 @@ trait RangeCollectionLoadOptions extends js.Object {
     *
     * For EACH ITEM in the collection: Represents the category of number format of each cell.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var numberFormatCategories: js.UndefOr[Boolean] = js.native
   
@@ -228,8 +226,7 @@ trait RangeCollectionLoadOptions extends js.Object {
     Returns true if ALL cells would be saved as an array formula, or false if ALL cells would NOT be saved as an array formula.
     Returns null if some cells would be saved as an array formula and some would not be.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var savedAsArray: js.UndefOr[Boolean] = js.native
   

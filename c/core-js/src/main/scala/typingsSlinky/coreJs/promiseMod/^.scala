@@ -17,7 +17,7 @@ class ^[T] protected () extends Promise[T] {
     * and a reject callback used to reject the promise with a provided reason or error.
     */
   def this(executor: js.Function2[
-        /* resolve */ js.Function1[/* value */ js.UndefOr[T | js.Thenable[T]], Unit], 
+        /* resolve */ js.Function1[/* value */ T | js.Thenable[T], Unit], 
         /* reject */ js.Function1[/* reason */ js.UndefOr[js.Any], Unit], 
         Unit
       ]) = this()

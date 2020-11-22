@@ -1,23 +1,19 @@
 package typingsSlinky.reactIntl.components
 
-import slinky.web.html.`*`.tag
-import typingsSlinky.StBuildingComponent.Default
-import typingsSlinky.react.mod.ProviderProps
-import typingsSlinky.reactIntl.typesMod.IntlShape
+import typingsSlinky.react.mod.PropsWithChildren
+import typingsSlinky.reactIntl.componentsProviderMod.OptionalIntlConfig
+import typingsSlinky.reactIntl.componentsProviderMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 object Provider {
-  @JSImport("react-intl/lib/components/injectIntl", "Provider")
+  
+  @JSImport("react-intl/src/components/provider", JSImport.Default)
   @js.native
   object component extends js.Object
   
-  def withProps(p: ProviderProps[IntlShape]): Default[tag.type, js.Object] = new Default[tag.type, js.Object](js.Array(this.component, p.asInstanceOf[js.Any]))
-  @scala.inline
-  def apply(value: IntlShape): Default[tag.type, js.Object] = {
-    val __props = js.Dynamic.literal(value = value.asInstanceOf[js.Any])
-    new Default[tag.type, js.Object](js.Array(this.component, __props.asInstanceOf[ProviderProps[IntlShape]]))
-  }
+  def withProps(p: PropsWithChildren[OptionalIntlConfig]): SharedBuilder_PropsWithChildren797446672[default] = new SharedBuilder_PropsWithChildren797446672[default](js.Array(this.component, p.asInstanceOf[js.Any]))
+  
+  implicit def make(companion: Provider.type): SharedBuilder_PropsWithChildren797446672[default] = new SharedBuilder_PropsWithChildren797446672[default](js.Array(this.component, js.Dictionary.empty))()
 }
-

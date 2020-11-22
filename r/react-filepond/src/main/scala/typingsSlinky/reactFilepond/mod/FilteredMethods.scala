@@ -1,0 +1,121 @@
+package typingsSlinky.reactFilepond.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
+
+/*
+According to react-filepond implementation, every FilePond instance key is cloned except some from an array, see
+<https://github.com/pqina/react-filepond/blob/7deaee287dd24614706f2401dcf39df6207ef5ef/lib/index.js#L13> and
+<https://github.com/pqina/react-filepond/blob/7deaee287dd24614706f2401dcf39df6207ef5ef/lib/index.js#L56-L61>.
+Exluded keys as of 2020-08-27:
+*/
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.reactFilepond.reactFilepondStrings.setOptions
+  - typingsSlinky.reactFilepond.reactFilepondStrings.on
+  - typingsSlinky.reactFilepond.reactFilepondStrings.off
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onOnce
+  - typingsSlinky.reactFilepond.reactFilepondStrings.appendTo
+  - typingsSlinky.reactFilepond.reactFilepondStrings.insertAfter
+  - typingsSlinky.reactFilepond.reactFilepondStrings.insertBefore
+  - typingsSlinky.reactFilepond.reactFilepondStrings.isAttachedTo
+  - typingsSlinky.reactFilepond.reactFilepondStrings.replaceElement
+  - typingsSlinky.reactFilepond.reactFilepondStrings.restoreElement
+  - typingsSlinky.reactFilepond.reactFilepondStrings.destroy
+  - typingsSlinky.reactFilepond.reactFilepondStrings.dropOnPage
+  - typingsSlinky.reactFilepond.reactFilepondStrings.dropOnElement
+  - typingsSlinky.reactFilepond.reactFilepondStrings.dropValidation
+  - typingsSlinky.reactFilepond.reactFilepondStrings.ignoredFiles
+  - typingsSlinky.reactFilepond.reactFilepondStrings.instantUpload
+  - typingsSlinky.reactFilepond.reactFilepondStrings.maxParallelUploads
+  - typingsSlinky.reactFilepond.reactFilepondStrings.server
+  - typingsSlinky.reactFilepond.reactFilepondStrings.chunkUploads
+  - typingsSlinky.reactFilepond.reactFilepondStrings.chunkForce
+  - typingsSlinky.reactFilepond.reactFilepondStrings.chunkSize
+  - typingsSlinky.reactFilepond.reactFilepondStrings.chunkRetryDelays
+  - typingsSlinky.reactFilepond.reactFilepondStrings.files
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelDecimalSeparator
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelThousandsSeparator
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelIdle
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelInvalidField
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelFileWaitingForSize
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelFileSizeNotAvailable
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelFileCountSingular
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelFileCountPlural
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelFileLoading
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelFileAdded
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelFileLoadError
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelFileRemoved
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelFileRemoveError
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelFileProcessing
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelFileProcessingComplete
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelFileProcessingAborted
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelFileProcessingError
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelFileProcessingRevertError
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelTapToCancel
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelTapToRetry
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelTapToUndo
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelButtonRemoveItem
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelButtonAbortItemLoad
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelButtonRetryItemLoad
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelButtonAbortItemProcessing
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelButtonUndoItemProcessing
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelButtonRetryItemProcessing
+  - typingsSlinky.reactFilepond.reactFilepondStrings.labelButtonProcessItem
+  - typingsSlinky.reactFilepond.reactFilepondStrings.iconRemove
+  - typingsSlinky.reactFilepond.reactFilepondStrings.iconProcess
+  - typingsSlinky.reactFilepond.reactFilepondStrings.iconRetry
+  - typingsSlinky.reactFilepond.reactFilepondStrings.iconUndo
+  - typingsSlinky.reactFilepond.reactFilepondStrings.iconDone
+  - typingsSlinky.reactFilepond.reactFilepondStrings.oninit
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onwarning
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onerror
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onaddfilestart
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onaddfileprogress
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onaddfile
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onprocessfilestart
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onprocessfileprogress
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onprocessfileabort
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onprocessfilerevert
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onprocessfile
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onprocessfiles
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onremovefile
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onpreparefile
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onupdatefiles
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onactivatefile
+  - typingsSlinky.reactFilepond.reactFilepondStrings.onreorderfiles
+  - typingsSlinky.reactFilepond.reactFilepondStrings.beforeDropFile
+  - typingsSlinky.reactFilepond.reactFilepondStrings.beforeAddFile
+  - typingsSlinky.reactFilepond.reactFilepondStrings.beforeRemoveFile
+  - typingsSlinky.reactFilepond.reactFilepondStrings.stylePanelLayout
+  - typingsSlinky.reactFilepond.reactFilepondStrings.stylePanelAspectRatio
+  - typingsSlinky.reactFilepond.reactFilepondStrings.styleItemPanelAspectRatio
+  - typingsSlinky.reactFilepond.reactFilepondStrings.styleButtonRemoveItemPosition
+  - typingsSlinky.reactFilepond.reactFilepondStrings.styleButtonProcessItemPosition
+  - typingsSlinky.reactFilepond.reactFilepondStrings.styleLoadIndicatorPosition
+  - typingsSlinky.reactFilepond.reactFilepondStrings.styleProgressIndicatorPosition
+  - typingsSlinky.reactFilepond.reactFilepondStrings.styleButtonRemoveItemAlign
+  - typingsSlinky.reactFilepond.reactFilepondStrings.id
+  - typingsSlinky.reactFilepond.reactFilepondStrings.name
+  - typingsSlinky.reactFilepond.reactFilepondStrings.className
+  - typingsSlinky.reactFilepond.reactFilepondStrings.required
+  - typingsSlinky.reactFilepond.reactFilepondStrings.disabled
+  - typingsSlinky.reactFilepond.reactFilepondStrings.captureMethod
+  - typingsSlinky.reactFilepond.reactFilepondStrings.allowSyncAcceptAttribute
+  - typingsSlinky.reactFilepond.reactFilepondStrings.allowDrop
+  - typingsSlinky.reactFilepond.reactFilepondStrings.allowBrowse
+  - typingsSlinky.reactFilepond.reactFilepondStrings.allowPaste
+  - typingsSlinky.reactFilepond.reactFilepondStrings.allowMultiple
+  - typingsSlinky.reactFilepond.reactFilepondStrings.allowReplace
+  - typingsSlinky.reactFilepond.reactFilepondStrings.allowRevert
+  - typingsSlinky.reactFilepond.reactFilepondStrings.allowProcess
+  - typingsSlinky.reactFilepond.reactFilepondStrings.allowReorder
+  - typingsSlinky.reactFilepond.reactFilepondStrings.allowDirectoriesOnly
+  - typingsSlinky.reactFilepond.reactFilepondStrings.forceRevert
+  - typingsSlinky.reactFilepond.reactFilepondStrings.maxFiles
+  - typingsSlinky.reactFilepond.reactFilepondStrings.checkValidity
+  - typingsSlinky.reactFilepond.reactFilepondStrings.itemInsertLocationFreedom
+  - typingsSlinky.reactFilepond.reactFilepondStrings.itemInsertLocation
+  - typingsSlinky.reactFilepond.reactFilepondStrings.itemInsertInterval
+*/
+trait FilteredMethods extends js.Object

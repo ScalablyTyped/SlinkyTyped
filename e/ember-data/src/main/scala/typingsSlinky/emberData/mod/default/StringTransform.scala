@@ -2,7 +2,7 @@ package typingsSlinky.emberData.mod.default
 
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
   * The `DS.StringTransform` class is used to serialize and deserialize
@@ -14,4 +14,3 @@ import scala.scalajs.js.annotation._
 @js.native
 class StringTransform ()
   extends typingsSlinky.emberData.mod.DS.Transform
-

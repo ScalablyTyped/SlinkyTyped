@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait S3SetObjectLegalHoldOperation extends js.Object {
   
   /**
-    * The Legal Hold contains the status to be applied to all objects in the Batch Operations job.
+    * Contains the Object Lock legal hold status to be applied to all objects in the Batch Operations job.
     */
   var LegalHold: S3ObjectLockLegalHold = js.native
 }

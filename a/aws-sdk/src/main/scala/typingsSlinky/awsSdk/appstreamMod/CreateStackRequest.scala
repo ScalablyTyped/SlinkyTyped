@@ -28,7 +28,7 @@ trait CreateStackRequest extends js.Object {
   var DisplayName: js.UndefOr[typingsSlinky.awsSdk.appstreamMod.DisplayName] = js.native
   
   /**
-    * The domains where AppStream 2.0 streaming sessions can be embedded in an iframe. You must approve the domains that you want to host embedded AppStream 2.0 streaming sessions.
+    * The domains where AppStream 2.0 streaming sessions can be embedded in an iframe. You must approve the domains that you want to host embedded AppStream 2.0 streaming sessions. 
     */
   var EmbedHostDomains: js.UndefOr[typingsSlinky.awsSdk.appstreamMod.EmbedHostDomains] = js.native
   

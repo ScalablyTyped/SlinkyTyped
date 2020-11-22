@@ -17,13 +17,6 @@ trait UserPoolAdminCreateUserConfig extends js.Object {
     * The invite message template structure.
     */
   var inviteMessageTemplate: js.UndefOr[Input[UserPoolAdminCreateUserConfigInviteMessageTemplate]] = js.native
-  
-  /**
-    * **DEPRECATED** Use password_policy.temporary_password_validity_days instead - The user account expiration limit, in days, after which the account is no longer usable.
-    *
-    * @deprecated Use password_policy.temporary_password_validity_days instead
-    */
-  var unusedAccountValidityDays: js.UndefOr[Input[Double]] = js.native
 }
 object UserPoolAdminCreateUserConfig {
   
@@ -59,11 +52,5 @@ object UserPoolAdminCreateUserConfig {
     
     @scala.inline
     def deleteInviteMessageTemplate: Self = this.set("inviteMessageTemplate", js.undefined)
-    
-    @scala.inline
-    def setUnusedAccountValidityDays(value: Input[Double]): Self = this.set("unusedAccountValidityDays", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUnusedAccountValidityDays: Self = this.set("unusedAccountValidityDays", js.undefined)
   }
 }

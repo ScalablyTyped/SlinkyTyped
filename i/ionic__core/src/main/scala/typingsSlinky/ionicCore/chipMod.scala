@@ -21,6 +21,11 @@ object chipMod extends js.Object {
     var color: js.UndefOr[Color] = js.native
     
     /**
+      * If `true`, the user cannot interact with the chip.
+      */
+    var disabled: Boolean = js.native
+    
+    /**
       * Display an outline style button.
       */
     var outline: Boolean = js.native

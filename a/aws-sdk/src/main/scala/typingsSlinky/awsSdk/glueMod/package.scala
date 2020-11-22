@@ -8,6 +8,8 @@ package object glueMod {
   
   type ActionList = js.Array[typingsSlinky.awsSdk.glueMod.Action]
   
+  type AdditionalPlanOptionsMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.GenericString]
+  
   type AttemptCount = scala.Double
   
   type BatchDeletePartitionValueList = js.Array[typingsSlinky.awsSdk.glueMod.PartitionValueList]
@@ -23,6 +25,10 @@ package object glueMod {
   type BatchStopJobRunJobRunIdList = js.Array[typingsSlinky.awsSdk.glueMod.IdString]
   
   type BatchStopJobRunSuccessfulSubmissionList = js.Array[typingsSlinky.awsSdk.glueMod.BatchStopJobRunSuccessfulSubmission]
+  
+  type BatchUpdatePartitionFailureList = js.Array[typingsSlinky.awsSdk.glueMod.BatchUpdatePartitionFailureEntry]
+  
+  type BatchUpdatePartitionRequestEntryList = js.Array[typingsSlinky.awsSdk.glueMod.BatchUpdatePartitionRequestEntry]
   
   type Boolean = scala.Boolean
   
@@ -112,6 +118,19 @@ package object glueMod {
   */
   type Comparator = typingsSlinky.awsSdk.glueMod._Comparator | java.lang.String
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NONE
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.BACKWARD
+    - typingsSlinky.awsSdk.awsSdkStrings.BACKWARD_ALL
+    - typingsSlinky.awsSdk.awsSdkStrings.FORWARD
+    - typingsSlinky.awsSdk.awsSdkStrings.FORWARD_ALL
+    - typingsSlinky.awsSdk.awsSdkStrings.FULL
+    - typingsSlinky.awsSdk.awsSdkStrings.FULL_ALL
+    - java.lang.String
+  */
+  type Compatibility = typingsSlinky.awsSdk.glueMod._Compatibility | java.lang.String
+  
   type ConditionList = js.Array[typingsSlinky.awsSdk.glueMod.Condition]
   
   type ConnectionList = js.Array[typingsSlinky.awsSdk.glueMod.Connection]
@@ -151,6 +170,7 @@ package object glueMod {
     - typingsSlinky.awsSdk.awsSdkStrings.SFTP
     - typingsSlinky.awsSdk.awsSdkStrings.MONGODB
     - typingsSlinky.awsSdk.awsSdkStrings.KAFKA
+    - typingsSlinky.awsSdk.awsSdkStrings.NETWORK
     - java.lang.String
   */
   type ConnectionType = typingsSlinky.awsSdk.glueMod._ConnectionType | java.lang.String
@@ -185,6 +205,8 @@ package object glueMod {
   */
   type CrawlerState = typingsSlinky.awsSdk.glueMod._CrawlerState | java.lang.String
   
+  type CreatedTimestamp = java.lang.String
+  
   type CronExpression = java.lang.String
   
   type CsvColumnDelimiter = java.lang.String
@@ -206,6 +228,8 @@ package object glueMod {
   type DagEdges = js.Array[typingsSlinky.awsSdk.glueMod.CodeGenEdge]
   
   type DagNodes = js.Array[typingsSlinky.awsSdk.glueMod.CodeGenNode]
+  
+  type DataFormat = typingsSlinky.awsSdk.awsSdkStrings.AVRO | java.lang.String
   
   type DataLakePrincipalString = java.lang.String
   
@@ -247,6 +271,10 @@ package object glueMod {
   type EnableHybridValues = typingsSlinky.awsSdk.glueMod._EnableHybridValues | java.lang.String
   
   type ErrorByName = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.ErrorDetail]
+  
+  type ErrorCodeString = java.lang.String
+  
+  type ErrorMessageString = java.lang.String
   
   type ErrorString = java.lang.String
   
@@ -296,6 +324,8 @@ package object glueMod {
   
   type IntegerValue = scala.Double
   
+  type IsVersionValid = scala.Boolean
+  
   type JdbcTargetList = js.Array[typingsSlinky.awsSdk.glueMod.JdbcTarget]
   
   /* Rewritten from type alias, can be one of: 
@@ -329,6 +359,10 @@ package object glueMod {
   
   type JsonValue = java.lang.String
   
+  type KeyList = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  
+  type KeySchemaElementList = js.Array[typingsSlinky.awsSdk.glueMod.KeySchemaElement]
+  
   type KeyString = java.lang.String
   
   type KmsKeyArn = java.lang.String
@@ -350,6 +384,8 @@ package object glueMod {
   */
   type LastCrawlStatus = typingsSlinky.awsSdk.glueMod._LastCrawlStatus | java.lang.String
   
+  type LatestSchemaVersionBoolean = scala.Boolean
+  
   type LocationMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.ColumnValuesString]
   
   type LocationString = java.lang.String
@@ -369,6 +405,13 @@ package object glueMod {
   
   type Long = scala.Double
   
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.`SSE-KMS`
+    - java.lang.String
+  */
+  type MLUserDataEncryptionModeString = typingsSlinky.awsSdk.glueMod._MLUserDataEncryptionModeString | java.lang.String
+  
   type MapValue = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.GenericString]
   
   type MappingList = js.Array[typingsSlinky.awsSdk.glueMod.MappingEntry]
@@ -377,11 +420,23 @@ package object glueMod {
   
   type MaxConcurrentRuns = scala.Double
   
+  type MaxResultsNumber = scala.Double
+  
   type MaxRetries = scala.Double
   
   type MessagePrefix = java.lang.String
   
+  type MetadataInfoMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.MetadataInfo]
+  
+  type MetadataKeyString = java.lang.String
+  
+  type MetadataList = js.Array[typingsSlinky.awsSdk.glueMod.MetadataKeyValuePair]
+  
+  type MetadataValueString = java.lang.String
+  
   type MillisecondsCount = scala.Double
+  
+  type MongoDBTargetList = js.Array[typingsSlinky.awsSdk.glueMod.MongoDBTarget]
   
   type NameString = java.lang.String
   
@@ -426,6 +481,12 @@ package object glueMod {
   type ParametersMapValue = java.lang.String
   
   type PartitionErrors = js.Array[typingsSlinky.awsSdk.glueMod.PartitionError]
+  
+  type PartitionIndexDescriptorList = js.Array[typingsSlinky.awsSdk.glueMod.PartitionIndexDescriptor]
+  
+  type PartitionIndexList = js.Array[typingsSlinky.awsSdk.glueMod.PartitionIndex]
+  
+  type PartitionIndexStatus = typingsSlinky.awsSdk.awsSdkStrings.ACTIVE | java.lang.String
   
   type PartitionInputList = js.Array[typingsSlinky.awsSdk.glueMod.PartitionInput]
   
@@ -473,7 +534,25 @@ package object glueMod {
   
   type PythonVersionString = java.lang.String
   
+  type QuerySchemaVersionMetadataMaxResults = scala.Double
+  
   type RecordsCount = scala.Double
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CRAWL_EVERYTHING
+    - typingsSlinky.awsSdk.awsSdkStrings.CRAWL_NEW_FOLDERS_ONLY
+    - java.lang.String
+  */
+  type RecrawlBehavior = typingsSlinky.awsSdk.glueMod._RecrawlBehavior | java.lang.String
+  
+  type RegistryListDefinition = js.Array[typingsSlinky.awsSdk.glueMod.RegistryListItem]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AVAILABLE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - java.lang.String
+  */
+  type RegistryStatus = typingsSlinky.awsSdk.glueMod._RegistryStatus | java.lang.String
   
   type ReplaceBoolean = scala.Boolean
   
@@ -526,7 +605,46 @@ package object glueMod {
   */
   type ScheduleState = typingsSlinky.awsSdk.glueMod._ScheduleState | java.lang.String
   
+  type SchemaCheckpointNumber = scala.Double
+  
+  type SchemaDefinitionDiff = java.lang.String
+  
+  type SchemaDefinitionString = java.lang.String
+  
+  type SchemaDiffType = typingsSlinky.awsSdk.awsSdkStrings.SYNTAX_DIFF | java.lang.String
+  
+  type SchemaListDefinition = js.Array[typingsSlinky.awsSdk.glueMod.SchemaListItem]
+  
   type SchemaPathString = java.lang.String
+  
+  type SchemaRegistryNameString = java.lang.String
+  
+  type SchemaRegistryTokenString = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AVAILABLE
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - java.lang.String
+  */
+  type SchemaStatus = typingsSlinky.awsSdk.glueMod._SchemaStatus | java.lang.String
+  
+  type SchemaValidationError = java.lang.String
+  
+  type SchemaVersionErrorList = js.Array[typingsSlinky.awsSdk.glueMod.SchemaVersionErrorItem]
+  
+  type SchemaVersionIdString = java.lang.String
+  
+  type SchemaVersionList = js.Array[typingsSlinky.awsSdk.glueMod.SchemaVersionListItem]
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AVAILABLE
+    - typingsSlinky.awsSdk.awsSdkStrings.PENDING
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILURE
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - java.lang.String
+  */
+  type SchemaVersionStatus = typingsSlinky.awsSdk.glueMod._SchemaVersionStatus | java.lang.String
   
   type ScriptLocationString = java.lang.String
   
@@ -680,6 +798,8 @@ package object glueMod {
   
   type UpdateColumnStatisticsList = js.Array[typingsSlinky.awsSdk.glueMod.ColumnStatistics]
   
+  type UpdatedTimestamp = java.lang.String
+  
   type UriString = java.lang.String
   
   type UserDefinedFunctionList = js.Array[typingsSlinky.awsSdk.glueMod.UserDefinedFunction]
@@ -690,7 +810,11 @@ package object glueMod {
   
   type VersionId = scala.Double
   
+  type VersionLongNumber = scala.Double
+  
   type VersionString = java.lang.String
+  
+  type VersionsString = java.lang.String
   
   type ViewTextString = java.lang.String
   
@@ -711,6 +835,7 @@ package object glueMod {
     - typingsSlinky.awsSdk.awsSdkStrings.COMPLETED
     - typingsSlinky.awsSdk.awsSdkStrings.STOPPING
     - typingsSlinky.awsSdk.awsSdkStrings.STOPPED
+    - typingsSlinky.awsSdk.awsSdkStrings.ERROR
     - java.lang.String
   */
   type WorkflowRunStatus = typingsSlinky.awsSdk.glueMod._WorkflowRunStatus | java.lang.String

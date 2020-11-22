@@ -1,10 +1,10 @@
 package typingsSlinky.tensorflowTfjsLayers.recurrentMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
 import typingsSlinky.tensorflowTfjsCore.mod.serialization.Serializable
 import typingsSlinky.tensorflowTfjsCore.serializationMod.ConfigDict
 import typingsSlinky.tensorflowTfjsCore.serializationMod.SerializableConstructor
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.InputSpec
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.Layer
 import scala.scalajs.js
@@ -24,7 +24,7 @@ class RNN_ protected () extends Layer {
   
   val goBackwards: Boolean = js.native
   
-  var keptStates: js.Any = js.native
+  var keptStates: js.Array[js.Array[Tensor[Rank]]] = js.native
   
   var numConstants: js.Any = js.native
   
@@ -50,7 +50,7 @@ class RNN_ protected () extends Layer {
     */
   var states: js.Array[Tensor[Rank]] = js.native
   
-  var states_ : js.Any = js.native
+  var states_ : js.Array[Tensor[Rank]] = js.native
   
   val unroll: Boolean = js.native
 }

@@ -11,7 +11,7 @@ trait NoDataOptions extends js.Object {
     * (Highcharts, Highstock, Gantt) An object of additional SVG attributes for
     * the no-data label.
     */
-  var attr: js.UndefOr[NoDataAttrOptions | SVGAttributes] = js.native
+  var attr: js.UndefOr[SVGAttributes] = js.native
   
   /**
     * (Highcharts, Highstock, Gantt) The position of the no-data label,
@@ -54,7 +54,7 @@ object NoDataOptions {
     }
     
     @scala.inline
-    def setAttr(value: NoDataAttrOptions | SVGAttributes): Self = this.set("attr", value.asInstanceOf[js.Any])
+    def setAttr(value: SVGAttributes): Self = this.set("attr", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteAttr: Self = this.set("attr", js.undefined)

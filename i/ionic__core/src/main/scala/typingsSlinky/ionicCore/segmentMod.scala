@@ -40,6 +40,10 @@ object segmentMod extends js.Object {
       */
     var color: js.UndefOr[Color] = js.native
     
+    /* protected */ def colorChanged(): Unit = js.native
+    /* protected */ def colorChanged(value: js.UndefOr[Color], oldValue: Color): Unit = js.native
+    /* protected */ def colorChanged(value: Color): Unit = js.native
+    
     @JSName("componentDidLoad")
     def componentDidLoad_MSegment(): js.Promise[Unit] = js.native
     
@@ -111,6 +115,13 @@ object segmentMod extends js.Object {
     var setCheckedClasses: js.Any = js.native
     
     var setNextIndex: js.Any = js.native
+    
+    /**
+      * If `true`, users will be able to swipe between segment buttons to activate them.
+      */
+    var swipeGesture: Boolean = js.native
+    
+    def swipeGestureChanged(): Unit = js.native
     
     /**
       * the value of the segment.

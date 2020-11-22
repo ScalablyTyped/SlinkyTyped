@@ -29,7 +29,7 @@ trait ProviderArgs extends js.Object {
   val enableDryRun: js.UndefOr[Input[Boolean]] = js.native
   
   /**
-    * The contents of a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.
+    * The contents of a kubeconfig file or the path to a kubeconfig file. If this is set, this config will be used instead of $KUBECONFIG.
     */
   val kubeconfig: js.UndefOr[Input[String]] = js.native
   

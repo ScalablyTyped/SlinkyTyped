@@ -8,14 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Disabled extends js.Object {
   
   var disabled: Boolean = js.native
-  
-  var id: String = js.native
 }
 object Disabled {
   
   @scala.inline
-  def apply(disabled: Boolean, id: String): Disabled = {
-    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any])
+  def apply(disabled: Boolean): Disabled = {
+    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any])
     __obj.asInstanceOf[Disabled]
   }
   
@@ -36,8 +34,5 @@ object Disabled {
     
     @scala.inline
     def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
   }
 }

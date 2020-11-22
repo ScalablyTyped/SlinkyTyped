@@ -9,13 +9,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartCommonAxisSettingsConstantLineStyleLabel extends js.Object {
   
-  /** @name dxChart.Options.commonAxisSettings.constantLineStyle.label.font */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.constantLineStyle.label.font]
+    */
   var font: js.UndefOr[Font] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.constantLineStyle.label.position */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.constantLineStyle.label.position]
+    */
   var position: js.UndefOr[inside | outside] = js.native
   
-  /** @name dxChart.Options.commonAxisSettings.constantLineStyle.label.visible */
+  /**
+    * [descr:dxChart.Options.commonAxisSettings.constantLineStyle.label.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
 }
 object dxChartCommonAxisSettingsConstantLineStyleLabel {

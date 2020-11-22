@@ -19,6 +19,7 @@ import typingsSlinky.node.anon.Persistent
 import typingsSlinky.node.anon.Recursive
 import typingsSlinky.node.anon.`3`
 import typingsSlinky.node.fsMod.BaseEncodingOptions
+import typingsSlinky.node.fsMod.BigIntOptions
 import typingsSlinky.node.fsMod.BufferEncodingOption
 import typingsSlinky.node.fsMod.FSWatcher
 import typingsSlinky.node.fsMod.MakeDirectoryOptions
@@ -28,8 +29,9 @@ import typingsSlinky.node.fsMod.OpenDirOptions
 import typingsSlinky.node.fsMod.OpenMode
 import typingsSlinky.node.fsMod.PathLike
 import typingsSlinky.node.fsMod.ReadSyncOptions
-import typingsSlinky.node.fsMod.RmDirAsyncOptions
 import typingsSlinky.node.fsMod.RmDirOptions
+import typingsSlinky.node.fsMod.RmOptions
+import typingsSlinky.node.fsMod.StatOptions
 import typingsSlinky.node.fsMod.StatsBase
 import typingsSlinky.node.fsMod.WriteFileOptions
 import typingsSlinky.node.fsMod.symlink.Type
@@ -170,6 +172,16 @@ object mod extends js.Object {
   def lstat(path: PathLike): js.Promise[typingsSlinky.node.fsMod.Stats] = js.native
   
   def lstatSync(path: PathLike): typingsSlinky.node.fsMod.Stats = js.native
+  
+  def lutimesSync(path: PathLike, atime: String, mtime: String): Unit = js.native
+  def lutimesSync(path: PathLike, atime: String, mtime: Double): Unit = js.native
+  def lutimesSync(path: PathLike, atime: String, mtime: js.Date): Unit = js.native
+  def lutimesSync(path: PathLike, atime: Double, mtime: String): Unit = js.native
+  def lutimesSync(path: PathLike, atime: Double, mtime: Double): Unit = js.native
+  def lutimesSync(path: PathLike, atime: Double, mtime: js.Date): Unit = js.native
+  def lutimesSync(path: PathLike, atime: js.Date, mtime: String): Unit = js.native
+  def lutimesSync(path: PathLike, atime: js.Date, mtime: Double): Unit = js.native
+  def lutimesSync(path: PathLike, atime: js.Date, mtime: js.Date): Unit = js.native
   
   def mkdir(path: PathLike): js.Promise[Unit] = js.native
   def mkdir(path: PathLike, options: String): js.Promise[Unit] = js.native
@@ -327,8 +339,11 @@ object mod extends js.Object {
   
   def renameSync(oldPath: PathLike, newPath: PathLike): Unit = js.native
   
+  def rmSync(path: PathLike): Unit = js.native
+  def rmSync(path: PathLike, options: RmOptions): Unit = js.native
+  
   def rmdir(path: PathLike): js.Promise[Unit] = js.native
-  def rmdir(path: PathLike, options: RmDirAsyncOptions): js.Promise[Unit] = js.native
+  def rmdir(path: PathLike, options: RmDirOptions): js.Promise[Unit] = js.native
   
   def rmdirSync(path: PathLike): Unit = js.native
   def rmdirSync(path: PathLike, options: RmDirOptions): Unit = js.native
@@ -336,6 +351,8 @@ object mod extends js.Object {
   def stat(path: PathLike): js.Promise[typingsSlinky.node.fsMod.Stats] = js.native
   
   def statSync(path: PathLike): typingsSlinky.node.fsMod.Stats = js.native
+  def statSync(path: PathLike, options: BigIntOptions): typingsSlinky.node.fsMod.BigIntStats = js.native
+  def statSync(path: PathLike, options: StatOptions): typingsSlinky.node.fsMod.Stats | typingsSlinky.node.fsMod.BigIntStats = js.native
   
   def symlinkSync(target: PathLike, path: PathLike): Unit = js.native
   def symlinkSync(target: PathLike, path: PathLike, `type`: Type): Unit = js.native
@@ -564,6 +581,10 @@ object mod extends js.Object {
   def writevSync(fd: Double, buffers: js.Array[ArrayBufferView], position: Double): Double = js.native
   
   @js.native
+  class BigIntStats ()
+    extends typingsSlinky.node.fsMod.BigIntStats
+  
+  @js.native
   class Dir ()
     extends typingsSlinky.node.fsMod.Dir
   
@@ -758,6 +779,20 @@ object mod extends js.Object {
   object lchmod extends js.Object {
     
     def apply(path: PathLike, mode: Mode, callback: NoParamCallback): Unit = js.native
+  }
+  
+  @js.native
+  object lutimes extends js.Object {
+    
+    def apply(path: PathLike, atime: String, mtime: String, callback: NoParamCallback): Unit = js.native
+    def apply(path: PathLike, atime: String, mtime: Double, callback: NoParamCallback): Unit = js.native
+    def apply(path: PathLike, atime: String, mtime: js.Date, callback: NoParamCallback): Unit = js.native
+    def apply(path: PathLike, atime: Double, mtime: String, callback: NoParamCallback): Unit = js.native
+    def apply(path: PathLike, atime: Double, mtime: Double, callback: NoParamCallback): Unit = js.native
+    def apply(path: PathLike, atime: Double, mtime: js.Date, callback: NoParamCallback): Unit = js.native
+    def apply(path: PathLike, atime: js.Date, mtime: String, callback: NoParamCallback): Unit = js.native
+    def apply(path: PathLike, atime: js.Date, mtime: Double, callback: NoParamCallback): Unit = js.native
+    def apply(path: PathLike, atime: js.Date, mtime: js.Date, callback: NoParamCallback): Unit = js.native
   }
   
   @js.native
@@ -960,6 +995,24 @@ object mod extends js.Object {
     def lstat(path: PathLike): js.Promise[typingsSlinky.node.fsMod.Stats] = js.native
     
     /**
+      * Changes the access and modification times of a file in the same way as `fsPromises.utimes()`,
+      * with the difference that if the path refers to a symbolic link, then the link is not
+      * dereferenced: instead, the timestamps of the symbolic link itself are changed.
+      * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
+      * @param atime The last access time. If a string is provided, it will be coerced to number.
+      * @param mtime The last modified time. If a string is provided, it will be coerced to number.
+      */
+    def lutimes(path: PathLike, atime: String, mtime: String): js.Promise[Unit] = js.native
+    def lutimes(path: PathLike, atime: String, mtime: Double): js.Promise[Unit] = js.native
+    def lutimes(path: PathLike, atime: String, mtime: js.Date): js.Promise[Unit] = js.native
+    def lutimes(path: PathLike, atime: Double, mtime: String): js.Promise[Unit] = js.native
+    def lutimes(path: PathLike, atime: Double, mtime: Double): js.Promise[Unit] = js.native
+    def lutimes(path: PathLike, atime: Double, mtime: js.Date): js.Promise[Unit] = js.native
+    def lutimes(path: PathLike, atime: js.Date, mtime: String): js.Promise[Unit] = js.native
+    def lutimes(path: PathLike, atime: js.Date, mtime: Double): js.Promise[Unit] = js.native
+    def lutimes(path: PathLike, atime: js.Date, mtime: js.Date): js.Promise[Unit] = js.native
+    
+    /**
       * Asynchronous mkdir(2) - create a directory.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       * @param options Either the file mode, or an object optionally specifying the file mode and whether parent folders
@@ -1149,11 +1202,17 @@ object mod extends js.Object {
     def rename(oldPath: PathLike, newPath: PathLike): js.Promise[Unit] = js.native
     
     /**
+      * Asynchronously removes files and directories (modeled on the standard POSIX `rm` utility).
+      */
+    def rm(path: PathLike): js.Promise[Unit] = js.native
+    def rm(path: PathLike, options: RmOptions): js.Promise[Unit] = js.native
+    
+    /**
       * Asynchronous rmdir(2) - delete a directory.
       * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
       */
     def rmdir(path: PathLike): js.Promise[Unit] = js.native
-    def rmdir(path: PathLike, options: RmDirAsyncOptions): js.Promise[Unit] = js.native
+    def rmdir(path: PathLike, options: RmDirOptions): js.Promise[Unit] = js.native
     
     /**
       * Asynchronous stat(2) - Get file status.
@@ -1341,6 +1400,13 @@ object mod extends js.Object {
     def native_Union(path: PathLike): String | Buffer = js.native
     @JSName("native")
     def native_Union(path: PathLike, options: BaseEncodingOptions): String | Buffer = js.native
+  }
+  
+  @js.native
+  object rm extends js.Object {
+    
+    def apply(path: PathLike, callback: NoParamCallback): Unit = js.native
+    def apply(path: PathLike, options: RmOptions, callback: NoParamCallback): Unit = js.native
   }
   
   @js.native

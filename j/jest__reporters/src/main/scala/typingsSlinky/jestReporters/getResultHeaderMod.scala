@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@jest/reporters/build/get_result_header", JSImport.Namespace)
+@JSImport("@jest/reporters/build/getResultHeader", JSImport.Namespace)
 @js.native
 object getResultHeaderMod extends js.Object {
   

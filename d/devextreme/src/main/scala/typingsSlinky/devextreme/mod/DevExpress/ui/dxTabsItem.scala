@@ -7,10 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxTabsItem extends CollectionWidgetItem {
   
-  /** @name dxTabsItem.badge */
+  /**
+    * [descr:dxTabsItem.badge]
+    */
   var badge: js.UndefOr[String] = js.native
   
-  /** @name dxTabsItem.icon */
+  /**
+    * [descr:dxTabsItem.icon]
+    */
   var icon: js.UndefOr[String] = js.native
 }
 object dxTabsItem {

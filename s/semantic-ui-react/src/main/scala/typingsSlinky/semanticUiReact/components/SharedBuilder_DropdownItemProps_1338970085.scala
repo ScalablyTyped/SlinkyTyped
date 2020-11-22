@@ -6,7 +6,6 @@ import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.mod.ReactNodeArray
-import typingsSlinky.react.mod.ReactType
 import typingsSlinky.semanticUiReact.dropdownItemMod.DropdownItemProps
 import typingsSlinky.semanticUiReact.flagFlagMod.FlagProps
 import typingsSlinky.semanticUiReact.genericMod.HtmlSpanProps
@@ -44,7 +43,7 @@ class SharedBuilder_DropdownItemProps_1338970085 (val args: js.Array[js.Any])
   
   @scala.inline
   def descriptionFunction3(
-    value: (/* component */ ReactType[HtmlSpanProps], HtmlSpanProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, HtmlSpanProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("description", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -58,7 +57,7 @@ class SharedBuilder_DropdownItemProps_1338970085 (val args: js.Array[js.Any])
   
   @scala.inline
   def flagFunction3(
-    value: (/* component */ ReactType[FlagProps], FlagProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, FlagProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("flag", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -69,7 +68,7 @@ class SharedBuilder_DropdownItemProps_1338970085 (val args: js.Array[js.Any])
   
   @scala.inline
   def iconFunction3(
-    value: (/* component */ ReactType[IconProps], IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, IconProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("icon", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -80,7 +79,7 @@ class SharedBuilder_DropdownItemProps_1338970085 (val args: js.Array[js.Any])
   
   @scala.inline
   def imageFunction3(
-    value: (/* component */ ReactType[ImageProps], ImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, ImageProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("image", js.Any.fromFunction3(value))
   
   @scala.inline
@@ -91,7 +90,7 @@ class SharedBuilder_DropdownItemProps_1338970085 (val args: js.Array[js.Any])
   
   @scala.inline
   def labelFunction3(
-    value: (/* component */ ReactType[LabelProps], LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
+    value: (/* component */ ReactElement, LabelProps, /* children */ js.UndefOr[ReactElement | ReactNodeArray]) => ReactElement | Null
   ): this.type = set("label", js.Any.fromFunction3(value))
   
   @scala.inline

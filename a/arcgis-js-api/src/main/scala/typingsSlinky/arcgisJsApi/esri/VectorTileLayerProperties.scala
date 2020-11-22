@@ -7,10 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait VectorTileLayerProperties
   extends LayerProperties
-     with ScaleRangeLayerProperties {
+     with ScaleRangeLayerProperties
+     with BlendLayerProperties {
   
   /**
-    * The portal item from which the layer is loaded. This will load the layer from the portal item, not the vector tile service.
+    * The portal item from which the layer is loaded.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-VectorTileLayer.html#portalItem)
     */
@@ -24,7 +25,7 @@ trait VectorTileLayerProperties
   var spatialReference: js.UndefOr[SpatialReferenceProperties] = js.native
   
   /**
-    * A style JSON object of vector tiles that will be used to render the layer. If initializing the layer with a style JSON object, the tiles are fetched from the tile servers specified in the style object.
+    * A style JSON object of vector tiles that will be used to render the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-VectorTileLayer.html#style)
     */
@@ -38,7 +39,7 @@ trait VectorTileLayerProperties
   var tileInfo: js.UndefOr[TileInfoProperties] = js.native
   
   /**
-    * The URL to the vector tile service, or the URL to the style resource of vector tiles that will be used to render the layer. If specifying a URL to a style, the tiles are fetched from the tile servers specified in the style object.
+    * The URL to the vector tile service, or the URL to the style resource of vector tiles that will be used to render the layer.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-VectorTileLayer.html#url)
     */

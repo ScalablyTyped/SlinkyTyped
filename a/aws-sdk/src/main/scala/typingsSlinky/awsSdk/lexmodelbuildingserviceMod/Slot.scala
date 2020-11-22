@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait Slot extends js.Object {
   
   /**
+    * A list of default values for the slot. Default values are used when Amazon Lex hasn't determined a value for a slot. You can specify default values from context variables, session attributes, and defined values.
+    */
+  var defaultValueSpec: js.UndefOr[SlotDefaultValueSpec] = js.native
+  
+  /**
     * A description of the slot.
     */
   var description: js.UndefOr[Description] = js.native
@@ -85,6 +90,12 @@ object Slot {
     
     @scala.inline
     def setSlotConstraint(value: SlotConstraint): Self = this.set("slotConstraint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setDefaultValueSpec(value: SlotDefaultValueSpec): Self = this.set("defaultValueSpec", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDefaultValueSpec: Self = this.set("defaultValueSpec", js.undefined)
     
     @scala.inline
     def setDescription(value: Description): Self = this.set("description", value.asInstanceOf[js.Any])

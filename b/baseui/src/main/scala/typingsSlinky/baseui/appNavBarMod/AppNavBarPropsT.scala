@@ -1,26 +1,39 @@
 package typingsSlinky.baseui.appNavBarMod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.baseui.anon.Item
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/* Inlined baseui.baseui/app-nav-bar.UserMenuPropsT & {  isMainItemActive :(item : baseui.baseui/app-nav-bar.NavItemT): boolean | undefined,   mainItems :std.Array<baseui.baseui/app-nav-bar.NavItemT> | undefined,   mapItemToNode :(item : baseui.baseui/app-nav-bar.NavItemT): react.react.ReactNode | undefined,   onMainItemSelect :(item : baseui.baseui/app-nav-bar.NavItemT): / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify mixed * / any | undefined,   title :react.react.ReactNode | undefined} */
 @js.native
 trait AppNavBarPropsT extends js.Object {
   
-  var appDisplayName: js.UndefOr[ReactElement] = js.native
+  var isMainItemActive: js.UndefOr[js.Function1[/* item */ NavItemT, Boolean]] = js.native
   
-  def isNavItemActive(params: Item): Boolean = js.native
+  var mainItems: js.UndefOr[js.Array[NavItemT]] = js.native
   
-  // eslint-disable-next-line flowtype/no-weak-type;
-  var mainNav: js.UndefOr[js.Array[MainNavItemT]] = js.native
+  var mapItemToNode: js.UndefOr[js.Function1[/* item */ NavItemT, ReactElement]] = js.native
   
-  def onNavItemSelect(params: Item): js.Any = js.native
+  var onMainItemSelect: js.UndefOr[
+    js.Function1[
+      /* item */ NavItemT, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify mixed */ _
+    ]
+  ] = js.native
+  
+  var onUserItemSelect: js.UndefOr[
+    js.Function1[
+      /* item */ NavItemT, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify mixed */ _
+    ]
+  ] = js.native
+  
+  var title: js.UndefOr[ReactElement] = js.native
   
   var userImgUrl: js.UndefOr[String] = js.native
   
-  var userNav: js.UndefOr[js.Array[UserNavItemT]] = js.native
+  var userItems: js.UndefOr[js.Array[NavItemT]] = js.native
   
   var username: js.UndefOr[String] = js.native
   
@@ -29,8 +42,8 @@ trait AppNavBarPropsT extends js.Object {
 object AppNavBarPropsT {
   
   @scala.inline
-  def apply(isNavItemActive: Item => Boolean, onNavItemSelect: Item => js.Any): AppNavBarPropsT = {
-    val __obj = js.Dynamic.literal(isNavItemActive = js.Any.fromFunction1(isNavItemActive), onNavItemSelect = js.Any.fromFunction1(onNavItemSelect))
+  def apply(): AppNavBarPropsT = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[AppNavBarPropsT]
   }
   
@@ -50,28 +63,50 @@ object AppNavBarPropsT {
     }
     
     @scala.inline
-    def setIsNavItemActive(value: Item => Boolean): Self = this.set("isNavItemActive", js.Any.fromFunction1(value))
+    def setIsMainItemActive(value: /* item */ NavItemT => Boolean): Self = this.set("isMainItemActive", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setOnNavItemSelect(value: Item => js.Any): Self = this.set("onNavItemSelect", js.Any.fromFunction1(value))
+    def deleteIsMainItemActive: Self = this.set("isMainItemActive", js.undefined)
     
     @scala.inline
-    def setAppDisplayNameReactElement(value: ReactElement): Self = this.set("appDisplayName", value.asInstanceOf[js.Any])
+    def setMainItemsVarargs(value: NavItemT*): Self = this.set("mainItems", js.Array(value :_*))
     
     @scala.inline
-    def setAppDisplayName(value: ReactElement): Self = this.set("appDisplayName", value.asInstanceOf[js.Any])
+    def setMainItems(value: js.Array[NavItemT]): Self = this.set("mainItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteAppDisplayName: Self = this.set("appDisplayName", js.undefined)
+    def deleteMainItems: Self = this.set("mainItems", js.undefined)
     
     @scala.inline
-    def setMainNavVarargs(value: MainNavItemT*): Self = this.set("mainNav", js.Array(value :_*))
+    def setMapItemToNode(value: /* item */ NavItemT => ReactElement): Self = this.set("mapItemToNode", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setMainNav(value: js.Array[MainNavItemT]): Self = this.set("mainNav", value.asInstanceOf[js.Any])
+    def deleteMapItemToNode: Self = this.set("mapItemToNode", js.undefined)
     
     @scala.inline
-    def deleteMainNav: Self = this.set("mainNav", js.undefined)
+    def setOnMainItemSelect(
+      value: /* item */ NavItemT => /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify mixed */ _
+    ): Self = this.set("onMainItemSelect", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnMainItemSelect: Self = this.set("onMainItemSelect", js.undefined)
+    
+    @scala.inline
+    def setOnUserItemSelect(
+      value: /* item */ NavItemT => /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify mixed */ _
+    ): Self = this.set("onUserItemSelect", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteOnUserItemSelect: Self = this.set("onUserItemSelect", js.undefined)
+    
+    @scala.inline
+    def setTitleReactElement(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTitle(value: ReactElement): Self = this.set("title", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTitle: Self = this.set("title", js.undefined)
     
     @scala.inline
     def setUserImgUrl(value: String): Self = this.set("userImgUrl", value.asInstanceOf[js.Any])
@@ -80,13 +115,13 @@ object AppNavBarPropsT {
     def deleteUserImgUrl: Self = this.set("userImgUrl", js.undefined)
     
     @scala.inline
-    def setUserNavVarargs(value: UserNavItemT*): Self = this.set("userNav", js.Array(value :_*))
+    def setUserItemsVarargs(value: NavItemT*): Self = this.set("userItems", js.Array(value :_*))
     
     @scala.inline
-    def setUserNav(value: js.Array[UserNavItemT]): Self = this.set("userNav", value.asInstanceOf[js.Any])
+    def setUserItems(value: js.Array[NavItemT]): Self = this.set("userItems", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteUserNav: Self = this.set("userNav", js.undefined)
+    def deleteUserItems: Self = this.set("userItems", js.undefined)
     
     @scala.inline
     def setUsername(value: String): Self = this.set("username", value.asInstanceOf[js.Any])

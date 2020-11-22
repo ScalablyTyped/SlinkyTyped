@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("office-ui-fabric-react/lib/index.bundle", "DATA_PORTAL_ATTRIBUTE")
 @js.native
-object DATA_PORTAL_ATTRIBUTE extends TopLevel[/* "@media screen and (-ms-high-contrast: active)" */ String]
+object DATA_PORTAL_ATTRIBUTE extends TopLevel[/* "change" */ String]

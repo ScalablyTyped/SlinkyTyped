@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/lib/Toast", JSImport.Default)
+@JSImport("reactstrap/es/Toast", JSImport.Default)
 @js.native
-class default[T] ()
+class default ()
   extends Component[ToastProps, js.Object, js.Any]

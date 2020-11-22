@@ -1,7 +1,14 @@
 package typingsSlinky.aframe.mod
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.tweenJs.TWEEN.Tween
+import org.scalablytyped.runtime.Instantiable1
+import typingsSlinky.aframe.anon.Back
+import typingsSlinky.aframe.anon.Bezier
+import typingsSlinky.aframe.anon.TypeofSequence
+import typingsSlinky.aframe.anon.Typeofdefault
+import typingsSlinky.std.Record
+import typingsSlinky.tweenjsTweenJs.mod.Tween
+import typingsSlinky.tweenjsTweenJs.mod.UnknownProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,21 +16,49 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TweenLib extends js.Object {
   
-  var Easing: typingsSlinky.tweenJs.Easing = js.native
+  /**
+    * The Ease class provides a collection of easing functions for use with tween.js.
+    */
+  val Easing: Back = js.native
   
-  var Group: Instantiable0[typingsSlinky.tweenJs.mod.Group] = js.native
+  /**
+    * Controlling groups of tweens
+    *
+    * Using the TWEEN singleton to manage your tweens can cause issues in large apps with many components.
+    * In these cases, you may want to create your own smaller groups of tween
+    */
+  var Group: Instantiable0[typingsSlinky.tweenjsTweenJs.mod.Group] = js.native
   
-  var Interpolation: typingsSlinky.tweenJs.Interpolation = js.native
+  /**
+    *
+    */
+  val Interpolation: Bezier = js.native
   
-  var Tween: Instantiable0[typingsSlinky.tweenJs.mod.Tween] = js.native
+  /**
+    * Utils
+    */
+  var Sequence: TypeofSequence = js.native
   
-  def add(tween: Tween): Unit = js.native
+  var Tween: Instantiable1[
+    /* import warning: RewrittenClass.unapply cls was tparam T */ /* _object */ js.Any, 
+    typingsSlinky.tweenjsTweenJs.mod.Tween[UnknownProps]
+  ] = js.native
   
-  def getAll(): js.Array[Tween] = js.native
+  val VERSION: /* "18.6.4" */ String = js.native
+  
+  def add(tween: Tween[Record[String, _]]): Unit = js.native
+  
+  val default: Typeofdefault = js.native
+  
+  def getAll(): js.Array[Tween[Record[String, _]]] = js.native
+  
+  val nextId: /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof Sequence.nextId */ js.Any = js.native
   
   def now(): Double = js.native
+  @JSName("now")
+  var now_Original: js.Function0[Double] = js.native
   
-  def remove(tween: Tween): Unit = js.native
+  def remove(tween: Tween[Record[String, _]]): Unit = js.native
   
   def removeAll(): Unit = js.native
   

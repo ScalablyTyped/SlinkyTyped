@@ -7,21 +7,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PropOptions extends js.Object {
   
-  /** @deprecated: "attr" has been deprecated, please use "attribute" instead. */
-  var attr: js.UndefOr[String] = js.native
-  
   /**
     * The name of the associated DOM attribute.
     * Stencil uses different heuristics to determine the default name of the attribute,
     * but using this property, you can override the default behaviour.
     */
   var attribute: js.UndefOr[String | Null] = js.native
-  
-  /** @deprecated "connect" has been deprecated, please use ES modules and/or dynamic imports instead. */
-  var connect: js.UndefOr[String] = js.native
-  
-  /** @deprecated "context" has been deprecated. */
-  var context: js.UndefOr[String] = js.native
   
   /**
     * A Prop is _by default_ immutable from inside the component logic.
@@ -36,9 +27,6 @@ trait PropOptions extends js.Object {
     * In this case you can set the `reflect` option to `true`, since it defaults to `false`:
     */
   var reflect: js.UndefOr[Boolean] = js.native
-  
-  /** @deprecated "reflectToAttr" has been deprecated, please use "reflect" instead. */
-  var reflectToAttr: js.UndefOr[Boolean] = js.native
 }
 object PropOptions {
   
@@ -64,12 +52,6 @@ object PropOptions {
     }
     
     @scala.inline
-    def setAttr(value: String): Self = this.set("attr", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteAttr: Self = this.set("attr", js.undefined)
-    
-    @scala.inline
     def setAttribute(value: String): Self = this.set("attribute", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -77,18 +59,6 @@ object PropOptions {
     
     @scala.inline
     def setAttributeNull: Self = this.set("attribute", null)
-    
-    @scala.inline
-    def setConnect(value: String): Self = this.set("connect", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteConnect: Self = this.set("connect", js.undefined)
-    
-    @scala.inline
-    def setContext(value: String): Self = this.set("context", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteContext: Self = this.set("context", js.undefined)
     
     @scala.inline
     def setMutable(value: Boolean): Self = this.set("mutable", value.asInstanceOf[js.Any])
@@ -101,11 +71,5 @@ object PropOptions {
     
     @scala.inline
     def deleteReflect: Self = this.set("reflect", js.undefined)
-    
-    @scala.inline
-    def setReflectToAttr(value: Boolean): Self = this.set("reflectToAttr", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteReflectToAttr: Self = this.set("reflectToAttr", js.undefined)
   }
 }

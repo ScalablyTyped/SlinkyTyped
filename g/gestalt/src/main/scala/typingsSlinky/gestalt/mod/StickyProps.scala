@@ -1,7 +1,6 @@
 package typingsSlinky.gestalt.mod
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.gestalt.anon.ZIndex
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,13 +12,15 @@ trait StickyProps extends js.Object {
   
   var children: js.UndefOr[ReactElement] = js.native
   
-  var dangerouslySetZIndex: js.UndefOr[ZIndex] = js.native
+  var height: js.UndefOr[Double] = js.native
   
   var left: js.UndefOr[Double | String] = js.native
   
   var right: js.UndefOr[Double | String] = js.native
   
   var top: js.UndefOr[Double | String] = js.native
+  
+  var zIndex: js.UndefOr[Indexable] = js.native
 }
 object StickyProps {
   
@@ -60,10 +61,10 @@ object StickyProps {
     def deleteChildren: Self = this.set("children", js.undefined)
     
     @scala.inline
-    def setDangerouslySetZIndex(value: ZIndex): Self = this.set("dangerouslySetZIndex", value.asInstanceOf[js.Any])
+    def setHeight(value: Double): Self = this.set("height", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteDangerouslySetZIndex: Self = this.set("dangerouslySetZIndex", js.undefined)
+    def deleteHeight: Self = this.set("height", js.undefined)
     
     @scala.inline
     def setLeft(value: Double | String): Self = this.set("left", value.asInstanceOf[js.Any])
@@ -82,5 +83,11 @@ object StickyProps {
     
     @scala.inline
     def deleteTop: Self = this.set("top", js.undefined)
+    
+    @scala.inline
+    def setZIndex(value: Indexable): Self = this.set("zIndex", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteZIndex: Self = this.set("zIndex", js.undefined)
   }
 }

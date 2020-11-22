@@ -77,6 +77,9 @@ object materialUiStrings {
   def middle: middle = "middle".asInstanceOf[middle]
   
   @scala.inline
+  def onChange: onChange = "onChange".asInstanceOf[onChange]
+  
+  @scala.inline
   def portrait: portrait = "portrait".asInstanceOf[portrait]
   
   @scala.inline
@@ -191,6 +194,9 @@ object materialUiStrings {
   @js.native
   sealed trait middle
     extends typingsSlinky.materialUi.MaterialUI.propTypes.horizontal
+  
+  @js.native
+  sealed trait onChange extends js.Object
   
   @js.native
   sealed trait portrait extends js.Object

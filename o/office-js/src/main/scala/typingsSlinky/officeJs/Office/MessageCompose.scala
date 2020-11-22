@@ -64,11 +64,6 @@ trait MessageCompose extends Item {
   def addFileAttachmentAsync(
     uri: String,
     attachmentName: String,
-    callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
-  ): Unit = js.native
-  def addFileAttachmentAsync(
-    uri: String,
-    attachmentName: String,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
   ): Unit = js.native
@@ -120,11 +115,6 @@ trait MessageCompose extends Item {
   def addFileAttachmentFromBase64Async(
     base64File: String,
     attachmentName: String,
-    callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
-  ): Unit = js.native
-  def addFileAttachmentFromBase64Async(
-    base64File: String,
-    attachmentName: String,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
   ): Unit = js.native
@@ -137,11 +127,6 @@ trait MessageCompose extends Item {
   ): Unit = js.native
   
   def addHandlerAsync(eventType: String, handler: js.Any): Unit = js.native
-  def addHandlerAsync(
-    eventType: String,
-    handler: js.Any,
-    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
-  ): Unit = js.native
   def addHandlerAsync(
     eventType: String,
     handler: js.Any,
@@ -177,11 +162,6 @@ trait MessageCompose extends Item {
     *                `asyncResult`, which is an `Office.AsyncResult` object.
     */
   def addHandlerAsync(eventType: EventType, handler: js.Any): Unit = js.native
-  def addHandlerAsync(
-    eventType: EventType,
-    handler: js.Any,
-    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
-  ): Unit = js.native
   def addHandlerAsync(
     eventType: EventType,
     handler: js.Any,
@@ -234,11 +214,6 @@ trait MessageCompose extends Item {
   def addItemAttachmentAsync(
     itemId: js.Any,
     attachmentName: String,
-    callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
-  ): Unit = js.native
-  def addItemAttachmentAsync(
-    itemId: js.Any,
-    attachmentName: String,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[String], Unit]
   ): Unit = js.native
@@ -251,14 +226,10 @@ trait MessageCompose extends Item {
   ): Unit = js.native
   
   /**
-    * Gets an object that provides methods to get or update the recipients on the Bcc (blind carbon copy) line of a message.
+    * Gets an object that provides methods to get or update the recipients on the **Bcc** (blind carbon copy) line of a message.
     *
-    * By default, the collection is limited to a maximum of 100 members. However, in Outlook on the web, Windows, and Mac,
-    * the following limits apply.
-    *
-    * - Get 500 members maximum.
-    *
-    * - Set a maximum of 100 members per call, up to 500 members total.
+    * Depending on the client/platform (i.e., Windows, Mac, etc.), limits may apply on how many recipients you can get or update.
+    * See the {@link Office.Recipients | Recipients} object for more details.
     *
     * [Api set: Mailbox 1.1]
     *
@@ -299,16 +270,12 @@ trait MessageCompose extends Item {
   var categories: Categories = js.native
   
   /**
-    * Provides access to the Cc (carbon copy) recipients of a message. The type of object and level of access depends on the mode of the 
+    * Provides access to the Cc (carbon copy) recipients of a message. The type of object and level of access depend on the mode of the 
     * current item.
     *
-    * The `cc` property returns a {@link Office.Recipients | Recipients} object that provides methods to get or update the recipients on the
-    * **Cc** line of the message. By default, the collection is limited to a maximum of 100 members. However, in Outlook on the web, Windows,
-    * and Mac, the following limits apply.
-    * 
-    * - Get 500 members maximum.
-    *
-    * - Set a maximum of 100 members per call, up to 500 members total.
+    * The `cc` property returns a `Recipients` object that provides methods to get or update the recipients on the
+    * **Cc** line of the message. However, depending on the client/platform (i.e., Windows, Mac, etc.), limits may apply on how many recipients
+    * you can get or update. See the {@link Office.Recipients | Recipients} object for more details.
     *
     * @remarks
     *
@@ -360,9 +327,6 @@ trait MessageCompose extends Item {
   /**
     * Gets the email address of the sender of a message.
     *
-    * The `from` and `sender` properties represent the same person unless the message is sent by a delegate.
-    * In that case, the `from` property represents the owner, and the `sender` property represents the delegate.
-    *
     * The `from` property returns a `From` object that provides a method to get the from value.
     * 
     * [Api set: Mailbox 1.7]
@@ -409,10 +373,6 @@ trait MessageCompose extends Item {
   def getAttachmentContentAsync(attachmentId: String): Unit = js.native
   def getAttachmentContentAsync(
     attachmentId: String,
-    callback: js.Function1[/* asyncResult */ AsyncResult[AttachmentContent], Unit]
-  ): Unit = js.native
-  def getAttachmentContentAsync(
-    attachmentId: String,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[AttachmentContent], Unit]
   ): Unit = js.native
@@ -441,7 +401,6 @@ trait MessageCompose extends Item {
     *                 the failure.
     */
   def getAttachmentsAsync(): Unit = js.native
-  def getAttachmentsAsync(callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[AttachmentDetailsCompose]], Unit]): Unit = js.native
   def getAttachmentsAsync(
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[AttachmentDetailsCompose]], Unit]
@@ -573,7 +532,18 @@ trait MessageCompose extends Item {
   /**
     * Gets the properties of an appointment or message in a shared folder, calendar, or mailbox.
     *
-    * **Note**: This method is not supported in Outlook on Mac, iOS, or Android.
+    * **Important**: In Message Compose mode, this API is not supported in Outlook on the web or Windows unless the following conditions are met.
+    *
+    * 1. The owner shares at least one mailbox folder with the delegate.
+    *
+    * 2. The delegate drafts a message in the shared folder.
+    *
+    * After the message has been sent, it's usually found in the delegate's **Sent Items** folder.
+    *
+    * For more information around using this API, see the
+    * {@link https://docs.microsoft.com/office/dev/add-ins/outlook/delegate-access | delegate access} article.
+    *
+    * **Note**: This method is not supported in Outlook on iOS or Android.
     *
     * [Api set: Mailbox 1.8]
     *
@@ -590,7 +560,18 @@ trait MessageCompose extends Item {
   /**
     * Gets the properties of an appointment or message in a shared folder, calendar, or mailbox.
     *
-    * **Note**: This method is not supported in Outlook on Mac, iOS, or Android.
+    * **Important**: In Message Compose mode, this API is not supported in Outlook on the web or Windows unless the following conditions are met.
+    *
+    * 1. The owner shares at least one mailbox folder with the delegate.
+    *
+    * 2. The delegate drafts a message in the shared folder.
+    *
+    * After the message has been sent, it's usually found in the delegate's **Sent Items** folder.
+    *
+    * For more information around using this API, see the
+    * {@link https://docs.microsoft.com/office/dev/add-ins/outlook/delegate-access | delegate access} article.
+    *
+    * **Note**: This method is not supported in Outlook on iOS or Android.
     *
     * [Api set: Mailbox 1.8]
     *
@@ -706,7 +687,6 @@ trait MessageCompose extends Item {
     *                 with the reason for the failure.
     */
   def removeAttachmentAsync(attachmentId: String): Unit = js.native
-  def removeAttachmentAsync(attachmentId: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def removeAttachmentAsync(
     attachmentId: String,
     options: js.UndefOr[scala.Nothing],
@@ -720,7 +700,6 @@ trait MessageCompose extends Item {
   ): Unit = js.native
   
   def removeHandlerAsync(eventType: String): Unit = js.native
-  def removeHandlerAsync(eventType: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def removeHandlerAsync(
     eventType: String,
     options: js.UndefOr[scala.Nothing],
@@ -752,7 +731,6 @@ trait MessageCompose extends Item {
     *                `asyncResult`, which is an `Office.AsyncResult` object.
     */
   def removeHandlerAsync(eventType: EventType): Unit = js.native
-  def removeHandlerAsync(eventType: EventType, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def removeHandlerAsync(
     eventType: EventType,
     options: js.UndefOr[scala.Nothing],
@@ -887,7 +865,6 @@ trait MessageCompose extends Item {
     *                 type `Office.AsyncResult`.
     */
   def setSelectedDataAsync(data: String): Unit = js.native
-  def setSelectedDataAsync(data: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def setSelectedDataAsync(data: String, options: AsyncContextOptions with CoercionTypeOptions): Unit = js.native
   def setSelectedDataAsync(
     data: String,
@@ -916,16 +893,12 @@ trait MessageCompose extends Item {
   var subject: Subject = js.native
   
   /**
-    * Provides access to the recipients on the To line of a message. The type of object and level of access depends on the mode of the
+    * Provides access to the recipients on the **To** line of a message. The type of object and level of access depend on the mode of the
     * current item.
     *
-    * The `to` property returns a {@link Office.Recipients | Recipients} object that provides methods to get or update the recipients on the
-    * **To** line of the message. By default, the collection is limited to a maximum of 100 members. However, in Outlook on the web, Windows,
-    * and Mac, the following limits apply.
-    * 
-    * - Get 500 members maximum.
-    *
-    * - Set a maximum of 100 members per call, up to 500 members total.
+    * The `to` property returns a `Recipients` object that provides methods to get or update the recipients on the
+    * **To** line of the message. However, depending on the client/platform (i.e., Windows, Mac, etc.), limits may apply on how many recipients
+    * you can get or update. See the {@link Office.Recipients | Recipients} object for more details.
     *
     * @remarks
     *

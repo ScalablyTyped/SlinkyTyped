@@ -2,14 +2,15 @@ package typingsSlinky.jupyterlabMainmenu
 
 import typingsSlinky.jupyterlabMainmenu.labmenuMod.IJupyterLabMenu
 import typingsSlinky.jupyterlabMainmenu.labmenuMod.JupyterLabMenu
-import typingsSlinky.phosphorWidgets.menuMod.Menu.IOptions
+import typingsSlinky.luminoWidgets.menuMod.Menu.IOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/mainmenu/lib/settings", JSImport.Namespace)
 @js.native
 object settingsMod extends js.Object {
+  
   @js.native
   class SettingsMenu protected () extends JupyterLabMenu {
     /**
@@ -20,4 +21,3 @@ object settingsMod extends js.Object {
   
   type ISettingsMenu = IJupyterLabMenu
 }
-

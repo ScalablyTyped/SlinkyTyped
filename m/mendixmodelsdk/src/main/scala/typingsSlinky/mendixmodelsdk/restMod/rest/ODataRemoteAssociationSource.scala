@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.restMod.rest
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.AssociationBase
 import typingsSlinky.mendixmodelsdk.domainmodelsMod.domainmodels.RemoteAssociationSource
@@ -7,6 +8,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.restMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -29,15 +31,12 @@ class ODataRemoteAssociationSource protected () extends RemoteAssociationSource 
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   @JSName("containerAsAssociationBase")
   def containerAsAssociationBase_MODataRemoteAssociationSource: AssociationBase = js.native
-  
-  @JSName("model")
-  var model_FODataRemoteAssociationSource: IModel = js.native
   
   def remoteChildNavigationProperty: String = js.native
   def remoteChildNavigationProperty_=(newValue: String): Unit = js.native

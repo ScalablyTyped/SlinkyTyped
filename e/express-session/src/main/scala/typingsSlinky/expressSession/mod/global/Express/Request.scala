@@ -1,21 +1,34 @@
 package typingsSlinky.expressSession.mod.global.Express
 
+import typingsSlinky.expressSession.anon.SessionPartialSessionData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+// Inject additional properties on express.Request
 @js.native
 trait Request extends js.Object {
   
-  var session: js.UndefOr[Session] = js.native
+  /**
+    * This request's `Session` object.
+    * Even though this property isn't marked as optional, it won't exist until you use the `express-session` middleware
+    * [Declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html) can be used to add your own properties.
+    *
+    * @see SessionData
+    */
+  var session: SessionPartialSessionData = js.native
   
-  var sessionID: js.UndefOr[String] = js.native
+  /**
+    * This request's session ID.
+    * Even though this property isn't marked as optional, it won't exist until you use the `express-session` middleware
+    */
+  var sessionID: String = js.native
 }
 object Request {
   
   @scala.inline
-  def apply(): Request = {
-    val __obj = js.Dynamic.literal()
+  def apply(session: SessionPartialSessionData, sessionID: String): Request = {
+    val __obj = js.Dynamic.literal(session = session.asInstanceOf[js.Any], sessionID = sessionID.asInstanceOf[js.Any])
     __obj.asInstanceOf[Request]
   }
   
@@ -35,15 +48,9 @@ object Request {
     }
     
     @scala.inline
-    def setSession(value: Session): Self = this.set("session", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSession: Self = this.set("session", js.undefined)
+    def setSession(value: SessionPartialSessionData): Self = this.set("session", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setSessionID(value: String): Self = this.set("sessionID", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteSessionID: Self = this.set("sessionID", js.undefined)
   }
 }

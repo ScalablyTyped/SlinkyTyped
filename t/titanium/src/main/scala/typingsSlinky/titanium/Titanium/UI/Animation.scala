@@ -42,7 +42,7 @@ trait Animation extends Proxy {
     * Value of the `backgroundColor` property at the end of the animation, as a color name
     * or hex triplet.
     */
-  var backgroundColor: String = js.native
+  var backgroundColor: String | Color = js.native
   
   /**
     * Value of the `bottom` property at the end of the animation.
@@ -57,7 +57,7 @@ trait Animation extends Proxy {
   /**
     * Value of the `color` property at the end of the animation, as a color name or hex triplet.
     */
-  var color: String = js.native
+  var color: String | Color = js.native
   
   /**
     * Animation curve or easing function to apply to the animation.
@@ -78,6 +78,11 @@ trait Animation extends Proxy {
     * Duration of the animation, in milliseconds.
     */
   var duration: Double = js.native
+  
+  /**
+    * Value of the `elevation` property at the end of the animation.
+    */
+  var elevation: Double = js.native
   
   /**
     * Fires a synthesized event to any registered listeners.
@@ -107,7 +112,7 @@ trait Animation extends Proxy {
     * Gets the value of the <Titanium.UI.Animation.backgroundColor> property.
     * @deprecated Access <Titanium.UI.Animation.backgroundColor> instead.
     */
-  def getBackgroundColor(): String = js.native
+  def getBackgroundColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Animation.bottom> property.
@@ -125,7 +130,7 @@ trait Animation extends Proxy {
     * Gets the value of the <Titanium.UI.Animation.color> property.
     * @deprecated Access <Titanium.UI.Animation.color> instead.
     */
-  def getColor(): String = js.native
+  def getColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Animation.curve> property.
@@ -150,6 +155,12 @@ trait Animation extends Proxy {
     * @deprecated Access <Titanium.UI.Animation.duration> instead.
     */
   def getDuration(): Double = js.native
+  
+  /**
+    * Gets the value of the <Titanium.UI.Animation.elevation> property.
+    * @deprecated Access <Titanium.UI.Animation.elevation> instead.
+    */
+  def getElevation(): Double = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Animation.height> property.
@@ -296,6 +307,7 @@ trait Animation extends Proxy {
     * @deprecated Set the value using <Titanium.UI.Animation.backgroundColor> instead.
     */
   def setBackgroundColor(backgroundColor: String): Unit = js.native
+  def setBackgroundColor(backgroundColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Animation.bottom> property.
@@ -314,6 +326,7 @@ trait Animation extends Proxy {
     * @deprecated Set the value using <Titanium.UI.Animation.color> instead.
     */
   def setColor(color: String): Unit = js.native
+  def setColor(color: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Animation.curve> property.
@@ -338,6 +351,12 @@ trait Animation extends Proxy {
     * @deprecated Set the value using <Titanium.UI.Animation.duration> instead.
     */
   def setDuration(duration: Double): Unit = js.native
+  
+  /**
+    * Sets the value of the <Titanium.UI.Animation.elevation> property.
+    * @deprecated Set the value using <Titanium.UI.Animation.elevation> instead.
+    */
+  def setElevation(elevation: Double): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Animation.height> property.

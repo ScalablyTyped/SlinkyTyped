@@ -14,6 +14,11 @@ trait NetworkAssociationArgs extends js.Object {
   val clientVpnEndpointId: Input[String] = js.native
   
   /**
+    * A list of up to five custom security groups to apply to the target network. If not specified, the VPC's default security group is assigned.
+    */
+  val securityGroups: js.UndefOr[Input[js.Array[Input[String]]]] = js.native
+  
+  /**
     * The ID of the subnet to associate with the Client VPN endpoint.
     */
   val subnetId: Input[String] = js.native
@@ -46,5 +51,14 @@ object NetworkAssociationArgs {
     
     @scala.inline
     def setSubnetId(value: Input[String]): Self = this.set("subnetId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSecurityGroupsVarargs(value: Input[String]*): Self = this.set("securityGroups", js.Array(value :_*))
+    
+    @scala.inline
+    def setSecurityGroups(value: Input[js.Array[Input[String]]]): Self = this.set("securityGroups", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSecurityGroups: Self = this.set("securityGroups", js.undefined)
   }
 }

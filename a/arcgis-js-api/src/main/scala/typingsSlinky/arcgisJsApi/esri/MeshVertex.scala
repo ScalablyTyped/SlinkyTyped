@@ -10,21 +10,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait MeshVertex extends Object {
   
   /**
-    * The distance parameter for this vertex; this only applies when tessellating polylines. It starts from 0 and runs up to the total length of the polyline. It is expressed in map units.
+    * The distance parameter for this vertex; this only applies when tessellating polylines.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#MeshVertex)
     */
   var distance: Double = js.native
   
   /**
-    * The `u`-coordinate for texture mapping. It varies between 0 and 1 horizontally for quads and polygons, and along the entire length of a polyline.
+    * The `u`-coordinate for texture mapping.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#MeshVertex)
     */
   var uTexcoord: Double = js.native
   
   /**
-    * The `v`-coordinate for texture mapping. It varies between 0 and 1 vertically for quads and polygons, and across the width of a polyline.
+    * The `v`-coordinate for texture mapping.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-views-2d-layers-BaseLayerViewGL2D.html#MeshVertex)
     */

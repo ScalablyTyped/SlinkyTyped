@@ -1,6 +1,5 @@
 package typingsSlinky.grommet.anon
 
-import typingsSlinky.grommet.utilsMod.OpacityType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +7,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `17` extends js.Object {
   
-  var opacity: js.UndefOr[OpacityType] = js.native
+  var border: js.UndefOr[ColorSide] = js.native
 }
 object `17` {
   
@@ -34,9 +33,9 @@ object `17` {
     }
     
     @scala.inline
-    def setOpacity(value: OpacityType): Self = this.set("opacity", value.asInstanceOf[js.Any])
+    def setBorder(value: ColorSide): Self = this.set("border", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteOpacity: Self = this.set("opacity", js.undefined)
+    def deleteBorder: Self = this.set("border", js.undefined)
   }
 }

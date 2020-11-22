@@ -16,6 +16,11 @@ trait IonChip extends js.Object {
   var color: js.UndefOr[Color] = js.native
   
   /**
+    * If `true`, the user cannot interact with the chip.
+    */
+  var disabled: Boolean = js.native
+  
+  /**
     * The mode determines which platform styles to use.
     */
   var mode: js.UndefOr[ios | md] = js.native
@@ -28,8 +33,8 @@ trait IonChip extends js.Object {
 object IonChip {
   
   @scala.inline
-  def apply(outline: Boolean): IonChip = {
-    val __obj = js.Dynamic.literal(outline = outline.asInstanceOf[js.Any])
+  def apply(disabled: Boolean, outline: Boolean): IonChip = {
+    val __obj = js.Dynamic.literal(disabled = disabled.asInstanceOf[js.Any], outline = outline.asInstanceOf[js.Any])
     __obj.asInstanceOf[IonChip]
   }
   
@@ -47,6 +52,9 @@ object IonChip {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDisabled(value: Boolean): Self = this.set("disabled", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOutline(value: Boolean): Self = this.set("outline", value.asInstanceOf[js.Any])

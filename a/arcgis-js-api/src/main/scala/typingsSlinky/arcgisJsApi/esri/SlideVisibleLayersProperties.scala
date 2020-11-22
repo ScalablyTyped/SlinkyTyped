@@ -17,7 +17,7 @@ trait SlideVisibleLayersProperties extends Object {
   var id: js.UndefOr[String] = js.native
   
   /**
-    * The service ids of the visible sublayers on the layer specified by the layer id. If this is not present, the visibilities of the sublayers are not changed when applying the slide.
+    * The service ids of the visible sublayers on the layer specified by the layer id.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-webscene-Slide.html#visibleLayers)
     */

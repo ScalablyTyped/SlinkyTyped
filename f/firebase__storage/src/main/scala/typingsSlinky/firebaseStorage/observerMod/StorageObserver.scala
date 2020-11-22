@@ -8,11 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait StorageObserver[T] extends js.Object {
   
-  var complete: js.UndefOr[CompleteFn | Null] = js.native
+  var complete: js.UndefOr[CompleteFn] = js.native
   
-  var error: js.UndefOr[ErrorFn | Null] = js.native
+  var error: js.UndefOr[ErrorFn] = js.native
   
-  var next: js.UndefOr[NextFn[T] | Null] = js.native
+  var next: js.UndefOr[NextFn[T]] = js.native
 }
 object StorageObserver {
   
@@ -44,24 +44,15 @@ object StorageObserver {
     def deleteComplete: Self = this.set("complete", js.undefined)
     
     @scala.inline
-    def setCompleteNull: Self = this.set("complete", null)
-    
-    @scala.inline
-    def setError(value: /* error */ js.Error | FirebaseStorageError => Unit): Self = this.set("error", js.Any.fromFunction1(value))
+    def setError(value: /* error */ FirebaseStorageError => Unit): Self = this.set("error", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteError: Self = this.set("error", js.undefined)
-    
-    @scala.inline
-    def setErrorNull: Self = this.set("error", null)
     
     @scala.inline
     def setNext(value: T => Unit): Self = this.set("next", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteNext: Self = this.set("next", js.undefined)
-    
-    @scala.inline
-    def setNextNull: Self = this.set("next", null)
   }
 }

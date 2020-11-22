@@ -59,13 +59,17 @@ object planeDragGizmoMod extends js.Object {
     
     var _coloredMaterial: js.Any = js.native
     
+    var _disableMaterial: js.Any = js.native
+    
+    var _dragging: js.Any = js.native
+    
+    var _gizmoMesh: js.Any = js.native
+    
     var _hoverMaterial: js.Any = js.native
     
     var _isEnabled: js.Any = js.native
     
     var _parent: js.Any = js.native
-    
-    var _plane: js.Any = js.native
     
     var _pointerObserver: js.Any = js.native
     
@@ -94,9 +98,6 @@ object planeDragGizmoMod extends js.Object {
   /* static members */
   @js.native
   object PlaneDragGizmo extends js.Object {
-    
-    /** @hidden */
-    def _CreateArrowInstance(scene: Scene, arrow: TransformNode): TransformNode = js.native
     
     /** @hidden */
     def _CreatePlane(scene: Scene, material: StandardMaterial): TransformNode = js.native

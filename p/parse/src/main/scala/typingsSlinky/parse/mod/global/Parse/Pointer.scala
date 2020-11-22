@@ -1,13 +1,15 @@
 package typingsSlinky.parse.mod.global.Parse
 
 import typingsSlinky.parse.mod.global.Parse.Object._Encode
+import typingsSlinky.parse.mod.global.Parse.Schema._FieldType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait Pointer
-  extends _Encode[js.Any] {
+  extends _Encode[js.Any]
+     with _FieldType {
   
   var __type: String = js.native
   

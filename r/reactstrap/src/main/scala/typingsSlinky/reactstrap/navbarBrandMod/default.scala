@@ -5,7 +5,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("reactstrap/lib/NavbarBrand", JSImport.Default)
+@JSImport("reactstrap/es/NavbarBrand", JSImport.Default)
 @js.native
-class default[T] ()
+class default ()
   extends Component[NavbarBrandProps, js.Object, js.Any]

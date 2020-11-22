@@ -11,26 +11,34 @@ object mulmatPackedGpuMod extends js.Object {
   
   @js.native
   class MatMulPackedProgram protected () extends GPGPUProgram {
-    def this(aShape: js.Tuple3[Double, Double, Double], outputShape: js.Tuple3[Double, Double, Double]) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
+      outputShape: js.Tuple3[Double, Double, Double]
+    ) = this()
+    def this(
+      aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: js.UndefOr[scala.Nothing],
       transposeB: Boolean
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean,
       transposeB: Boolean
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: js.UndefOr[scala.Nothing],
       transposeB: js.UndefOr[scala.Nothing],
@@ -38,6 +46,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: js.UndefOr[scala.Nothing],
       transposeB: Boolean,
@@ -45,6 +54,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean,
       transposeB: js.UndefOr[scala.Nothing],
@@ -52,6 +62,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean,
       transposeB: Boolean,
@@ -59,6 +70,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: js.UndefOr[scala.Nothing],
       transposeB: js.UndefOr[scala.Nothing],
@@ -67,6 +79,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: js.UndefOr[scala.Nothing],
       transposeB: js.UndefOr[scala.Nothing],
@@ -75,6 +88,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: js.UndefOr[scala.Nothing],
       transposeB: Boolean,
@@ -83,6 +97,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: js.UndefOr[scala.Nothing],
       transposeB: Boolean,
@@ -91,6 +106,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean,
       transposeB: js.UndefOr[scala.Nothing],
@@ -99,6 +115,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean,
       transposeB: js.UndefOr[scala.Nothing],
@@ -107,6 +124,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean,
       transposeB: Boolean,
@@ -115,6 +133,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean,
       transposeB: Boolean,
@@ -123,6 +142,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: js.UndefOr[scala.Nothing],
       transposeB: js.UndefOr[scala.Nothing],
@@ -132,6 +152,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: js.UndefOr[scala.Nothing],
       transposeB: js.UndefOr[scala.Nothing],
@@ -141,6 +162,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: js.UndefOr[scala.Nothing],
       transposeB: js.UndefOr[scala.Nothing],
@@ -150,6 +172,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: js.UndefOr[scala.Nothing],
       transposeB: js.UndefOr[scala.Nothing],
@@ -159,6 +182,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: js.UndefOr[scala.Nothing],
       transposeB: Boolean,
@@ -168,6 +192,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: js.UndefOr[scala.Nothing],
       transposeB: Boolean,
@@ -177,6 +202,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: js.UndefOr[scala.Nothing],
       transposeB: Boolean,
@@ -186,6 +212,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: js.UndefOr[scala.Nothing],
       transposeB: Boolean,
@@ -195,6 +222,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean,
       transposeB: js.UndefOr[scala.Nothing],
@@ -204,6 +232,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean,
       transposeB: js.UndefOr[scala.Nothing],
@@ -213,6 +242,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean,
       transposeB: js.UndefOr[scala.Nothing],
@@ -222,6 +252,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean,
       transposeB: js.UndefOr[scala.Nothing],
@@ -231,6 +262,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean,
       transposeB: Boolean,
@@ -240,6 +272,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean,
       transposeB: Boolean,
@@ -249,6 +282,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean,
       transposeB: Boolean,
@@ -258,6 +292,7 @@ object mulmatPackedGpuMod extends js.Object {
     ) = this()
     def this(
       aShape: js.Tuple3[Double, Double, Double],
+      bShape: js.Tuple3[Double, Double, Double],
       outputShape: js.Tuple3[Double, Double, Double],
       transposeA: Boolean,
       transposeB: Boolean,

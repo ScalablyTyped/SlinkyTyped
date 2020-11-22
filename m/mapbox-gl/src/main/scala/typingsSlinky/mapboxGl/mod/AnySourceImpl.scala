@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.mapboxGl.mod.VideoSource
   - typingsSlinky.mapboxGl.mod.ImageSource
   - typingsSlinky.mapboxGl.mod.CanvasSource
-  - typingsSlinky.mapboxGl.mod.VectorSource
+  - typingsSlinky.mapboxGl.mod.VectorSourceImpl
   - typingsSlinky.mapboxGl.mod.RasterSource
   - typingsSlinky.mapboxGl.mod.RasterDemSource
 */

@@ -1,6 +1,6 @@
 package typingsSlinky.nano.mod
 
-import typingsSlinky.request.mod.Request
+import typingsSlinky.node.processMod.global.NodeJS.ReadStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -44,23 +44,13 @@ trait DocumentScope[D] extends js.Object {
   def changes(params: DatabaseChangesParams): js.Promise[DatabaseChangesResponse] = js.native
   def changes(params: DatabaseChangesParams, callback: Callback[DatabaseChangesResponse]): js.Promise[DatabaseChangesResponse] = js.native
   
+  var changesReader: ChangesReaderScope = js.native
+  
   // http://docs.couchdb.org/en/latest/api/database/compact.html#post--db-_compact
   def compact(): js.Promise[OkResponse] = js.native
   def compact(callback: Callback[OkResponse]): js.Promise[OkResponse] = js.native
   
   val config: ServerConfig = js.native
-  
-  // http://docs.couchdb.org/en/latest/api/document/common.html#copy--db-docid
-  def copy(src_document: String, dst_document: String): js.Promise[DocumentCopyResponse] = js.native
-  def copy(src_document: String, dst_document: String, callback: Callback[DocumentCopyResponse]): js.Promise[DocumentCopyResponse] = js.native
-  // http://docs.couchdb.org/en/latest/api/document/common.html#copy--db-docid
-  def copy(src_document: String, dst_document: String, options: DocumentCopyOptions): js.Promise[DocumentCopyResponse] = js.native
-  def copy(
-    src_document: String,
-    dst_document: String,
-    options: DocumentCopyOptions,
-    callback: Callback[DocumentCopyResponse]
-  ): js.Promise[DocumentCopyResponse] = js.native
   
   // http://docs.couchdb.org/en/latest/api/database/find.html#db-index
   def createIndex(indexDef: CreateIndexRequest): js.Promise[CreateIndexResponse] = js.native
@@ -95,11 +85,6 @@ trait DocumentScope[D] extends js.Object {
   // http://docs.couchdb.org/en/latest/api/database/find.html#db-find
   def find(query: MangoQuery): js.Promise[MangoResponse[D]] = js.native
   def find(query: MangoQuery, callback: Callback[MangoResponse[D]]): js.Promise[MangoResponse[D]] = js.native
-  
-  def follow(): FollowEmitter = js.native
-  def follow(callback: Callback[_]): Unit = js.native
-  def follow(params: DocumentScopeFollowUpdatesParams): FollowEmitter = js.native
-  def follow(params: DocumentScopeFollowUpdatesParams, callback: Callback[_]): Unit = js.native
   
   // http://docs.couchdb.org/en/latest/api/document/common.html#get--db-docid
   def get(docname: String): js.Promise[DocumentGetResponse with D] = js.native
@@ -149,9 +134,9 @@ trait DocumentScope[D] extends js.Object {
   def list(params: DocumentListParams, callback: Callback[DocumentListResponse[D]]): js.Promise[DocumentListResponse[D]] = js.native
   
   // http://docs.couchdb.org/en/latest/api/database/bulk-api.html#get--db-_all_docs
-  def listAsStream(): Request = js.native
+  def listAsStream(): ReadStream = js.native
   // http://docs.couchdb.org/en/latest/api/database/bulk-api.html#get--db-_all_docs
-  def listAsStream(params: DocumentListParams): Request = js.native
+  def listAsStream(params: DocumentListParams): ReadStream = js.native
   
   var multipart: Multipart[D] = js.native
   
@@ -162,7 +147,7 @@ trait DocumentScope[D] extends js.Object {
   def partitionedFind(partitionKey: String, query: MangoQuery): js.Promise[MangoResponse[D]] = js.native
   def partitionedFind(partitionKey: String, query: MangoQuery, callback: Callback[MangoResponse[D]]): js.Promise[MangoResponse[D]] = js.native
   
-  def partitionedFindAsStream(partitionKey: String, query: MangoQuery): Request = js.native
+  def partitionedFindAsStream(partitionKey: String, query: MangoQuery): ReadStream = js.native
   
   def partitionedList(partitionKey: String): js.Promise[DocumentListResponse[D]] = js.native
   def partitionedList(
@@ -173,10 +158,10 @@ trait DocumentScope[D] extends js.Object {
   def partitionedList(partitionKey: String, params: DocumentFetchParams): js.Promise[DocumentListResponse[D]] = js.native
   def partitionedList(partitionKey: String, params: DocumentFetchParams, callback: Callback[DocumentListResponse[D]]): js.Promise[DocumentListResponse[D]] = js.native
   
-  def partitionedListAsStream(partitionKey: String): Request = js.native
-  def partitionedListAsStream(partitionKey: String, params: DocumentFetchParams): Request = js.native
+  def partitionedListAsStream(partitionKey: String): ReadStream = js.native
+  def partitionedListAsStream(partitionKey: String, params: DocumentFetchParams): ReadStream = js.native
   
-  def partitionedSearchAsStream(partitionKey: String, designname: String, searchname: String, params: DocumentSearchParams): Request = js.native
+  def partitionedSearchAsStream(partitionKey: String, designname: String, searchname: String, params: DocumentSearchParams): ReadStream = js.native
   
   def partitionedView[V](partitionKey: String, designname: String, viewname: String, params: DocumentViewParams): js.Promise[DocumentViewResponse[V, D]] = js.native
   def partitionedView[V](
@@ -187,7 +172,7 @@ trait DocumentScope[D] extends js.Object {
     callback: Callback[DocumentViewResponse[V, D]]
   ): js.Promise[DocumentViewResponse[V, D]] = js.native
   
-  def partitionedViewAsStream[V](partitionKey: String, designname: String, viewname: String, params: DocumentViewParams): Request = js.native
+  def partitionedViewAsStream[V](partitionKey: String, designname: String, viewname: String, params: DocumentViewParams): ReadStream = js.native
   
   def partitionedViewpartitionedSearch[V](partitionKey: String, designname: String, searchname: String, params: DocumentSearchParams): js.Promise[DocumentSearchResponse[V]] = js.native
   def partitionedViewpartitionedSearch[V](
@@ -217,7 +202,7 @@ trait DocumentScope[D] extends js.Object {
     callback: Callback[DocumentSearchResponse[V]]
   ): js.Promise[DocumentSearchResponse[V]] = js.native
   
-  def searchAsStream[V](designname: String, searchname: String, params: DocumentSearchParams): Request = js.native
+  def searchAsStream[V](designname: String, searchname: String, params: DocumentSearchParams): ReadStream = js.native
   
   var server: ServerScope = js.native
   
@@ -261,10 +246,10 @@ trait DocumentScope[D] extends js.Object {
   
   // http://docs.couchdb.org/en/latest/api/ddoc/views.html#get--db-_design-ddoc-_view-view
   // http://docs.couchdb.org/en/latest/api/ddoc/views.html#post--db-_design-ddoc-_view-view
-  def viewAsStream[V](designname: String, viewname: String): Request = js.native
+  def viewAsStream[V](designname: String, viewname: String): ReadStream = js.native
   // http://docs.couchdb.org/en/latest/api/ddoc/views.html#get--db-_design-ddoc-_view-view
   // http://docs.couchdb.org/en/latest/api/ddoc/views.html#post--db-_design-ddoc-_view-view
-  def viewAsStream[V](designname: String, viewname: String, params: DocumentViewParams): Request = js.native
+  def viewAsStream[V](designname: String, viewname: String, params: DocumentViewParams): ReadStream = js.native
   
   // http://docs.couchdb.org/en/latest/api/ddoc/render.html#db-design-design-doc-list-list-name-view-name
   def viewWithList(designname: String, viewname: String, listname: String): js.Promise[_] = js.native
@@ -272,6 +257,19 @@ trait DocumentScope[D] extends js.Object {
   // http://docs.couchdb.org/en/latest/api/ddoc/render.html#db-design-design-doc-list-list-name-view-name
   def viewWithList(designname: String, viewname: String, listname: String, params: DocumentViewParams): js.Promise[_] = js.native
   def viewWithList(
+    designname: String,
+    viewname: String,
+    listname: String,
+    params: DocumentViewParams,
+    callback: Callback[_]
+  ): js.Promise[_] = js.native
+  
+  // http://docs.couchdb.org/en/latest/api/ddoc/render.html#db-design-design-doc-list-list-name-view-name
+  def viewWithListAsStream(designname: String, viewname: String, listname: String): js.Promise[_] = js.native
+  def viewWithListAsStream(designname: String, viewname: String, listname: String, callback: Callback[_]): js.Promise[_] = js.native
+  // http://docs.couchdb.org/en/latest/api/ddoc/render.html#db-design-design-doc-list-list-name-view-name
+  def viewWithListAsStream(designname: String, viewname: String, listname: String, params: DocumentViewParams): js.Promise[_] = js.native
+  def viewWithListAsStream(
     designname: String,
     viewname: String,
     listname: String,

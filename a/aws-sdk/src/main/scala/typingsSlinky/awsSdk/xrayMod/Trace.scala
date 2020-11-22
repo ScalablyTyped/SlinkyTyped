@@ -18,6 +18,11 @@ trait Trace extends js.Object {
   var Id: js.UndefOr[TraceId] = js.native
   
   /**
+    * LimitExceeded is set to true when the trace has exceeded one of the defined quotas. For more information about quotas, see AWS X-Ray endpoints and quotas.
+    */
+  var LimitExceeded: js.UndefOr[NullableBoolean] = js.native
+  
+  /**
     * Segment documents for the segments and subsegments that comprise the trace.
     */
   var Segments: js.UndefOr[SegmentList] = js.native
@@ -56,6 +61,12 @@ object Trace {
     
     @scala.inline
     def deleteId: Self = this.set("Id", js.undefined)
+    
+    @scala.inline
+    def setLimitExceeded(value: NullableBoolean): Self = this.set("LimitExceeded", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLimitExceeded: Self = this.set("LimitExceeded", js.undefined)
     
     @scala.inline
     def setSegmentsVarargs(value: Segment*): Self = this.set("Segments", js.Array(value :_*))

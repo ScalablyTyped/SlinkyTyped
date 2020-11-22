@@ -1,6 +1,7 @@
 package typingsSlinky.rcPicker.useValueTextsMod
 
 import typingsSlinky.rcPicker.generateMod.GenerateConfig
+import typingsSlinky.rcPicker.interfaceMod.CustomFormat
 import typingsSlinky.rcPicker.interfaceMod.Locale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait ValueTextConfig[DateType] extends js.Object {
   
-  var formatList: js.Array[String] = js.native
+  var formatList: js.Array[String | CustomFormat[DateType]] = js.native
   
   var generateConfig: GenerateConfig[DateType] = js.native
   
@@ -18,7 +19,11 @@ trait ValueTextConfig[DateType] extends js.Object {
 object ValueTextConfig {
   
   @scala.inline
-  def apply[DateType](formatList: js.Array[String], generateConfig: GenerateConfig[DateType], locale: Locale): ValueTextConfig[DateType] = {
+  def apply[DateType](
+    formatList: js.Array[String | CustomFormat[DateType]],
+    generateConfig: GenerateConfig[DateType],
+    locale: Locale
+  ): ValueTextConfig[DateType] = {
     val __obj = js.Dynamic.literal(formatList = formatList.asInstanceOf[js.Any], generateConfig = generateConfig.asInstanceOf[js.Any], locale = locale.asInstanceOf[js.Any])
     __obj.asInstanceOf[ValueTextConfig[DateType]]
   }
@@ -39,10 +44,10 @@ object ValueTextConfig {
     }
     
     @scala.inline
-    def setFormatListVarargs(value: String*): Self = this.set("formatList", js.Array(value :_*))
+    def setFormatListVarargs(value: (String | CustomFormat[DateType])*): Self = this.set("formatList", js.Array(value :_*))
     
     @scala.inline
-    def setFormatList(value: js.Array[String]): Self = this.set("formatList", value.asInstanceOf[js.Any])
+    def setFormatList(value: js.Array[String | CustomFormat[DateType]]): Self = this.set("formatList", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setGenerateConfig(value: GenerateConfig[DateType]): Self = this.set("generateConfig", value.asInstanceOf[js.Any])

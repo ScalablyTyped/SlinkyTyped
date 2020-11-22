@@ -8,7 +8,17 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait AwsIamAccessKeyDetails extends js.Object {
   
   /**
-    * The creation date/time of the IAM access key related to a finding.
+    * The identifier of the access key.
+    */
+  var AccessKeyId: js.UndefOr[NonEmptyString] = js.native
+  
+  /**
+    * The AWS account ID of the account for the key.
+    */
+  var AccountId: js.UndefOr[NonEmptyString] = js.native
+  
+  /**
+    * Indicates when the IAM access key was created. Uses the date-time format specified in RFC 3339 section 5.6, Internet Date/Time Format. The value cannot contain spaces. For example, 2020-03-22T13:22:13.933Z.
     */
   var CreatedAt: js.UndefOr[NonEmptyString] = js.native
   
@@ -26,6 +36,11 @@ trait AwsIamAccessKeyDetails extends js.Object {
     * The type of principal associated with an access key.
     */
   var PrincipalType: js.UndefOr[NonEmptyString] = js.native
+  
+  /**
+    * Information about the session that the key was used for.
+    */
+  var SessionContext: js.UndefOr[AwsIamAccessKeySessionContext] = js.native
   
   /**
     * The status of the IAM access key related to a finding.
@@ -61,6 +76,18 @@ object AwsIamAccessKeyDetails {
     }
     
     @scala.inline
+    def setAccessKeyId(value: NonEmptyString): Self = this.set("AccessKeyId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAccessKeyId: Self = this.set("AccessKeyId", js.undefined)
+    
+    @scala.inline
+    def setAccountId(value: NonEmptyString): Self = this.set("AccountId", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAccountId: Self = this.set("AccountId", js.undefined)
+    
+    @scala.inline
     def setCreatedAt(value: NonEmptyString): Self = this.set("CreatedAt", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -83,6 +110,12 @@ object AwsIamAccessKeyDetails {
     
     @scala.inline
     def deletePrincipalType: Self = this.set("PrincipalType", js.undefined)
+    
+    @scala.inline
+    def setSessionContext(value: AwsIamAccessKeySessionContext): Self = this.set("SessionContext", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSessionContext: Self = this.set("SessionContext", js.undefined)
     
     @scala.inline
     def setStatus(value: AwsIamAccessKeyStatus): Self = this.set("Status", value.asInstanceOf[js.Any])

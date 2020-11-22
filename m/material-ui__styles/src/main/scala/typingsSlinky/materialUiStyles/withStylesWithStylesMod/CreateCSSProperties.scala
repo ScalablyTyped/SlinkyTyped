@@ -11,7 +11,7 @@ trait CreateCSSProperties[Props /* <: js.Object */]
      with // Allow pseudo selectors and media queries
 /* k */ StringDictionary[
       js.UndefOr[
-        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 529 */ js.Any
+        /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 511 */ js.Any
       ]
     ]
 object CreateCSSProperties {

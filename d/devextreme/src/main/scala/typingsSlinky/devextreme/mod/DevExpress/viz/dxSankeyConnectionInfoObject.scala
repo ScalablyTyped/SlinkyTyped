@@ -7,13 +7,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxSankeyConnectionInfoObject extends js.Object {
   
-  /** @name dxSankeyConnectionInfoObject.source */
+  /**
+    * [descr:dxSankeyConnectionInfoObject.source]
+    */
   var source: js.UndefOr[String] = js.native
   
-  /** @name dxSankeyConnectionInfoObject.target */
+  /**
+    * [descr:dxSankeyConnectionInfoObject.target]
+    */
   var target: js.UndefOr[String] = js.native
   
-  /** @name dxSankeyConnectionInfoObject.weight */
+  /**
+    * [descr:dxSankeyConnectionInfoObject.weight]
+    */
   var weight: js.UndefOr[Double] = js.native
 }
 object dxSankeyConnectionInfoObject {

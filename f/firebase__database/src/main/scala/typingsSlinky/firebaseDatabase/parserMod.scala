@@ -12,5 +12,5 @@ object parserMod extends js.Object {
   
   def parseDatabaseURL(dataURL: String): Domain = js.native
   
-  def parseRepoInfo(dataURL: String): RepoInfo = js.native
+  def parseRepoInfo(dataURL: String, nodeAdmin: Boolean): RepoInfo = js.native
 }

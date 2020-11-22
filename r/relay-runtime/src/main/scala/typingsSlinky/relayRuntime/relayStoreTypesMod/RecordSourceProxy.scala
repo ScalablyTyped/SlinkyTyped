@@ -12,7 +12,7 @@ trait RecordSourceProxy extends js.Object {
   
   def delete(dataID: DataID): Unit = js.native
   
-  // tslint:disable-next-line
+  // tslint:disable-next-line:no-unnecessary-generics
   def get[T](dataID: DataID): js.UndefOr[RecordProxy[T] | Null] = js.native
   
   def getRoot(): RecordProxy[js.Object] = js.native

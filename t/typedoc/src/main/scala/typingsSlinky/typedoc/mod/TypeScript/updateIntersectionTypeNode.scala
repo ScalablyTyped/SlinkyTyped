@@ -11,5 +11,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateIntersectionTypeNode extends js.Object {
   
+  /** @deprecated Use `factory.updateIntersectionTypeNode` or the factory supplied by your transformation context instead. */
   def apply(node: IntersectionTypeNode, types: NodeArray[TypeNode]): IntersectionTypeNode = js.native
 }

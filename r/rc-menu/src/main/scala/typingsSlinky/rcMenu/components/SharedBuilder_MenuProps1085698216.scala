@@ -19,7 +19,6 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
-import typingsSlinky.rcMenu.anon.Open
 import typingsSlinky.rcMenu.anon.PartialkeyinMenuModeother
 import typingsSlinky.rcMenu.interfaceMod.BuiltinPlacements
 import typingsSlinky.rcMenu.interfaceMod.MenuInfo
@@ -28,8 +27,13 @@ import typingsSlinky.rcMenu.interfaceMod.OpenAnimation
 import typingsSlinky.rcMenu.interfaceMod.RenderIconType
 import typingsSlinky.rcMenu.interfaceMod.SelectInfo
 import typingsSlinky.rcMenu.interfaceMod.TriggerSubMenuAction
+import typingsSlinky.rcMenu.rcMenuStrings.`additions removals`
 import typingsSlinky.rcMenu.rcMenuStrings.`additions text`
 import typingsSlinky.rcMenu.rcMenuStrings.`inline`
+import typingsSlinky.rcMenu.rcMenuStrings.`removals additions`
+import typingsSlinky.rcMenu.rcMenuStrings.`removals text`
+import typingsSlinky.rcMenu.rcMenuStrings.`text additions`
+import typingsSlinky.rcMenu.rcMenuStrings.`text removals`
 import typingsSlinky.rcMenu.rcMenuStrings.additions
 import typingsSlinky.rcMenu.rcMenuStrings.all
 import typingsSlinky.rcMenu.rcMenuStrings.ascending
@@ -75,7 +79,7 @@ import typingsSlinky.rcMenu.rcMenuStrings.tree
 import typingsSlinky.rcMenu.rcMenuStrings.url
 import typingsSlinky.rcMenu.rcMenuStrings.vertical
 import typingsSlinky.rcMenu.rcMenuStrings.yes
-import typingsSlinky.rcTrigger.interfaceMod.MotionType
+import typingsSlinky.rcMotion.cssmotionMod.CSSMotionProps
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -205,7 +209,9 @@ class SharedBuilder_MenuProps1085698216[R <: js.Object] (val args: js.Array[js.A
   def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+  def `aria-relevant`(
+    value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
   
   @scala.inline
   def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -379,7 +385,7 @@ class SharedBuilder_MenuProps1085698216[R <: js.Object] (val args: js.Array[js.A
   def mode(value: MenuMode): this.type = set("mode", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def motion(value: MotionType): this.type = set("motion", value.asInstanceOf[js.Any])
+  def motion(value: CSSMotionProps): this.type = set("motion", value.asInstanceOf[js.Any])
   
   @scala.inline
   def multiple(value: Boolean): this.type = set("multiple", value.asInstanceOf[js.Any])
@@ -535,7 +541,7 @@ class SharedBuilder_MenuProps1085698216[R <: js.Object] (val args: js.Array[js.A
   def onMouseUp(value: SyntheticMouseEvent[HTMLDivElement] => Unit): this.type = set("onMouseUp", js.Any.fromFunction1(value))
   
   @scala.inline
-  def onOpenChange(value: /* keys */ js.Array[Key] | Open => Unit): this.type = set("onOpenChange", js.Any.fromFunction1(value))
+  def onOpenChange(value: /* openKeys */ js.Array[Key] => Unit): this.type = set("onOpenChange", js.Any.fromFunction1(value))
   
   @scala.inline
   def onPaste(value: SyntheticClipboardEvent[HTMLDivElement] => Unit): this.type = set("onPaste", js.Any.fromFunction1(value))

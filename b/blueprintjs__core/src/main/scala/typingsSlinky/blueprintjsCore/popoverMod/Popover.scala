@@ -55,7 +55,9 @@ class Popover ()
     * When `usePortal={true}`, this element will be portaled outside the usual DOM flow,
     * so this reference can be very useful for testing.
     */
-  var popoverElement: HTMLElement = js.native
+  var popoverElement: HTMLElement | Null = js.native
+  
+  var popoverRef: js.Any = js.native
   
   var popperScheduleUpdate: js.Any = js.native
   
@@ -73,12 +75,12 @@ class Popover ()
     * without changing its _size_ (since `Popover` already repositions when it
     * detects a resize).
     */
-  def reposition(): Unit = js.native
+  def reposition(): js.UndefOr[Unit] = js.native
   
   var setOpenState: js.Any = js.native
   
   /** DOM element that contains the target. */
-  var targetElement: HTMLElement = js.native
+  var targetElement: HTMLElement | Null = js.native
   
   var understandChildren: js.Any = js.native
   

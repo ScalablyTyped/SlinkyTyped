@@ -17,7 +17,7 @@ object ^ extends js.Object {
   	@returns A [`child_process` instance](https://nodejs.org/api/child_process.html#child_process_class_childprocess), which is enhanced to also be a `Promise` for a result `Object` with `stdout` and `stderr` properties.
   	@example
   	```
-  	import execa from 'execa';
+  	import execa = require('execa');
   	(async () => {
   		const {stdout} = await execa('echo', ['unicorns']);
   		console.log(stdout);
@@ -50,7 +50,7 @@ object ^ extends js.Object {
   	@returns A [`child_process` instance](https://nodejs.org/api/child_process.html#child_process_class_childprocess), which is enhanced to also be a `Promise` for a result `Object` with `stdout` and `stderr` properties.
   	@example
   	```
-  	import execa from 'execa';
+  	import execa = require('execa');
   	(async () => {
   		const {stdout} = await execa.command('echo unicorns');
   		console.log(stdout);

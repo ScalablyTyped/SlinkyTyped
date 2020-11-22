@@ -13,20 +13,18 @@ trait GeoprocessorWaitForJobCompletionOptions extends Object {
     * The time in millisecond between remote job status requests.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#waitForJobCompletion)
-    *
-    * @default 1000
     */
   var interval: js.UndefOr[js.Any] = js.native
   
   /**
-    * [AbortSignal](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) allows for cancelable asynchronous job. If canceled, the promise will be rejected with an error named `AbortError`.
+    * [AbortSignal](https://developer.mozilla.org/en-US/docs/Web/API/AbortSignal) allows for cancelable asynchronous job.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#waitForJobCompletion)
     */
   var signal: js.UndefOr[js.Any] = js.native
   
   /**
-    * Callback function that is called at the specified interval. Use this method to monitor job status and messages.
+    * Callback function that is called at the specified interval.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-Geoprocessor.html#waitForJobCompletion)
     */

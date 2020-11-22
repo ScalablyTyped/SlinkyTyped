@@ -6,7 +6,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped {[ P in std.Exclude<keyof react.react.ComponentProps<@emotion/styled-base.@emotion/styled-base.StyledComponent<react.react.DetailedHTMLProps<react.react.AnchorHTMLAttributes<std.HTMLAnchorElement>, std.HTMLAnchorElement>, @storybook/components.@storybook/components/dist/tooltip/ListItem.ItemProps, @storybook/theming.@storybook/theming/dist/types.Theme>>, 'href' | 'title'> ]: react.react.ComponentProps<@emotion/styled-base.@emotion/styled-base.StyledComponent<react.react.DetailedHTMLProps<react.react.AnchorHTMLAttributes<std.HTMLAnchorElement>, std.HTMLAnchorElement>, @storybook/components.@storybook/components/dist/tooltip/ListItem.ItemProps, @storybook/theming.@storybook/theming/dist/types.Theme>>[P]} */ @js.native
 trait ListItemProps extends js.Object {
   
   var LinkWrapper: js.UndefOr[ReactComponentClass[js.Object]] = js.native
@@ -17,13 +18,11 @@ trait ListItemProps extends js.Object {
   
   var disabled: js.UndefOr[Boolean] = js.native
   
-  var href: js.UndefOr[String | js.Object] = js.native
+  var href: js.UndefOr[String] = js.native
   
   var left: js.UndefOr[ReactElement] = js.native
   
   var loading: js.UndefOr[Boolean] = js.native
-  
-  var onClick: js.UndefOr[js.Function0[Unit]] = js.native
   
   var right: js.UndefOr[ReactElement] = js.native
   
@@ -80,7 +79,7 @@ object ListItemProps {
     def deleteDisabled: Self = this.set("disabled", js.undefined)
     
     @scala.inline
-    def setHref(value: String | js.Object): Self = this.set("href", value.asInstanceOf[js.Any])
+    def setHref(value: String): Self = this.set("href", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteHref: Self = this.set("href", js.undefined)
@@ -99,12 +98,6 @@ object ListItemProps {
     
     @scala.inline
     def deleteLoading: Self = this.set("loading", js.undefined)
-    
-    @scala.inline
-    def setOnClick(value: () => Unit): Self = this.set("onClick", js.Any.fromFunction0(value))
-    
-    @scala.inline
-    def deleteOnClick: Self = this.set("onClick", js.undefined)
     
     @scala.inline
     def setRightReactElement(value: ReactElement): Self = this.set("right", value.asInstanceOf[js.Any])

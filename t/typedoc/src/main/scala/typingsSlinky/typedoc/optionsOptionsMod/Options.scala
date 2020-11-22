@@ -207,6 +207,8 @@ class Options protected () extends js.Object {
     ReadonlyStringDeclaration | ReadonlyNumberDeclaration | ReadonlyBooleanDeclaratio | ReadonlyMixedDeclarationO | ReadonlyMapDeclarationOpt | ReadonlyArrayDeclarationO
   ] = js.native
   
+  var getDefaultOptionValue: js.Any = js.native
+  
   def getRawValues(): PartialTypeDocOptions = js.native
   
   def getValue(name: NeverIfInternal[String]): js.Any = js.native

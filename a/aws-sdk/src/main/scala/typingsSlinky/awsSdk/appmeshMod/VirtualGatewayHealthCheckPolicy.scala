@@ -8,8 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VirtualGatewayHealthCheckPolicy extends js.Object {
   
   /**
-    * The number of consecutive successful health checks that must occur before declaring the
-    listener healthy.
+    * The number of consecutive successful health checks that must occur before declaring the listener healthy.
     */
   var healthyThreshold: VirtualGatewayHealthCheckThreshold = js.native
   
@@ -19,33 +18,27 @@ trait VirtualGatewayHealthCheckPolicy extends js.Object {
   var intervalMillis: VirtualGatewayHealthCheckIntervalMillis = js.native
   
   /**
-    * The destination path for the health check request. This value is only used if the
-    specified protocol is HTTP or HTTP/2. For any other protocol, this value is ignored.
+    * The destination path for the health check request. This value is only used if the specified protocol is HTTP or HTTP/2. For any other protocol, this value is ignored.
     */
   var path: js.UndefOr[String] = js.native
   
   /**
-    * The destination port for the health check request. This port must match the port defined
-    in the PortMapping for the listener.
+    * The destination port for the health check request. This port must match the port defined in the PortMapping for the listener.
     */
   var port: js.UndefOr[PortNumber] = js.native
   
   /**
-    * The protocol for the health check request. If you specify grpc, then your
-    service must conform to the GRPC Health
-    Checking Protocol.
+    * The protocol for the health check request. If you specify grpc, then your service must conform to the GRPC Health Checking Protocol.
     */
   var protocol: VirtualGatewayPortProtocol = js.native
   
   /**
-    * The amount of time to wait when receiving a response from the health check, in
-    milliseconds.
+    * The amount of time to wait when receiving a response from the health check, in milliseconds.
     */
   var timeoutMillis: VirtualGatewayHealthCheckTimeoutMillis = js.native
   
   /**
-    * The number of consecutive failed health checks that must occur before declaring a
-    virtual gateway unhealthy.
+    * The number of consecutive failed health checks that must occur before declaring a virtual gateway unhealthy.
     */
   var unhealthyThreshold: VirtualGatewayHealthCheckThreshold = js.native
 }

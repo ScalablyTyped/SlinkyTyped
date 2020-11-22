@@ -1,5 +1,6 @@
 package typingsSlinky.antDesignReactNative.carouselMod
 
+import org.scalablytyped.runtime.Instantiable0
 import slinky.core.facade.ReactRef
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
@@ -33,7 +34,5 @@ trait Carousel
   
   var renderDots: js.Any = js.native
   
-  var viewPager: ReactRef[
-    /* import warning: ResolveTypeQueries.resolve Couldn't resolve typeof ViewPager */ _
-  ] = js.native
+  var viewPager: ReactRef[Instantiable0[typingsSlinky.reactNativeCommunityViewpager.mod.default]] = js.native
 }

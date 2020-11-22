@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.codeactionsMod.codeactions
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.codeactionsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
@@ -66,9 +65,6 @@ abstract class CodeAction protected () extends Document {
   
   @JSName("containerAsFolderBase")
   def containerAsFolderBase_MCodeAction: FolderBase = js.native
-  
-  @JSName("model")
-  var model_FCodeAction: IModel = js.native
   
   /**
     * In version 7.21.0: introduced

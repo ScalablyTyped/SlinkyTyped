@@ -15,7 +15,7 @@ trait NativeTheme extends EventEmitter {
   @JSName("addListener")
   def addListener_updated(event: updated, listener: js.Function): this.type = js.native
   
-  // Docs: http://electronjs.org/docs/api/native-theme
+  // Docs: https://electronjs.org/docs/api/native-theme
   /**
     * Emitted when something in the underlying NativeTheme has changed. This normally
     * means that either the value of `shouldUseDarkColors`,
@@ -41,7 +41,7 @@ trait NativeTheme extends EventEmitter {
   
   /**
     * A `Boolean` for if the OS / Chromium currently has high-contrast mode enabled or
-    * is being instructed to show a high-constrast UI.
+    * is being instructed to show a high-contrast UI.
     *
     * @platform darwin,win32
     */

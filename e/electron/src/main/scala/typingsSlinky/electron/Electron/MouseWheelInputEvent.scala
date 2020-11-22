@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MouseWheelInputEvent extends MouseInputEvent {
   
-  // Docs: http://electronjs.org/docs/api/structures/mouse-wheel-input-event
+  // Docs: https://electronjs.org/docs/api/structures/mouse-wheel-input-event
   var accelerationRatioX: js.UndefOr[Double] = js.native
   
   var accelerationRatioY: js.UndefOr[Double] = js.native

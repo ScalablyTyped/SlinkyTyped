@@ -8,17 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait WhereClause extends js.Object {
   
   /**
-    * Executes the where clause against a feature to generate a value. It is used when the `WhereClause` is being used as a simple expression. For example, you can use the expression to gather values for statistics.
+    * Executes the where clause against a feature to generate a value.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-sql-WhereClause.html#calculateValue)
-    *
-    * @param feature The feature to check against the where clause.
-    *
     */
   def calculateValue(feature: js.Any): js.Any = js.native
   
   /**
-    * An array of the field names used in the where clause. It can be used to get the appropriate fields when querying layers.
+    * An array of the field names used in the where clause.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-sql-WhereClause.html#fieldNames)
     */
@@ -35,9 +32,6 @@ trait WhereClause extends js.Object {
     * Tests the attributes of a feature against the `whereClause`, and returns `true` if the test passes, `false` otherwise.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-core-sql-WhereClause.html#testFeature)
-    *
-    * @param feature The feature to test against the `whereClause`.
-    *
     */
   def testFeature(feature: js.Any): Boolean = js.native
 }

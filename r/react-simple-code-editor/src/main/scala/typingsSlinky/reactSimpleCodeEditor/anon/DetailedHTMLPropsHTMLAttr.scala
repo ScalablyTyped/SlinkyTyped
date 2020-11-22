@@ -38,8 +38,13 @@ import typingsSlinky.react.mod.TouchEventHandler
 import typingsSlinky.react.mod.TransitionEventHandler
 import typingsSlinky.react.mod.UIEventHandler
 import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.`additions removals`
 import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.`additions text`
 import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.`inline`
+import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.`removals additions`
+import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.`removals text`
+import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.`text additions`
+import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.`text removals`
 import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.additions
 import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.all
 import typingsSlinky.reactSimpleCodeEditor.reactSimpleCodeEditorStrings.ascending
@@ -273,7 +278,9 @@ trait DetailedHTMLPropsHTMLAttr extends js.Object {
     * Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.
     * @see aria-atomic.
     */
-  var `aria-relevant`: js.UndefOr[additions | (`additions text`) | all | removals | text] = js.native
+  var `aria-relevant`: js.UndefOr[
+    additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ] = js.native
   
   /** Indicates that user input is required on the element before a form may be submitted. */
   var `aria-required`: js.UndefOr[Boolean] = js.native
@@ -400,7 +407,7 @@ trait DetailedHTMLPropsHTMLAttr extends js.Object {
   
   var itemType: js.UndefOr[String] = js.native
   
-  var key: js.UndefOr[Key] = js.native
+  var key: js.UndefOr[Key | Null] = js.native
   
   var lang: js.UndefOr[String] = js.native
   
@@ -932,7 +939,9 @@ object DetailedHTMLPropsHTMLAttr {
     def `deleteAria-readonly`: Self = this.set("aria-readonly", js.undefined)
     
     @scala.inline
-    def `setAria-relevant`(value: additions | (`additions text`) | all | removals | text): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
+    def `setAria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): Self = this.set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-relevant`: Self = this.set("aria-relevant", js.undefined)
@@ -1194,6 +1203,9 @@ object DetailedHTMLPropsHTMLAttr {
     
     @scala.inline
     def deleteKey: Self = this.set("key", js.undefined)
+    
+    @scala.inline
+    def setKeyNull: Self = this.set("key", null)
     
     @scala.inline
     def setLang(value: String): Self = this.set("lang", value.asInstanceOf[js.Any])

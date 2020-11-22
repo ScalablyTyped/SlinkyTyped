@@ -4,6 +4,7 @@ import typingsSlinky.babylonjs.cameraMod.Camera
 import typingsSlinky.babylonjs.engineMod.Engine
 import typingsSlinky.babylonjs.postProcessMod.PostProcess
 import typingsSlinky.babylonjs.postProcessMod.PostProcessOptions
+import typingsSlinky.babylonjs.sceneMod.Scene
 import typingsSlinky.babylonjs.typesMod.Nullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,11 +27,12 @@ object fxaaPostProcessMod extends js.Object {
     ) = this()
     
     var _getDefines: js.Any = js.native
+  }
+  /* static members */
+  @js.native
+  object FxaaPostProcess extends js.Object {
     
     /** @hidden */
-    var texelHeight: Double = js.native
-    
-    /** @hidden */
-    var texelWidth: Double = js.native
+    def _Parse(parsedPostProcess: js.Any, targetCamera: Camera, scene: Scene, rootUrl: String): FxaaPostProcess = js.native
   }
 }

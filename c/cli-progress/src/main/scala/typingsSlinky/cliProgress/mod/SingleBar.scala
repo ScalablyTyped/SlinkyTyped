@@ -19,6 +19,7 @@ class SingleBar protected () extends js.Object {
   
   /** Increases the current progress value by a specified amount (default +1). Update payload optionally */
   def increment(): Unit = js.native
+  def increment(payload: js.Object): Unit = js.native
   def increment(step: js.UndefOr[scala.Nothing], payload: js.Object): Unit = js.native
   def increment(step: Double): Unit = js.native
   def increment(step: Double, payload: js.Object): Unit = js.native
@@ -40,4 +41,8 @@ class SingleBar protected () extends js.Object {
   /** Sets the current progress value and optionally the payload with values of custom tokens as a second parameter */
   def update(current: Double): Unit = js.native
   def update(current: Double, payload: js.Object): Unit = js.native
+  def update(payload: js.Object): Unit = js.native
+  
+  /** Force eta calculation update (long running processes) without altering the progress values. */
+  def updateETA(): Unit = js.native
 }

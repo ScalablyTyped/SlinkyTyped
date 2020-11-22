@@ -9,6 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait VirtualNodeSpec extends js.Object {
   
   /**
+    * The defaults for backends.
+    */
+  var backendDefaults: js.UndefOr[Input[VirtualNodeSpecBackendDefaults]] = js.native
+  
+  /**
     * The backends to which the virtual node is expected to send outbound traffic.
     */
   var backends: js.UndefOr[Input[js.Array[Input[VirtualNodeSpecBackend]]]] = js.native
@@ -50,6 +55,12 @@ object VirtualNodeSpec {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setBackendDefaults(value: Input[VirtualNodeSpecBackendDefaults]): Self = this.set("backendDefaults", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBackendDefaults: Self = this.set("backendDefaults", js.undefined)
     
     @scala.inline
     def setBackendsVarargs(value: Input[VirtualNodeSpecBackend]*): Self = this.set("backends", js.Array(value :_*))

@@ -15,8 +15,6 @@ class QuestionMatrixModel protected ()
   
   var cells: MartrixCells = js.native
   
-  /* protected */ def createMatrixRow(item: ItemValue, fullName: String, value: js.Any): MatrixRowModel = js.native
-  
   def getCellDisplayLocText(row: js.Any, column: js.Any): LocalizableString = js.native
   
   def getCellDisplayText(row: js.Any, column: js.Any): String = js.native
@@ -24,6 +22,8 @@ class QuestionMatrixModel protected ()
   def getCellText(row: js.Any, column: js.Any): String = js.native
   
   def getDefaultCellText(column: js.Any): String = js.native
+  
+  def getItemClass(row: js.Any, column: js.Any): String = js.native
   
   def getPlainData(options: Calculations): js.Any = js.native
   
@@ -49,6 +49,8 @@ class QuestionMatrixModel protected ()
   
   /* InferMemberOverrides */
   override def locStrsChanged(): js.Any with Unit = js.native
+  
+  /* protected */ def onMatrixRowCreated(row: MatrixRowModel): Unit = js.native
   
   /**
     * Use this property to render items in a specific order: "random" or "initial". Default is "initial".

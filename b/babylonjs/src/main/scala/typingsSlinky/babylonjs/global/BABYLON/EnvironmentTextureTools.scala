@@ -20,7 +20,7 @@ object EnvironmentTextureTools extends js.Object {
     * @param texture defines the cube texture to convert in env file
     * @return a promise containing the environment data if succesfull.
     */
-  def CreateEnvTextureAsync(texture: typingsSlinky.babylonjs.BABYLON.CubeTexture): js.Promise[js.typedarray.ArrayBuffer] = js.native
+  def CreateEnvTextureAsync(texture: typingsSlinky.babylonjs.BABYLON.BaseTexture): js.Promise[js.typedarray.ArrayBuffer] = js.native
   
   /**
     * Creates the ArrayBufferViews used for initializing environment texture image data.

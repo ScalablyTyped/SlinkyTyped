@@ -13,7 +13,7 @@ trait ReplicationDetails extends js.Object {
   var replicated: js.UndefOr[boolean] = js.native
   
   /**
-    * Specifies whether the bucket is configured to replicate one or more objects to an AWS account that isn't part of the Amazon Macie organization.
+    * Specifies whether the bucket is configured to replicate one or more objects to an AWS account that isn't part of the same Amazon Macie organization.
     */
   var replicatedExternally: js.UndefOr[boolean] = js.native
   

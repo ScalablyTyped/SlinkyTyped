@@ -8,28 +8,28 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait TechType extends js.Object {
   
-  /** IsoDep 标签 */
+  /** 对应IsoDep实例，实例支持ISO-DEP (ISO 14443-4)标准的读写 */
   var isoDep: String = js.native
   
-  /** MifareClassic 标签 */
+  /** 对应MifareClassic实例，实例支持MIFARE Classic标签的读写 */
   var mifareClassic: String = js.native
   
-  /** MifareUltralight 标签 */
+  /** 对应MifareUltralight实例，实例支持MIFARE Ultralight标签的读写 */
   var mifareUltralight: String = js.native
   
-  /** Ndef 标签 */
+  /** 对应Ndef实例，实例支持对NDEF格式的NFC标签上的NDEF数据的读写 */
   var ndef: String = js.native
   
-  /** NfcA 标签 */
+  /** 对应NfcA实例，实例支持NFC-A (ISO 14443-3A)标准的读写 */
   var nfcA: String = js.native
   
-  /** NfcB 标签 */
+  /** 对应NfcB实例，实例支持NFC-B (ISO 14443-3B)标准的读写 */
   var nfcB: String = js.native
   
-  /** NfcF 标签 */
+  /** 对应NfcF实例，实例支持NFC-F (JIS 6319-4)标准的读写 */
   var nfcF: String = js.native
   
-  /** NfcV 标签 */
+  /** 对应NfcV实例，实例支持NFC-V (ISO 15693)标准的读写 */
   var nfcV: String = js.native
 }
 object TechType {

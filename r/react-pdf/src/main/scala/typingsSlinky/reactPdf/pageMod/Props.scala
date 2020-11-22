@@ -3,7 +3,6 @@ package typingsSlinky.reactPdf.pageMod
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
-import typingsSlinky.pdfjsDist.mod.PDFPageProxy
 import typingsSlinky.react.mod.LegacyRef
 import typingsSlinky.reactPdf.reactPdfStrings.canvas
 import typingsSlinky.reactPdf.reactPdfStrings.none

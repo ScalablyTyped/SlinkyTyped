@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSThisType
+import typingsSlinky.babelTraverse.babelTraverseStrings.DecimalLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `201` extends js.Object {
   
-  var `type`: TSThisType = js.native
+  var `type`: DecimalLiteral = js.native
 }
 object `201` {
   
   @scala.inline
-  def apply(`type`: TSThisType): `201` = {
+  def apply(`type`: DecimalLiteral): `201` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`201`]
@@ -35,6 +35,6 @@ object `201` {
     }
     
     @scala.inline
-    def setType(value: TSThisType): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: DecimalLiteral): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

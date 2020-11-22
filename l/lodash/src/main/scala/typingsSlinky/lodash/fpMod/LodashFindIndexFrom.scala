@@ -8,7 +8,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashFindIndexFrom extends LodashConvertible {
+trait LodashFindIndexFrom extends js.Object {
   
   def apply(predicate: __, fromIndex: Double): LodashFindIndexFrom1x2 = js.native
   def apply[T](predicate: ValueIterateeCustom[T, Boolean]): LodashFindIndexFrom1x1[T] = js.native

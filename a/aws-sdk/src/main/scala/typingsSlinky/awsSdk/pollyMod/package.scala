@@ -197,6 +197,7 @@ package object pollyMod {
     - typingsSlinky.awsSdk.awsSdkStrings.Mizuki
     - typingsSlinky.awsSdk.awsSdkStrings.Naja
     - typingsSlinky.awsSdk.awsSdkStrings.Nicole
+    - typingsSlinky.awsSdk.awsSdkStrings.Olivia
     - typingsSlinky.awsSdk.awsSdkStrings.Penelope
     - typingsSlinky.awsSdk.awsSdkStrings.Raveena
     - typingsSlinky.awsSdk.awsSdkStrings.Ricardo

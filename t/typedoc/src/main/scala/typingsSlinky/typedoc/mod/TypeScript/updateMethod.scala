@@ -18,6 +18,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object updateMethod extends js.Object {
   
+  /** @deprecated Use `factory.updateMethodDeclaration` or the factory supplied by your transformation context instead. */
   def apply(
     node: MethodDeclaration,
     decorators: js.UndefOr[js.Array[Decorator]],

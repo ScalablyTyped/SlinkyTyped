@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object regularexpressions extends js.Object {
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/regular-expressions relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/regular-expressions relevant section in reference guide}
     */
   @js.native
   class RegularExpression protected ()

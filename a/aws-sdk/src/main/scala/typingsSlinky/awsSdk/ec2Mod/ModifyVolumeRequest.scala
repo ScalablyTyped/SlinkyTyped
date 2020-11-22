@@ -13,7 +13,7 @@ trait ModifyVolumeRequest extends js.Object {
   var DryRun: js.UndefOr[Boolean] = js.native
   
   /**
-    * The target IOPS rate of the volume. This is only valid for Provisioned IOPS SSD (io1) volumes. For more information, see Provisioned IOPS SSD (io1) Volumes. Default: If no IOPS value is specified, the existing value is retained.
+    * The target IOPS rate of the volume. This is only valid for Provisioned IOPS SSD (io1 and io2) volumes. For moreinformation, see  Provisioned IOPS SSD (io1 and io2) volumes. Default: If no IOPS value is specified, the existing value is retained.
     */
   var Iops: js.UndefOr[Integer] = js.native
   

@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ɵangularPackagesCoreCoreBe extends js.Object {
   
-  def apply[T](level: Double): T = js.native
+  def apply(): ɵangularPackagesCoreCoreBv = js.native
 }

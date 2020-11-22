@@ -2,10 +2,10 @@ package typingsSlinky.grommet.boxMod
 
 import slinky.core.ReactComponentClass
 import typingsSlinky.grommet.anon.Delay
+import typingsSlinky.grommet.anon.Error
 import typingsSlinky.grommet.anon.Grow
 import typingsSlinky.grommet.anon.Horizontal
 import typingsSlinky.grommet.anon.Max
-import typingsSlinky.grommet.anon.SizeStyle
 import typingsSlinky.grommet.grommetStrings.`column-reverse`
 import typingsSlinky.grommet.grommetStrings.`row-responsive`
 import typingsSlinky.grommet.grommetStrings.`row-reverse`
@@ -213,7 +213,7 @@ object BoxProps {
     def deleteBasis: Self = this.set("basis", js.undefined)
     
     @scala.inline
-    def setBorderVarargs(value: SizeStyle*): Self = this.set("border", js.Array(value :_*))
+    def setBorderVarargs(value: Error*): Self = this.set("border", js.Array(value :_*))
     
     @scala.inline
     def setBorder(value: BorderType): Self = this.set("border", value.asInstanceOf[js.Any])

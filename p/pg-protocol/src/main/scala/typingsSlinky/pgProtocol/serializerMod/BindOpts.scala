@@ -13,6 +13,8 @@ trait BindOpts extends js.Object {
   
   var statement: js.UndefOr[String] = js.native
   
+  var valueMapper: js.UndefOr[ValueMapper] = js.native
+  
   var values: js.UndefOr[js.Array[_]] = js.native
 }
 object BindOpts {
@@ -55,6 +57,12 @@ object BindOpts {
     
     @scala.inline
     def deleteStatement: Self = this.set("statement", js.undefined)
+    
+    @scala.inline
+    def setValueMapper(value: (/* param */ js.Any, /* index */ Double) => js.Any): Self = this.set("valueMapper", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteValueMapper: Self = this.set("valueMapper", js.undefined)
     
     @scala.inline
     def setValuesVarargs(value: js.Any*): Self = this.set("values", js.Array(value :_*))

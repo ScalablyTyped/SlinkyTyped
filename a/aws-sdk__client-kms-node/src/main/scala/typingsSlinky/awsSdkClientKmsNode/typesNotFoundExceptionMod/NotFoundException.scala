@@ -31,16 +31,14 @@ import typingsSlinky.awsSdkClientKmsNode.tagResourceExceptionsUnionMod.TagResour
 import typingsSlinky.awsSdkClientKmsNode.untagResourceExceptionsUnionMod.UntagResourceExceptionsUnion
 import typingsSlinky.awsSdkClientKmsNode.updateAliasExceptionsUnionMod.UpdateAliasExceptionsUnion
 import typingsSlinky.awsSdkClientKmsNode.updateKeyDescriptionExceptionsUnionMod.UpdateKeyDescriptionExceptionsUnion
-import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
-import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@js.native
+/* import warning: RemoveDifficultInheritance.summarizeChanges 
+- Dropped / * import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __ServiceException__<_NotFoundExceptionDetails> * / any */ @js.native
 trait NotFoundException
-  extends ServiceException[NotFoundExceptionDetails]
-     with CancelKeyDeletionExceptionsUnion
+  extends CancelKeyDeletionExceptionsUnion
      with CreateAliasExceptionsUnion
      with CreateGrantExceptionsUnion
      with DecryptExceptionsUnion
@@ -72,19 +70,13 @@ trait NotFoundException
      with UpdateAliasExceptionsUnion
      with UpdateKeyDescriptionExceptionsUnion {
   
-  @JSName("name")
-  var name_NotFoundException: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.NotFoundException = js.native
+  var name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.NotFoundException = js.native
 }
 object NotFoundException {
   
   @scala.inline
-  def apply(
-    $metadata: ResponseMetadata,
-    details: NotFoundExceptionDetails,
-    message: String,
-    name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.NotFoundException
-  ): NotFoundException = {
-    val __obj = js.Dynamic.literal($metadata = $metadata.asInstanceOf[js.Any], details = details.asInstanceOf[js.Any], message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any])
+  def apply(name: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.NotFoundException): NotFoundException = {
+    val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     __obj.asInstanceOf[NotFoundException]
   }
   

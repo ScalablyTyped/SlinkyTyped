@@ -1,6 +1,7 @@
 package typingsSlinky.officeUiFabricReact.positioningPositioningMod
 
 import typingsSlinky.officeUiFabricReact.positioningTypesMod.RectangleEdge
+import typingsSlinky.officeUiFabricReact.utilitiesMod.Rectangle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

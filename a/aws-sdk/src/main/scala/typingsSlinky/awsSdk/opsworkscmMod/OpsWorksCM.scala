@@ -2,7 +2,7 @@ package typingsSlinky.awsSdk.opsworkscmMod
 
 import typingsSlinky.awsSdk.anon.DescribeNodeAssociationSt
 import typingsSlinky.awsSdk.awsSdkStrings.nodeAssociated
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service

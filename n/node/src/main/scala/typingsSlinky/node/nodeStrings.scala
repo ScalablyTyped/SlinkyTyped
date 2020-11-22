@@ -6,6 +6,7 @@ import typingsSlinky.node.childProcessMod.StdioNull
 import typingsSlinky.node.childProcessMod._StdioOptions
 import typingsSlinky.node.cryptoMod.CipherCCMTypes
 import typingsSlinky.node.cryptoMod.CipherGCMTypes
+import typingsSlinky.node.cryptoMod.DSAEncoding
 import typingsSlinky.node.cryptoMod.ECDHKeyFormat
 import typingsSlinky.node.cryptoMod.HexBase64BinaryEncoding
 import typingsSlinky.node.cryptoMod.HexBase64Latin1Encoding
@@ -556,6 +557,9 @@ object nodeStrings {
   def `aes-256-gcm`: `aes-256-gcm` = "aes-256-gcm".asInstanceOf[`aes-256-gcm`]
   
   @scala.inline
+  def afterEvaluate: afterEvaluate = "afterEvaluate".asInstanceOf[afterEvaluate]
+  
+  @scala.inline
   def aix: aix = "aix".asInstanceOf[aix]
   
   @scala.inline
@@ -625,6 +629,12 @@ object nodeStrings {
   def date: date = "date".asInstanceOf[date]
   
   @scala.inline
+  def deepEqual: deepEqual = "deepEqual".asInstanceOf[deepEqual]
+  
+  @scala.inline
+  def deepStrictEqual: deepStrictEqual = "deepStrictEqual".asInstanceOf[deepStrictEqual]
+  
+  @scala.inline
   def der: der = "der".asInstanceOf[der]
   
   @scala.inline
@@ -649,13 +659,22 @@ object nodeStrings {
   def ed25519: ed25519 = "ed25519".asInstanceOf[ed25519]
   
   @scala.inline
+  def ed448: ed448 = "ed448".asInstanceOf[ed448]
+  
+  @scala.inline
   def end: end = "end".asInstanceOf[end]
+  
+  @scala.inline
+  def equal: equal = "equal".asInstanceOf[equal]
   
   @scala.inline
   def error: error = "error".asInstanceOf[error]
   
   @scala.inline
   def exit: exit = "exit".asInstanceOf[exit]
+  
+  @scala.inline
+  def fifo: fifo = "fifo".asInstanceOf[fifo]
   
   @scala.inline
   def file: file = "file".asInstanceOf[file]
@@ -706,6 +725,12 @@ object nodeStrings {
   def hybrid: hybrid = "hybrid".asInstanceOf[hybrid]
   
   @scala.inline
+  def `ieee-p1363`: `ieee-p1363` = "ieee-p1363".asInstanceOf[`ieee-p1363`]
+  
+  @scala.inline
+  def ifError: ifError = "ifError".asInstanceOf[ifError]
+  
+  @scala.inline
   def ignore: ignore = "ignore".asInstanceOf[ignore]
   
   @scala.inline
@@ -733,6 +758,9 @@ object nodeStrings {
   def latin1: latin1 = "latin1".asInstanceOf[latin1]
   
   @scala.inline
+  def lifo: lifo = "lifo".asInstanceOf[lifo]
+  
+  @scala.inline
   def line: line = "line".asInstanceOf[line]
   
   @scala.inline
@@ -757,6 +785,9 @@ object nodeStrings {
   def message: message = "message".asInstanceOf[message]
   
   @scala.inline
+  def messageerror: messageerror = "messageerror".asInstanceOf[messageerror]
+  
+  @scala.inline
   def module: module = "module".asInstanceOf[module]
   
   @scala.inline
@@ -775,10 +806,19 @@ object nodeStrings {
   def node: node = "node".asInstanceOf[node]
   
   @scala.inline
+  def notDeepEqual: notDeepEqual = "notDeepEqual".asInstanceOf[notDeepEqual]
+  
+  @scala.inline
+  def notEqual: notEqual = "notEqual".asInstanceOf[notEqual]
+  
+  @scala.inline
   def `null`: `null` = "null".asInstanceOf[`null`]
   
   @scala.inline
   def number: number = "number".asInstanceOf[number]
+  
+  @scala.inline
+  def ok: ok = "ok".asInstanceOf[ok]
   
   @scala.inline
   def online: online = "online".asInstanceOf[online]
@@ -904,6 +944,12 @@ object nodeStrings {
   def streamClosed: streamClosed = "streamClosed".asInstanceOf[streamClosed]
   
   @scala.inline
+  def strict: strict = "strict".asInstanceOf[strict]
+  
+  @scala.inline
+  def strictEqual: strictEqual = "strictEqual".asInstanceOf[strictEqual]
+  
+  @scala.inline
   def string: string = "string".asInstanceOf[string]
   
   @scala.inline
@@ -977,6 +1023,12 @@ object nodeStrings {
   
   @scala.inline
   def win32: win32 = "win32".asInstanceOf[win32]
+  
+  @scala.inline
+  def x25519: x25519 = "x25519".asInstanceOf[x25519]
+  
+  @scala.inline
+  def x448: x448 = "x448".asInstanceOf[x448]
   
   @js.native
   sealed trait A extends js.Object
@@ -1504,6 +1556,9 @@ object nodeStrings {
   sealed trait `aes-256-gcm` extends CipherGCMTypes
   
   @js.native
+  sealed trait afterEvaluate extends js.Object
+  
+  @js.native
   sealed trait aix extends Platform
   
   @js.native
@@ -1584,7 +1639,15 @@ object nodeStrings {
   sealed trait date extends Style
   
   @js.native
-  sealed trait der extends KeyFormat
+  sealed trait deepEqual extends js.Object
+  
+  @js.native
+  sealed trait deepStrictEqual extends js.Object
+  
+  @js.native
+  sealed trait der
+    extends DSAEncoding
+       with KeyFormat
   
   @js.native
   sealed trait detailed extends MeasureMemoryMode
@@ -1608,13 +1671,22 @@ object nodeStrings {
   sealed trait ed25519 extends KeyType
   
   @js.native
+  sealed trait ed448 extends KeyType
+  
+  @js.native
   sealed trait end extends js.Object
+  
+  @js.native
+  sealed trait equal extends js.Object
   
   @js.native
   sealed trait error extends js.Object
   
   @js.native
   sealed trait exit extends js.Object
+  
+  @js.native
+  sealed trait fifo extends js.Object
   
   @js.native
   sealed trait file extends Type
@@ -1668,6 +1740,12 @@ object nodeStrings {
   sealed trait hybrid extends ECDHKeyFormat
   
   @js.native
+  sealed trait `ieee-p1363` extends DSAEncoding
+  
+  @js.native
+  sealed trait ifError extends js.Object
+  
+  @js.native
   sealed trait ignore
     extends StdioNull
        with _StdioOptions
@@ -1703,6 +1781,9 @@ object nodeStrings {
        with Utf8AsciiLatin1Encoding
   
   @js.native
+  sealed trait lifo extends js.Object
+  
+  @js.native
   sealed trait line extends js.Object
   
   @js.native
@@ -1727,6 +1808,9 @@ object nodeStrings {
   sealed trait message extends js.Object
   
   @js.native
+  sealed trait messageerror extends js.Object
+  
+  @js.native
   sealed trait module extends Style
   
   @js.native
@@ -1745,10 +1829,19 @@ object nodeStrings {
   sealed trait node extends EntryType
   
   @js.native
+  sealed trait notDeepEqual extends js.Object
+  
+  @js.native
+  sealed trait notEqual extends js.Object
+  
+  @js.native
   sealed trait `null` extends Style
   
   @js.native
   sealed trait number extends Style
+  
+  @js.native
+  sealed trait ok extends js.Object
   
   @js.native
   sealed trait online extends js.Object
@@ -1874,6 +1967,12 @@ object nodeStrings {
   sealed trait streamClosed extends js.Object
   
   @js.native
+  sealed trait strict extends js.Object
+  
+  @js.native
+  sealed trait strictEqual extends js.Object
+  
+  @js.native
   sealed trait string extends Style
   
   @js.native
@@ -1955,4 +2054,10 @@ object nodeStrings {
   
   @js.native
   sealed trait win32 extends Platform
+  
+  @js.native
+  sealed trait x25519 extends KeyType
+  
+  @js.native
+  sealed trait x448 extends KeyType
 }

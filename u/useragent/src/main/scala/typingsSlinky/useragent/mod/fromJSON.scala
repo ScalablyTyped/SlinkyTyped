@@ -9,6 +9,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object fromJSON extends js.Object {
   
+  /**
+    * Transform a JSON object back to a valid userAgent string
+    * @param obj A JSON object or stringified JSON object
+    */
   def apply(obj: String): Agent = js.native
   def apply(obj: Major): Agent = js.native
 }

@@ -1,28 +1,28 @@
 package typingsSlinky.tensorflowTfjsCore.anon
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait Grads[T /* <: Tensor[Rank] */] extends js.Object {
+trait Grads[O /* <: Tensor[Rank] */] extends js.Object {
   
   var grads: js.Array[Tensor[Rank]] = js.native
   
-  var value: T = js.native
+  var value: O = js.native
 }
 object Grads {
   
   @scala.inline
-  def apply[T /* <: Tensor[Rank] */](grads: js.Array[Tensor[Rank]], value: T): Grads[T] = {
+  def apply[O /* <: Tensor[Rank] */](grads: js.Array[Tensor[Rank]], value: O): Grads[O] = {
     val __obj = js.Dynamic.literal(grads = grads.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.asInstanceOf[Grads[T]]
+    __obj.asInstanceOf[Grads[O]]
   }
   
   @scala.inline
-  implicit class GradsOps[Self <: Grads[_], T /* <: Tensor[Rank] */] (val x: Self with Grads[T]) extends AnyVal {
+  implicit class GradsOps[Self <: Grads[_], O /* <: Tensor[Rank] */] (val x: Self with Grads[O]) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -43,6 +43,6 @@ object Grads {
     def setGrads(value: js.Array[Tensor[Rank]]): Self = this.set("grads", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setValue(value: T): Self = this.set("value", value.asInstanceOf[js.Any])
+    def setValue(value: O): Self = this.set("value", value.asInstanceOf[js.Any])
   }
 }

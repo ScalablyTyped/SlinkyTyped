@@ -13,22 +13,27 @@ trait KafkaSettings extends js.Object {
   var Broker: js.UndefOr[String] = js.native
   
   /**
-    * Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is False.
+    * Shows detailed control information for table definition, column definition, and table and column changes in the Kafka message output. The default is false.
     */
   var IncludeControlDetails: js.UndefOr[BooleanOptional] = js.native
   
   /**
-    * Shows the partition value within the Kafka message output, unless the partition type is schema-table-type. The default is False.
+    * Include NULL and empty columns for records migrated to the endpoint. The default is false.
+    */
+  var IncludeNullAndEmpty: js.UndefOr[BooleanOptional] = js.native
+  
+  /**
+    * Shows the partition value within the Kafka message output, unless the partition type is schema-table-type. The default is false.
     */
   var IncludePartitionValue: js.UndefOr[BooleanOptional] = js.native
   
   /**
-    * Includes any data definition language (DDL) operations that change the table in the control data, such as rename-table, drop-table, add-column, drop-column, and rename-column. The default is False.
+    * Includes any data definition language (DDL) operations that change the table in the control data, such as rename-table, drop-table, add-column, drop-column, and rename-column. The default is false.
     */
   var IncludeTableAlterOperations: js.UndefOr[BooleanOptional] = js.native
   
   /**
-    * Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for transaction_id, previous transaction_id, and transaction_record_id (the record offset within a transaction). The default is False.
+    * Provides detailed transaction information from the source database. This information includes a commit timestamp, a log position, and values for transaction_id, previous transaction_id, and transaction_record_id (the record offset within a transaction). The default is false.
     */
   var IncludeTransactionDetails: js.UndefOr[BooleanOptional] = js.native
   
@@ -38,7 +43,12 @@ trait KafkaSettings extends js.Object {
   var MessageFormat: js.UndefOr[MessageFormatValue] = js.native
   
   /**
-    * Prefixes schema and table names to partition values, when the partition type is primary-key-type. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is False.
+    * The maximum size in bytes for records created on the endpoint The default is 1,000,000.
+    */
+  var MessageMaxBytes: js.UndefOr[IntegerOptional] = js.native
+  
+  /**
+    * Prefixes schema and table names to partition values, when the partition type is primary-key-type. Doing this increases data distribution among Kafka partitions. For example, suppose that a SysBench schema has thousands of tables and each table has only limited range for a primary key. In this case, the same primary key is sent from thousands of tables to the same partition, which causes throttling. The default is false.
     */
   var PartitionIncludeSchemaTable: js.UndefOr[BooleanOptional] = js.native
   
@@ -83,6 +93,12 @@ object KafkaSettings {
     def deleteIncludeControlDetails: Self = this.set("IncludeControlDetails", js.undefined)
     
     @scala.inline
+    def setIncludeNullAndEmpty(value: BooleanOptional): Self = this.set("IncludeNullAndEmpty", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIncludeNullAndEmpty: Self = this.set("IncludeNullAndEmpty", js.undefined)
+    
+    @scala.inline
     def setIncludePartitionValue(value: BooleanOptional): Self = this.set("IncludePartitionValue", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -105,6 +121,12 @@ object KafkaSettings {
     
     @scala.inline
     def deleteMessageFormat: Self = this.set("MessageFormat", js.undefined)
+    
+    @scala.inline
+    def setMessageMaxBytes(value: IntegerOptional): Self = this.set("MessageMaxBytes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMessageMaxBytes: Self = this.set("MessageMaxBytes", js.undefined)
     
     @scala.inline
     def setPartitionIncludeSchemaTable(value: BooleanOptional): Self = this.set("PartitionIncludeSchemaTable", value.asInstanceOf[js.Any])

@@ -7,7 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxLinearGaugeScaleLabel extends BaseGaugeScaleLabel {
   
-  /** @name dxLinearGauge.Options.scale.label.indentFromTick */
+  /**
+    * [descr:dxLinearGauge.Options.scale.label.indentFromTick]
+    */
   var indentFromTick: js.UndefOr[Double] = js.native
 }
 object dxLinearGaugeScaleLabel {

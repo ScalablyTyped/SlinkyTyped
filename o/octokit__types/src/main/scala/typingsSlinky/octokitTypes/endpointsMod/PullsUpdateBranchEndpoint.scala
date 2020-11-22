@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`9`
+import typingsSlinky.octokitTypes.anon.`8`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -14,7 +14,7 @@ trait PullsUpdateBranchEndpoint extends js.Object {
     */
   var expected_head_sha: js.UndefOr[String] = js.native
   
-  var mediaType: `9` = js.native
+  var mediaType: `8` = js.native
   
   var owner: String = js.native
   
@@ -25,7 +25,7 @@ trait PullsUpdateBranchEndpoint extends js.Object {
 object PullsUpdateBranchEndpoint {
   
   @scala.inline
-  def apply(mediaType: `9`, owner: String, pull_number: Double, repo: String): PullsUpdateBranchEndpoint = {
+  def apply(mediaType: `8`, owner: String, pull_number: Double, repo: String): PullsUpdateBranchEndpoint = {
     val __obj = js.Dynamic.literal(mediaType = mediaType.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], pull_number = pull_number.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[PullsUpdateBranchEndpoint]
   }
@@ -46,7 +46,7 @@ object PullsUpdateBranchEndpoint {
     }
     
     @scala.inline
-    def setMediaType(value: `9`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `8`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])

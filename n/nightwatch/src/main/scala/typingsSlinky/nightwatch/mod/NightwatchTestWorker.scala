@@ -9,6 +9,8 @@ trait NightwatchTestWorker extends js.Object {
   
   var enabled: Boolean = js.native
   
+  var node_options: js.UndefOr[String | js.Array[String]] = js.native
+  
   var workers: String = js.native
 }
 object NightwatchTestWorker {
@@ -39,5 +41,14 @@ object NightwatchTestWorker {
     
     @scala.inline
     def setWorkers(value: String): Self = this.set("workers", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setNode_optionsVarargs(value: String*): Self = this.set("node_options", js.Array(value :_*))
+    
+    @scala.inline
+    def setNode_options(value: String | js.Array[String]): Self = this.set("node_options", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNode_options: Self = this.set("node_options", js.undefined)
   }
 }

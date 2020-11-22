@@ -83,6 +83,8 @@ package object DocumentClient {
   
   type BatchWriteItemRequestMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.documentClientMod.DocumentClient.WriteRequests]
   
+  type BilledSizeBytes = scala.Double
+  
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.PROVISIONED
     - typingsSlinky.awsSdk.awsSdkStrings.PAY_PER_REQUEST
@@ -99,6 +101,8 @@ package object DocumentClient {
   type BooleanObject = scala.Boolean
   
   type ClientRequestToken = java.lang.String
+  
+  type ClientToken = java.lang.String
   
   /* Rewritten from type alias, can be one of: 
     - typingsSlinky.awsSdk.awsSdkStrings.EQ
@@ -175,6 +179,35 @@ package object DocumentClient {
   
   type ExpectedAttributeMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.documentClientMod.DocumentClient.ExpectedAttributeValue]
   
+  type ExportArn = java.lang.String
+  
+  type ExportEndTime = js.Date
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DYNAMODB_JSON
+    - typingsSlinky.awsSdk.awsSdkStrings.ION
+    - java.lang.String
+  */
+  type ExportFormat = typingsSlinky.awsSdk.documentClientMod.DocumentClient._ExportFormat | java.lang.String
+  
+  type ExportManifest = java.lang.String
+  
+  type ExportNextToken = java.lang.String
+  
+  type ExportStartTime = js.Date
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.IN_PROGRESS
+    - typingsSlinky.awsSdk.awsSdkStrings.COMPLETED
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - java.lang.String
+  */
+  type ExportStatus = typingsSlinky.awsSdk.documentClientMod.DocumentClient._ExportStatus | java.lang.String
+  
+  type ExportSummaries = js.Array[typingsSlinky.awsSdk.documentClientMod.DocumentClient.ExportSummary]
+  
+  type ExportTime = js.Date
+  
   type ExpressionAttributeNameMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.documentClientMod.DocumentClient.AttributeName]
   
   type ExpressionAttributeNameVariable = java.lang.String
@@ -182,6 +215,10 @@ package object DocumentClient {
   type ExpressionAttributeValueMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.documentClientMod.DocumentClient.AttributeValue]
   
   type ExpressionAttributeValueVariable = java.lang.String
+  
+  type FailureCode = java.lang.String
+  
+  type FailureMessage = java.lang.String
   
   type FilterConditionMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.documentClientMod.DocumentClient.Condition]
   
@@ -280,6 +317,8 @@ package object DocumentClient {
   
   type ListContributorInsightsLimit = scala.Double
   
+  type ListExportsMaxLimit = scala.Double
+  
   type ListTablesInputLimit = scala.Double
   
   type LocalSecondaryIndexDescriptionList = js.Array[
@@ -377,6 +416,8 @@ package object DocumentClient {
     - typingsSlinky.awsSdk.awsSdkStrings.UPDATING
     - typingsSlinky.awsSdk.awsSdkStrings.DELETING
     - typingsSlinky.awsSdk.awsSdkStrings.ACTIVE
+    - typingsSlinky.awsSdk.awsSdkStrings.REGION_DISABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.INACCESSIBLE_ENCRYPTION_CREDENTIALS
     - java.lang.String
   */
   type ReplicaStatus = typingsSlinky.awsSdk.documentClientMod.DocumentClient._ReplicaStatus | java.lang.String
@@ -424,6 +465,21 @@ package object DocumentClient {
     - java.lang.String
   */
   type ReturnValuesOnConditionCheckFailure = typingsSlinky.awsSdk.documentClientMod.DocumentClient._ReturnValuesOnConditionCheckFailure | java.lang.String
+  
+  type S3Bucket = java.lang.String
+  
+  type S3BucketOwner = java.lang.String
+  
+  type S3Prefix = java.lang.String
+  
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AES256
+    - typingsSlinky.awsSdk.awsSdkStrings.KMS
+    - java.lang.String
+  */
+  type S3SseAlgorithm = typingsSlinky.awsSdk.documentClientMod.DocumentClient._S3SseAlgorithm | java.lang.String
+  
+  type S3SseKmsKeyId = java.lang.String
   
   type SSEEnabled = scala.Boolean
   

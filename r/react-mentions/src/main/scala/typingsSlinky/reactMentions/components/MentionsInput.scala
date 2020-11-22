@@ -24,11 +24,17 @@ import typingsSlinky.StBuildingComponent
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.Ref
 import typingsSlinky.reactMentions.anon.Target
 import typingsSlinky.reactMentions.mod.MentionItem
 import typingsSlinky.reactMentions.mod.MentionsInputProps
+import typingsSlinky.reactMentions.reactMentionsStrings.`additions removals`
 import typingsSlinky.reactMentions.reactMentionsStrings.`additions text`
 import typingsSlinky.reactMentions.reactMentionsStrings.`inline`
+import typingsSlinky.reactMentions.reactMentionsStrings.`removals additions`
+import typingsSlinky.reactMentions.reactMentionsStrings.`removals text`
+import typingsSlinky.reactMentions.reactMentionsStrings.`text additions`
+import typingsSlinky.reactMentions.reactMentionsStrings.`text removals`
 import typingsSlinky.reactMentions.reactMentionsStrings.additions
 import typingsSlinky.reactMentions.reactMentionsStrings.all
 import typingsSlinky.reactMentions.reactMentionsStrings.ascending
@@ -205,7 +211,9 @@ object MentionsInput {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -322,7 +330,16 @@ object MentionsInput {
     def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputRef(value: ReactRef[HTMLInputElement | HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    def inputRefRefObject(value: ReactRef[HTMLInputElement | HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def inputRefFunction1(value: /* instance */ HTMLInputElement | HTMLTextAreaElement | Null => Unit): this.type = set("inputRef", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def inputRef(value: Ref[HTMLInputElement | HTMLTextAreaElement]): this.type = set("inputRef", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def inputRefNull: this.type = set("inputRef", null)
     
     @scala.inline
     def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])

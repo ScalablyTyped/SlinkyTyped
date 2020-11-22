@@ -104,7 +104,7 @@ trait TypeaheadProps[T /* <: TypeaheadModel */] extends js.Object {
     so as not to render too many DOM nodes in the case of large data sets. */
   var maxResults: js.UndefOr[Double] = js.native
   
-  /* DEPRECATED. Id applied to the top-level menu element. Required for accessibility. */
+  /** @deprecated: Id applied to the top-level menu element. Required for accessibility. */
   var menuId: js.UndefOr[String] = js.native
   
   /* Number of input characters that must be entered before showing results. */
@@ -131,10 +131,10 @@ trait TypeaheadProps[T /* <: TypeaheadModel */] extends js.Object {
   /* Invoked when a key is pressed. Receives an event. */
   var onKeyDown: js.UndefOr[js.Function1[/* e */ Event, Unit]] = js.native
   
-  /* DEPRECATED: Invoked when the menu is hidden. */
+  /** @deprecated: Invoked when the menu is hidden. */
   var onMenuHide: js.UndefOr[js.Function0[Unit]] = js.native
   
-  /* DEPRECATED: Invoked when the menu is shown. */
+  /** @deprecated: Invoked when the menu is shown. */
   var onMenuShow: js.UndefOr[js.Function0[Unit]] = js.native
   
   /*     Invoked when menu visibility changes. */
@@ -165,7 +165,12 @@ trait TypeaheadProps[T /* <: TypeaheadModel */] extends js.Object {
   
   /* Callback for custom menu rendering. */
   var renderMenu: js.UndefOr[
-    js.Function2[/* results */ js.Array[TypeaheadResult[T]], /* menuProps */ js.Any, ReactElement]
+    js.Function3[
+      /* results */ js.Array[TypeaheadResult[T]], 
+      /* menuProps */ TypeaheadMenuProps[T], 
+      /* state */ TypeaheadState[T], 
+      ReactElement
+    ]
   ] = js.native
   
   /* Provides a hook for customized rendering of menu item contents. */
@@ -188,7 +193,7 @@ trait TypeaheadProps[T /* <: TypeaheadModel */] extends js.Object {
     ]
   ] = js.native
   
-  /* Allows selecting the hinted result by pressing enter. */
+  /** @deprecated: Allows selecting the hinted result by pressing enter. */
   var selectHintOnEnter: js.UndefOr[Boolean] = js.native
   
   /* The selected option(s) displayed in the input. Use this prop if you want to control the component via its parent. */
@@ -513,7 +518,9 @@ object TypeaheadProps {
     def deletePositionFixed: Self = this.set("positionFixed", js.undefined)
     
     @scala.inline
-    def setRenderMenu(value: (/* results */ js.Array[TypeaheadResult[T]], /* menuProps */ js.Any) => ReactElement): Self = this.set("renderMenu", js.Any.fromFunction2(value))
+    def setRenderMenu(
+      value: (/* results */ js.Array[TypeaheadResult[T]], /* menuProps */ TypeaheadMenuProps[T], /* state */ TypeaheadState[T]) => ReactElement
+    ): Self = this.set("renderMenu", js.Any.fromFunction3(value))
     
     @scala.inline
     def deleteRenderMenu: Self = this.set("renderMenu", js.undefined)

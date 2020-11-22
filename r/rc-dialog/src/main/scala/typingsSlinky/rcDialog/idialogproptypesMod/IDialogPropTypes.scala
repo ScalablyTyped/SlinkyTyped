@@ -1,12 +1,13 @@
 package typingsSlinky.rcDialog.idialogproptypesMod
 
+import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.Event
-import org.scalajs.dom.raw.HTMLDivElement
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
 import typingsSlinky.rcDialog.anon.X
 import typingsSlinky.rcDialog.rcDialogBooleans.`false`
+import typingsSlinky.rcUtil.portalWrapperMod.GetContainer
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -39,7 +40,7 @@ trait IDialogPropTypes extends js.Object {
   
   var forceRender: js.UndefOr[Boolean] = js.native
   
-  var getContainer: js.UndefOr[IStringOrHtmlElement | js.Function0[IStringOrHtmlElement] | `false`] = js.native
+  var getContainer: js.UndefOr[GetContainer | `false`] = js.native
   
   var height: js.UndefOr[Double] = js.native
   
@@ -57,9 +58,11 @@ trait IDialogPropTypes extends js.Object {
   
   var maskTransitionName: js.UndefOr[String] = js.native
   
+  var modalRender: js.UndefOr[js.Function1[/* node */ ReactElement, ReactElement]] = js.native
+  
   var mousePosition: js.UndefOr[X] = js.native
   
-  var onClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, HTMLDivElement], _]] = js.native
+  var onClose: js.UndefOr[js.Function1[/* e */ SyntheticEvent[Event, Element], _]] = js.native
   
   var prefixCls: js.UndefOr[String] = js.native
   
@@ -186,10 +189,10 @@ object IDialogPropTypes {
     def setGetContainerHTMLElement(value: HTMLElement): Self = this.set("getContainer", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetContainerFunction0(value: () => IStringOrHtmlElement): Self = this.set("getContainer", js.Any.fromFunction0(value))
+    def setGetContainerFunction0(value: () => HTMLElement): Self = this.set("getContainer", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setGetContainer(value: IStringOrHtmlElement | js.Function0[IStringOrHtmlElement] | `false`): Self = this.set("getContainer", value.asInstanceOf[js.Any])
+    def setGetContainer(value: GetContainer | `false`): Self = this.set("getContainer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteGetContainer: Self = this.set("getContainer", js.undefined)
@@ -243,13 +246,19 @@ object IDialogPropTypes {
     def deleteMaskTransitionName: Self = this.set("maskTransitionName", js.undefined)
     
     @scala.inline
+    def setModalRender(value: /* node */ ReactElement => ReactElement): Self = this.set("modalRender", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def deleteModalRender: Self = this.set("modalRender", js.undefined)
+    
+    @scala.inline
     def setMousePosition(value: X): Self = this.set("mousePosition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMousePosition: Self = this.set("mousePosition", js.undefined)
     
     @scala.inline
-    def setOnClose(value: /* e */ SyntheticEvent[Event, HTMLDivElement] => _): Self = this.set("onClose", js.Any.fromFunction1(value))
+    def setOnClose(value: /* e */ SyntheticEvent[Event, Element] => _): Self = this.set("onClose", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnClose: Self = this.set("onClose", js.undefined)

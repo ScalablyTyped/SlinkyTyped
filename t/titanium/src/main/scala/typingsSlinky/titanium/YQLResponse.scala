@@ -19,7 +19,7 @@ trait YQLResponse extends ErrorResponse {
     * Error message, if any returned. Use `error` instead
     * @deprecated
     */
-  var message: js.UndefOr[java.lang.String] = js.native
+  var message: js.UndefOr[String] = js.native
 }
 object YQLResponse {
   
@@ -39,7 +39,7 @@ object YQLResponse {
     def combineWith[Other <: js.Any](other: Other): Self with Other = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x, other.asInstanceOf[js.Any])).asInstanceOf[Self with Other]
     
     @scala.inline
-    def set(key: java.lang.String, value: js.Any): Self = {
+    def set(key: String, value: js.Any): Self = {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
@@ -51,7 +51,7 @@ object YQLResponse {
     def deleteData: Self = this.set("data", js.undefined)
     
     @scala.inline
-    def setMessage(value: java.lang.String): Self = this.set("message", value.asInstanceOf[js.Any])
+    def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMessage: Self = this.set("message", js.undefined)

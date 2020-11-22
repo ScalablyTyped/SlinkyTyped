@@ -14,7 +14,7 @@ trait EventTargetEcsTarget extends js.Object {
   var group: js.UndefOr[Input[String]] = js.native
   
   /**
-    * Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are EC2 or FARGATE.
+    * Specifies the launch type on which your task is running. The launch type that you specify here must match one of the launch type (compatibilities) of the target task. Valid values are `EC2` or `FARGATE`.
     */
   var launchType: js.UndefOr[Input[String]] = js.native
   

@@ -13,6 +13,11 @@ trait CreatePortalRequest extends js.Object {
   var clientToken: js.UndefOr[ClientToken] = js.native
   
   /**
+    * The service to use to authenticate users to the portal. Choose from the following options:    SSO – The portal uses AWS Single Sign-On to authenticate users and manage user permissions. Before you can create a portal that uses AWS SSO, you must enable AWS SSO. For more information, see Enabling AWS SSO in the AWS IoT SiteWise User Guide. This option is only available in AWS Regions other than the China Regions.    IAM – The portal uses AWS Identity and Access Management (IAM) to authenticate users and manage user permissions. IAM users must have the iotsitewise:CreatePresignedPortalUrl permission to sign in to the portal. This option is only available in the China Regions.   You can't change this value after you create a portal. Default: SSO 
+    */
+  var portalAuthMode: js.UndefOr[AuthMode] = js.native
+  
+  /**
     * The AWS administrator's contact email address.
     */
   var portalContactEmail: Email = js.native
@@ -79,6 +84,12 @@ object CreatePortalRequest {
     
     @scala.inline
     def deleteClientToken: Self = this.set("clientToken", js.undefined)
+    
+    @scala.inline
+    def setPortalAuthMode(value: AuthMode): Self = this.set("portalAuthMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePortalAuthMode: Self = this.set("portalAuthMode", js.undefined)
     
     @scala.inline
     def setPortalDescription(value: Description): Self = this.set("portalDescription", value.asInstanceOf[js.Any])

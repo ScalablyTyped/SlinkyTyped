@@ -11,6 +11,9 @@ trait ElementsInstance extends Emitter[ElementsInstanceEvents] {
   def CardCvvElement(): IndividualElement = js.native
   def CardCvvElement(cardCvvElementOptions: IndividualElementOptions): IndividualElement = js.native
   
+  /**
+    * @see {@link https://developers.recurly.com/reference/recurly-js/index.html#the-card-element|The Card Element}
+    */
   def CardElement(): typingsSlinky.recurlyRecurlyJs.elementsMod.CardElement = js.native
   def CardElement(cardElementOptions: CardElementOptions): typingsSlinky.recurlyRecurlyJs.elementsMod.CardElement = js.native
   

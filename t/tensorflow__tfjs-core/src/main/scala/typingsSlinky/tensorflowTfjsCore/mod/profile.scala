@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object profile extends js.Object {
   
-  def apply(f: js.Function0[TensorContainer]): js.Promise[ProfileInfo] = js.native
+  def apply(f: js.Function0[TensorContainer | js.Promise[TensorContainer]]): js.Promise[ProfileInfo] = js.native
 }

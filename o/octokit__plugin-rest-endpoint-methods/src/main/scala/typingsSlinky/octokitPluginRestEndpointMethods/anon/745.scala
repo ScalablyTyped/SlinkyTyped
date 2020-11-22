@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.IssuesSetLabelsEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.IssuesSetLabelsResponseData
+import typingsSlinky.octokitTypes.endpointsMod.IssuesListLabelsOnIssueEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.IssuesListLabelsOnIssueResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `745` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[IssuesSetLabelsEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[IssuesListLabelsOnIssueEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[IssuesSetLabelsResponseData] = js.native
+  var response: OctokitResponse[IssuesListLabelsOnIssueResponseData] = js.native
 }
 object `745` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[IssuesSetLabelsEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[IssuesSetLabelsResponseData]
+    parameters: RequestParameters with (Omit[IssuesListLabelsOnIssueEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[IssuesListLabelsOnIssueResponseData]
   ): `745` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`745`]
@@ -46,9 +46,11 @@ object `745` {
     }
     
     @scala.inline
-    def setParameters(value: RequestParameters with (Omit[IssuesSetLabelsEndpoint, baseUrl | headers | mediaType])): Self = this.set("parameters", value.asInstanceOf[js.Any])
+    def setParameters(
+      value: RequestParameters with (Omit[IssuesListLabelsOnIssueEndpoint, baseUrl | headers | mediaType])
+    ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[IssuesSetLabelsResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[IssuesListLabelsOnIssueResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

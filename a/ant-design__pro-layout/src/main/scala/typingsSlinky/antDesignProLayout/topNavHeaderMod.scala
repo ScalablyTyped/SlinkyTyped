@@ -1,7 +1,8 @@
 package typingsSlinky.antDesignProLayout
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.antDesignProLayout.anon.Logo
+import typingsSlinky.antDesignProLayout.globalHeaderMod.GlobalHeaderProps
+import typingsSlinky.antDesignProLayout.siderMenuSiderMenuMod.PrivateSiderMenuProps
 import typingsSlinky.antDesignProLayout.siderMenuSiderMenuMod.SiderMenuProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,5 +14,5 @@ object topNavHeaderMod extends js.Object {
   
   val default: ReactComponentClass[TopNavHeaderProps] = js.native
   
-  type TopNavHeaderProps = SiderMenuProps with Logo
+  type TopNavHeaderProps = SiderMenuProps with GlobalHeaderProps with PrivateSiderMenuProps with js.Object
 }

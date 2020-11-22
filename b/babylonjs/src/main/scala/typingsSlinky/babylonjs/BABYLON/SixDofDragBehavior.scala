@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SixDofDragBehavior extends Behavior[Mesh] {
   
+  var _attachedToElement: js.Any = js.native
+  
   var _moving: js.Any = js.native
   
   var _ownerNode: js.Any = js.native
@@ -60,6 +62,11 @@ trait SixDofDragBehavior extends Behavior[Mesh] {
     *  Fires each time a drag ends (eg. mouse release after drag)
     */
   var onDragEndObservable: Observable[js.Object] = js.native
+  
+  /**
+    * Fires each time a drag happens
+    */
+  var onDragObservable: Observable[Unit] = js.native
   
   /**
     * Fires each time a drag starts

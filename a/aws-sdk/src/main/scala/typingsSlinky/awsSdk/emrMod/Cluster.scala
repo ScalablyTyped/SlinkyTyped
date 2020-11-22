@@ -93,6 +93,11 @@ trait Cluster extends js.Object {
   var OutpostArn: js.UndefOr[OptionalArnType] = js.native
   
   /**
+    * Placement group configured for an Amazon EMR cluster.
+    */
+  var PlacementGroups: js.UndefOr[PlacementGroupConfigList] = js.native
+  
+  /**
     * The Amazon EMR release label, which determines the version of open-source application packages installed on the cluster. Release labels are in the form emr-x.x.x, where x.x.x is an Amazon EMR release version such as emr-5.14.0. For more information about Amazon EMR release versions and included application versions and features, see https://docs.aws.amazon.com/emr/latest/ReleaseGuide/. The release label applies only to Amazon EMR releases version 4.0 and later. Earlier versions use AmiVersion.
     */
   var ReleaseLabel: js.UndefOr[String] = js.native
@@ -282,6 +287,15 @@ object Cluster {
     
     @scala.inline
     def deleteOutpostArn: Self = this.set("OutpostArn", js.undefined)
+    
+    @scala.inline
+    def setPlacementGroupsVarargs(value: PlacementGroupConfig*): Self = this.set("PlacementGroups", js.Array(value :_*))
+    
+    @scala.inline
+    def setPlacementGroups(value: PlacementGroupConfigList): Self = this.set("PlacementGroups", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePlacementGroups: Self = this.set("PlacementGroups", js.undefined)
     
     @scala.inline
     def setReleaseLabel(value: String): Self = this.set("ReleaseLabel", value.asInstanceOf[js.Any])

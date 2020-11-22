@@ -12,5 +12,4 @@ object expressionType extends js.Object {
   def apply(expr: Expression, typeModifiers: js.UndefOr[scala.Nothing], typeParams: js.Array[Type]): ExpressionType_ = js.native
   def apply(expr: Expression, typeModifiers: js.Array[TypeModifier]): ExpressionType_ = js.native
   def apply(expr: Expression, typeModifiers: js.Array[TypeModifier], typeParams: js.Array[Type]): ExpressionType_ = js.native
-  def apply(expr: Expression, typeModifiers: Null, typeParams: js.Array[Type]): ExpressionType_ = js.native
 }

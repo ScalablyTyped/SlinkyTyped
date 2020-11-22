@@ -2,7 +2,7 @@ package typingsSlinky.echarts.echarts.EChartOption.SeriesPictorialBar
 
 import typingsSlinky.echarts.anon.BorderType
 import typingsSlinky.echarts.anon.Distance
-import typingsSlinky.echarts.anon.`4`
+import typingsSlinky.echarts.anon.`18`
 import typingsSlinky.echarts.echarts.EChartOption.BaseTooltip
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -121,7 +121,7 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.data.emphasis
     */
-  var emphasis: js.UndefOr[`4`] = js.native
+  var emphasis: js.UndefOr[`18`] = js.native
   
   /**
     * Whether to enable hover animation.
@@ -809,7 +809,7 @@ object DataObject {
     def deleteAnimationThreshold: Self = this.set("animationThreshold", js.undefined)
     
     @scala.inline
-    def setEmphasis(value: `4`): Self = this.set("emphasis", value.asInstanceOf[js.Any])
+    def setEmphasis(value: `18`): Self = this.set("emphasis", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEmphasis: Self = this.set("emphasis", js.undefined)

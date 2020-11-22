@@ -17,8 +17,14 @@ import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
 import slinky.web.html.input.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.antd.anon.Offset
+import typingsSlinky.antd.antdStrings.`additions removals`
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.`removals additions`
+import typingsSlinky.antd.antdStrings.`removals text`
+import typingsSlinky.antd.antdStrings.`text additions`
+import typingsSlinky.antd.antdStrings.`text removals`
 import typingsSlinky.antd.antdStrings.additions
 import typingsSlinky.antd.antdStrings.all
 import typingsSlinky.antd.antdStrings.ascending
@@ -29,8 +35,11 @@ import typingsSlinky.antd.antdStrings.date
 import typingsSlinky.antd.antdStrings.decimal
 import typingsSlinky.antd.antdStrings.descending
 import typingsSlinky.antd.antdStrings.dialog
+import typingsSlinky.antd.antdStrings.done
 import typingsSlinky.antd.antdStrings.email
+import typingsSlinky.antd.antdStrings.enter
 import typingsSlinky.antd.antdStrings.execute
+import typingsSlinky.antd.antdStrings.go
 import typingsSlinky.antd.antdStrings.grammar
 import typingsSlinky.antd.antdStrings.grid
 import typingsSlinky.antd.antdStrings.horizontal
@@ -42,6 +51,7 @@ import typingsSlinky.antd.antdStrings.location
 import typingsSlinky.antd.antdStrings.menu
 import typingsSlinky.antd.antdStrings.mixed
 import typingsSlinky.antd.antdStrings.move
+import typingsSlinky.antd.antdStrings.next
 import typingsSlinky.antd.antdStrings.no
 import typingsSlinky.antd.antdStrings.none
 import typingsSlinky.antd.antdStrings.numeric
@@ -51,19 +61,21 @@ import typingsSlinky.antd.antdStrings.other
 import typingsSlinky.antd.antdStrings.page
 import typingsSlinky.antd.antdStrings.polite
 import typingsSlinky.antd.antdStrings.popup
+import typingsSlinky.antd.antdStrings.previous
 import typingsSlinky.antd.antdStrings.removals
 import typingsSlinky.antd.antdStrings.search
+import typingsSlinky.antd.antdStrings.send
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
 import typingsSlinky.antd.antdStrings.tel
-import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.text_
 import typingsSlinky.antd.antdStrings.time
 import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.antd.inputNumberMod.InputNumberProps
-import typingsSlinky.antd.sizeContextMod.SizeType
 import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
@@ -202,7 +214,9 @@ object InputNumber {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text_ | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])
@@ -301,6 +315,9 @@ object InputNumber {
     def draggable(value: Booleanish): this.type = set("draggable", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def enterKeyHint(value: enter | done | go | next | previous | search | send): this.type = set("enterKeyHint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def form(value: String): this.type = set("form", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -334,7 +351,7 @@ object InputNumber {
     def inlist(value: js.Any): this.type = set("inlist", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def inputMode(value: none | text | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
+    def inputMode(value: none | text_ | tel | url | email | numeric | decimal | search): this.type = set("inputMode", value.asInstanceOf[js.Any])
     
     @scala.inline
     def is(value: String): this.type = set("is", value.asInstanceOf[js.Any])
@@ -584,6 +601,9 @@ object InputNumber {
     
     @scala.inline
     def onStalled(value: SyntheticEvent[Event, HTMLInputElement] => Unit): this.type = set("onStalled", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onStep(value: (/* value */ Double, /* info */ Offset) => Unit): this.type = set("onStep", js.Any.fromFunction2(value))
     
     @scala.inline
     def onSubmit(value: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit): this.type = set("onSubmit", js.Any.fromFunction1(value))

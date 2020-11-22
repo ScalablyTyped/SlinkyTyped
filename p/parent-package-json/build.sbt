@@ -1,6 +1,6 @@
 organization := "org.scalablytyped.slinky"
 name := "parent-package-json"
-version := "2.0-dt-20200515Z-475685"
+version := "2.0-dt-20200917Z-475685"
 scalaVersion := "2.13.3"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(

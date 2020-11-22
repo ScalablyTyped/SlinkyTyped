@@ -23,9 +23,14 @@ trait CreateGovCloudAccountRequest extends js.Object {
   var IamUserAccessToBilling: js.UndefOr[IAMUserAccessToBilling] = js.native
   
   /**
-    * (Optional) The name of an IAM role that AWS Organizations automatically preconfigures in the new member accounts in both the AWS GovCloud (US) Region and in the commercial Region. This role trusts the master account, allowing users in the master account to assume the role, as permitted by the master account administrator. The role has administrator permissions in the new member account. If you don't specify this parameter, the role name defaults to OrganizationAccountAccessRole. For more information about how to use this role to access the member account, see Accessing and Administering the Member Accounts in Your Organization in the AWS Organizations User Guide and steps 2 and 3 in Tutorial: Delegate Access Across AWS Accounts Using IAM Roles in the IAM User Guide.  The regex pattern that is used to validate this parameter. The pattern can include uppercase letters, lowercase letters, digits with no spaces, and any of the following characters: =,.@-
+    * (Optional) The name of an IAM role that AWS Organizations automatically preconfigures in the new member accounts in both the AWS GovCloud (US) Region and in the commercial Region. This role trusts the management account, allowing users in the management account to assume the role, as permitted by the management account administrator. The role has administrator permissions in the new member account. If you don't specify this parameter, the role name defaults to OrganizationAccountAccessRole. For more information about how to use this role to access the member account, see Accessing and Administering the Member Accounts in Your Organization in the AWS Organizations User Guide and steps 2 and 3 in Tutorial: Delegate Access Across AWS Accounts Using IAM Roles in the IAM User Guide.  The regex pattern that is used to validate this parameter. The pattern can include uppercase letters, lowercase letters, digits with no spaces, and any of the following characters: =,.@-
     */
   var RoleName: js.UndefOr[typingsSlinky.awsSdk.organizationsMod.RoleName] = js.native
+  
+  /**
+    * A list of tags that you want to attach to the newly created account. These tags are attached to the commercial account associated with the GovCloud account, and not to the GovCloud account itself. To add tags to the actual GovCloud account, call the TagResource operation in the GovCloud region after the new GovCloud account exists. For each tag in the list, you must specify both a tag key and a value. You can set the value to an empty string, but you can't set it to null. For more information about tagging, see Tagging AWS Organizations resources in the AWS Organizations User Guide.  If any one of the tags is invalid or if you exceed the allowed number of tags for an account, then the entire request fails and the account is not created. 
+    */
+  var Tags: js.UndefOr[typingsSlinky.awsSdk.organizationsMod.Tags] = js.native
 }
 object CreateGovCloudAccountRequest {
   
@@ -67,5 +72,14 @@ object CreateGovCloudAccountRequest {
     
     @scala.inline
     def deleteRoleName: Self = this.set("RoleName", js.undefined)
+    
+    @scala.inline
+    def setTagsVarargs(value: Tag*): Self = this.set("Tags", js.Array(value :_*))
+    
+    @scala.inline
+    def setTags(value: Tags): Self = this.set("Tags", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTags: Self = this.set("Tags", js.undefined)
   }
 }

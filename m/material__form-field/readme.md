@@ -1,7 +1,7 @@
 
 # Scala.js typings for material__form-field
 
-Typings are for version 7.0.0
+Typings are for version 8.0.0
 
 ## Library description:
 Material Components for the web wrapper for laying out form fields and labels next to one another

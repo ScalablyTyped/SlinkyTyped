@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("@aws-sdk/credential-provider-imds/build/remoteProvider/retry", JSImport.Namespace)
+@JSImport("@aws-sdk/credential-provider-imds/dist/cjs/remoteProvider/retry", JSImport.Namespace)
 @js.native
 object retryMod extends js.Object {
   

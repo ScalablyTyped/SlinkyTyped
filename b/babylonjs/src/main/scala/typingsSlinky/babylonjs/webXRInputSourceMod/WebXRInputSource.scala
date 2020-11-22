@@ -16,8 +16,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class WebXRInputSource protected () extends js.Object {
   /**
-    * Creates the controller
-    * @see https://doc.babylonjs.com/how_to/webxr
+    * Creates the input source object
+    * @see https://doc.babylonjs.com/how_to/webxr_controllers_support
     * @param _scene the scene which the controller should be associated to
     * @param inputSource the underlying input source for the controller
     * @param _options options for this controller creation
@@ -31,11 +31,11 @@ class WebXRInputSource protected () extends js.Object {
     _options: IWebXRControllerOptions
   ) = this()
   
+  var _disposed: js.Any = js.native
+  
   var _options: js.Any = js.native
   
   var _scene: js.Any = js.native
-  
-  var _tmpQuaternion: js.Any = js.native
   
   var _tmpVector: js.Any = js.native
   

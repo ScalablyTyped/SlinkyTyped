@@ -157,7 +157,7 @@ trait Request extends js.Object {
   /**
     * _Response of the request._
     *
-    * The response is not populated until the request have been completed. The response is an object that looks like the following example.
+    * The response is not populated until the request has been completed. The response is an object that looks like the following example.
     *
     *     {
     *       "url": "https://example.com/",
@@ -167,11 +167,29 @@ trait Request extends js.Object {
     *       "headers": {
     *         "Content-Type": "application/json;charset=utf-8",
     *         "Content-Length": "17671"
-    *       }
+    *       },
+    *       "cookies": [{
+    *         "path": "/",
+    *         "httpOnly": true,
+    *         "domain": "www.example.com",
+    *         "sessionOnly": true,
+    *         "name": "JSESSIONID",
+    *         "value": "7616271F4878CFD05182D20C45F4CEB3"
+    *       }]
     *     }
     * @see https://docs.scriptable.app/request/#response
     */
   var response: StringDictionary[js.Any] = js.native
+  
+  /**
+    * _Timeout interval of the request._
+    *
+    * If a request remains idle for longer than the timeout interval, the request is considered timed out.
+    *
+    * The timeout interval is measured in seconds and defaults to 60 seconds.
+    * @see https://docs.scriptable.app/request/#timeoutinterval
+    */
+  var timeoutInterval: Double = js.native
   
   /**
     * _URL to send request to._

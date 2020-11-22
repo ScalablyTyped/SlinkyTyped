@@ -11,12 +11,12 @@ import typingsSlinky.handsontable.mod.Handsontable.plugins.ColumnSummary
 import typingsSlinky.handsontable.mod.Handsontable.plugins.Comments
 import typingsSlinky.handsontable.mod.Handsontable.plugins.ContextMenu
 import typingsSlinky.handsontable.mod.Handsontable.plugins.CopyPaste
+import typingsSlinky.handsontable.mod.Handsontable.plugins.CustomBorders
 import typingsSlinky.handsontable.mod.Handsontable.plugins.DragToScroll
 import typingsSlinky.handsontable.mod.Handsontable.plugins.DropdownMenu
 import typingsSlinky.handsontable.mod.Handsontable.plugins.ExportFile
 import typingsSlinky.handsontable.mod.Handsontable.plugins.Filters
 import typingsSlinky.handsontable.mod.Handsontable.plugins.Formulas
-import typingsSlinky.handsontable.mod.Handsontable.plugins.GanttChart
 import typingsSlinky.handsontable.mod.Handsontable.plugins.HeaderTooltips
 import typingsSlinky.handsontable.mod.Handsontable.plugins.HiddenColumns
 import typingsSlinky.handsontable.mod.Handsontable.plugins.HiddenRows
@@ -65,6 +65,8 @@ trait PluginsCollection extends js.Object {
   
   var copyPaste: CopyPaste = js.native
   
+  var customBorders: CustomBorders = js.native
+  
   var dragToScroll: DragToScroll = js.native
   
   var dropdownMenu: DropdownMenu = js.native
@@ -74,8 +76,6 @@ trait PluginsCollection extends js.Object {
   var filters: Filters = js.native
   
   var formulas: Formulas = js.native
-  
-  var ganttChart: GanttChart = js.native
   
   var headerTooltips: HeaderTooltips = js.native
   
@@ -128,12 +128,12 @@ object PluginsCollection {
     comments: Comments,
     contextMenu: ContextMenu,
     copyPaste: CopyPaste,
+    customBorders: CustomBorders,
     dragToScroll: DragToScroll,
     dropdownMenu: DropdownMenu,
     exportFile: ExportFile,
     filters: Filters,
     formulas: Formulas,
-    ganttChart: GanttChart,
     headerTooltips: HeaderTooltips,
     hiddenColumns: HiddenColumns,
     hiddenRows: HiddenRows,
@@ -153,7 +153,7 @@ object PluginsCollection {
     touchScroll: TouchScroll,
     trimRows: TrimRows
   ): PluginsCollection = {
-    val __obj = js.Dynamic.literal(autoColumnSize = autoColumnSize.asInstanceOf[js.Any], autoRowSize = autoRowSize.asInstanceOf[js.Any], autofill = autofill.asInstanceOf[js.Any], basePlugin = basePlugin.asInstanceOf[js.Any], bindRowsWithHeaders = bindRowsWithHeaders.asInstanceOf[js.Any], collapsibleColumns = collapsibleColumns.asInstanceOf[js.Any], columnSorting = columnSorting.asInstanceOf[js.Any], columnSummary = columnSummary.asInstanceOf[js.Any], comments = comments.asInstanceOf[js.Any], contextMenu = contextMenu.asInstanceOf[js.Any], copyPaste = copyPaste.asInstanceOf[js.Any], dragToScroll = dragToScroll.asInstanceOf[js.Any], dropdownMenu = dropdownMenu.asInstanceOf[js.Any], exportFile = exportFile.asInstanceOf[js.Any], filters = filters.asInstanceOf[js.Any], formulas = formulas.asInstanceOf[js.Any], ganttChart = ganttChart.asInstanceOf[js.Any], headerTooltips = headerTooltips.asInstanceOf[js.Any], hiddenColumns = hiddenColumns.asInstanceOf[js.Any], hiddenRows = hiddenRows.asInstanceOf[js.Any], manualColumnFreeze = manualColumnFreeze.asInstanceOf[js.Any], manualColumnMove = manualColumnMove.asInstanceOf[js.Any], manualColumnResize = manualColumnResize.asInstanceOf[js.Any], manualRowMove = manualRowMove.asInstanceOf[js.Any], manualRowResize = manualRowResize.asInstanceOf[js.Any], mergeCells = mergeCells.asInstanceOf[js.Any], multiColumnSorting = multiColumnSorting.asInstanceOf[js.Any], multipleSelectionHandles = multipleSelectionHandles.asInstanceOf[js.Any], nestedHeaders = nestedHeaders.asInstanceOf[js.Any], nestedRows = nestedRows.asInstanceOf[js.Any], observeChanges = observeChanges.asInstanceOf[js.Any], persistentState = persistentState.asInstanceOf[js.Any], search = search.asInstanceOf[js.Any], touchScroll = touchScroll.asInstanceOf[js.Any], trimRows = trimRows.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(autoColumnSize = autoColumnSize.asInstanceOf[js.Any], autoRowSize = autoRowSize.asInstanceOf[js.Any], autofill = autofill.asInstanceOf[js.Any], basePlugin = basePlugin.asInstanceOf[js.Any], bindRowsWithHeaders = bindRowsWithHeaders.asInstanceOf[js.Any], collapsibleColumns = collapsibleColumns.asInstanceOf[js.Any], columnSorting = columnSorting.asInstanceOf[js.Any], columnSummary = columnSummary.asInstanceOf[js.Any], comments = comments.asInstanceOf[js.Any], contextMenu = contextMenu.asInstanceOf[js.Any], copyPaste = copyPaste.asInstanceOf[js.Any], customBorders = customBorders.asInstanceOf[js.Any], dragToScroll = dragToScroll.asInstanceOf[js.Any], dropdownMenu = dropdownMenu.asInstanceOf[js.Any], exportFile = exportFile.asInstanceOf[js.Any], filters = filters.asInstanceOf[js.Any], formulas = formulas.asInstanceOf[js.Any], headerTooltips = headerTooltips.asInstanceOf[js.Any], hiddenColumns = hiddenColumns.asInstanceOf[js.Any], hiddenRows = hiddenRows.asInstanceOf[js.Any], manualColumnFreeze = manualColumnFreeze.asInstanceOf[js.Any], manualColumnMove = manualColumnMove.asInstanceOf[js.Any], manualColumnResize = manualColumnResize.asInstanceOf[js.Any], manualRowMove = manualRowMove.asInstanceOf[js.Any], manualRowResize = manualRowResize.asInstanceOf[js.Any], mergeCells = mergeCells.asInstanceOf[js.Any], multiColumnSorting = multiColumnSorting.asInstanceOf[js.Any], multipleSelectionHandles = multipleSelectionHandles.asInstanceOf[js.Any], nestedHeaders = nestedHeaders.asInstanceOf[js.Any], nestedRows = nestedRows.asInstanceOf[js.Any], observeChanges = observeChanges.asInstanceOf[js.Any], persistentState = persistentState.asInstanceOf[js.Any], search = search.asInstanceOf[js.Any], touchScroll = touchScroll.asInstanceOf[js.Any], trimRows = trimRows.asInstanceOf[js.Any])
     __obj.asInstanceOf[PluginsCollection]
   }
   
@@ -206,6 +206,9 @@ object PluginsCollection {
     def setCopyPaste(value: CopyPaste): Self = this.set("copyPaste", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setCustomBorders(value: CustomBorders): Self = this.set("customBorders", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setDragToScroll(value: DragToScroll): Self = this.set("dragToScroll", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -219,9 +222,6 @@ object PluginsCollection {
     
     @scala.inline
     def setFormulas(value: Formulas): Self = this.set("formulas", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def setGanttChart(value: GanttChart): Self = this.set("ganttChart", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setHeaderTooltips(value: HeaderTooltips): Self = this.set("headerTooltips", value.asInstanceOf[js.Any])

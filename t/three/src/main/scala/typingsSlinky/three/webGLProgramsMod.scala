@@ -2,7 +2,10 @@ package typingsSlinky.three
 
 import typingsSlinky.three.materialMod.Material
 import typingsSlinky.three.sceneMod.Scene
+import typingsSlinky.three.webGLBindingStatesMod.WebGLBindingStates
 import typingsSlinky.three.webGLCapabilitiesMod.WebGLCapabilities
+import typingsSlinky.three.webGLClippingMod.WebGLClipping
+import typingsSlinky.three.webGLCubeMapsMod.WebGLCubeMaps
 import typingsSlinky.three.webGLExtensionsMod.WebGLExtensions
 import typingsSlinky.three.webGLProgramMod.WebGLProgram
 import typingsSlinky.three.webGLRendererMod.WebGLRenderer
@@ -16,19 +19,18 @@ object webGLProgramsMod extends js.Object {
   
   @js.native
   class WebGLPrograms protected () extends js.Object {
-    def this(renderer: WebGLRenderer, extensions: WebGLExtensions, capabilities: WebGLCapabilities) = this()
+    def this(
+      renderer: WebGLRenderer,
+      cubemaps: WebGLCubeMaps,
+      extensions: WebGLExtensions,
+      capabilities: WebGLCapabilities,
+      bindingStates: WebGLBindingStates,
+      clipping: WebGLClipping
+    ) = this()
     
     def acquireProgram(parameters: js.Any, cacheKey: String): WebGLProgram = js.native
     
-    def getParameters(
-      material: Material,
-      lights: js.Any,
-      shadows: js.Array[js.Object],
-      scene: Scene,
-      nClipPlanes: Double,
-      nClipIntersection: Double,
-      `object`: js.Any
-    ): js.Any = js.native
+    def getParameters(material: Material, lights: js.Any, shadows: js.Array[js.Object], scene: Scene, `object`: js.Any): js.Any = js.native
     
     def getProgramCacheKey(parameters: js.Any): String = js.native
     

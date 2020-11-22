@@ -23,7 +23,7 @@ trait PolicySummary extends js.Object {
   var Description: js.UndefOr[PolicyDescription] = js.native
   
   /**
-    * The unique identifier (ID) of the policy. The regex pattern for a policy ID string requires "p-" followed by from 8 to 128 lower-case letters or digits.
+    * The unique identifier (ID) of the policy. The regex pattern for a policy ID string requires "p-" followed by from 8 to 128 lowercase or uppercase letters, digits, or the underscore character (_).
     */
   var Id: js.UndefOr[PolicyId] = js.native
   

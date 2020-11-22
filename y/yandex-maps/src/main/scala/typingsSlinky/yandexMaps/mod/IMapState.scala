@@ -1,5 +1,8 @@
 package typingsSlinky.yandexMaps.mod
 
+import typingsSlinky.yandexMaps.mod.control.RulerControl
+import typingsSlinky.yandexMaps.mod.control.TypeSelector
+import typingsSlinky.yandexMaps.mod.control.ZoomControl
 import typingsSlinky.yandexMaps.yandexMapsStrings.yandexNumbersignhybrid
 import typingsSlinky.yandexMaps.yandexMapsStrings.yandexNumbersignmap
 import typingsSlinky.yandexMaps.yandexMapsStrings.yandexNumbersignsatellite
@@ -16,7 +19,7 @@ trait IMapState extends js.Object {
   
   var center: js.UndefOr[js.Array[Double]] = js.native
   
-  var controls: js.UndefOr[js.Array[String]] = js.native
+  var controls: js.UndefOr[js.Array[String | ZoomControl | RulerControl | TypeSelector]] = js.native
   
   var margin: js.UndefOr[js.Array[js.Array[Double] | Double]] = js.native
   
@@ -75,10 +78,10 @@ object IMapState {
     def deleteCenter: Self = this.set("center", js.undefined)
     
     @scala.inline
-    def setControlsVarargs(value: String*): Self = this.set("controls", js.Array(value :_*))
+    def setControlsVarargs(value: (String | ZoomControl | RulerControl | TypeSelector)*): Self = this.set("controls", js.Array(value :_*))
     
     @scala.inline
-    def setControls(value: js.Array[String]): Self = this.set("controls", value.asInstanceOf[js.Any])
+    def setControls(value: js.Array[String | ZoomControl | RulerControl | TypeSelector]): Self = this.set("controls", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteControls: Self = this.set("controls", js.undefined)

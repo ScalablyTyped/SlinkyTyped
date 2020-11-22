@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait LodashGetOr extends LodashConvertible {
+trait LodashGetOr extends js.Object {
   
   def apply(defaultValue: js.Any): LodashGetOr7x1 = js.native
   def apply(defaultValue: js.Any, path: PropertyPath): LodashGetOr7x3 = js.native

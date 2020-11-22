@@ -29,7 +29,7 @@ trait TextEditor extends js.Object {
   def edit(callback: js.Function1[/* editBuilder */ TextEditorEdit, Unit], options: UndoStopAfter): Thenable[Boolean] = js.native
   
   /**
-    * ~~Hide the text editor.~~
+    * Hide the text editor.
     *
     * @deprecated Use the command `workbench.action.closeActiveEditor` instead.
     * This method shows unexpected behavior and will be removed in the next major update.
@@ -92,7 +92,7 @@ trait TextEditor extends js.Object {
   def setDecorations(decorationType: TextEditorDecorationType, rangesOrOptions: js.Array[DecorationOptions | Range]): Unit = js.native
   
   /**
-    * ~~Show the text editor.~~
+    * Show the text editor.
     *
     * @deprecated Use [window.showTextDocument](#window.showTextDocument) instead.
     *
@@ -107,7 +107,7 @@ trait TextEditor extends js.Object {
     * isn't one of the main editors, e.g. an embedded editor, or when the editor
     * column is larger than three.
     */
-  var viewColumn: js.UndefOr[ViewColumn] = js.native
+  val viewColumn: js.UndefOr[ViewColumn] = js.native
   
   /**
     * The current visible ranges in the editor (vertically).

@@ -12,14 +12,14 @@ trait ParametersActionsListSelectedReposForOrgSecretEndpoint extends js.Object {
   
   var parameters: ActionsListSelectedReposForOrgSecretEndpoint = js.native
   
-  var response: OctokitResponse[ActionsListSelectedReposForOrgSecretResponseData] with `1` = js.native
+  var response: OctokitResponse[ActionsListSelectedReposForOrgSecretResponseData] with `5` = js.native
 }
 object ParametersActionsListSelectedReposForOrgSecretEndpoint {
   
   @scala.inline
   def apply(
     parameters: ActionsListSelectedReposForOrgSecretEndpoint,
-    response: OctokitResponse[ActionsListSelectedReposForOrgSecretResponseData] with `1`
+    response: OctokitResponse[ActionsListSelectedReposForOrgSecretResponseData] with `5`
   ): ParametersActionsListSelectedReposForOrgSecretEndpoint = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[ParametersActionsListSelectedReposForOrgSecretEndpoint]
@@ -44,6 +44,6 @@ object ParametersActionsListSelectedReposForOrgSecretEndpoint {
     def setParameters(value: ActionsListSelectedReposForOrgSecretEndpoint): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[ActionsListSelectedReposForOrgSecretResponseData] with `1`): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[ActionsListSelectedReposForOrgSecretResponseData] with `5`): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

@@ -45,7 +45,7 @@ trait CustomProperties extends js.Object {
     *
     * You can iterate through the dictionary object to discover all `names` and `values`.
     *
-    * [Api set: Mailbox Preview]
+    * [Api set: Mailbox 1.9]
     *
     * @returns An object with all custom properties in a collection of name/value pairs.
     *
@@ -54,8 +54,6 @@ trait CustomProperties extends js.Object {
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/understanding-outlook-add-in-permissions | Minimum permission level}**: `ReadItem`
     *
     * **{@link https://docs.microsoft.com/office/dev/add-ins/outlook/outlook-add-ins-overview#extension-points | Applicable Outlook mode}**: Compose or Read
-    *
-    * @beta
     */
   def getAll(): js.Any = js.native
   

@@ -23,14 +23,6 @@ trait Ndef extends js.Object {
   def connect(): Unit = js.native
   def connect(option: ConnectOption): Unit = js.native
   
-  /** [Ndef.isConnected(Object object)](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/Ndef.isConnected.html)
-    *
-    * 检查连接状态
-    *
-    * 最低基础库： `2.11.2` */
-  def isConnected(): Unit = js.native
-  def isConnected(option: IsConnectedOption): Unit = js.native
-  
   /** [Ndef.offNdefMessage(function callback)](https://developers.weixin.qq.com/miniprogram/dev/api/device/nfc/Ndef.offNdefMessage.html)
     *
     * 取消监听 Ndef 消息

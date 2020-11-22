@@ -4,17 +4,12 @@ import typingsSlinky.googleAppsScript.GoogleAppsScript.Charts.DataTable
 import typingsSlinky.googleAppsScript.GoogleAppsScript.Integer
 import typingsSlinky.googleAppsScript.anon.CommentsOnly
 import typingsSlinky.googleAppsScript.anon.ContentsOnly
-import typingsSlinky.googleAppsScript.googleAppsScriptStrings.`line-through`
-import typingsSlinky.googleAppsScript.googleAppsScriptStrings.bold
 import typingsSlinky.googleAppsScript.googleAppsScriptStrings.bottom
 import typingsSlinky.googleAppsScript.googleAppsScriptStrings.center
-import typingsSlinky.googleAppsScript.googleAppsScriptStrings.italic
 import typingsSlinky.googleAppsScript.googleAppsScriptStrings.left
 import typingsSlinky.googleAppsScript.googleAppsScriptStrings.middle
-import typingsSlinky.googleAppsScript.googleAppsScriptStrings.none
 import typingsSlinky.googleAppsScript.googleAppsScriptStrings.normal
 import typingsSlinky.googleAppsScript.googleAppsScriptStrings.top
-import typingsSlinky.googleAppsScript.googleAppsScriptStrings.underline
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -130,21 +125,21 @@ trait Range extends js.Object {
   
   def getFontFamily(): String = js.native
   
-  def getFontLine(): String = js.native
+  def getFontLine(): FontLine = js.native
   
-  def getFontLines(): js.Array[js.Array[String]] = js.native
+  def getFontLines(): js.Array[js.Array[FontLine]] = js.native
   
   def getFontSize(): Integer = js.native
   
   def getFontSizes(): js.Array[js.Array[Integer]] = js.native
   
-  def getFontStyle(): String = js.native
+  def getFontStyle(): FontStyle = js.native
   
-  def getFontStyles(): js.Array[js.Array[String]] = js.native
+  def getFontStyles(): js.Array[js.Array[FontStyle]] = js.native
   
-  def getFontWeight(): String = js.native
+  def getFontWeight(): FontWeight = js.native
   
-  def getFontWeights(): js.Array[js.Array[String]] = js.native
+  def getFontWeights(): js.Array[js.Array[FontWeight]] = js.native
   
   def getFormula(): String = js.native
   
@@ -305,34 +300,23 @@ trait Range extends js.Object {
   def setFontFamily(fontFamily: String): Range = js.native
   
   def setFontLine(): Range = js.native
-  @JSName("setFontLine")
-  def setFontLine_linethrough(fontLine: `line-through`): Range = js.native
-  @JSName("setFontLine")
-  def setFontLine_none(fontLine: none): Range = js.native
-  @JSName("setFontLine")
-  def setFontLine_underline(fontLine: underline): Range = js.native
+  def setFontLine(fontLine: FontLine): Range = js.native
   
-  def setFontLines(fontLines: js.Array[js.Array[underline | `line-through` | none | Null]]): Range = js.native
+  def setFontLines(fontLines: js.Array[js.Array[FontLine | Null]]): Range = js.native
   
   def setFontSize(size: Integer): Range = js.native
   
   def setFontSizes(sizes: js.Array[js.Array[Integer]]): Range = js.native
   
   def setFontStyle(): Range = js.native
-  @JSName("setFontStyle")
-  def setFontStyle_italic(fontStyle: italic): Range = js.native
-  @JSName("setFontStyle")
-  def setFontStyle_normal(fontStyle: normal): Range = js.native
+  def setFontStyle(fontStyle: FontStyle): Range = js.native
   
-  def setFontStyles(fontStyles: js.Array[js.Array[italic | normal | Null]]): Range = js.native
+  def setFontStyles(fontStyles: js.Array[js.Array[FontStyle | Null]]): Range = js.native
   
   def setFontWeight(): Range = js.native
-  @JSName("setFontWeight")
-  def setFontWeight_bold(fontWeight: bold): Range = js.native
-  @JSName("setFontWeight")
-  def setFontWeight_normal(fontWeight: normal): Range = js.native
+  def setFontWeight(fontWeight: FontWeight): Range = js.native
   
-  def setFontWeights(fontWeights: js.Array[js.Array[bold | normal | Null]]): Range = js.native
+  def setFontWeights(fontWeights: js.Array[js.Array[FontWeight | Null]]): Range = js.native
   
   def setFormula(formula: String): Range = js.native
   

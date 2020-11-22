@@ -147,6 +147,11 @@ trait SolidParticle extends js.Object {
   var position: Vector3 = js.native
   
   /**
+    * Custom object or properties.
+    */
+  var props: Nullable[_] = js.native
+  
+  /**
     * Legacy support, changed quaternion to rotationQuaternion
     */
   def quaternion: Nullable[Quaternion] = js.native

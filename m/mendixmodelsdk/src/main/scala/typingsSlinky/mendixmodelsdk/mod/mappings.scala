@@ -1,7 +1,9 @@
 package typingsSlinky.mendixmodelsdk.mod
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -24,8 +26,8 @@ object mappings extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -66,7 +68,7 @@ object mappings extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/mapping-documents relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/mapping-documents relevant section in reference guide}
     */
   @js.native
   abstract class MappingDocument protected ()
@@ -96,8 +98,8 @@ object mappings extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -117,8 +119,8 @@ object mappings extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -152,8 +154,8 @@ object mappings extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -217,8 +219,8 @@ object mappings extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -238,8 +240,8 @@ object mappings extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit,
-      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
+      unit: typingsSlinky.mendixmodelsdk.internalMod.ModelUnit[IAbstractModel],
+      container: typingsSlinky.mendixmodelsdk.internalMod.AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */

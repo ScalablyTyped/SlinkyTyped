@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("yup", "number")
 @js.native
-class number ()
-  extends NumberSchema[js.UndefOr[Double]]
+// tslint:disable-next-line:no-unnecessary-generics
+class number[T /* <: js.UndefOr[Double | Null] */, C] () extends NumberSchema[T, C]
 @JSImport("yup", "number")
 @js.native
 object number extends TopLevel[NumberSchemaConstructor]

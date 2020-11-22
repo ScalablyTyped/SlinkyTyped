@@ -26,7 +26,7 @@ object pointerDragBehaviorMod extends js.Object {
     
     var _alternatePickedPoint: js.Any = js.native
     
-    var _attachedElement: js.Any = js.native
+    var _attachedToElement: js.Any = js.native
     
     var _beforeRenderObserver: js.Any = js.native
     
@@ -38,15 +38,11 @@ object pointerDragBehaviorMod extends js.Object {
     
     var _lastPointerRay: js.Any = js.native
     
-    var _lineA: js.Any = js.native
-    
-    var _lineB: js.Any = js.native
-    
     var _localAxis: js.Any = js.native
     
     var _lookAt: js.Any = js.native
     
-    var _moveDrag: js.Any = js.native
+    /* protected */ def _moveDrag(ray: Ray): Unit = js.native
     
     var _moving: js.Any = js.native
     
@@ -56,15 +52,16 @@ object pointerDragBehaviorMod extends js.Object {
     
     var _pointA: js.Any = js.native
     
-    var _pointB: js.Any = js.native
-    
     var _pointC: js.Any = js.native
     
     var _pointerObserver: js.Any = js.native
     
     var _scene: js.Any = js.native
     
-    var _startDrag: js.Any = js.native
+    /* protected */ def _startDrag(pointerId: Double): Unit = js.native
+    /* protected */ def _startDrag(pointerId: Double, fromRay: js.UndefOr[scala.Nothing], startPickedPoint: Vector3): Unit = js.native
+    /* protected */ def _startDrag(pointerId: Double, fromRay: Ray): Unit = js.native
+    /* protected */ def _startDrag(pointerId: Double, fromRay: Ray, startPickedPoint: Vector3): Unit = js.native
     
     var _startDragRay: js.Any = js.native
     

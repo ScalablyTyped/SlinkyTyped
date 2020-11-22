@@ -45,7 +45,7 @@ trait Switch extends View {
   /**
     * Color to use for switch text, as a color name or hex triplet.
     */
-  var color: String = js.native
+  var color: String | Color = js.native
   
   /**
     * Determines whether the switch is enabled.
@@ -107,7 +107,7 @@ trait Switch extends View {
     * Gets the value of the <Titanium.UI.Switch.color> property.
     * @deprecated Access <Titanium.UI.Switch.color> instead.
     */
-  def getColor(): String = js.native
+  def getColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Switch.enabled> property.
@@ -125,7 +125,7 @@ trait Switch extends View {
     * Gets the value of the <Titanium.UI.Switch.onTintColor> property.
     * @deprecated Access <Titanium.UI.Switch.onTintColor> instead.
     */
-  def getOnTintColor(): String = js.native
+  def getOnTintColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Switch.style> property.
@@ -143,7 +143,7 @@ trait Switch extends View {
     * Gets the value of the <Titanium.UI.Switch.thumbTintColor> property.
     * @deprecated Access <Titanium.UI.Switch.thumbTintColor> instead.
     */
-  def getThumbTintColor(): String = js.native
+  def getThumbTintColor(): String | Color = js.native
   
   /**
     * Gets the value of the <Titanium.UI.Switch.title> property.
@@ -178,7 +178,7 @@ trait Switch extends View {
   /**
     * The color used to tint the appearance of the switch when it is turned on.
     */
-  var onTintColor: String = js.native
+  var onTintColor: String | Color = js.native
   
   /**
     * Removes the specified callback as an event listener for the named event.
@@ -200,6 +200,7 @@ trait Switch extends View {
     * @deprecated Set the value using <Titanium.UI.Switch.color> instead.
     */
   def setColor(color: String): Unit = js.native
+  def setColor(color: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Switch.enabled> property.
@@ -218,6 +219,7 @@ trait Switch extends View {
     * @deprecated Set the value using <Titanium.UI.Switch.onTintColor> instead.
     */
   def setOnTintColor(onTintColor: String): Unit = js.native
+  def setOnTintColor(onTintColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Switch.style> property.
@@ -237,6 +239,7 @@ trait Switch extends View {
     * @deprecated Set the value using <Titanium.UI.Switch.thumbTintColor> instead.
     */
   def setThumbTintColor(thumbTintColor: String): Unit = js.native
+  def setThumbTintColor(thumbTintColor: Color): Unit = js.native
   
   /**
     * Sets the value of the <Titanium.UI.Switch.title> property.
@@ -282,7 +285,7 @@ trait Switch extends View {
   /**
     * The color used to tint the appearance of the thumb.
     */
-  var thumbTintColor: String = js.native
+  var thumbTintColor: String | Color = js.native
   
   /**
     * Text to display next to the switch, when the checkbox style is in use.

@@ -11,10 +11,10 @@ trait Store extends Destroyable {
   
   def clear(): js.Any = js.native
   
-  def findOrCreate(obj: Model[_, ModelSetOptions], options: StoreOptions): js.Any = js.native
+  def findOrCreate(obj: Model[_, ModelSetOptions, js.Object], options: StoreOptions): js.Any = js.native
   
   def register(
-    obj: Model[_, ModelSetOptions],
+    obj: Model[_, ModelSetOptions, js.Object],
     observable: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutObservable<any> */ js.Any,
     options: StoreOptions
   ): js.Any = js.native
@@ -25,8 +25,8 @@ object Store {
   def apply(
     clear: () => js.Any,
     destroy: () => js.Any,
-    findOrCreate: (Model[_, ModelSetOptions], StoreOptions) => js.Any,
-    register: (Model[_, ModelSetOptions], /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutObservable<any> */ js.Any, StoreOptions) => js.Any
+    findOrCreate: (Model[_, ModelSetOptions, js.Object], StoreOptions) => js.Any,
+    register: (Model[_, ModelSetOptions, js.Object], /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutObservable<any> */ js.Any, StoreOptions) => js.Any
   ): Store = {
     val __obj = js.Dynamic.literal(clear = js.Any.fromFunction0(clear), destroy = js.Any.fromFunction0(destroy), findOrCreate = js.Any.fromFunction2(findOrCreate), register = js.Any.fromFunction3(register))
     __obj.asInstanceOf[Store]
@@ -51,11 +51,11 @@ object Store {
     def setClear(value: () => js.Any): Self = this.set("clear", js.Any.fromFunction0(value))
     
     @scala.inline
-    def setFindOrCreate(value: (Model[_, ModelSetOptions], StoreOptions) => js.Any): Self = this.set("findOrCreate", js.Any.fromFunction2(value))
+    def setFindOrCreate(value: (Model[_, ModelSetOptions, js.Object], StoreOptions) => js.Any): Self = this.set("findOrCreate", js.Any.fromFunction2(value))
     
     @scala.inline
     def setRegister(
-      value: (Model[_, ModelSetOptions], /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutObservable<any> */ js.Any, StoreOptions) => js.Any
+      value: (Model[_, ModelSetOptions, js.Object], /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify KnockoutObservable<any> */ js.Any, StoreOptions) => js.Any
     ): Self = this.set("register", js.Any.fromFunction3(value))
   }
 }

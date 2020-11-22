@@ -3,12 +3,35 @@ package typingsSlinky.blueprintjsDatetime.datePickerCoreMod
 import typingsSlinky.blueprintjsDatetime.anon.FormatDate
 import typingsSlinky.blueprintjsDatetime.timePickerMod.ITimePickerProps
 import typingsSlinky.blueprintjsDatetime.timePickerMod.TimePrecision
+import typingsSlinky.reactDayPicker.propsMod.DayPickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
 trait IDatePickerBaseProps extends js.Object {
+  
+  /**
+    * Props to pass to ReactDayPicker. See API documentation
+    * [here](http://react-day-picker.js.org/api/DayPicker).
+    *
+    * The following props are managed by the component and cannot be configured:
+    * `canChangeMonth`, `captionElement`, `fromMonth` (use `minDate`), `month` (use
+    * `initialMonth`), `toMonth` (use `maxDate`).
+    *
+    * In case of supplying your owner `renderDay` function, make sure to apply the appropriate
+    * CSS wrapper class to obtain default Blueprint styling.
+    * eg.
+    * `<div className={Classes.DATEPICKER_DAY_WRAPPER}>{CONTENT_HERE}</div>`
+    *
+    */
+  var dayPickerProps: js.UndefOr[DayPickerProps] = js.native
+  
+  /**
+    * Whether the current day should be highlighted in the calendar.
+    * @default false
+    */
+  var highlightCurrentDay: js.UndefOr[Boolean] = js.native
   
   /**
     * The initial month the calendar displays.
@@ -93,6 +116,18 @@ object IDatePickerBaseProps {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDayPickerProps(value: DayPickerProps): Self = this.set("dayPickerProps", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDayPickerProps: Self = this.set("dayPickerProps", js.undefined)
+    
+    @scala.inline
+    def setHighlightCurrentDay(value: Boolean): Self = this.set("highlightCurrentDay", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteHighlightCurrentDay: Self = this.set("highlightCurrentDay", js.undefined)
     
     @scala.inline
     def setInitialMonth(value: js.Date): Self = this.set("initialMonth", value.asInstanceOf[js.Any])

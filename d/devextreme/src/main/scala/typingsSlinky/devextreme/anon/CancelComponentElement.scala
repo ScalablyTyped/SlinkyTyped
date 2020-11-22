@@ -1,7 +1,7 @@
 package typingsSlinky.devextreme.anon
 
 import typingsSlinky.devextreme.mod.DevExpress.core.dxElement
-import typingsSlinky.devextreme.mod.DevExpress.ui.dxContextMenu
+import typingsSlinky.devextreme.mod.DevExpress.ui.dxActionSheet
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +11,7 @@ trait CancelComponentElement extends js.Object {
   
   var cancel: js.UndefOr[Boolean] = js.native
   
-  var component: js.UndefOr[dxContextMenu] = js.native
+  var component: js.UndefOr[dxActionSheet] = js.native
   
   var element: js.UndefOr[dxElement] = js.native
   
@@ -47,7 +47,7 @@ object CancelComponentElement {
     def deleteCancel: Self = this.set("cancel", js.undefined)
     
     @scala.inline
-    def setComponent(value: dxContextMenu): Self = this.set("component", value.asInstanceOf[js.Any])
+    def setComponent(value: dxActionSheet): Self = this.set("component", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteComponent: Self = this.set("component", js.undefined)

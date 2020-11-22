@@ -9,7 +9,7 @@ trait SizeProps[TLength] extends js.Object {
   
   val size: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLength> */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLength> */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object SizeProps {
     }
     
     @scala.inline
+    def setSizeVarargs(value: js.Any*): Self = this.set("size", js.Array(value :_*))
+    
+    @scala.inline
     def setSize(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.HeightProperty<TLength> */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Height<TLength> */ _
         ]
     ): Self = this.set("size", value.asInstanceOf[js.Any])
     

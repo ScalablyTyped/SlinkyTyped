@@ -22,7 +22,7 @@ object babylonjsSceneAugmentingMod extends js.Object {
     
     /**
       * Creates or updates the octree used to boost selection (picking)
-      * @see http://doc.babylonjs.com/how_to/optimizing_your_scene_with_octrees
+      * @see https://doc.babylonjs.com/how_to/optimizing_your_scene_with_octrees
       * @param maxCapacity defines the maximum capacity per leaf
       * @param maxDepth defines the maximum depth of the octree
       * @returns an octree of AbstractMesh
@@ -34,7 +34,7 @@ object babylonjsSceneAugmentingMod extends js.Object {
     
     /**
       * Gets the octree used to boost mesh selection (picking)
-      * @see http://doc.babylonjs.com/how_to/optimizing_your_scene_with_octrees
+      * @see https://doc.babylonjs.com/how_to/optimizing_your_scene_with_octrees
       */
     var selectionOctree: Octree[AbstractMesh] = js.native
   }

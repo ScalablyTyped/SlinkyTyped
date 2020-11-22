@@ -1,5 +1,6 @@
 package typingsSlinky.pulumiAws.globalClusterMod
 
+import typingsSlinky.pulumiAws.outputMod.rds.GlobalClusterGlobalClusterMember
 import typingsSlinky.pulumiPulumi.mod.CustomResource
 import typingsSlinky.pulumiPulumi.outputMod.Input
 import typingsSlinky.pulumiPulumi.outputMod.Output_
@@ -37,10 +38,7 @@ class GlobalCluster protected () extends CustomResource {
     */
   val deletionProtection: Output_[js.UndefOr[Boolean]] = js.native
   
-  /**
-    * Name of the database engine to be used for this DB cluster. Valid values: `aurora`, `aurora-mysql`, `aurora-postgresql`. Defaults to `aurora`.
-    */
-  val engine: Output_[js.UndefOr[String]] = js.native
+  val engine: Output_[String] = js.native
   
   /**
     * Engine version of the Aurora global database.
@@ -49,19 +47,28 @@ class GlobalCluster protected () extends CustomResource {
   val engineVersion: Output_[String] = js.native
   
   /**
+    * Enable to remove DB Cluster members from Global Cluster on destroy. Required with `sourceDbClusterIdentifier`.
+    */
+  val forceDestroy: Output_[js.UndefOr[Boolean]] = js.native
+  
+  /**
     * The global cluster identifier.
     */
   val globalClusterIdentifier: Output_[String] = js.native
+  
+  /**
+    * Set of objects containing Global Cluster members.
+    */
+  val globalClusterMembers: Output_[js.Array[GlobalClusterGlobalClusterMember]] = js.native
   
   /**
     * AWS Region-unique, immutable identifier for the global database cluster. This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB cluster is accessed
     */
   val globalClusterResourceId: Output_[String] = js.native
   
-  /**
-    * Specifies whether the DB cluster is encrypted. The default is `false`.
-    */
-  val storageEncrypted: Output_[js.UndefOr[Boolean]] = js.native
+  val sourceDbClusterIdentifier: Output_[String] = js.native
+  
+  val storageEncrypted: Output_[Boolean] = js.native
 }
 /* static members */
 @JSImport("@pulumi/aws/rds/globalCluster", "GlobalCluster")

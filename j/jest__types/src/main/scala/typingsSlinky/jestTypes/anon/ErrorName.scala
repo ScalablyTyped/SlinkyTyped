@@ -1,6 +1,6 @@
 package typingsSlinky.jestTypes.anon
 
-import typingsSlinky.jestTypes.circusMod.Event
+import typingsSlinky.jestTypes.circusMod.AsyncEvent
 import typingsSlinky.jestTypes.circusMod.Exception
 import typingsSlinky.jestTypes.circusMod.TestEntry
 import typingsSlinky.jestTypes.jestTypesStrings.test_fn_failure
@@ -9,7 +9,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait ErrorName extends Event {
+trait ErrorName extends AsyncEvent {
   
   var error: Exception = js.native
   

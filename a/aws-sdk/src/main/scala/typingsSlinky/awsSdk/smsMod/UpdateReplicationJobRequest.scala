@@ -13,7 +13,7 @@ trait UpdateReplicationJobRequest extends js.Object {
   var description: js.UndefOr[Description] = js.native
   
   /**
-    * When true, the replication job produces encrypted AMIs . See also KmsKeyId below.
+    * When true, the replication job produces encrypted AMIs. For more information, KmsKeyId.
     */
   var encrypted: js.UndefOr[Encrypted] = js.native
   
@@ -23,7 +23,7 @@ trait UpdateReplicationJobRequest extends js.Object {
   var frequency: js.UndefOr[Frequency] = js.native
   
   /**
-    *  KMS key ID for replication jobs that produce encrypted AMIs. Can be any of the following:    KMS key ID   KMS key alias   ARN referring to KMS key ID   ARN referring to KMS key alias    If encrypted is true but a KMS key id is not specified, the customer's default KMS key for EBS is used. 
+    * The ID of the KMS key for replication jobs that produce encrypted AMIs. This value can be any of the following:   KMS key ID   KMS key alias   ARN referring to the KMS key ID   ARN referring to the KMS key alias   If encrypted is enabled but a KMS key ID is not specified, the customer's default KMS key for Amazon EBS is used.
     */
   var kmsKeyId: js.UndefOr[KmsKeyId] = js.native
   
@@ -38,12 +38,12 @@ trait UpdateReplicationJobRequest extends js.Object {
   var nextReplicationRunStartTime: js.UndefOr[js.Date] = js.native
   
   /**
-    * The maximum number of SMS-created AMIs to retain. The oldest will be deleted once the maximum number is reached and a new AMI is created.
+    * The maximum number of SMS-created AMIs to retain. The oldest is deleted after the maximum number is reached and a new AMI is created.
     */
   var numberOfRecentAmisToKeep: js.UndefOr[NumberOfRecentAmisToKeep] = js.native
   
   /**
-    * The identifier of the replication job.
+    * The ID of the replication job.
     */
   var replicationJobId: ReplicationJobId = js.native
   

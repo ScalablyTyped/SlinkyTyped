@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSExportAssignment
+import typingsSlinky.babelTraverse.babelTraverseStrings.DirectiveLiteral
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `140` extends js.Object {
   
-  var `type`: TSExportAssignment = js.native
+  var `type`: DirectiveLiteral = js.native
 }
 object `140` {
   
   @scala.inline
-  def apply(`type`: TSExportAssignment): `140` = {
+  def apply(`type`: DirectiveLiteral): `140` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`140`]
@@ -35,6 +35,6 @@ object `140` {
     }
     
     @scala.inline
-    def setType(value: TSExportAssignment): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: DirectiveLiteral): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

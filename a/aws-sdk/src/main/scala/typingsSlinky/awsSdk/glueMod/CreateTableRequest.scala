@@ -18,6 +18,11 @@ trait CreateTableRequest extends js.Object {
   var DatabaseName: NameString = js.native
   
   /**
+    * A list of partition indexes, PartitionIndex structures, to create in the table.
+    */
+  var PartitionIndexes: js.UndefOr[PartitionIndexList] = js.native
+  
+  /**
     * The TableInput object that defines the metadata table to create in the catalog.
     */
   var TableInput: typingsSlinky.awsSdk.glueMod.TableInput = js.native
@@ -56,5 +61,14 @@ object CreateTableRequest {
     
     @scala.inline
     def deleteCatalogId: Self = this.set("CatalogId", js.undefined)
+    
+    @scala.inline
+    def setPartitionIndexesVarargs(value: PartitionIndex*): Self = this.set("PartitionIndexes", js.Array(value :_*))
+    
+    @scala.inline
+    def setPartitionIndexes(value: PartitionIndexList): Self = this.set("PartitionIndexes", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deletePartitionIndexes: Self = this.set("PartitionIndexes", js.undefined)
   }
 }

@@ -9,7 +9,7 @@ trait AlignItemsProps extends js.Object {
   
   val alignItems: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignItemsProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignItems */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object AlignItemsProps {
     }
     
     @scala.inline
+    def setAlignItemsVarargs(value: js.Any*): Self = this.set("alignItems", js.Array(value :_*))
+    
+    @scala.inline
     def setAlignItems(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignItemsProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignItems */ _
         ]
     ): Self = this.set("alignItems", value.asInstanceOf[js.Any])
     

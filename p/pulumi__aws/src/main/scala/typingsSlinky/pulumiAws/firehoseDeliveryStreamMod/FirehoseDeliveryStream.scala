@@ -3,6 +3,7 @@ package typingsSlinky.pulumiAws.firehoseDeliveryStreamMod
 import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.pulumiAws.outputMod.kinesis.FirehoseDeliveryStreamElasticsearchConfiguration
 import typingsSlinky.pulumiAws.outputMod.kinesis.FirehoseDeliveryStreamExtendedS3Configuration
+import typingsSlinky.pulumiAws.outputMod.kinesis.FirehoseDeliveryStreamHttpEndpointConfiguration
 import typingsSlinky.pulumiAws.outputMod.kinesis.FirehoseDeliveryStreamKinesisSourceConfiguration
 import typingsSlinky.pulumiAws.outputMod.kinesis.FirehoseDeliveryStreamRedshiftConfiguration
 import typingsSlinky.pulumiAws.outputMod.kinesis.FirehoseDeliveryStreamS3Configuration
@@ -36,7 +37,7 @@ class FirehoseDeliveryStream protected () extends CustomResource {
   val arn: Output_[String] = js.native
   
   /**
-    * This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extendedS3` instead), `extendedS3`, `redshift`, `elasticsearch`, and `splunk`.
+    * This is the destination to where the data is delivered. The only options are `s3` (Deprecated, use `extendedS3` instead), `extendedS3`, `redshift`, `elasticsearch`, `splunk`, and `httpEndpoint`.
     */
   val destination: Output_[String] = js.native
   
@@ -51,6 +52,11 @@ class FirehoseDeliveryStream protected () extends CustomResource {
     * Enhanced configuration options for the s3 destination. More details are given below.
     */
   val extendedS3Configuration: Output_[js.UndefOr[FirehoseDeliveryStreamExtendedS3Configuration]] = js.native
+  
+  /**
+    * Configuration options if httpEndpoint is the destination. requires the user to also specify a `s3Configuration` block.  More details are given below.
+    */
+  val httpEndpointConfiguration: Output_[js.UndefOr[FirehoseDeliveryStreamHttpEndpointConfiguration]] = js.native
   
   /**
     * Allows the ability to specify the kinesis stream that is used as the source of the firehose delivery stream.
@@ -82,6 +88,9 @@ class FirehoseDeliveryStream protected () extends CustomResource {
     */
   val serverSideEncryption: Output_[js.UndefOr[FirehoseDeliveryStreamServerSideEncryption]] = js.native
   
+  /**
+    * Configuration options if splunk is the destination. More details are given below.
+    */
   val splunkConfiguration: Output_[js.UndefOr[FirehoseDeliveryStreamSplunkConfiguration]] = js.native
   
   /**

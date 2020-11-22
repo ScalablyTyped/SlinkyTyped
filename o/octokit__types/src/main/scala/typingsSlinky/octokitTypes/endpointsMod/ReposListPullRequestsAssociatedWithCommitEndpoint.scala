@@ -1,6 +1,6 @@
 package typingsSlinky.octokitTypes.endpointsMod
 
-import typingsSlinky.octokitTypes.anon.`18`
+import typingsSlinky.octokitTypes.anon.`17`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +11,7 @@ trait ReposListPullRequestsAssociatedWithCommitEndpoint extends js.Object {
   
   var commit_sha: String = js.native
   
-  var mediaType: `18` = js.native
+  var mediaType: `17` = js.native
   
   var owner: String = js.native
   
@@ -30,7 +30,7 @@ trait ReposListPullRequestsAssociatedWithCommitEndpoint extends js.Object {
 object ReposListPullRequestsAssociatedWithCommitEndpoint {
   
   @scala.inline
-  def apply(commit_sha: String, mediaType: `18`, owner: String, repo: String): ReposListPullRequestsAssociatedWithCommitEndpoint = {
+  def apply(commit_sha: String, mediaType: `17`, owner: String, repo: String): ReposListPullRequestsAssociatedWithCommitEndpoint = {
     val __obj = js.Dynamic.literal(commit_sha = commit_sha.asInstanceOf[js.Any], mediaType = mediaType.asInstanceOf[js.Any], owner = owner.asInstanceOf[js.Any], repo = repo.asInstanceOf[js.Any])
     __obj.asInstanceOf[ReposListPullRequestsAssociatedWithCommitEndpoint]
   }
@@ -54,7 +54,7 @@ object ReposListPullRequestsAssociatedWithCommitEndpoint {
     def setCommit_sha(value: String): Self = this.set("commit_sha", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setMediaType(value: `18`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
+    def setMediaType(value: `17`): Self = this.set("mediaType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setOwner(value: String): Self = this.set("owner", value.asInstanceOf[js.Any])

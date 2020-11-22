@@ -140,6 +140,13 @@ class jsPlumbInstance () extends js.Object {
     element: js.UndefOr[String | Element | Selector | js.Array[_]]
   ): Selection = js.native
   
+  /**
+    * Gets the current rotation, if any, for the element with the given id. If no specific rotation has been applied this method will return 0, never null or undefined.
+    * @param elementId ID of the element to retrieve rotation for.
+    * @returns The element's current rotation, 0 if no rotation applied.
+    */
+  def getRotation(elementId: String): Double = js.native
+  
   def getScope(Element: String): String = js.native
   def getScope(Element: Element): String = js.native
   
@@ -266,8 +273,19 @@ class jsPlumbInstance () extends js.Object {
   
   def restoreDefaults(): jsPlumbInstance = js.native
   
-  def revalidate(el: Selector | String): Unit = js.native
-  def revalidate(el: Element): Unit = js.native
+  def revalidate(el: String): RedrawResult = js.native
+  def revalidate(el: Element): RedrawResult = js.native
+  
+  /**
+    * Rotates the element with the given id by the given amount in degrees. This method sets two properties on the element's style: `transform:rotate(<amount>deg)` and `transform-origin:center center`.
+    * Transform origins other than `center center` are not supported. To reset the rotation for some element, call `rotate(elId, 0)`.
+    * @param elId
+    * @param amountInDegrees
+    * @param doNotRedraw
+    * @returns a RedrawResult, which is empty if no redraw was requested (or an element with the given id is not being managed)
+    */
+  def rotate(elId: String, amountInDegrees: Double): RedrawResult = js.native
+  def rotate(elId: String, amountInDegrees: Double, doNotRedraw: Boolean): RedrawResult = js.native
   
   def select(): Each = js.native
   def select(

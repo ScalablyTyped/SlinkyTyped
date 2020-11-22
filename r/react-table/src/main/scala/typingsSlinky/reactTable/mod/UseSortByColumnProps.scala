@@ -20,5 +20,8 @@ trait UseSortByColumnProps[D /* <: js.Object */] extends js.Object {
   
   var sortedIndex: Double = js.native
   
+  def toggleSortBy(): Unit = js.native
+  def toggleSortBy(descending: js.UndefOr[scala.Nothing], multi: Boolean): Unit = js.native
+  def toggleSortBy(descending: Boolean): Unit = js.native
   def toggleSortBy(descending: Boolean, multi: Boolean): Unit = js.native
 }

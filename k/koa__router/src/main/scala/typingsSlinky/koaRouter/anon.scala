@@ -506,7 +506,7 @@ object anon extends js.Object {
       *    this.set('Accept', 'application/json');
       *    this.set({ Accept: 'text/plain', 'X-API-Key': 'tobi' });
       */
-    def set(field: StringDictionary[String]): Unit = js.native
+    def set(field: StringDictionary[String | js.Array[String]]): Unit = js.native
     
     /**
       * Return the request socket.

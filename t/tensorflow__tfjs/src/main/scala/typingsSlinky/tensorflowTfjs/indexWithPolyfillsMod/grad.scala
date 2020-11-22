@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjs.indexWithPolyfillsMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -41,8 +41,9 @@ object grad extends js.Object {
     * ```
     *
     * @param f The function f(x), to compute gradient for.
+    *
+    * @doc {heading: 'Training', subheading: 'Gradients'}
     */
-  /** @doc {heading: 'Training', subheading: 'Gradients'} */
   def apply(
     f: js.Function1[
       /* x */ Tensor[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank], 

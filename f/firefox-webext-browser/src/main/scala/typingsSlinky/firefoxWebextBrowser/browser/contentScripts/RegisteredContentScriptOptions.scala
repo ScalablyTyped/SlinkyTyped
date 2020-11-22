@@ -13,8 +13,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RegisteredContentScriptOptions extends js.Object {
   
   /**
-    * If allFrames is `true`, implies that the JavaScript or CSS should be injected into all frames of current
-    * page. By default, it's `false` and is only injected into the top frame.
+    * If allFrames is `true`, implies that the JavaScript or CSS should be injected into all frames of current page. By default, it's `false` and is only injected into the top frame.
     */
   var allFrames: js.UndefOr[Boolean] = js.native
   
@@ -32,9 +31,7 @@ trait RegisteredContentScriptOptions extends js.Object {
   var js_ : js.UndefOr[js.Array[ExtensionFileOrCode]] = js.native
   
   /**
-    * If matchAboutBlank is true, then the code is also injected in about:blank and about:srcdoc frames if your
-    * extension has access to its parent document. Code cannot be inserted in top-level about:-frames. By default
-    * it is `false`.
+    * If matchAboutBlank is true, then the code is also injected in about:blank and about:srcdoc frames if your extension has access to its parent document. Code cannot be inserted in top-level about:-frames. By default it is `false`.
     */
   var matchAboutBlank: js.UndefOr[Boolean] = js.native
   

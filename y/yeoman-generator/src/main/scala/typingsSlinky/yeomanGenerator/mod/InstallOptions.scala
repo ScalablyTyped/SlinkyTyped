@@ -4,26 +4,29 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
+/**
+  * Provides options for performing installations.
+  */
 @js.native
 trait InstallOptions extends js.Object {
   
   /**
-    * whether to run `bower install` or can be options to pass to `dargs` as arguments
+    * A value indicating whether to run `bower install` or options to pass to `dargs` as arguments.
     */
   var bower: js.UndefOr[Boolean | js.Object] = js.native
   
   /**
-    * whether to run `npm install` or can be options to pass to `dargs` as arguments
+    * A value indicating whether to run `npm install` or options to pass to `dargs` as arguments.
     */
   var npm: js.UndefOr[Boolean | js.Object] = js.native
   
   /**
-    * whether to log the used commands
+    * A value indicating whether messages should be logged.
     */
   var skipMessage: js.UndefOr[Boolean] = js.native
   
   /**
-    * whether to run `yarn install` or can be options to pass to `dargs` as arguments
+    * A value indicating whether to run `yarn install` or options to pass to `dargs` as arguments.
     */
   var yarn: js.UndefOr[Boolean | js.Object] = js.native
 }

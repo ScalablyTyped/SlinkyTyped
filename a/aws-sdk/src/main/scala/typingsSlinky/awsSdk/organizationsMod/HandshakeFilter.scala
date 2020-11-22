@@ -13,7 +13,7 @@ trait HandshakeFilter extends js.Object {
   var ActionType: js.UndefOr[typingsSlinky.awsSdk.organizationsMod.ActionType] = js.native
   
   /**
-    * Specifies the parent handshake. Only used for handshake types that are a child of another type. If you specify ParentHandshakeId, you cannot also specify ActionType. The regex pattern for handshake ID string requires "h-" followed by from 8 to 32 lower-case letters or digits.
+    * Specifies the parent handshake. Only used for handshake types that are a child of another type. If you specify ParentHandshakeId, you cannot also specify ActionType. The regex pattern for handshake ID string requires "h-" followed by from 8 to 32 lowercase letters or digits.
     */
   var ParentHandshakeId: js.UndefOr[HandshakeId] = js.native
 }

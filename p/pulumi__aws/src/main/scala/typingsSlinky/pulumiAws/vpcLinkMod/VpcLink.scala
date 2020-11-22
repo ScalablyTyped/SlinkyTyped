@@ -29,7 +29,7 @@ class VpcLink protected () extends CustomResource {
   val arn: Output_[String] = js.native
   
   /**
-    * The name of the VPC Link.
+    * The name of the VPC Link. Must be between 1 and 128 characters in length.
     */
   val name: Output_[String] = js.native
   

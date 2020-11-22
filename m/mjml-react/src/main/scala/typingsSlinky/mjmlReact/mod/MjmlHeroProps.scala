@@ -1,8 +1,8 @@
 package typingsSlinky.mjmlReact.mod
 
-import typingsSlinky.csstype.mod.Property.BackgroundColor
-import typingsSlinky.csstype.mod.Property.BackgroundPosition
-import typingsSlinky.csstype.mod.Property.VerticalAlign
+import typingsSlinky.csstype.mod.BackgroundColorProperty
+import typingsSlinky.csstype.mod.BackgroundPositionProperty
+import typingsSlinky.csstype.mod.VerticalAlignProperty
 import typingsSlinky.mjmlReact.mjmlReactStrings.`fixed-height`
 import typingsSlinky.mjmlReact.mjmlReactStrings.`fluid-height`
 import scala.scalajs.js
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait MjmlHeroProps extends js.Object {
   
-  var backgroundColor: js.UndefOr[BackgroundColor] = js.native
+  var backgroundColor: js.UndefOr[BackgroundColorProperty] = js.native
   
   var backgroundHeight: js.UndefOr[String] = js.native
   
-  var backgroundPosition: js.UndefOr[BackgroundPosition[String | Double]] = js.native
+  var backgroundPosition: js.UndefOr[BackgroundPositionProperty[String | Double]] = js.native
   
   var backgroundUrl: js.UndefOr[String] = js.native
   
@@ -26,7 +26,7 @@ trait MjmlHeroProps extends js.Object {
   
   var mode: js.UndefOr[`fluid-height` | `fixed-height`] = js.native
   
-  var verticalAlign: js.UndefOr[VerticalAlign[String | Double]] = js.native
+  var verticalAlign: js.UndefOr[VerticalAlignProperty[String | Double]] = js.native
   
   var width: js.UndefOr[String | Double] = js.native
 }
@@ -54,7 +54,7 @@ object MjmlHeroProps {
     }
     
     @scala.inline
-    def setBackgroundColor(value: BackgroundColor): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
+    def setBackgroundColor(value: BackgroundColorProperty): Self = this.set("backgroundColor", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackgroundColor: Self = this.set("backgroundColor", js.undefined)
@@ -66,7 +66,7 @@ object MjmlHeroProps {
     def deleteBackgroundHeight: Self = this.set("backgroundHeight", js.undefined)
     
     @scala.inline
-    def setBackgroundPosition(value: BackgroundPosition[String | Double]): Self = this.set("backgroundPosition", value.asInstanceOf[js.Any])
+    def setBackgroundPosition(value: BackgroundPositionProperty[String | Double]): Self = this.set("backgroundPosition", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBackgroundPosition: Self = this.set("backgroundPosition", js.undefined)
@@ -96,7 +96,7 @@ object MjmlHeroProps {
     def deleteMode: Self = this.set("mode", js.undefined)
     
     @scala.inline
-    def setVerticalAlign(value: VerticalAlign[String | Double]): Self = this.set("verticalAlign", value.asInstanceOf[js.Any])
+    def setVerticalAlign(value: VerticalAlignProperty[String | Double]): Self = this.set("verticalAlign", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVerticalAlign: Self = this.set("verticalAlign", js.undefined)

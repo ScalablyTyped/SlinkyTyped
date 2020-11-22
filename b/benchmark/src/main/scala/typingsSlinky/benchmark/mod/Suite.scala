@@ -28,6 +28,8 @@ class Suite () extends js.Object {
   
   def clone(options: Options): Suite = js.native
   
+  def each(callback: js.Function): Suite = js.native
+  
   def emit(`type`: String): js.Any = js.native
   def emit(`type`: js.Object): js.Any = js.native
   
@@ -38,8 +40,6 @@ class Suite () extends js.Object {
   
   def indexOf(value: js.Any): Double = js.native
   
-  def invoke(name: String, args: js.Any*): js.Array[_] = js.native
-  
   def join(): String = js.native
   def join(separator: String): String = js.native
   
@@ -47,6 +47,7 @@ class Suite () extends js.Object {
   
   def listeners(`type`: String): js.Array[js.Function] = js.native
   
+  def map(callback: String): js.Array[_] = js.native
   def map(callback: js.Function): js.Array[_] = js.native
   
   def off(): Suite = js.native
@@ -60,8 +61,6 @@ class Suite () extends js.Object {
   def on(`type`: String): Suite = js.native
   def on(`type`: String, callback: js.Function): Suite = js.native
   def on(types: js.Array[String]): Suite = js.native
-  
-  def pluck(property: String): js.Array[_] = js.native
   
   def pop(): js.Function = js.native
   
@@ -82,6 +81,11 @@ class Suite () extends js.Object {
   
   def slice(start: Double, deleteCount: Double, values: js.Any*): js.Array[_] = js.native
   def slice(start: Double, end: Double): js.Array[_] = js.native
+  
+  def sort(compareFn: js.Function2[/* a */ js.Any, /* b */ js.Any, Double]): js.Array[_] = js.native
+  
+  def splice(start: Double): js.Array[_] = js.native
+  def splice(start: Double, deleteCount: Double): js.Array[_] = js.native
   
   def unshift(benchmark: Benchmark): Double = js.native
 }

@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-is
 
-Typings are for version 16.7
+Typings are for version 17.0
 
 ## Library description:
 Brand checking of React Elements.

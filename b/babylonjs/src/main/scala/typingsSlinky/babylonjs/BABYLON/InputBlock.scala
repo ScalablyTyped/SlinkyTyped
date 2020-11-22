@@ -19,6 +19,9 @@ trait InputBlock extends NodeMaterialBlock {
   
   var _mode: js.Any = js.native
   
+  /** @hidden */
+  def _noContextSwitch: Boolean = js.native
+  
   var _storedValue: js.Any = js.native
   
   /** @hidden */
@@ -49,6 +52,12 @@ trait InputBlock extends NodeMaterialBlock {
     */
   def associatedVariableName: String = js.native
   def associatedVariableName_=(value: String): Unit = js.native
+  
+  /** Gets or sets a boolean indicating if content needs to be converted to gamma space (for color3/4 only) */
+  var convertToGammaSpace: Boolean = js.native
+  
+  /** Gets or sets a boolean indicating if content needs to be converted to linear space (for color3/4 only) */
+  var convertToLinearSpace: Boolean = js.native
   
   /** Gets or sets the group to use to display this block in the Inspector */
   var groupInInspector: String = js.native
@@ -154,7 +163,4 @@ trait InputBlock extends NodeMaterialBlock {
   def valueCallback_=(value: js.Function0[_]): Unit = js.native
   
   def value_=(value: js.Any): Unit = js.native
-  
-  /** Gets or sets a boolean indicating that this input can be edited in the Inspector (false by default) */
-  var visibleInInspector: Boolean = js.native
 }

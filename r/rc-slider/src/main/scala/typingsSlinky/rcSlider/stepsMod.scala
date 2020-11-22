@@ -6,7 +6,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("rc-slider/es/common/Steps", JSImport.Namespace)
+@JSImport("rc-slider/lib/common/Steps", JSImport.Namespace)
 @js.native
 object stepsMod extends js.Object {
   

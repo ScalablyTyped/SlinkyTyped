@@ -1,7 +1,7 @@
 package typingsSlinky.node.dnsMod
 
-import typingsSlinky.node.anon.FnCall
 import typingsSlinky.node.anon.FnCallHostnameOptions
+import typingsSlinky.node.anon.FnCallHostnameRrtype
 import typingsSlinky.node.anon.Hostname
 import typingsSlinky.node.nodeStrings.A
 import typingsSlinky.node.nodeStrings.AAAA
@@ -165,7 +165,7 @@ object promises extends js.Object {
     @JSName("resolve")
     def resolve_NS(hostname: String, rrtype: NS): js.Promise[js.Array[String]] = js.native
     @JSName("resolve")
-    var resolve_Original: FnCall = js.native
+    var resolve_Original: FnCallHostnameRrtype = js.native
     @JSName("resolve")
     def resolve_PTR(hostname: String, rrtype: PTR): js.Promise[js.Array[String]] = js.native
     @JSName("resolve")

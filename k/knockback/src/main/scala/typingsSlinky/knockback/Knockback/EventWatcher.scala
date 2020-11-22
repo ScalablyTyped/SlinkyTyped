@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EventWatcher extends Destroyable {
   
-  def emitter(): Model[_, ModelSetOptions] = js.native
-  def emitter(newEmitter: Model[_, ModelSetOptions]): js.Any = js.native
+  def emitter(): Model[_, ModelSetOptions, js.Object] = js.native
+  def emitter(newEmitter: Model[_, ModelSetOptions, js.Object]): js.Any = js.native
   
   def registerCallbacks(obj: js.Any, callback_info: js.Any): js.Any = js.native
   

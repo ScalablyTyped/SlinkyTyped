@@ -10,6 +10,8 @@ package object mod {
   
   type Coordinate = js.Array[scala.Double]
   
+  type Distance = scala.Double
+  
   type Duration = scala.Double
   
   type Hint = java.lang.String

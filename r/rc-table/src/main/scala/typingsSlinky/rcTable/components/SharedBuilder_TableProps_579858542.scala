@@ -16,6 +16,7 @@ import typingsSlinky.rcTable.interfaceMod.RenderExpandIconProps
 import typingsSlinky.rcTable.interfaceMod.RowClassName
 import typingsSlinky.rcTable.interfaceMod.TableComponents
 import typingsSlinky.rcTable.interfaceMod.TableLayout
+import typingsSlinky.rcTable.interfaceMod.TableSticky
 import typingsSlinky.rcTable.rcTableStrings.ltr
 import typingsSlinky.rcTable.rcTableStrings.rtl
 import typingsSlinky.react.mod.CSSProperties
@@ -146,6 +147,9 @@ class SharedBuilder_TableProps_579858542[RecordType /* <: DefaultRecordType */] 
   
   @scala.inline
   def showHeader(value: Boolean): this.type = set("showHeader", value.asInstanceOf[js.Any])
+  
+  @scala.inline
+  def sticky(value: Boolean | TableSticky): this.type = set("sticky", value.asInstanceOf[js.Any])
   
   @scala.inline
   def style(value: CSSProperties): this.type = set("style", value.asInstanceOf[js.Any])

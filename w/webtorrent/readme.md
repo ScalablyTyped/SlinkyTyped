@@ -1,7 +1,7 @@
 
 # Scala.js typings for webtorrent
 
-Typings are for version 0.107
+Typings are for version 0.109
 
 ## Library description:
 Streaming torrent client

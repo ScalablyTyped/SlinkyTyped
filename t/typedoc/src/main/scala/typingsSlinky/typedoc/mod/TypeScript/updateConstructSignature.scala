@@ -24,6 +24,7 @@ object updateConstructSignature extends js.Object {
     parameters: NodeArray[ParameterDeclaration],
     `type`: TypeNode
   ): ConstructSignatureDeclaration = js.native
+  /** @deprecated Use `factory.updateConstructSignature` or the factory supplied by your transformation context instead. */
   def apply(
     node: ConstructSignatureDeclaration,
     typeParameters: NodeArray[TypeParameterDeclaration],

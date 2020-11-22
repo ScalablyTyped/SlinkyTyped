@@ -33,7 +33,7 @@ trait NamespaceInfoV2 extends js.Object {
   var Name: js.UndefOr[Namespace] = js.native
   
   /**
-    * An error that occured when the namespace was created.
+    * An error that occurred when the namespace was created.
     */
   var NamespaceError: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.NamespaceError] = js.native
 }

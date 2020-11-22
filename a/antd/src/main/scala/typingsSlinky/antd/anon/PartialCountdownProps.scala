@@ -27,6 +27,8 @@ trait PartialCountdownProps extends js.Object {
   
   var groupSeparator: js.UndefOr[String] = js.native
   
+  var loading: js.UndefOr[Boolean] = js.native
+  
   var onFinish: js.UndefOr[js.Function0[Unit]] = js.native
   
   var onMouseEnter: js.UndefOr[MouseEventHandler[HTMLDivElement]] = js.native
@@ -106,6 +108,12 @@ object PartialCountdownProps {
     
     @scala.inline
     def deleteGroupSeparator: Self = this.set("groupSeparator", js.undefined)
+    
+    @scala.inline
+    def setLoading(value: Boolean): Self = this.set("loading", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLoading: Self = this.set("loading", js.undefined)
     
     @scala.inline
     def setOnFinish(value: () => Unit): Self = this.set("onFinish", js.Any.fromFunction0(value))

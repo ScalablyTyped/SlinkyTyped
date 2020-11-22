@@ -1,6 +1,8 @@
 package typingsSlinky.hexRgb.mod
 
+import typingsSlinky.hexRgb.hexRgbStrings.`object`
 import typingsSlinky.hexRgb.hexRgbStrings.array
+import typingsSlinky.hexRgb.hexRgbStrings.css
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +10,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Options extends js.Object {
   
-  val format: js.UndefOr[array] = js.native
+  /**
+  		The RGB output format.
+  		Note that when using the `css` format, the value of the alpha channel is rounded to two decimal places.
+  		@default 'object'
+  		*/
+  val format: js.UndefOr[`object` | array | css] = js.native
 }
 object Options {
   
@@ -34,7 +41,7 @@ object Options {
     }
     
     @scala.inline
-    def setFormat(value: array): Self = this.set("format", value.asInstanceOf[js.Any])
+    def setFormat(value: `object` | array | css): Self = this.set("format", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)

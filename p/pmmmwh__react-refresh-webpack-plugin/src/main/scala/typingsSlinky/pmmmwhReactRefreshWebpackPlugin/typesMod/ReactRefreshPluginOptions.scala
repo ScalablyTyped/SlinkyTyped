@@ -31,11 +31,6 @@ trait ReactRefreshPluginOptions extends js.Object {
     * Modifies how the error overlay integration works in the plugin.
     */
   var overlay: js.UndefOr[Boolean | ErrorOverlayOptions] = js.native
-  
-  /**
-    * Uses a custom SocketJS implementation for older versions of webpack-dev-server.
-    */
-  var useLegacyWDSSockets: js.UndefOr[Boolean] = js.native
 }
 object ReactRefreshPluginOptions {
   
@@ -101,11 +96,5 @@ object ReactRefreshPluginOptions {
     
     @scala.inline
     def deleteOverlay: Self = this.set("overlay", js.undefined)
-    
-    @scala.inline
-    def setUseLegacyWDSSockets(value: Boolean): Self = this.set("useLegacyWDSSockets", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteUseLegacyWDSSockets: Self = this.set("useLegacyWDSSockets", js.undefined)
   }
 }

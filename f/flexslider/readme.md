@@ -1,6 +1,7 @@
 
 # Scala.js typings for flexslider
 
+Typings are for version 2.7
 
 ## Library description:
 An awesome, fully responsive jQuery slider toolkit.

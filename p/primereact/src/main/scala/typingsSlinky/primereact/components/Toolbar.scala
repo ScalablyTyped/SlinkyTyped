@@ -25,6 +25,12 @@ object Toolbar {
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def left(value: /* props */ js.Object => _): this.type = set("left", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def right(value: /* props */ js.Object => _): this.type = set("right", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def style(value: js.Object): this.type = set("style", value.asInstanceOf[js.Any])
   }
   

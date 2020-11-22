@@ -16,11 +16,11 @@ object default extends js.Object {
   
   var defaultProps: DateTypeProps = js.native
   
-  def deserialize(value: Double): Double = js.native
+  def deserialize(value: DateTypeKnobValue): Double = js.native
   
   def getDerivedStateFromProps(): Valid = js.native
   
   var propTypes: KnobOnChange = js.native
   
-  def serialize(value: Double): Double = js.native
+  def serialize(value: DateTypeKnobValue): Double = js.native
 }

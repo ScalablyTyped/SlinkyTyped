@@ -24,7 +24,7 @@ class Manager protected () extends js.Object {
   def each(callback: js.Function1[/* control */ IControl, Unit]): this.type = js.native
   def each(callback: js.Function1[/* control */ IControl, Unit], context: js.Object): this.type = js.native
   
-  var events: typingsSlinky.yandexMaps.mod.event.Manager = js.native
+  var events: typingsSlinky.yandexMaps.mod.event.Manager[js.Object] = js.native
   
   def get(index: String): IControl | Null = js.native
   def get(index: Double): IControl | Null = js.native

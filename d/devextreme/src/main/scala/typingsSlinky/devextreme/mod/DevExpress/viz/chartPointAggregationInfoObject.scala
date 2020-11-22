@@ -7,16 +7,24 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait chartPointAggregationInfoObject extends js.Object {
   
-  /** @name chartPointAggregationInfoObject.aggregationInterval */
+  /**
+    * [descr:chartPointAggregationInfoObject.aggregationInterval]
+    */
   var aggregationInterval: js.UndefOr[js.Any] = js.native
   
-  /** @name chartPointAggregationInfoObject.data */
+  /**
+    * [descr:chartPointAggregationInfoObject.data]
+    */
   var data: js.UndefOr[js.Array[_]] = js.native
   
-  /** @name chartPointAggregationInfoObject.intervalEnd */
+  /**
+    * [descr:chartPointAggregationInfoObject.intervalEnd]
+    */
   var intervalEnd: js.UndefOr[js.Any] = js.native
   
-  /** @name chartPointAggregationInfoObject.intervalStart */
+  /**
+    * [descr:chartPointAggregationInfoObject.intervalStart]
+    */
   var intervalStart: js.UndefOr[js.Any] = js.native
 }
 object chartPointAggregationInfoObject {

@@ -1,7 +1,7 @@
 package typingsSlinky.tensorflowTfjsLayers.recurrentMod
 
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor
 import typingsSlinky.tensorflowTfjsLayers.anon.Constants
 import typingsSlinky.tensorflowTfjsLayers.topologyMod.SymbolicTensor
 import scala.scalajs.js

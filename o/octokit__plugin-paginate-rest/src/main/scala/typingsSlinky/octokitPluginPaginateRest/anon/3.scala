@@ -1,6 +1,6 @@
 package typingsSlinky.octokitPluginPaginateRest.anon
 
-import typingsSlinky.octokitTypes.anon.Groupdescription
+import typingsSlinky.octokitTypes.anon.Allowmergecommit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `3` extends js.Object {
   
-  var data: js.Array[Groupdescription] = js.native
+  var data: js.Array[Allowmergecommit] = js.native
 }
 object `3` {
   
   @scala.inline
-  def apply(data: js.Array[Groupdescription]): `3` = {
+  def apply(data: js.Array[Allowmergecommit]): `3` = {
     val __obj = js.Dynamic.literal(data = data.asInstanceOf[js.Any])
     __obj.asInstanceOf[`3`]
   }
@@ -34,9 +34,9 @@ object `3` {
     }
     
     @scala.inline
-    def setDataVarargs(value: Groupdescription*): Self = this.set("data", js.Array(value :_*))
+    def setDataVarargs(value: Allowmergecommit*): Self = this.set("data", js.Array(value :_*))
     
     @scala.inline
-    def setData(value: js.Array[Groupdescription]): Self = this.set("data", value.asInstanceOf[js.Any])
+    def setData(value: js.Array[Allowmergecommit]): Self = this.set("data", value.asInstanceOf[js.Any])
   }
 }

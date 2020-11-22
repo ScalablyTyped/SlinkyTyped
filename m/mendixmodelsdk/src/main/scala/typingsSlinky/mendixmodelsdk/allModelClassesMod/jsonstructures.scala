@@ -1,11 +1,13 @@
 package typingsSlinky.mendixmodelsdk.allModelClassesMod
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.mappingsMod.mappings.Element
 import typingsSlinky.mendixmodelsdk.projectsMod.projects.IFolderBase
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -28,8 +30,8 @@ object jsonstructures extends js.Object {
       structureTypeName: String,
       id: String,
       isPartial: Boolean,
-      unit: ModelUnit,
-      container: AbstractElement
+      unit: ModelUnit[IAbstractModel],
+      container: AbstractElement[IAbstractModel, Container]
     ) = this()
   }
   /* static members */
@@ -69,7 +71,7 @@ object jsonstructures extends js.Object {
   }
   
   /**
-    * See: {@link https://docs.mendix.com/refguide7/json-structures relevant section in reference guide}
+    * See: {@link https://docs.mendix.com/refguide/json-structures relevant section in reference guide}
     *
     * In version 6.6.0: removed experimental
     * In version 6.2.0: introduced

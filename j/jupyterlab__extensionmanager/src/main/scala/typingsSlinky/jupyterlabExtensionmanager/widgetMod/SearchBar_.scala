@@ -9,16 +9,16 @@ import typingsSlinky.jupyterlabExtensionmanager.widgetMod.SearchBar.IState
 import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
+import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @JSImport("@jupyterlab/extensionmanager/lib/widget", "SearchBar")
 @js.native
 class SearchBar_ protected ()
   extends Component[IProperties, IState, js.Any] {
   def this(props: IProperties) = this()
+  
   /**
     * Handler for search input changes.
     */
   def handleChange(e: SyntheticEvent[EventTarget with HTMLElement, Event]): Unit = js.native
 }
-

@@ -1,5 +1,6 @@
 package typingsSlinky.three.materialMod
 
+import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.three.constantsMod.Blending
 import typingsSlinky.three.constantsMod.BlendingDstFactor
 import typingsSlinky.three.constantsMod.BlendingEquation
@@ -25,61 +26,73 @@ class Material () extends EventDispatcher {
   
   /**
   	 * Sets the alpha value to be used when running an alpha test. Default is 0.
+  	 * @default 0
   	 */
   var alphaTest: Double = js.native
   
   /**
   	 * Blending destination. It's one of the blending mode constants defined in Three.js. Default is {@link OneMinusSrcAlphaFactor}.
+  	 * @default THREE.OneMinusSrcAlphaFactor
   	 */
   var blendDst: BlendingDstFactor = js.native
   
   /**
   	 * The tranparency of the .blendDst. Default is null.
+  	 * @default null
   	 */
   var blendDstAlpha: Double | Null = js.native
   
   /**
   	 * Blending equation to use when applying blending. It's one of the constants defined in Three.js. Default is {@link AddEquation}.
+  	 * @default THREE.AddEquation
   	 */
   var blendEquation: BlendingEquation = js.native
   
   /**
   	 * The tranparency of the .blendEquation. Default is null.
+  	 * @default null
   	 */
   var blendEquationAlpha: Double | Null = js.native
   
   /**
   	 * Blending source. It's one of the blending mode constants defined in Three.js. Default is {@link SrcAlphaFactor}.
+  	 * @default THREE.SrcAlphaFactor
   	 */
   var blendSrc: BlendingSrcFactor | BlendingDstFactor = js.native
   
   /**
   	 * The tranparency of the .blendSrc. Default is null.
+  	 * @default null
   	 */
   var blendSrcAlpha: Double | Null = js.native
   
   /**
   	 * Which blending to use when displaying objects with this material. Default is {@link NormalBlending}.
+  	 * @default THREE.NormalBlending
   	 */
   var blending: Blending = js.native
   
   /**
   	 * Changes the behavior of clipping planes so that only their intersection is clipped, rather than their union. Default is false.
+  	 * @default false
   	 */
   var clipIntersection: Boolean = js.native
   
   /**
   	 * Defines whether to clip shadows according to the clipping planes specified on this material. Default is false.
+  	 * @default false
   	 */
   var clipShadows: Boolean = js.native
   
   /**
   	 * User-defined clipping planes specified as THREE.Plane objects in world space. These planes apply to the objects this material is attached to. Points in space whose signed distance to the plane is negative are clipped (not rendered). See the WebGL / clipping /intersection example. Default is null.
+  	 * @default null
   	 */
   var clippingPlanes: js.Any = js.native
   
   /**
   	 * Whether to render the material's color. This can be used in conjunction with a mesh's .renderOrder property to create invisible objects that occlude other objects. Default is true.
+  	 * @default true
   	 */
   var colorWrite: Boolean = js.native
   
@@ -97,22 +110,26 @@ class Material () extends EventDispatcher {
   /**
   	 * Custom defines to be injected into the shader. These are passed in form of an object literal, with key/value pairs. { MY_CUSTOM_DEFINE: '' , PI2: Math.PI * 2 }.
   	 * The pairs are defined in both vertex and fragment shaders. Default is undefined.
+  	 * @default undefined
   	 */
-  var defines: js.Any = js.native
+  var defines: js.UndefOr[StringDictionary[js.Any]] = js.native
   
   /**
   	 * Which depth function to use. Default is {@link LessEqualDepth}. See the depth mode constants for all possible values.
+  	 * @default THREE.LessEqualDepth
   	 */
   var depthFunc: DepthModes = js.native
   
   /**
   	 * Whether to have depth test enabled when rendering this material. Default is true.
+  	 * @default true
   	 */
   var depthTest: Boolean = js.native
   
   /**
   	 * Whether rendering this material has any effect on the depth buffer. Default is true.
   	 * When drawing 2D overlays it can be useful to disable the depth writing in order to layer several things together without creating z-index artifacts.
+  	 * @default true
   	 */
   var depthWrite: Boolean = js.native
   
@@ -123,16 +140,19 @@ class Material () extends EventDispatcher {
   
   /**
   	 * Whether to apply dithering to the color to remove the appearance of banding. Default is false.
+  	 * @default false
   	 */
   var dithering: Boolean = js.native
   
   /**
   	 * Define whether the material is rendered with flat shading. Default is false.
+  	 * @default false
   	 */
   var flatShading: Boolean = js.native
   
   /**
   	 * Whether the material is affected by fog. Default is true.
+  	 * @default fog
   	 */
   var fog: Boolean = js.native
   
@@ -149,12 +169,14 @@ class Material () extends EventDispatcher {
   
   /**
   	 * Material name. Default is an empty string.
+  	 * @default ''
   	 */
   var name: String = js.native
   
   /**
   	 * Specifies that the material needs to be updated, WebGL wise. Set it to true if you made changes that need to be reflected in WebGL.
   	 * This property is automatically set to true when instancing a new material.
+  	 * @default false
   	 */
   var needsUpdate: Boolean = js.native
   
@@ -167,31 +189,37 @@ class Material () extends EventDispatcher {
   
   /**
   	 * Opacity. Default is 1.
+  	 * @default 1
   	 */
   var opacity: Double = js.native
   
   /**
   	 * Whether to use polygon offset. Default is false. This corresponds to the POLYGON_OFFSET_FILL WebGL feature.
+  	 * @default false
   	 */
   var polygonOffset: Boolean = js.native
   
   /**
   	 * Sets the polygon offset factor. Default is 0.
+  	 * @default 0
   	 */
   var polygonOffsetFactor: Double = js.native
   
   /**
   	 * Sets the polygon offset units. Default is 0.
+  	 * @default 0
   	 */
   var polygonOffsetUnits: Double = js.native
   
   /**
   	 * Override the renderer's default precision for this material. Can be "highp", "mediump" or "lowp". Defaults is null.
+  	 * @default null
   	 */
   var precision: highp | mediump | lowp | Null = js.native
   
   /**
   	 * Whether to premultiply the alpha (transparency) value. See WebGL / Materials / Transparency for an example of the difference. Default is false.
+  	 * @default false
   	 */
   var premultipliedAlpha: Boolean = js.native
   
@@ -204,47 +232,56 @@ class Material () extends EventDispatcher {
   /**
   	 * Defines which of the face sides will cast shadows. Default is *null*.
   	 * If *null*, the value is opposite that of side, above.
+  	 * @default null
   	 */
   var shadowSide: Side = js.native
   
   /**
   	 * Defines which of the face sides will be rendered - front, back or both.
   	 * Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSide.
+  	 * @default THREE.FrontSide
   	 */
   var side: Side = js.native
   
   /**
     * Which stencil operation to perform when the comparison function returns false. Default is {@link KeepStencilOp}. See the stencil operation constants for all possible values.
+  	 * @default THREE.KeepStencilOp
     */
   var stencilFail: StencilOp = js.native
   
   /**
     * The stencil comparison function to use. Default is {@link AlwaysStencilFunc}. See stencil operation constants for all possible values.
+  	 * @default THREE.AlwaysStencilFunc
     */
   var stencilFunc: StencilFunc = js.native
   
   /**
     * The bit mask to use when comparing against or writing to the stencil buffer. Default is *0xFF*.
+  	 * @default 0xff
     */
   var stencilMask: Double = js.native
   
   /**
     * The value to use when performing stencil comparisons or stencil operations. Default is *0*.
+  	 * @default 0
     */
   var stencilRef: Double = js.native
   
   /**
     * Whether rendering this material has any effect on the stencil buffer. Default is *false*.
+  	 * @default false
     */
   var stencilWrite: Boolean = js.native
   
   /**
     * Which stencil operation to perform when the comparison function returns true but the depth test fails. Default is {@link KeepStencilOp}. See the stencil operation constants for all possible values.
+  	 * @default THREE.KeepStencilOp
     */
   var stencilZFail: StencilOp = js.native
   
   /**
     * Which stencil operation to perform when the comparison function returns true and the depth test passes. Default is {@link KeepStencilOp}. See the stencil operation constants for all possible values.
+  	 * @default THREE.KeepStencilOp
     */
   var stencilZPass: StencilOp = js.native
   
@@ -258,6 +295,7 @@ class Material () extends EventDispatcher {
   /**
   	 * Defines whether this material is tone mapped according to the renderer's toneMapping setting.
   	 * Default is true.
+  	 * @default true
   	 */
   var toneMapped: Boolean = js.native
   
@@ -265,16 +303,19 @@ class Material () extends EventDispatcher {
   	 * Defines whether this material is transparent. This has an effect on rendering as transparent objects need special treatment and are rendered after non-transparent objects.
   	 * When set to true, the extent to which the material is transparent is controlled by setting it's .opacity property.
   	 * Default is false.
+  	 * @default false
   	 */
   var transparent: Boolean = js.native
   
   /**
   	 * Value is the string 'Material'. This shouldn't be changed, and can be used to find all objects of this type in a scene.
+  	 * @default 'Material'
   	 */
   var `type`: String = js.native
   
   /**
   	 * An object that can be used to store custom data about the Material. It should not hold references to functions as these will not be cloned.
+  	 * @default {}
   	 */
   var userData: js.Any = js.native
   
@@ -285,16 +326,19 @@ class Material () extends EventDispatcher {
   
   /**
   	 * This starts at 0 and counts how many times .needsUpdate is set to true.
+  	 * @default 0
   	 */
   var version: Double = js.native
   
   /**
   	 * Defines whether vertex coloring is used. Default is false.
+  	 * @default false
   	 */
   var vertexColors: Boolean = js.native
   
   /**
   	 * Defines whether this material is visible. Default is true.
+  	 * @default true
   	 */
   var visible: Boolean = js.native
 }

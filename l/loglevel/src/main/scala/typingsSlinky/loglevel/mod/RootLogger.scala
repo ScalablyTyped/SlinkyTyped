@@ -9,6 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait RootLogger extends Logger {
   
   /**
+    * A .default property for ES6 default import compatibility
+    */
+  var default: RootLogger = js.native
+  
+  /**
     * This gets you a new logger object that works exactly like the root log object, but can have its level and
     * logging methods set independently. All loggers must have a name (which is a non-empty string). Calling
     * getLogger() multiple times with the same name will return an identical logger object.

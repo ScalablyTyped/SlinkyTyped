@@ -15,6 +15,7 @@ object ambientLightMod extends js.Object {
   /**
   	 * This creates a Ambientlight with a color.
   	 * @param color Numeric value of the RGB component of the color or a Color instance.
+  	 * @param [intensity=1]
   	 */
   class AmbientLight () extends Light {
     def this(color: String) = this()

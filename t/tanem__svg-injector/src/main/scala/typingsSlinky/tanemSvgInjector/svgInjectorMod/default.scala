@@ -9,5 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object default extends js.Object {
   
   def apply(elements: Elements): Unit = js.native
-  def apply(elements: Elements, hasAfterAllAfterEachBeforeEachEvalScriptsRenumerateIRIElements: OptionalArgs): Unit = js.native
+  def apply(
+    elements: Elements,
+    hasAfterAllAfterEachBeforeEachCacheRequestsEvalScriptsRenumerateIRIElements: OptionalArgs
+  ): Unit = js.native
 }

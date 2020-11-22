@@ -8,23 +8,33 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.StepLineSeries */
+/**
+  * [descr:dxChartSeriesTypes.StepLineSeries]
+  */
 @js.native
 trait dxChartSeriesTypesStepLineSeries extends dxChartSeriesTypesCommonSeries {
   
-  /** @name dxChartSeriesTypes.StepLineSeries.aggregation */
+  /**
+    * [descr:dxChartSeriesTypes.StepLineSeries.aggregation]
+    */
   @JSName("aggregation")
   var aggregation_dxChartSeriesTypesStepLineSeries: js.UndefOr[dxChartSeriesTypesStepLineSeriesAggregation] = js.native
   
-  /** @name dxChartSeriesTypes.StepLineSeries.hoverMode */
+  /**
+    * [descr:dxChartSeriesTypes.StepLineSeries.hoverMode]
+    */
   @JSName("hoverMode")
   var hoverMode_dxChartSeriesTypesStepLineSeries: js.UndefOr[nearestPoint | includePoints | excludePoints | none] = js.native
   
-  /** @name dxChartSeriesTypes.StepLineSeries.label */
+  /**
+    * [descr:dxChartSeriesTypes.StepLineSeries.label]
+    */
   @JSName("label")
   var label_dxChartSeriesTypesStepLineSeries: js.UndefOr[dxChartSeriesTypesStepLineSeriesLabel] = js.native
   
-  /** @name dxChartSeriesTypes.StepLineSeries.selectionMode */
+  /**
+    * [descr:dxChartSeriesTypes.StepLineSeries.selectionMode]
+    */
   @JSName("selectionMode")
   var selectionMode_dxChartSeriesTypesStepLineSeries: js.UndefOr[includePoints | excludePoints | none] = js.native
 }

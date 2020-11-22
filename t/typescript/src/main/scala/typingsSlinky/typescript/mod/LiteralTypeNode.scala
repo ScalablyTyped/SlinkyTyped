@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait LiteralTypeNode extends TypeNode {
   
   @JSName("kind")
-  var kind_LiteralTypeNode: typingsSlinky.typescript.mod.SyntaxKind.LiteralType = js.native
+  val kind_LiteralTypeNode: typingsSlinky.typescript.mod.SyntaxKind.LiteralType = js.native
   
-  var literal: BooleanLiteral | LiteralExpression | PrefixUnaryExpression = js.native
+  val literal: NullLiteral | BooleanLiteral | LiteralExpression | PrefixUnaryExpression = js.native
 }

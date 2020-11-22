@@ -13,6 +13,11 @@ trait VideoCodecSettings extends js.Object {
   var Av1Settings: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.Av1Settings] = js.native
   
   /**
+    * Required when you set your output video codec to AVC-Intra. For more information about the AVC-I settings, see the relevant specification. For detailed information about SD and HD in AVC-I, see https://ieeexplore.ieee.org/document/7290936.
+    */
+  var AvcIntraSettings: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.AvcIntraSettings] = js.native
+  
+  /**
     * Specifies the video codec. This must be equal to one of the enum values defined by the object  VideoCodec.
     */
   var Codec: js.UndefOr[VideoCodec] = js.native
@@ -41,6 +46,11 @@ trait VideoCodecSettings extends js.Object {
     * Required when you set (Codec) under (VideoDescription)>(CodecSettings) to the value PRORES.
     */
   var ProresSettings: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.ProresSettings] = js.native
+  
+  /**
+    * Required when you set (Codec) under (VideoDescription)>(CodecSettings) to the value VC3
+    */
+  var Vc3Settings: js.UndefOr[typingsSlinky.awsSdk.mediaconvertMod.Vc3Settings] = js.native
   
   /**
     * Required when you set (Codec) under (VideoDescription)>(CodecSettings) to the value VP8.
@@ -82,6 +92,12 @@ object VideoCodecSettings {
     def deleteAv1Settings: Self = this.set("Av1Settings", js.undefined)
     
     @scala.inline
+    def setAvcIntraSettings(value: AvcIntraSettings): Self = this.set("AvcIntraSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAvcIntraSettings: Self = this.set("AvcIntraSettings", js.undefined)
+    
+    @scala.inline
     def setCodec(value: VideoCodec): Self = this.set("Codec", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -116,6 +132,12 @@ object VideoCodecSettings {
     
     @scala.inline
     def deleteProresSettings: Self = this.set("ProresSettings", js.undefined)
+    
+    @scala.inline
+    def setVc3Settings(value: Vc3Settings): Self = this.set("Vc3Settings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteVc3Settings: Self = this.set("Vc3Settings", js.undefined)
     
     @scala.inline
     def setVp8Settings(value: Vp8Settings): Self = this.set("Vp8Settings", value.asInstanceOf[js.Any])

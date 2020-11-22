@@ -28,6 +28,7 @@ package object pinpointMod {
     - typingsSlinky.awsSdk.awsSdkStrings.COMPLETED
     - typingsSlinky.awsSdk.awsSdkStrings.PAUSED
     - typingsSlinky.awsSdk.awsSdkStrings.DELETED
+    - typingsSlinky.awsSdk.awsSdkStrings.INVALID
     - java.lang.String
   */
   type CampaignStatus = typingsSlinky.awsSdk.pinpointMod._CampaignStatus | java.lang.String

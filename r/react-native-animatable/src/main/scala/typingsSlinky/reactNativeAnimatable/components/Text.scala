@@ -3,6 +3,7 @@ package typingsSlinky.reactNativeAnimatable.components
 import slinky.core.SyntheticEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -11,24 +12,28 @@ import typingsSlinky.reactNative.mod.AccessibilityTrait
 import typingsSlinky.reactNative.mod.AccessibilityValue
 import typingsSlinky.reactNative.mod.ColorValue
 import typingsSlinky.reactNative.mod.ImageStyle
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NativeTouchEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
+import typingsSlinky.reactNative.mod.TextLayoutEventData
 import typingsSlinky.reactNative.mod.TextProperties
 import typingsSlinky.reactNative.mod.TextStyle
 import typingsSlinky.reactNative.mod.ViewStyle
 import typingsSlinky.reactNative.reactNativeStrings.`no-hide-descendants`
+import typingsSlinky.reactNative.reactNativeStrings.all_
 import typingsSlinky.reactNative.reactNativeStrings.assertive
 import typingsSlinky.reactNative.reactNativeStrings.auto
 import typingsSlinky.reactNative.reactNativeStrings.balanced
 import typingsSlinky.reactNative.reactNativeStrings.button
 import typingsSlinky.reactNative.reactNativeStrings.clip
+import typingsSlinky.reactNative.reactNativeStrings.email
 import typingsSlinky.reactNative.reactNativeStrings.head
 import typingsSlinky.reactNative.reactNativeStrings.highQuality
+import typingsSlinky.reactNative.reactNativeStrings.link
 import typingsSlinky.reactNative.reactNativeStrings.middle
 import typingsSlinky.reactNative.reactNativeStrings.no
 import typingsSlinky.reactNative.reactNativeStrings.none
+import typingsSlinky.reactNative.reactNativeStrings.phoneNumber
 import typingsSlinky.reactNative.reactNativeStrings.polite
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_checked
 import typingsSlinky.reactNative.reactNativeStrings.radiobutton_unchecked
@@ -111,6 +116,12 @@ object Text {
     def animation(value: Animation | String | (CustomAnimation[TextStyle with ViewStyle with ImageStyle])): this.type = set("animation", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def dataDetectorType(value: phoneNumber | link | email | none | all_): this.type = set("dataDetectorType", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def dataDetectorTypeNull: this.type = set("dataDetectorType", null)
+    
+    @scala.inline
     def delay(value: Double): this.type = set("delay", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -171,7 +182,7 @@ object Text {
     def onAnimationEnd(value: js.Function): this.type = set("onAnimationEnd", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def onLayout(value: /* event */ LayoutChangeEvent => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
+    def onLayout(value: SyntheticEvent[NodeHandle, Layout] => Unit): this.type = set("onLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def onLongPress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onLongPress", js.Any.fromFunction1(value))
@@ -181,6 +192,9 @@ object Text {
     
     @scala.inline
     def onPress(value: SyntheticEvent[NodeHandle, NativeTouchEvent] => Unit): this.type = set("onPress", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onTextLayout(value: SyntheticEvent[NodeHandle, TextLayoutEventData] => Unit): this.type = set("onTextLayout", js.Any.fromFunction1(value))
     
     @scala.inline
     def onTransitionBegin(value: /* property */ String => Unit): this.type = set("onTransitionBegin", js.Any.fromFunction1(value))

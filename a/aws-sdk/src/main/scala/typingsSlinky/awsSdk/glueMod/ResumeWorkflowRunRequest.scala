@@ -13,7 +13,7 @@ trait ResumeWorkflowRunRequest extends js.Object {
   var Name: NameString = js.native
   
   /**
-    * A list of the node IDs for the nodes you want to restart. The nodes that are to be restarted must have an execution attempt in the original run.
+    * A list of the node IDs for the nodes you want to restart. The nodes that are to be restarted must have a run attempt in the original run.
     */
   var NodeIds: NodeIdList = js.native
   

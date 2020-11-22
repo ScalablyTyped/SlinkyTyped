@@ -9,7 +9,7 @@ trait AlignContentProps extends js.Object {
   
   val alignContent: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignContentProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignContent */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object AlignContentProps {
     }
     
     @scala.inline
+    def setAlignContentVarargs(value: js.Any*): Self = this.set("alignContent", js.Array(value :_*))
+    
+    @scala.inline
     def setAlignContent(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignContentProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignContent */ _
         ]
     ): Self = this.set("alignContent", value.asInstanceOf[js.Any])
     

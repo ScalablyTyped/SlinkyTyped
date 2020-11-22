@@ -58,6 +58,8 @@ object httpMod extends js.Object {
     def save_MHTTPRequest(modelArtifacts: ModelArtifacts): js.Promise[SaveResult] = js.native
     
     val weightPathPrefix: js.Any = js.native
+    
+    val weightUrlConverter: js.Any = js.native
   }
   /* static members */
   @js.native

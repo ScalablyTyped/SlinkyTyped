@@ -8,9 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("react-native", "Animated.SectionList")
 @js.native
-class SectionList[SectionT] ()
-  extends Component[
-      SectionListProps[SectionT] | AnimatedProps[SectionListProps[SectionT]], 
-      js.Object, 
-      js.Any
-    ]
+class SectionList[ItemT, SectionT] ()
+  extends Component[AnimatedProps[SectionListProps[ItemT, SectionT]], js.Object, js.Any]

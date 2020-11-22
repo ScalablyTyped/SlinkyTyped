@@ -13,7 +13,7 @@ trait Shipment extends js.Object {
   var Status: js.UndefOr[String] = js.native
   
   /**
-    * The tracking number for this job. Using this tracking number with your region's carrier's website, you can track a Snowball as the carrier transports it. For India, the carrier is Amazon Logistics. For all other regions, UPS is the carrier.
+    * The tracking number for this job. Using this tracking number with your region's carrier's website, you can track a Snow device as the carrier transports it. For India, the carrier is Amazon Logistics. For all other regions, UPS is the carrier.
     */
   var TrackingNumber: js.UndefOr[String] = js.native
 }

@@ -20,6 +20,28 @@ object FontSizes extends js.Object {
   
   val mini: String = js.native
   
+  val size10: /* "10px" */ String = js.native
+  
+  val size12: /* "12px" */ String = js.native
+  
+  val size14: /* "14px" */ String = js.native
+  
+  val size16: /* "16px" */ String = js.native
+  
+  val size18: /* "18px" */ String = js.native
+  
+  val size20: /* "20px" */ String = js.native
+  
+  val size24: /* "24px" */ String = js.native
+  
+  val size28: /* "28px" */ String = js.native
+  
+  val size32: /* "32px" */ String = js.native
+  
+  val size42: /* "42px" */ String = js.native
+  
+  val size68: /* "68px" */ String = js.native
+  
   val small: String = js.native
   
   val smallPlus: String = js.native

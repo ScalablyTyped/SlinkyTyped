@@ -6,5 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object customInputMod {
   
-  type CustomInput[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.customInputMod.CustomInputProps]
+  type CustomInput = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.customInputMod.CustomInputProps]
+  
+  type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[/* keyof T */ java.lang.String, K]]
 }

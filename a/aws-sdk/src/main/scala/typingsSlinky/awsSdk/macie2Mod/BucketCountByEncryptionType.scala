@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait BucketCountByEncryptionType extends js.Object {
   
   /**
-    *  The total number of buckets that use an AWS Key Management Service (AWS KMS) customer master key (CMK) to encrypt objects. These buckets use AWS KMS AWS-managed (AWS-KMS) encryption or AWS KMS customer-managed (SSE-KMS) encryption.
+    *  The total number of buckets that use an AWS Key Management Service (AWS KMS) customer master key (CMK) to encrypt objects. These buckets use AWS managed AWS KMS (AWS-KMS) encryption or customer managed AWS KMS (SSE-KMS) encryption.
     */
   var kmsManaged: js.UndefOr[long] = js.native
   
   /**
-    * The total number of buckets that use an Amazon S3-managed key to encrypt objects. These buckets use Amazon S3-managed (SSE-S3) encryption.
+    * The total number of buckets that use an Amazon S3 managed key to encrypt objects. These buckets use Amazon S3 managed (SSE-S3) encryption.
     */
   var s3Managed: js.UndefOr[long] = js.native
   

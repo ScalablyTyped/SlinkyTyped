@@ -1,6 +1,5 @@
 package typingsSlinky.convertUnits.mod
 
-import typingsSlinky.convertUnits.convertUnitsStrings.km_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.convertUnits.convertUnitsStrings.mm
   - typingsSlinky.convertUnits.convertUnitsStrings.cm
   - typingsSlinky.convertUnits.convertUnitsStrings.m
-  - typingsSlinky.convertUnits.convertUnitsStrings.km_
+  - typingsSlinky.convertUnits.convertUnitsStrings.km
   - typingsSlinky.convertUnits.convertUnitsStrings.in
   - typingsSlinky.convertUnits.convertUnitsStrings.`ft-us`
   - typingsSlinky.convertUnits.convertUnitsStrings.ft
@@ -31,7 +30,7 @@ object uDistance {
   def in: typingsSlinky.convertUnits.convertUnitsStrings.in = "in".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.in]
   
   @scala.inline
-  def km: km_ = "km".asInstanceOf[km_]
+  def km: typingsSlinky.convertUnits.convertUnitsStrings.km = "km".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.km]
   
   @scala.inline
   def m: typingsSlinky.convertUnits.convertUnitsStrings.m = "m".asInstanceOf[typingsSlinky.convertUnits.convertUnitsStrings.m]

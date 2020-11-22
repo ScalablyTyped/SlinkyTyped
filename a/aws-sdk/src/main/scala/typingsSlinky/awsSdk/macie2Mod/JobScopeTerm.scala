@@ -13,7 +13,7 @@ trait JobScopeTerm extends js.Object {
   var simpleScopeTerm: js.UndefOr[SimpleScopeTerm] = js.native
   
   /**
-    * A tag-based condition that defines the operator and a tag key or tag keys and values for including or excluding an object from the job.
+    * A tag-based condition that defines the operator and tag keys or tag key and value pairs for including or excluding an object from the job.
     */
   var tagScopeTerm: js.UndefOr[TagScopeTerm] = js.native
 }

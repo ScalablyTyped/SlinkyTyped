@@ -14,7 +14,7 @@ class AbstractClassPart () extends js.Object {
   
   def hasModifier(modifier: StmtModifier): Boolean = js.native
   
-  var modifiers: js.Array[StmtModifier] | Null = js.native
+  var modifiers: js.Array[StmtModifier] = js.native
   
   var `type`: Type | Null = js.native
 }

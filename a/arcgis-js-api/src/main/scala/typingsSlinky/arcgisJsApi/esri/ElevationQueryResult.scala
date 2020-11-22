@@ -24,7 +24,7 @@ trait ElevationQueryResult extends Object {
   var noDataValue: Double = js.native
   
   /**
-    * Contains additional information about how the geometry was sampled. This property is present depending on whether the user set `options.returnSampleInfo = true`, for each coordinate in the geometry.
+    * Contains additional information about how the geometry was sampled.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-Ground.html#ElevationQueryResult)
     */

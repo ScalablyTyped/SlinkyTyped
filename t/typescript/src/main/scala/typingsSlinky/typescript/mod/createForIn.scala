@@ -8,5 +8,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object createForIn extends js.Object {
   
+  /** @deprecated Use `factory.createForIn` or the factory supplied by your transformation context instead. */
   def apply(initializer: ForInitializer, expression: Expression, statement: Statement): ForInStatement = js.native
 }

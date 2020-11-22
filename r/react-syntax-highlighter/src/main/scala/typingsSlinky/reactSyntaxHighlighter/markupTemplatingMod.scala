@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-syntax-highlighter/dist/cjs/languages/prism/markupTemplating", JSImport.Namespace)
+@JSImport("react-syntax-highlighter/dist/cjs/languages/prism/markup-templating", JSImport.Namespace)
 @js.native
 object markupTemplatingMod extends js.Object {
   

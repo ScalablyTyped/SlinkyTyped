@@ -7,6 +7,7 @@ import slinky.core.facade.ReactRef
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.navTypesMod.INav
 import typingsSlinky.officeUiFabricReact.navTypesMod.INavButtonProps
 import typingsSlinky.officeUiFabricReact.navTypesMod.INavLink
@@ -17,7 +18,6 @@ import typingsSlinky.officeUiFabricReact.navTypesMod.INavStyles
 import typingsSlinky.officeUiFabricReact.navTypesMod.IRenderGroupHeaderProps
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAs
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAsProps

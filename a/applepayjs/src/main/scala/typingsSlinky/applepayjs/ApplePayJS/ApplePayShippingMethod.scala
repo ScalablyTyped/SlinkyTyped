@@ -18,12 +18,12 @@ trait ApplePayShippingMethod extends js.Object {
   /**
     * A further description of the shipping method.
     */
-  var detail: js.UndefOr[String] = js.native
+  var detail: String = js.native
   
   /**
     * A client-defined identifier.
     */
-  var identifier: js.UndefOr[String] = js.native
+  var identifier: String = js.native
   
   /**
     * A short description of the shipping method.
@@ -33,8 +33,8 @@ trait ApplePayShippingMethod extends js.Object {
 object ApplePayShippingMethod {
   
   @scala.inline
-  def apply(amount: String, label: String): ApplePayShippingMethod = {
-    val __obj = js.Dynamic.literal(amount = amount.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
+  def apply(amount: String, detail: String, identifier: String, label: String): ApplePayShippingMethod = {
+    val __obj = js.Dynamic.literal(amount = amount.asInstanceOf[js.Any], detail = detail.asInstanceOf[js.Any], identifier = identifier.asInstanceOf[js.Any], label = label.asInstanceOf[js.Any])
     __obj.asInstanceOf[ApplePayShippingMethod]
   }
   
@@ -57,18 +57,12 @@ object ApplePayShippingMethod {
     def setAmount(value: String): Self = this.set("amount", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setDetail(value: String): Self = this.set("detail", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteDetail: Self = this.set("detail", js.undefined)
     
     @scala.inline
     def setIdentifier(value: String): Self = this.set("identifier", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteIdentifier: Self = this.set("identifier", js.undefined)
+    def setLabel(value: String): Self = this.set("label", value.asInstanceOf[js.Any])
   }
 }

@@ -12,7 +12,6 @@ trait ChangePictureScaleCommand extends CommandBase {
   
   /**
     * Executes the ChangePictureScaleCommand command with the specified parameter. true if the command has been successfully executed; false if the command execution has failed.
-    * @param scale The picture scale.
     * @param x The picture scale object or the x-scale factor as a percent.
     * @param y The y-scale factor as a percent.
     */

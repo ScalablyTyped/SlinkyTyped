@@ -32,6 +32,8 @@ trait ListBoxProps extends js.Object {
   
   var itemTemplate: js.UndefOr[js.Function1[/* item */ js.Any, js.UndefOr[ReactElement]]] = js.native
   
+  var listClassName: js.UndefOr[String] = js.native
+  
   var listStyle: js.UndefOr[js.Object] = js.native
   
   var metaKeySelection: js.UndefOr[Boolean] = js.native
@@ -144,6 +146,12 @@ object ListBoxProps {
     
     @scala.inline
     def deleteItemTemplate: Self = this.set("itemTemplate", js.undefined)
+    
+    @scala.inline
+    def setListClassName(value: String): Self = this.set("listClassName", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteListClassName: Self = this.set("listClassName", js.undefined)
     
     @scala.inline
     def setListStyle(value: js.Object): Self = this.set("listStyle", value.asInstanceOf[js.Any])

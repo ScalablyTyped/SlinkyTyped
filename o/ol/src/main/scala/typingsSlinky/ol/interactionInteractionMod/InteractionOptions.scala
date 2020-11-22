@@ -1,5 +1,6 @@
 package typingsSlinky.ol.interactionInteractionMod
 
+import org.scalajs.dom.raw.UIEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait InteractionOptions extends js.Object {
   
-  def handleEvent(p0: typingsSlinky.ol.mapBrowserEventMod.default): Boolean = js.native
+  def handleEvent(p0: typingsSlinky.ol.mapBrowserEventMod.default[UIEvent]): Boolean = js.native
 }
 object InteractionOptions {
   
   @scala.inline
-  def apply(handleEvent: typingsSlinky.ol.mapBrowserEventMod.default => Boolean): InteractionOptions = {
+  def apply(handleEvent: typingsSlinky.ol.mapBrowserEventMod.default[UIEvent] => Boolean): InteractionOptions = {
     val __obj = js.Dynamic.literal(handleEvent = js.Any.fromFunction1(handleEvent))
     __obj.asInstanceOf[InteractionOptions]
   }
@@ -33,6 +34,6 @@ object InteractionOptions {
     }
     
     @scala.inline
-    def setHandleEvent(value: typingsSlinky.ol.mapBrowserEventMod.default => Boolean): Self = this.set("handleEvent", js.Any.fromFunction1(value))
+    def setHandleEvent(value: typingsSlinky.ol.mapBrowserEventMod.default[UIEvent] => Boolean): Self = this.set("handleEvent", js.Any.fromFunction1(value))
   }
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.TSExternalModuleReference
+import typingsSlinky.babelTraverse.babelTraverseStrings.ExistsTypeAnnotation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `116` extends js.Object {
   
-  var `type`: TSExternalModuleReference = js.native
+  var `type`: ExistsTypeAnnotation = js.native
 }
 object `116` {
   
   @scala.inline
-  def apply(`type`: TSExternalModuleReference): `116` = {
+  def apply(`type`: ExistsTypeAnnotation): `116` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`116`]
@@ -35,6 +35,6 @@ object `116` {
     }
     
     @scala.inline
-    def setType(value: TSExternalModuleReference): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: ExistsTypeAnnotation): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

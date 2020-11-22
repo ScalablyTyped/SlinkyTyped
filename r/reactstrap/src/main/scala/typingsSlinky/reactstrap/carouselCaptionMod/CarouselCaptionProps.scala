@@ -2,8 +2,8 @@ package typingsSlinky.reactstrap.carouselCaptionMod
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.react.mod.AllHTMLAttributes
-import typingsSlinky.react.mod.ClassAttributes
+import slinky.core.facade.ReactElement
+import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.reactstrap.mod.CSSModule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,21 +11,20 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait CarouselCaptionProps
-  extends AllHTMLAttributes[HTMLElement]
-     with ClassAttributes[HTMLElement]
+  extends HTMLAttributes[HTMLElement]
      with /* key */ StringDictionary[js.Any] {
   
-  var captionHeader: js.UndefOr[String] = js.native
+  var captionHeader: js.UndefOr[ReactElement] = js.native
   
-  var captionText: String = js.native
+  var captionText: ReactElement = js.native
   
   var cssModule: js.UndefOr[CSSModule] = js.native
 }
 object CarouselCaptionProps {
   
   @scala.inline
-  def apply(captionText: String): CarouselCaptionProps = {
-    val __obj = js.Dynamic.literal(captionText = captionText.asInstanceOf[js.Any])
+  def apply(): CarouselCaptionProps = {
+    val __obj = js.Dynamic.literal()
     __obj.asInstanceOf[CarouselCaptionProps]
   }
   
@@ -45,13 +44,19 @@ object CarouselCaptionProps {
     }
     
     @scala.inline
-    def setCaptionText(value: String): Self = this.set("captionText", value.asInstanceOf[js.Any])
+    def setCaptionHeaderReactElement(value: ReactElement): Self = this.set("captionHeader", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setCaptionHeader(value: String): Self = this.set("captionHeader", value.asInstanceOf[js.Any])
+    def setCaptionHeader(value: ReactElement): Self = this.set("captionHeader", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCaptionHeader: Self = this.set("captionHeader", js.undefined)
+    
+    @scala.inline
+    def setCaptionText(value: ReactElement): Self = this.set("captionText", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCaptionText: Self = this.set("captionText", js.undefined)
     
     @scala.inline
     def setCssModule(value: CSSModule): Self = this.set("cssModule", value.asInstanceOf[js.Any])

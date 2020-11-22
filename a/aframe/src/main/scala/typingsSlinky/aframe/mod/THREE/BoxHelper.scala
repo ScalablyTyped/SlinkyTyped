@@ -9,5 +9,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class BoxHelper protected ()
   extends typingsSlinky.three.mod.BoxHelper {
+  /**
+  	 * @param object
+  	 * @param [color=0xffff00]
+  	 */
   def this(`object`: Object3D) = this()
 }

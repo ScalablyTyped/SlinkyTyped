@@ -1,6 +1,5 @@
 package typingsSlinky.mendixmodelsdk.restMod.rest
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflow
@@ -14,7 +13,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * See: {@link https://docs.mendix.com/refguide7/published-rest-services relevant section in reference guide}
+  * See: {@link https://docs.mendix.com/refguide/published-rest-services relevant section in reference guide}
   *
   * In version 7.11.0: removed experimental
   * In version 7.6.0: introduced
@@ -72,9 +71,6 @@ class PublishedRestService protected () extends Document {
     */
   def corsConfiguration: CorsConfiguration | Null = js.native
   def corsConfiguration_=(newValue: CorsConfiguration | Null): Unit = js.native
-  
-  @JSName("model")
-  var model_FPublishedRestService: IModel = js.native
   
   /**
     * In version 7.17.0: introduced

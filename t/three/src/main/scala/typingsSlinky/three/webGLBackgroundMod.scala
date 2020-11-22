@@ -3,6 +3,7 @@ package typingsSlinky.three
 import typingsSlinky.three.cameraMod.Camera
 import typingsSlinky.three.colorMod.Color
 import typingsSlinky.three.sceneMod.Scene
+import typingsSlinky.three.webGLCubeMapsMod.WebGLCubeMaps
 import typingsSlinky.three.webGLObjectsMod.WebGLObjects
 import typingsSlinky.three.webGLRenderListsMod.WebGLRenderList
 import typingsSlinky.three.webGLRendererMod.WebGLRenderer
@@ -17,7 +18,13 @@ object webGLBackgroundMod extends js.Object {
   
   @js.native
   class WebGLBackground protected () extends js.Object {
-    def this(renderer: WebGLRenderer, state: WebGLState, objects: WebGLObjects, premultipliedAlpha: Boolean) = this()
+    def this(
+      renderer: WebGLRenderer,
+      cubemaps: WebGLCubeMaps,
+      state: WebGLState,
+      objects: WebGLObjects,
+      premultipliedAlpha: Boolean
+    ) = this()
     
     def getClearAlpha(): Double = js.native
     

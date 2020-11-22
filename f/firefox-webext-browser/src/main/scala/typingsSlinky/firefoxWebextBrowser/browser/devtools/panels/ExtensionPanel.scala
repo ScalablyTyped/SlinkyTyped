@@ -1,5 +1,6 @@
 package typingsSlinky.firefoxWebextBrowser.browser.devtools.panels
 
+import org.scalajs.dom.raw.Window
 import typingsSlinky.firefoxWebextBrowser.WebExtEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,9 +12,7 @@ trait ExtensionPanel extends js.Object {
   
   /**
     * Appends a button to the status bar of the panel.
-    * @param iconPath Path to the icon of the button. The file should contain a 64x24-pixel image composed of two
-    *     32x24 icons. The left icon is used when the button is inactive; the right icon is displayed when the
-    *     button is pressed.
+    * @param iconPath Path to the icon of the button. The file should contain a 64x24-pixel image composed of two 32x24 icons. The left icon is used when the button is inactive; the right icon is displayed when the button is pressed.
     * @param tooltipText Text shown as a tooltip when user hovers the mouse over the button.
     * @param disabled Whether the button is disabled.
     * @deprecated Unsupported on Firefox at this time.
@@ -37,7 +36,7 @@ trait ExtensionPanel extends js.Object {
     * Fired when the user switches to the panel.
     * @param window The JavaScript `window` object of panel's page.
     */
-  var onShown: WebExtEvent[js.Function1[/* window */ js.Object, Unit]] = js.native
+  var onShown: WebExtEvent[js.Function1[/* window */ Window, Unit]] = js.native
 }
 object ExtensionPanel {
   
@@ -45,7 +44,7 @@ object ExtensionPanel {
   def apply(
     onHidden: WebExtEvent[js.Function0[Unit]],
     onSearch: WebExtEvent[js.Function2[/* action */ String, /* queryString */ js.UndefOr[String], Unit]],
-    onShown: WebExtEvent[js.Function1[/* window */ js.Object, Unit]]
+    onShown: WebExtEvent[js.Function1[/* window */ Window, Unit]]
   ): ExtensionPanel = {
     val __obj = js.Dynamic.literal(onHidden = onHidden.asInstanceOf[js.Any], onSearch = onSearch.asInstanceOf[js.Any], onShown = onShown.asInstanceOf[js.Any])
     __obj.asInstanceOf[ExtensionPanel]
@@ -73,7 +72,7 @@ object ExtensionPanel {
     def setOnSearch(value: WebExtEvent[js.Function2[/* action */ String, /* queryString */ js.UndefOr[String], Unit]]): Self = this.set("onSearch", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOnShown(value: WebExtEvent[js.Function1[/* window */ js.Object, Unit]]): Self = this.set("onShown", value.asInstanceOf[js.Any])
+    def setOnShown(value: WebExtEvent[js.Function1[/* window */ Window, Unit]]): Self = this.set("onShown", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCreateStatusBarButton(value: (/* iconPath */ String, /* tooltipText */ String, /* disabled */ Boolean) => Button): Self = this.set("createStatusBarButton", js.Any.fromFunction3(value))

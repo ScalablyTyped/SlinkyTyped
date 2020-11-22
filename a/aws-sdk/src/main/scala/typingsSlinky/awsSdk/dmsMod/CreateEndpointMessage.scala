@@ -22,6 +22,8 @@ trait CreateEndpointMessage extends js.Object {
     */
   var DmsTransferSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.DmsTransferSettings] = js.native
   
+  var DocDbSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.DocDbSettings] = js.native
+  
   /**
     * Settings in JSON format for the target Amazon DynamoDB endpoint. For information about other available settings, see Using Object Mapping to Migrate Data to DynamoDB in the AWS Database Migration Service User Guide. 
     */
@@ -33,7 +35,7 @@ trait CreateEndpointMessage extends js.Object {
   var ElasticsearchSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.ElasticsearchSettings] = js.native
   
   /**
-    * The database endpoint identifier. Identifiers must begin with a letter and must contain only ASCII letters, digits, and hyphens. They can't end with a hyphen or contain two consecutive hyphens.
+    * The database endpoint identifier. Identifiers must begin with a letter and must contain only ASCII letters, digits, and hyphens. They can't end with a hyphen, or contain two consecutive hyphens.
     */
   var EndpointIdentifier: String = js.native
   
@@ -43,7 +45,7 @@ trait CreateEndpointMessage extends js.Object {
   var EndpointType: ReplicationEndpointTypeValue = js.native
   
   /**
-    * The type of engine for the endpoint. Valid values, depending on the EndpointType value, include "mysql", "oracle", "postgres", "mariadb", "aurora", "aurora-postgresql", "redshift", "s3", "db2", "azuredb", "sybase", "dynamodb", "mongodb", "kinesis", "kafka", "elasticsearch", "documentdb", "sqlserver", and "neptune".
+    * The type of engine for the endpoint. Valid values, depending on the EndpointType value, include "mysql", "oracle", "postgres", "mariadb", "aurora", "aurora-postgresql", "redshift", "s3", "db2", "azuredb", "sybase", "dynamodb", "mongodb", "kinesis", "kafka", "elasticsearch", "docdb", "sqlserver", and "neptune".
     */
   var EngineName: String = js.native
   
@@ -118,6 +120,11 @@ trait CreateEndpointMessage extends js.Object {
   var PostgreSQLSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.PostgreSQLSettings] = js.native
   
   var RedshiftSettings: js.UndefOr[typingsSlinky.awsSdk.dmsMod.RedshiftSettings] = js.native
+  
+  /**
+    * A friendly name for the resource identifier at the end of the EndpointArn response parameter that is returned in the created Endpoint object. The value for this parameter can have up to 31 characters. It can contain only ASCII letters, digits, and hyphen ('-'). Also, it can't end with a hyphen or contain two consecutive hyphens, and can only begin with a letter, such as Example-App-ARN1. For example, this value might result in the EndpointArn value arn:aws:dms:eu-west-1:012345678901:rep:Example-App-ARN1. If you don't specify a ResourceIdentifier value, AWS DMS generates a default identifier value for the end of EndpointArn.
+    */
+  var ResourceIdentifier: js.UndefOr[String] = js.native
   
   /**
     * Settings in JSON format for the target Amazon S3 endpoint. For more information about the available settings, see Extra Connection Attributes When Using Amazon S3 as a Target for AWS DMS in the AWS Database Migration Service User Guide. 
@@ -203,6 +210,12 @@ object CreateEndpointMessage {
     
     @scala.inline
     def deleteDmsTransferSettings: Self = this.set("DmsTransferSettings", js.undefined)
+    
+    @scala.inline
+    def setDocDbSettings(value: DocDbSettings): Self = this.set("DocDbSettings", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDocDbSettings: Self = this.set("DocDbSettings", js.undefined)
     
     @scala.inline
     def setDynamoDbSettings(value: DynamoDbSettings): Self = this.set("DynamoDbSettings", value.asInstanceOf[js.Any])
@@ -305,6 +318,12 @@ object CreateEndpointMessage {
     
     @scala.inline
     def deleteRedshiftSettings: Self = this.set("RedshiftSettings", js.undefined)
+    
+    @scala.inline
+    def setResourceIdentifier(value: String): Self = this.set("ResourceIdentifier", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteResourceIdentifier: Self = this.set("ResourceIdentifier", js.undefined)
     
     @scala.inline
     def setS3Settings(value: S3Settings): Self = this.set("S3Settings", value.asInstanceOf[js.Any])

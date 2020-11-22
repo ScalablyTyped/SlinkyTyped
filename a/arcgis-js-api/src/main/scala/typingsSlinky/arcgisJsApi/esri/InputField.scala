@@ -21,7 +21,7 @@ trait InputField extends Accessor {
   val description: String = js.native
   
   /**
-    * The input value's domain. This is used to constrain the allowable values of the layer.
+    * The input value's domain.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureForm-InputField.html#domain)
     */
@@ -35,22 +35,14 @@ trait InputField extends Accessor {
   val editable: Boolean = js.native
   
   /**
-    * The type of editor used when working with `string` fields. Possible values are in the table below.
-    *
-    * Value | Description
-    * ------|------------
-    * text-box | An HTML textbox used to capture input.
-    * text-area | An HTML textarea used to capture input.
-    *
+    * The type of editor used when working with `string` fields.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureForm-InputField.html#editorType)
-    *
-    * @default text-box
     */
   val editorType: `text-box` | `text-area` = js.native
   
   /**
-    * If the input field's value is invalid, this property returns validation error code. Otherwise, it is `null`.
+    * If the input field's value is invalid, this property returns validation error code.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureForm-InputField.html#error)
     */
@@ -71,11 +63,18 @@ trait InputField extends Accessor {
   val group: InputFieldGroup = js.native
   
   /**
-    * A hint for the field's value. This property is rendered as a tooltip.
+    * A hint for the field's value.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureForm-InputField.html#hint)
     */
   val hint: String = js.native
+  
+  /**
+    * For date inputs, this enables the time input part.
+    *
+    * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureForm-InputField.html#includeTime)
+    */
+  val includeTime: String = js.native
   
   /**
     * The field's label.
@@ -113,22 +112,14 @@ trait InputField extends Accessor {
   val required: Boolean = js.native
   
   /**
-    * The type of input field. Possible values are listed below.
-    *
-    * Value | Description
-    * ------|------------
-    * number | Input represents a number.
-    * text |   Input represents text.
-    * date | Input represents a date.
-    * unsupported | The field represents an unsupported value. A `blob` field type is an example of this.
-    *
+    * The type of input field.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureForm-InputField.html#type)
     */
   val `type`: number | text | date | unsupported = js.native
   
   /**
-    * When `true`, the input value is valid. Otherwise, it is invalid.
+    * When `true`, the input value is valid.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureForm-InputField.html#valid)
     */
@@ -142,7 +133,7 @@ trait InputField extends Accessor {
   val value: Double | String | js.Any = js.native
   
   /**
-    * When `true`, the field is displayed. Otherwise, it is hidden.
+    * When `true`, the field is displayed.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-FeatureForm-InputField.html#visible)
     */

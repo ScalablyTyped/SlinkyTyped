@@ -9,10 +9,13 @@ import typingsSlinky.gestalt.gestaltNumbers.`5`
 import typingsSlinky.gestalt.gestaltNumbers.`6`
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.breakWord
+import typingsSlinky.gestalt.gestaltStrings.center
 import typingsSlinky.gestalt.gestaltStrings.darkGray
 import typingsSlinky.gestalt.gestaltStrings.eggplant
 import typingsSlinky.gestalt.gestaltStrings.gray
 import typingsSlinky.gestalt.gestaltStrings.green
+import typingsSlinky.gestalt.gestaltStrings.justify
+import typingsSlinky.gestalt.gestaltStrings.left
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.lightGray
 import typingsSlinky.gestalt.gestaltStrings.maroon
@@ -26,6 +29,7 @@ import typingsSlinky.gestalt.gestaltStrings.orchid
 import typingsSlinky.gestalt.gestaltStrings.pine
 import typingsSlinky.gestalt.gestaltStrings.purple
 import typingsSlinky.gestalt.gestaltStrings.red
+import typingsSlinky.gestalt.gestaltStrings.right
 import typingsSlinky.gestalt.gestaltStrings.sm
 import typingsSlinky.gestalt.gestaltStrings.watermelon
 import typingsSlinky.gestalt.gestaltStrings.white
@@ -37,6 +41,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait HeaderProps extends js.Object {
   
   var accessibilityLevel: js.UndefOr[`1` | `2` | `3` | `4` | `5` | `6`] = js.native
+  
+  var align: js.UndefOr[left | right | center | justify] = js.native
   
   var children: js.UndefOr[ReactElement] = js.native
   
@@ -80,6 +86,12 @@ object HeaderProps {
     
     @scala.inline
     def deleteAccessibilityLevel: Self = this.set("accessibilityLevel", js.undefined)
+    
+    @scala.inline
+    def setAlign(value: left | right | center | justify): Self = this.set("align", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAlign: Self = this.set("align", js.undefined)
     
     @scala.inline
     def setChildrenReactElement(value: ReactElement): Self = this.set("children", value.asInstanceOf[js.Any])

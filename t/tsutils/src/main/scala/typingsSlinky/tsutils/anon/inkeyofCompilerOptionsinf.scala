@@ -64,6 +64,10 @@ trait inkeyofCompilerOptionsinf extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: infer U */ js.Any
   ] = js.native
   
+  var disableReferencedProjectLoad: js.UndefOr[
+    /* import warning: importer.ImportType#apply Failed type conversion: infer U */ js.Any
+  ] = js.native
+  
   var disableSizeLimit: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: infer U */ js.Any
   ] = js.native
@@ -133,6 +137,14 @@ trait inkeyofCompilerOptionsinf extends js.Object {
   ] = js.native
   
   var jsxFactory: js.UndefOr[
+    /* import warning: importer.ImportType#apply Failed type conversion: infer U */ js.Any
+  ] = js.native
+  
+  var jsxFragmentFactory: js.UndefOr[
+    /* import warning: importer.ImportType#apply Failed type conversion: infer U */ js.Any
+  ] = js.native
+  
+  var jsxImportSource: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: infer U */ js.Any
   ] = js.native
   
@@ -213,6 +225,10 @@ trait inkeyofCompilerOptionsinf extends js.Object {
   ] = js.native
   
   var noStrictGenericChecks: js.UndefOr[
+    /* import warning: importer.ImportType#apply Failed type conversion: infer U */ js.Any
+  ] = js.native
+  
+  var noUncheckedIndexedAccess: js.UndefOr[
     /* import warning: importer.ImportType#apply Failed type conversion: infer U */ js.Any
   ] = js.native
   
@@ -452,6 +468,12 @@ object inkeyofCompilerOptionsinf {
     def deleteDeclarationMap: Self = this.set("declarationMap", js.undefined)
     
     @scala.inline
+    def setDisableReferencedProjectLoad(value: /* import warning: importer.ImportType#apply Failed type conversion: infer U */ js.Any): Self = this.set("disableReferencedProjectLoad", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDisableReferencedProjectLoad: Self = this.set("disableReferencedProjectLoad", js.undefined)
+    
+    @scala.inline
     def setDisableSizeLimit(value: /* import warning: importer.ImportType#apply Failed type conversion: infer U */ js.Any): Self = this.set("disableSizeLimit", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -558,6 +580,18 @@ object inkeyofCompilerOptionsinf {
     
     @scala.inline
     def deleteJsxFactory: Self = this.set("jsxFactory", js.undefined)
+    
+    @scala.inline
+    def setJsxFragmentFactory(value: /* import warning: importer.ImportType#apply Failed type conversion: infer U */ js.Any): Self = this.set("jsxFragmentFactory", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJsxFragmentFactory: Self = this.set("jsxFragmentFactory", js.undefined)
+    
+    @scala.inline
+    def setJsxImportSource(value: /* import warning: importer.ImportType#apply Failed type conversion: infer U */ js.Any): Self = this.set("jsxImportSource", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteJsxImportSource: Self = this.set("jsxImportSource", js.undefined)
     
     @scala.inline
     def setKeyofStringsOnly(value: /* import warning: importer.ImportType#apply Failed type conversion: infer U */ js.Any): Self = this.set("keyofStringsOnly", value.asInstanceOf[js.Any])
@@ -678,6 +712,12 @@ object inkeyofCompilerOptionsinf {
     
     @scala.inline
     def deleteNoStrictGenericChecks: Self = this.set("noStrictGenericChecks", js.undefined)
+    
+    @scala.inline
+    def setNoUncheckedIndexedAccess(value: /* import warning: importer.ImportType#apply Failed type conversion: infer U */ js.Any): Self = this.set("noUncheckedIndexedAccess", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteNoUncheckedIndexedAccess: Self = this.set("noUncheckedIndexedAccess", js.undefined)
     
     @scala.inline
     def setNoUnusedLocals(value: /* import warning: importer.ImportType#apply Failed type conversion: infer U */ js.Any): Self = this.set("noUnusedLocals", value.asInstanceOf[js.Any])

@@ -18,7 +18,7 @@ trait CreateDirectoryRequest extends js.Object {
   var Name: DirectoryName = js.native
   
   /**
-    * The password for the directory administrator. The directory creation process creates a directory administrator account with the user name Administrator and this password. If you need to change the password for the administrator account, you can use the ResetUserPassword API call.
+    * The password for the directory administrator. The directory creation process creates a directory administrator account with the user name Administrator and this password. If you need to change the password for the administrator account, you can use the ResetUserPassword API call. The regex pattern for this string is made up of the following conditions:   Length (?=^.{8,64}$) – Must be between 8 and 64 characters   AND any 3 of the following password complexity rules required by Active Directory:   Numbers and upper case and lowercase (?=.*\d)(?=.*[A-Z])(?=.*[a-z])   Numbers and special characters and lower case (?=.*\d)(?=.*[^A-Za-z0-9\s])(?=.*[a-z])   Special characters and upper case and lower case (?=.*[^A-Za-z0-9\s])(?=.*[A-Z])(?=.*[a-z])   Numbers and upper case and special characters (?=.*\d)(?=.*[A-Z])(?=.*[^A-Za-z0-9\s])   For additional information about how Active Directory passwords are enforced, see Password must meet complexity requirements on the Microsoft website.
     */
   var Password: typingsSlinky.awsSdk.directoryserviceMod.Password = js.native
   

@@ -8,46 +8,32 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ColorCurveness extends js.Object {
   
   /**
-    * Line color.
-    *
-    * > Color can be represented in RGB, for example `'rgb(128,
-    * 128, 128)'`.
-    * RGBA can be used when you need alpha channel, for example
-    * `'rgba(128, 128, 128, 0.5)'`.
-    * You may also use hexadecimal format, for example `'#ccc'`.
-    * Gradient color and texture are also supported besides
-    * single colors.
-    * >
-    * > [see doc](https://echarts.apache.org/en/option.html#series-line.line.markLine.lineStyle)
+    * The color of the edge in sankey graphs.
     *
     *
     * @default
-    * "#000"
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.lineStyle.color
+    * "'#314656"
+    * @see https://echarts.apache.org/en/option.html#series-sankey.links.emphasis.lineStyle.color
     */
-  var color: js.UndefOr[typingsSlinky.echarts.echarts.EChartOption.Color] = js.native
+  var color: js.UndefOr[String] = js.native
   
   /**
-    * Edge curvature, which supports value from 0 to 1.
-    * The larger the value, the greater the curvature.
+    * The curveness of the edge in sankey graph.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.lineStyle.curveness
+    * @default
+    * 0.5
+    * @see https://echarts.apache.org/en/option.html#series-sankey.links.emphasis.lineStyle.curveness
     */
   var curveness: js.UndefOr[Double] = js.native
   
   /**
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.lineStyle.emphasis
-    */
-  var emphasis: js.UndefOr[ShadowBlur] = js.native
-  
-  /**
-    * Opacity of the component.
-    * Supports value from 0 to 1, and the component will not
-    * be drawn when set to 0.
+    * The opacity of the edge in sankey graph.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.lineStyle.opacity
+    * @default
+    * 0.2
+    * @see https://echarts.apache.org/en/option.html#series-sankey.links.emphasis.lineStyle.opacity
     */
   var opacity: js.UndefOr[Double] = js.native
   
@@ -58,10 +44,10 @@ trait ColorCurveness extends js.Object {
     *
     * For example:
     *
-    * [see doc](https://echarts.apache.org/en/option.html#series-line.line.markLine.lineStyle)
+    * [see doc](https://echarts.apache.org/en/option.html#series-sankey.sankey.links.emphasis.lineStyle)
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.lineStyle.shadowBlur
+    * @see https://echarts.apache.org/en/option.html#series-sankey.links.emphasis.lineStyle.shadowBlur
     */
   var shadowBlur: js.UndefOr[Double] = js.native
   
@@ -69,7 +55,7 @@ trait ColorCurveness extends js.Object {
     * Shadow color. Support same format as `color`.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.lineStyle.shadowColor
+    * @see https://echarts.apache.org/en/option.html#series-sankey.links.emphasis.lineStyle.shadowColor
     */
   var shadowColor: js.UndefOr[String] = js.native
   
@@ -77,7 +63,7 @@ trait ColorCurveness extends js.Object {
     * Offset distance on the horizontal direction of shadow.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.lineStyle.shadowOffsetX
+    * @see https://echarts.apache.org/en/option.html#series-sankey.links.emphasis.lineStyle.shadowOffsetX
     */
   var shadowOffsetX: js.UndefOr[Double] = js.native
   
@@ -85,33 +71,9 @@ trait ColorCurveness extends js.Object {
     * Offset distance on the vertical direction of shadow.
     *
     *
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.lineStyle.shadowOffsetY
+    * @see https://echarts.apache.org/en/option.html#series-sankey.links.emphasis.lineStyle.shadowOffsetY
     */
   var shadowOffsetY: js.UndefOr[Double] = js.native
-  
-  /**
-    * line type.
-    *
-    * Options are:
-    *
-    * + `'solid'`
-    * + `'dashed'`
-    * + `'dotted'`
-    *
-    *
-    * @default
-    * "solid"
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.lineStyle.type
-    */
-  var `type`: js.UndefOr[String] = js.native
-  
-  /**
-    * line width.
-    *
-    *
-    * @see https://echarts.apache.org/en/option.html#series-line.markLine.lineStyle.width
-    */
-  var width: js.UndefOr[Double] = js.native
 }
 object ColorCurveness {
   
@@ -137,7 +99,7 @@ object ColorCurveness {
     }
     
     @scala.inline
-    def setColor(value: typingsSlinky.echarts.echarts.EChartOption.Color): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setColor(value: String): Self = this.set("color", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteColor: Self = this.set("color", js.undefined)
@@ -147,12 +109,6 @@ object ColorCurveness {
     
     @scala.inline
     def deleteCurveness: Self = this.set("curveness", js.undefined)
-    
-    @scala.inline
-    def setEmphasis(value: ShadowBlur): Self = this.set("emphasis", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteEmphasis: Self = this.set("emphasis", js.undefined)
     
     @scala.inline
     def setOpacity(value: Double): Self = this.set("opacity", value.asInstanceOf[js.Any])
@@ -183,17 +139,5 @@ object ColorCurveness {
     
     @scala.inline
     def deleteShadowOffsetY: Self = this.set("shadowOffsetY", js.undefined)
-    
-    @scala.inline
-    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteType: Self = this.set("type", js.undefined)
-    
-    @scala.inline
-    def setWidth(value: Double): Self = this.set("width", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteWidth: Self = this.set("width", js.undefined)
   }
 }

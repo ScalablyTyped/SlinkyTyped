@@ -1,6 +1,7 @@
 package typingsSlinky.roslib.mod
 
 import typingsSlinky.roslib.anon.GroovyCompatibility
+import typingsSlinky.roslib.anon.Topics
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -124,6 +125,22 @@ class Ros protected () extends js.Object {
   ): Unit = js.native
   
   /**
+    * Retrieves a detail of ROS service request.
+    *
+    * @param service name of service:
+    * @param callback - function with params:
+    *   * type - String of the service type
+    * @param failedCallback - the callback function when the service call failed (optional). Params:
+    *   * error - the error message reported by ROS
+    */
+  def getServiceRequestDetails(service: String, callback: js.Function1[/* type */ String, Unit]): Unit = js.native
+  def getServiceRequestDetails(
+    service: String,
+    callback: js.Function1[/* type */ String, Unit],
+    failedCallback: js.Function1[/* error */ js.Any, Unit]
+  ): Unit = js.native
+  
+  /**
     * Retrieves a type of ROS service.
     *
     * @param service name of service:
@@ -190,12 +207,13 @@ class Ros protected () extends js.Object {
     *
     * @param callback function with params:
     *   * topics - Array of topic names
-    * @param failedCallback - the callback function when the ros call failed (optional). Params:
+    *   * types - Array of message type names
+    * @param failedCallback - the callback function when the service call failed (optional). Params:
     *   * error - the error message reported by ROS
     */
-  def getTopics(callback: js.Function1[/* topics */ js.Array[String], Unit]): Unit = js.native
+  def getTopics(callback: js.Function1[/* topics */ Topics, Unit]): Unit = js.native
   def getTopics(
-    callback: js.Function1[/* topics */ js.Array[String], Unit],
+    callback: js.Function1[/* topics */ Topics, Unit],
     failedCallback: js.Function1[/* error */ js.Any, Unit]
   ): Unit = js.native
   

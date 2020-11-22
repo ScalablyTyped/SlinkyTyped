@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Input.DispatchTouchEventRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.IndexedDB.DeleteObjectStoreEntriesRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `96` extends js.Object {
   
-  var paramsType: js.Array[DispatchTouchEventRequest] = js.native
+  var paramsType: js.Array[DeleteObjectStoreEntriesRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `96` {
   
   @scala.inline
-  def apply(paramsType: js.Array[DispatchTouchEventRequest], returnType: Unit): `96` = {
+  def apply(paramsType: js.Array[DeleteObjectStoreEntriesRequest], returnType: Unit): `96` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`96`]
   }
@@ -36,10 +36,10 @@ object `96` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: DispatchTouchEventRequest*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: DeleteObjectStoreEntriesRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[DispatchTouchEventRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[DeleteObjectStoreEntriesRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SwapShiftsChangeRequest extends OfferShiftRequest {
   
   // ShiftId for the recipient user with whom the request is to swap.
-  var recipientShiftId: js.UndefOr[String] = js.native
+  var recipientShiftId: js.UndefOr[NullableOption[String]] = js.native
 }
 object SwapShiftsChangeRequest {
   
@@ -34,9 +34,12 @@ object SwapShiftsChangeRequest {
     }
     
     @scala.inline
-    def setRecipientShiftId(value: String): Self = this.set("recipientShiftId", value.asInstanceOf[js.Any])
+    def setRecipientShiftId(value: NullableOption[String]): Self = this.set("recipientShiftId", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteRecipientShiftId: Self = this.set("recipientShiftId", js.undefined)
+    
+    @scala.inline
+    def setRecipientShiftIdNull: Self = this.set("recipientShiftId", null)
   }
 }

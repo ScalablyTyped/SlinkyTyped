@@ -28,8 +28,6 @@ package object GoogleAppsScript {
   
   type BigNumber = js.Any
   
-  type Bigquery = typingsSlinky.googleAppsScript.GoogleAppsScript.Bigquery_
-  
   type Byte = scala.Double
   
   type Calendar = typingsSlinky.googleAppsScript.GoogleAppsScript.Calendar_

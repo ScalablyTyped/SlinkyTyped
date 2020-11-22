@@ -12,8 +12,7 @@ trait WorksheetCustomPropertyUpdateData extends js.Object {
     *
     * Gets or sets the value of the custom property.
     *
-    * [Api set: ExcelApi BETA (PREVIEW ONLY)]
-    * @beta
+    * [Api set: ExcelApi 1.12]
     */
   var value: js.UndefOr[String] = js.native
 }

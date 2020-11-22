@@ -14,6 +14,11 @@ trait IEntityCapabilities extends IElement {
   
   val containerAsEntity: IEntity = js.native
   
+  /**
+    * In version 8.14.0: added public
+    */
+  val countable: Boolean = js.native
+  
   @JSName("model")
   val model_IEntityCapabilities: IModel = js.native
 }

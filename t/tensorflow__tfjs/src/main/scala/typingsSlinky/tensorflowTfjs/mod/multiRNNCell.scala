@@ -1,9 +1,9 @@
 package typingsSlinky.tensorflowTfjs.mod
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.tensorflowTfjsCore.distTensorMod.Tensor2D
 import typingsSlinky.tensorflowTfjsCore.distTypesMod.TensorLike
-import typingsSlinky.tensorflowTfjsCore.lstmMod.LSTMCellFunc
-import typingsSlinky.tensorflowTfjsCore.tensorMod.Tensor2D
+import typingsSlinky.tensorflowTfjsCore.multiRnnCellMod.LSTMCellFunc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

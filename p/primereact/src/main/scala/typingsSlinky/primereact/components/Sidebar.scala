@@ -1,6 +1,5 @@
 package typingsSlinky.primereact.components
 
-import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.primereact.sidebarMod.SidebarProps
@@ -41,7 +40,7 @@ object Sidebar {
     def fullScreen(value: Boolean): this.type = set("fullScreen", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def iconsTemplate(value: () => js.UndefOr[ReactElement]): this.type = set("iconsTemplate", js.Any.fromFunction0(value))
+    def icons(value: /* props */ js.Object => _): this.type = set("icons", js.Any.fromFunction1(value))
     
     @scala.inline
     def id(value: String): this.type = set("id", value.asInstanceOf[js.Any])

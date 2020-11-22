@@ -34,7 +34,6 @@ trait OptionsTopBar extends js.Object {
   
   /**
     * Change the navbar border color
-    * #### (Android specific)
     */
   var borderColor: js.UndefOr[Color] = js.native
   
@@ -107,10 +106,21 @@ trait OptionsTopBar extends js.Object {
   var rightButtons: js.UndefOr[js.Array[OptionsTopBarButton]] = js.native
   
   /**
+    *
+    */
+  var scrollEdgeAppearance: js.UndefOr[OptionsTopBarScrollEdgeAppearance] = js.native
+  
+  /**
     * Show a UISearchBar in the Top Bar
     * #### (iOS 11+ specific)
     */
-  var searchBar: js.UndefOr[Boolean] = js.native
+  var searchBar: js.UndefOr[OptionsSearchBar] = js.native
+  
+  /**
+    * The background color of the UISearchBar's TextField
+    * #### (iOS 13+ specific)
+    */
+  var searchBarBackgroundColor: js.UndefOr[String] = js.native
   
   /**
     * Hides the UISearchBar when scrolling
@@ -123,6 +133,12 @@ trait OptionsTopBar extends js.Object {
     * #### (iOS 11+ specific)
     */
   var searchBarPlaceholder: js.UndefOr[String] = js.native
+  
+  /**
+    * The tint color of the UISearchBar
+    * #### (iOS 11+ specific)
+    */
+  var searchBarTintColor: js.UndefOr[String] = js.native
   
   /**
     * Subtitle configuration
@@ -294,10 +310,22 @@ object OptionsTopBar {
     def deleteRightButtons: Self = this.set("rightButtons", js.undefined)
     
     @scala.inline
-    def setSearchBar(value: Boolean): Self = this.set("searchBar", value.asInstanceOf[js.Any])
+    def setScrollEdgeAppearance(value: OptionsTopBarScrollEdgeAppearance): Self = this.set("scrollEdgeAppearance", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteScrollEdgeAppearance: Self = this.set("scrollEdgeAppearance", js.undefined)
+    
+    @scala.inline
+    def setSearchBar(value: OptionsSearchBar): Self = this.set("searchBar", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSearchBar: Self = this.set("searchBar", js.undefined)
+    
+    @scala.inline
+    def setSearchBarBackgroundColor(value: String): Self = this.set("searchBarBackgroundColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSearchBarBackgroundColor: Self = this.set("searchBarBackgroundColor", js.undefined)
     
     @scala.inline
     def setSearchBarHiddenWhenScrolling(value: Boolean): Self = this.set("searchBarHiddenWhenScrolling", value.asInstanceOf[js.Any])
@@ -310,6 +338,12 @@ object OptionsTopBar {
     
     @scala.inline
     def deleteSearchBarPlaceholder: Self = this.set("searchBarPlaceholder", js.undefined)
+    
+    @scala.inline
+    def setSearchBarTintColor(value: String): Self = this.set("searchBarTintColor", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteSearchBarTintColor: Self = this.set("searchBarTintColor", js.undefined)
     
     @scala.inline
     def setSubtitle(value: OptionsTopBarSubtitle): Self = this.set("subtitle", value.asInstanceOf[js.Any])

@@ -80,9 +80,9 @@ trait Omitted extends js.Object {
   @JSName("getMaxListeners")
   var getMaxListeners_Original: js.Function0[Double] = js.native
   
-  def listenerCount(`type`: String): Double = js.native
+  def listenerCount(event: String): Double = js.native
   @JSName("listenerCount")
-  var listenerCount_Original: js.Function1[/* type */ String, Double] = js.native
+  var listenerCount_Original: js.Function1[/* event */ String, Double] = js.native
   
   def listeners(event: String): js.Array[js.Function] = js.native
   @JSName("listeners")

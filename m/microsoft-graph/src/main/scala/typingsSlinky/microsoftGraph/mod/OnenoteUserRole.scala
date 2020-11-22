@@ -7,8 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Rewritten from type alias, can be one of: 
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.Owner
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.Contributor
-  - typingsSlinky.microsoftGraph.microsoftGraphStrings.Reader
   - typingsSlinky.microsoftGraph.microsoftGraphStrings.None
+  - typingsSlinky.microsoftGraph.microsoftGraphStrings.Reader
 */
 trait OnenoteUserRole extends js.Object
 object OnenoteUserRole {

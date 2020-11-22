@@ -10,8 +10,8 @@ trait ExpressionStatement
      with JSDocContainer
      with _HasJSDoc {
   
-  var expression: Expression = js.native
+  val expression: Expression = js.native
   
   @JSName("kind")
-  var kind_ExpressionStatement: typingsSlinky.typescript.mod.SyntaxKind.ExpressionStatement = js.native
+  val kind_ExpressionStatement: typingsSlinky.typescript.mod.SyntaxKind.ExpressionStatement = js.native
 }

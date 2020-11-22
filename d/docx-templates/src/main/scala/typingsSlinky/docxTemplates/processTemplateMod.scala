@@ -16,7 +16,7 @@ object processTemplateMod extends js.Object {
   
   def extractQuery(template: Node, options: CreateReportOptions): js.Promise[js.UndefOr[String]] = js.native
   
-  def getCommand(command: String, shorthands: StringDictionary[String]): String = js.native
+  def getCommand(command: String, shorthands: StringDictionary[String], fixSmartQuotes: Boolean): String = js.native
   
   def produceJsReport(data: js.UndefOr[scala.Nothing], template: Node, options: CreateReportOptions): js.Promise[ReportOutput] = js.native
   def produceJsReport(data: ReportData, template: Node, options: CreateReportOptions): js.Promise[ReportOutput] = js.native

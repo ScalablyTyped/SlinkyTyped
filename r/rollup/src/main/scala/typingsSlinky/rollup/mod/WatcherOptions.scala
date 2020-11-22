@@ -13,9 +13,9 @@ trait WatcherOptions extends js.Object {
   
   var clearScreen: js.UndefOr[Boolean] = js.native
   
-  var exclude: js.UndefOr[js.Array[String]] = js.native
+  var exclude: js.UndefOr[String | js.RegExp | (js.Array[String | js.RegExp])] = js.native
   
-  var include: js.UndefOr[js.Array[String]] = js.native
+  var include: js.UndefOr[String | js.RegExp | (js.Array[String | js.RegExp])] = js.native
   
   var skipWrite: js.UndefOr[Boolean] = js.native
 }
@@ -61,19 +61,25 @@ object WatcherOptions {
     def deleteClearScreen: Self = this.set("clearScreen", js.undefined)
     
     @scala.inline
-    def setExcludeVarargs(value: String*): Self = this.set("exclude", js.Array(value :_*))
+    def setExcludeVarargs(value: (String | js.RegExp)*): Self = this.set("exclude", js.Array(value :_*))
     
     @scala.inline
-    def setExclude(value: js.Array[String]): Self = this.set("exclude", value.asInstanceOf[js.Any])
+    def setExcludeRegExp(value: js.RegExp): Self = this.set("exclude", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setExclude(value: String | js.RegExp | (js.Array[String | js.RegExp])): Self = this.set("exclude", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExclude: Self = this.set("exclude", js.undefined)
     
     @scala.inline
-    def setIncludeVarargs(value: String*): Self = this.set("include", js.Array(value :_*))
+    def setIncludeVarargs(value: (String | js.RegExp)*): Self = this.set("include", js.Array(value :_*))
     
     @scala.inline
-    def setInclude(value: js.Array[String]): Self = this.set("include", value.asInstanceOf[js.Any])
+    def setIncludeRegExp(value: js.RegExp): Self = this.set("include", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setInclude(value: String | js.RegExp | (js.Array[String | js.RegExp])): Self = this.set("include", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteInclude: Self = this.set("include", js.undefined)

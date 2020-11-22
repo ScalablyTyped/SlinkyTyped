@@ -7,7 +7,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-@JSImport("react-pdf/dist/entry.parcel", JSImport.Namespace)
+@JSImport("react-pdf/dist/esm/entry.parcel", JSImport.Namespace)
 @js.native
 object entryParcelMod extends js.Object {
   

@@ -1,8 +1,8 @@
 package typingsSlinky.uifabricStyling
 
-import typingsSlinky.uifabricMergeStyles.istyleMod.IRawStyle
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
+import typingsSlinky.uifabricMergeStyles.irawstyleMod.IRawStyle
 import typingsSlinky.uifabricStyling.igetfocusstylesMod.IGetFocusStylesOptions
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricStyling.uifabricStylingStrings.absolute
 import typingsSlinky.uifabricStyling.uifabricStylingStrings.border
 import typingsSlinky.uifabricStyling.uifabricStylingStrings.borderBottom

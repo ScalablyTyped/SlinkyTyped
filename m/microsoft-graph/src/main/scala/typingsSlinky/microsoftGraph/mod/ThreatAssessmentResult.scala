@@ -11,13 +11,13 @@ trait ThreatAssessmentResult extends Entity {
     * The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example,
     * midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'.
     */
-  var createdDateTime: js.UndefOr[String] = js.native
+  var createdDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   // The result message for each threat assessment.
-  var message: js.UndefOr[String] = js.native
+  var message: js.UndefOr[NullableOption[String]] = js.native
   
   // The threat assessment result type. Possible values are: checkPolicy, rescan.
-  var resultType: js.UndefOr[ThreatAssessmentResultType] = js.native
+  var resultType: js.UndefOr[NullableOption[ThreatAssessmentResultType]] = js.native
 }
 object ThreatAssessmentResult {
   
@@ -43,21 +43,30 @@ object ThreatAssessmentResult {
     }
     
     @scala.inline
-    def setCreatedDateTime(value: String): Self = this.set("createdDateTime", value.asInstanceOf[js.Any])
+    def setCreatedDateTime(value: NullableOption[String]): Self = this.set("createdDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCreatedDateTime: Self = this.set("createdDateTime", js.undefined)
     
     @scala.inline
-    def setMessage(value: String): Self = this.set("message", value.asInstanceOf[js.Any])
+    def setCreatedDateTimeNull: Self = this.set("createdDateTime", null)
+    
+    @scala.inline
+    def setMessage(value: NullableOption[String]): Self = this.set("message", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteMessage: Self = this.set("message", js.undefined)
     
     @scala.inline
-    def setResultType(value: ThreatAssessmentResultType): Self = this.set("resultType", value.asInstanceOf[js.Any])
+    def setMessageNull: Self = this.set("message", null)
+    
+    @scala.inline
+    def setResultType(value: NullableOption[ThreatAssessmentResultType]): Self = this.set("resultType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteResultType: Self = this.set("resultType", js.undefined)
+    
+    @scala.inline
+    def setResultTypeNull: Self = this.set("resultType", null)
   }
 }

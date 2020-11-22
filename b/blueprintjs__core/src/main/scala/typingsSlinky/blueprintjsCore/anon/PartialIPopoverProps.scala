@@ -59,7 +59,7 @@ trait PartialIPopoverProps extends js.Object {
   
   var modifiers: js.UndefOr[Modifiers] = js.native
   
-  var onClose: js.UndefOr[js.Function1[/* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]], Unit]] = js.native
+  var onClose: js.UndefOr[js.Function1[/* event */ SyntheticEvent[Event, HTMLElement], Unit]] = js.native
   
   var onClosed: js.UndefOr[js.Function1[/* node */ HTMLElement, Unit]] = js.native
   
@@ -81,7 +81,7 @@ trait PartialIPopoverProps extends js.Object {
   
   var popoverClassName: js.UndefOr[String] = js.native
   
-  var popoverRef: js.UndefOr[js.Function1[/* ref */ HTMLDivElement | Null, Unit]] = js.native
+  var popoverRef: js.UndefOr[js.Function1[/* ref */ HTMLElement | Null, Unit]] = js.native
   
   var portalClassName: js.UndefOr[String] = js.native
   
@@ -254,7 +254,7 @@ object PartialIPopoverProps {
     def deleteModifiers: Self = this.set("modifiers", js.undefined)
     
     @scala.inline
-    def setOnClose(value: /* event */ js.UndefOr[SyntheticEvent[Event, HTMLElement]] => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))
+    def setOnClose(value: /* event */ SyntheticEvent[Event, HTMLElement] => Unit): Self = this.set("onClose", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnClose: Self = this.set("onClose", js.undefined)
@@ -304,7 +304,7 @@ object PartialIPopoverProps {
     def deletePopoverClassName: Self = this.set("popoverClassName", js.undefined)
     
     @scala.inline
-    def setPopoverRef(value: /* ref */ HTMLDivElement | Null => Unit): Self = this.set("popoverRef", js.Any.fromFunction1(value))
+    def setPopoverRef(value: /* ref */ HTMLElement | Null => Unit): Self = this.set("popoverRef", js.Any.fromFunction1(value))
     
     @scala.inline
     def deletePopoverRef: Self = this.set("popoverRef", js.undefined)

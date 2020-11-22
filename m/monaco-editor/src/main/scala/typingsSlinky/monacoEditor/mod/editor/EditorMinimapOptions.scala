@@ -1,8 +1,11 @@
 package typingsSlinky.monacoEditor.mod.editor
 
 import typingsSlinky.monacoEditor.monacoEditorStrings.always
+import typingsSlinky.monacoEditor.monacoEditorStrings.fill
+import typingsSlinky.monacoEditor.monacoEditorStrings.fit
 import typingsSlinky.monacoEditor.monacoEditorStrings.left
 import typingsSlinky.monacoEditor.monacoEditorStrings.mouseover
+import typingsSlinky.monacoEditor.monacoEditorStrings.proportional
 import typingsSlinky.monacoEditor.monacoEditorStrings.right
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,6 +26,8 @@ trait EditorMinimapOptions extends js.Object {
   val showSlider: always | mouseover = js.native
   
   val side: right | left = js.native
+  
+  val size: proportional | fill | fit = js.native
 }
 object EditorMinimapOptions {
   
@@ -33,9 +38,10 @@ object EditorMinimapOptions {
     renderCharacters: Boolean,
     scale: Double,
     showSlider: always | mouseover,
-    side: right | left
+    side: right | left,
+    size: proportional | fill | fit
   ): EditorMinimapOptions = {
-    val __obj = js.Dynamic.literal(enabled = enabled.asInstanceOf[js.Any], maxColumn = maxColumn.asInstanceOf[js.Any], renderCharacters = renderCharacters.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any], showSlider = showSlider.asInstanceOf[js.Any], side = side.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(enabled = enabled.asInstanceOf[js.Any], maxColumn = maxColumn.asInstanceOf[js.Any], renderCharacters = renderCharacters.asInstanceOf[js.Any], scale = scale.asInstanceOf[js.Any], showSlider = showSlider.asInstanceOf[js.Any], side = side.asInstanceOf[js.Any], size = size.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditorMinimapOptions]
   }
   
@@ -71,5 +77,8 @@ object EditorMinimapOptions {
     
     @scala.inline
     def setSide(value: right | left): Self = this.set("side", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setSize(value: proportional | fill | fit): Self = this.set("size", value.asInstanceOf[js.Any])
   }
 }

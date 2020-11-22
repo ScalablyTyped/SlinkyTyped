@@ -1,6 +1,6 @@
 package typingsSlinky.awsSdk.quicksightMod
 
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service
@@ -29,12 +29,12 @@ trait QuickSight extends Service {
   var config_QuickSight: ConfigBase with ClientConfiguration = js.native
   
   /**
-    * Creates a customization for the Amazon QuickSight subscription associated with your AWS account.
+    * Creates Amazon QuickSight customizations the current AWS Region. Currently, you can add a custom default theme by using the CreateAccountCustomization or UpdateAccountCustomization API operation. To further customize QuickSight by removing QuickSight sample assets and videos for all new users, see Customizing QuickSight in the Amazon QuickSight User Guide.  You can create customizations for your AWS account or, if you specify a namespace, for a QuickSight namespace instead. Customizations that apply to a namespace always override customizations that apply to an AWS account. To find out which customizations apply, use the DescribeAccountCustomization API operation. Before you use the CreateAccountCustomization API operation to add a theme as the namespace default, make sure that you first share the theme with the namespace. If you don't share it with the namespace, the theme isn't visible to your users even if you make it the default theme. To check if the theme is shared, view the current permissions by using the  DescribeThemePermissions  API operation. To share the theme, grant permissions by using the  UpdateThemePermissions  API operation. 
     */
   def createAccountCustomization(): Request[CreateAccountCustomizationResponse, AWSError] = js.native
   def createAccountCustomization(callback: js.Function2[/* err */ AWSError, /* data */ CreateAccountCustomizationResponse, Unit]): Request[CreateAccountCustomizationResponse, AWSError] = js.native
   /**
-    * Creates a customization for the Amazon QuickSight subscription associated with your AWS account.
+    * Creates Amazon QuickSight customizations the current AWS Region. Currently, you can add a custom default theme by using the CreateAccountCustomization or UpdateAccountCustomization API operation. To further customize QuickSight by removing QuickSight sample assets and videos for all new users, see Customizing QuickSight in the Amazon QuickSight User Guide.  You can create customizations for your AWS account or, if you specify a namespace, for a QuickSight namespace instead. Customizations that apply to a namespace always override customizations that apply to an AWS account. To find out which customizations apply, use the DescribeAccountCustomization API operation. Before you use the CreateAccountCustomization API operation to add a theme as the namespace default, make sure that you first share the theme with the namespace. If you don't share it with the namespace, the theme isn't visible to your users even if you make it the default theme. To check if the theme is shared, view the current permissions by using the  DescribeThemePermissions  API operation. To share the theme, grant permissions by using the  UpdateThemePermissions  API operation. 
     */
   def createAccountCustomization(params: CreateAccountCustomizationRequest): Request[CreateAccountCustomizationResponse, AWSError] = js.native
   def createAccountCustomization(
@@ -43,12 +43,26 @@ trait QuickSight extends Service {
   ): Request[CreateAccountCustomizationResponse, AWSError] = js.native
   
   /**
-    * Creates a dashboard from a template. To first create a template, see the CreateTemplate API operation. A dashboard is an entity in QuickSight that identifies QuickSight reports, created from analyses. You can share QuickSight dashboards. With the right permissions, you can create scheduled email reports from them. The CreateDashboard, DescribeDashboard, and ListDashboardsByUser API operations act on the dashboard entity. If you have the correct permissions, you can create a dashboard from a template that exists in a different AWS account.
+    * Creates an analysis in Amazon QuickSight.
+    */
+  def createAnalysis(): Request[CreateAnalysisResponse, AWSError] = js.native
+  def createAnalysis(callback: js.Function2[/* err */ AWSError, /* data */ CreateAnalysisResponse, Unit]): Request[CreateAnalysisResponse, AWSError] = js.native
+  /**
+    * Creates an analysis in Amazon QuickSight.
+    */
+  def createAnalysis(params: CreateAnalysisRequest): Request[CreateAnalysisResponse, AWSError] = js.native
+  def createAnalysis(
+    params: CreateAnalysisRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ CreateAnalysisResponse, Unit]
+  ): Request[CreateAnalysisResponse, AWSError] = js.native
+  
+  /**
+    * Creates a dashboard from a template. To first create a template, see the  CreateTemplate  API operation. A dashboard is an entity in QuickSight that identifies QuickSight reports, created from analyses. You can share QuickSight dashboards. With the right permissions, you can create scheduled email reports from them. If you have the correct permissions, you can create a dashboard from a template that exists in a different AWS account.
     */
   def createDashboard(): Request[CreateDashboardResponse, AWSError] = js.native
   def createDashboard(callback: js.Function2[/* err */ AWSError, /* data */ CreateDashboardResponse, Unit]): Request[CreateDashboardResponse, AWSError] = js.native
   /**
-    * Creates a dashboard from a template. To first create a template, see the CreateTemplate API operation. A dashboard is an entity in QuickSight that identifies QuickSight reports, created from analyses. You can share QuickSight dashboards. With the right permissions, you can create scheduled email reports from them. The CreateDashboard, DescribeDashboard, and ListDashboardsByUser API operations act on the dashboard entity. If you have the correct permissions, you can create a dashboard from a template that exists in a different AWS account.
+    * Creates a dashboard from a template. To first create a template, see the  CreateTemplate  API operation. A dashboard is an entity in QuickSight that identifies QuickSight reports, created from analyses. You can share QuickSight dashboards. With the right permissions, you can create scheduled email reports from them. If you have the correct permissions, you can create a dashboard from a template that exists in a different AWS account.
     */
   def createDashboard(params: CreateDashboardRequest): Request[CreateDashboardResponse, AWSError] = js.native
   def createDashboard(
@@ -113,12 +127,12 @@ trait QuickSight extends Service {
   ): Request[CreateGroupMembershipResponse, AWSError] = js.native
   
   /**
-    * Creates an assignment with one specified IAM policy, identified by its Amazon Resource Name (ARN). This policy will be assigned to specified groups or users of Amazon QuickSight. The users and groups need to be in the same namespace. 
+    * Creates an assignment with one specified IAM policy, identified by its Amazon Resource Name (ARN). This policy assignment is attached to the specified groups or users of Amazon QuickSight. Assignment names are unique per AWS account. To avoid overwriting rules in other namespaces, use assignment names that are unique.
     */
   def createIAMPolicyAssignment(): Request[CreateIAMPolicyAssignmentResponse, AWSError] = js.native
   def createIAMPolicyAssignment(callback: js.Function2[/* err */ AWSError, /* data */ CreateIAMPolicyAssignmentResponse, Unit]): Request[CreateIAMPolicyAssignmentResponse, AWSError] = js.native
   /**
-    * Creates an assignment with one specified IAM policy, identified by its Amazon Resource Name (ARN). This policy will be assigned to specified groups or users of Amazon QuickSight. The users and groups need to be in the same namespace. 
+    * Creates an assignment with one specified IAM policy, identified by its Amazon Resource Name (ARN). This policy assignment is attached to the specified groups or users of Amazon QuickSight. Assignment names are unique per AWS account. To avoid overwriting rules in other namespaces, use assignment names that are unique.
     */
   def createIAMPolicyAssignment(params: CreateIAMPolicyAssignmentRequest): Request[CreateIAMPolicyAssignmentResponse, AWSError] = js.native
   def createIAMPolicyAssignment(
@@ -211,18 +225,32 @@ trait QuickSight extends Service {
   ): Request[CreateThemeAliasResponse, AWSError] = js.native
   
   /**
-    * Deletes customizations for the QuickSight subscription on your AWS account.
+    * Deletes all Amazon QuickSight customizations in this AWS Region for the specified AWS account and QuickSight namespace.
     */
   def deleteAccountCustomization(): Request[DeleteAccountCustomizationResponse, AWSError] = js.native
   def deleteAccountCustomization(callback: js.Function2[/* err */ AWSError, /* data */ DeleteAccountCustomizationResponse, Unit]): Request[DeleteAccountCustomizationResponse, AWSError] = js.native
   /**
-    * Deletes customizations for the QuickSight subscription on your AWS account.
+    * Deletes all Amazon QuickSight customizations in this AWS Region for the specified AWS account and QuickSight namespace.
     */
   def deleteAccountCustomization(params: DeleteAccountCustomizationRequest): Request[DeleteAccountCustomizationResponse, AWSError] = js.native
   def deleteAccountCustomization(
     params: DeleteAccountCustomizationRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DeleteAccountCustomizationResponse, Unit]
   ): Request[DeleteAccountCustomizationResponse, AWSError] = js.native
+  
+  /**
+    * Deletes an analysis from Amazon QuickSight. You can optionally include a recovery window during which you can restore the analysis. If you don't specify a recovery window value, the operation defaults to 30 days. QuickSight attaches a DeletionTime stamp to the response that specifies the end of the recovery window. At the end of the recovery window, QuickSight deletes the analysis permanently. At any time before recovery window ends, you can use the RestoreAnalysis API operation to remove the DeletionTime stamp and cancel the deletion of the analysis. The analysis remains visible in the API until it's deleted, so you can describe it but you can't make a template from it. An analysis that's scheduled for deletion isn't accessible in the QuickSight console. To access it in the console, restore it. Deleting an analysis doesn't delete the dashboards that you publish from it.
+    */
+  def deleteAnalysis(): Request[DeleteAnalysisResponse, AWSError] = js.native
+  def deleteAnalysis(callback: js.Function2[/* err */ AWSError, /* data */ DeleteAnalysisResponse, Unit]): Request[DeleteAnalysisResponse, AWSError] = js.native
+  /**
+    * Deletes an analysis from Amazon QuickSight. You can optionally include a recovery window during which you can restore the analysis. If you don't specify a recovery window value, the operation defaults to 30 days. QuickSight attaches a DeletionTime stamp to the response that specifies the end of the recovery window. At the end of the recovery window, QuickSight deletes the analysis permanently. At any time before recovery window ends, you can use the RestoreAnalysis API operation to remove the DeletionTime stamp and cancel the deletion of the analysis. The analysis remains visible in the API until it's deleted, so you can describe it but you can't make a template from it. An analysis that's scheduled for deletion isn't accessible in the QuickSight console. To access it in the console, restore it. Deleting an analysis doesn't delete the dashboards that you publish from it.
+    */
+  def deleteAnalysis(params: DeleteAnalysisRequest): Request[DeleteAnalysisResponse, AWSError] = js.native
+  def deleteAnalysis(
+    params: DeleteAnalysisRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DeleteAnalysisResponse, Unit]
+  ): Request[DeleteAnalysisResponse, AWSError] = js.native
   
   /**
     * Deletes a dashboard.
@@ -253,12 +281,12 @@ trait QuickSight extends Service {
   ): Request[DeleteDataSetResponse, AWSError] = js.native
   
   /**
-    * Deletes the data source permanently. This action breaks all the datasets that reference the deleted data source.
+    * Deletes the data source permanently. This operation breaks all the datasets that reference the deleted data source.
     */
   def deleteDataSource(): Request[DeleteDataSourceResponse, AWSError] = js.native
   def deleteDataSource(callback: js.Function2[/* err */ AWSError, /* data */ DeleteDataSourceResponse, Unit]): Request[DeleteDataSourceResponse, AWSError] = js.native
   /**
-    * Deletes the data source permanently. This action breaks all the datasets that reference the deleted data source.
+    * Deletes the data source permanently. This operation breaks all the datasets that reference the deleted data source.
     */
   def deleteDataSource(params: DeleteDataSourceRequest): Request[DeleteDataSourceResponse, AWSError] = js.native
   def deleteDataSource(
@@ -309,12 +337,12 @@ trait QuickSight extends Service {
   ): Request[DeleteIAMPolicyAssignmentResponse, AWSError] = js.native
   
   /**
-    * Deletes a namespace and the users and groups that are associated with the namespace. This is an asynchronous process. Assets including dashboards, analyses, datasets and data sources are not deleted. To delete these assets, you use the APIs for the relevant asset. 
+    * Deletes a namespace and the users and groups that are associated with the namespace. This is an asynchronous process. Assets including dashboards, analyses, datasets and data sources are not deleted. To delete these assets, you use the API operations for the relevant asset. 
     */
   def deleteNamespace(): Request[DeleteNamespaceResponse, AWSError] = js.native
   def deleteNamespace(callback: js.Function2[/* err */ AWSError, /* data */ DeleteNamespaceResponse, Unit]): Request[DeleteNamespaceResponse, AWSError] = js.native
   /**
-    * Deletes a namespace and the users and groups that are associated with the namespace. This is an asynchronous process. Assets including dashboards, analyses, datasets and data sources are not deleted. To delete these assets, you use the APIs for the relevant asset. 
+    * Deletes a namespace and the users and groups that are associated with the namespace. This is an asynchronous process. Assets including dashboards, analyses, datasets and data sources are not deleted. To delete these assets, you use the API operations for the relevant asset. 
     */
   def deleteNamespace(params: DeleteNamespaceRequest): Request[DeleteNamespaceResponse, AWSError] = js.native
   def deleteNamespace(
@@ -407,12 +435,12 @@ trait QuickSight extends Service {
   ): Request[DeleteUserByPrincipalIdResponse, AWSError] = js.native
   
   /**
-    * Describes the customizations associated with your AWS account.
+    * Describes the customizations associated with the provided AWS account and Amazon QuickSight namespace in an AWS Region. The QuickSight console evaluates which customizations to apply by running this API operation with the Resolved flag included.  To determine what customizations display when you run this command, it can help to visualize the relationship of the entities involved.     AWS Account - The AWS account exists at the top of the hierarchy. It has the potential to use all of the AWS Regions and AWS Services. When you subscribe to QuickSight, you choose one AWS Region to use as your home Region. That's where your free SPICE capacity is located. You can use QuickSight in any supported AWS Region.     AWS Region - In each AWS Region where you sign in to QuickSight at least once, QuickSight acts as a separate instance of the same service. If you have a user directory, it resides in us-east-1, which is the US East (N. Virginia). Generally speaking, these users have access to QuickSight in any AWS Region, unless they are constrained to a namespace.  To run the command in a different AWS Region, you change your Region settings. If you're using the AWS CLI, you can use one of the following options:   Use command line options.    Use named profiles.    Run aws configure to change your default AWS Region. Use Enter to key the same settings for your keys. For more information, see Configuring the AWS CLI.      Namespace - A QuickSight namespace is a partition that contains users and assets (data sources, datasets, dashboards, and so on). To access assets that are in a specific namespace, users and groups must also be part of the same namespace. People who share a namespace are completely isolated from users and assets in other namespaces, even if they are in the same AWS account and AWS Region.    Applied customizations - Within an AWS Region, a set of QuickSight customizations can apply to an AWS account or to a namespace. Settings that you apply to a namespace override settings that you apply to an AWS account. All settings are isolated to a single AWS Region. To apply them in other AWS Regions, run the CreateAccountCustomization command in each AWS Region where you want to apply the same customizations.   
     */
   def describeAccountCustomization(): Request[DescribeAccountCustomizationResponse, AWSError] = js.native
   def describeAccountCustomization(callback: js.Function2[/* err */ AWSError, /* data */ DescribeAccountCustomizationResponse, Unit]): Request[DescribeAccountCustomizationResponse, AWSError] = js.native
   /**
-    * Describes the customizations associated with your AWS account.
+    * Describes the customizations associated with the provided AWS account and Amazon QuickSight namespace in an AWS Region. The QuickSight console evaluates which customizations to apply by running this API operation with the Resolved flag included.  To determine what customizations display when you run this command, it can help to visualize the relationship of the entities involved.     AWS Account - The AWS account exists at the top of the hierarchy. It has the potential to use all of the AWS Regions and AWS Services. When you subscribe to QuickSight, you choose one AWS Region to use as your home Region. That's where your free SPICE capacity is located. You can use QuickSight in any supported AWS Region.     AWS Region - In each AWS Region where you sign in to QuickSight at least once, QuickSight acts as a separate instance of the same service. If you have a user directory, it resides in us-east-1, which is the US East (N. Virginia). Generally speaking, these users have access to QuickSight in any AWS Region, unless they are constrained to a namespace.  To run the command in a different AWS Region, you change your Region settings. If you're using the AWS CLI, you can use one of the following options:   Use command line options.    Use named profiles.    Run aws configure to change your default AWS Region. Use Enter to key the same settings for your keys. For more information, see Configuring the AWS CLI.      Namespace - A QuickSight namespace is a partition that contains users and assets (data sources, datasets, dashboards, and so on). To access assets that are in a specific namespace, users and groups must also be part of the same namespace. People who share a namespace are completely isolated from users and assets in other namespaces, even if they are in the same AWS account and AWS Region.    Applied customizations - Within an AWS Region, a set of QuickSight customizations can apply to an AWS account or to a namespace. Settings that you apply to a namespace override settings that you apply to an AWS account. All settings are isolated to a single AWS Region. To apply them in other AWS Regions, run the CreateAccountCustomization command in each AWS Region where you want to apply the same customizations.   
     */
   def describeAccountCustomization(params: DescribeAccountCustomizationRequest): Request[DescribeAccountCustomizationResponse, AWSError] = js.native
   def describeAccountCustomization(
@@ -421,18 +449,46 @@ trait QuickSight extends Service {
   ): Request[DescribeAccountCustomizationResponse, AWSError] = js.native
   
   /**
-    * Describes the settings that were used when your QuickSight subscription was first created in this AWS Account.
+    * Describes the settings that were used when your QuickSight subscription was first created in this AWS account.
     */
   def describeAccountSettings(): Request[DescribeAccountSettingsResponse, AWSError] = js.native
   def describeAccountSettings(callback: js.Function2[/* err */ AWSError, /* data */ DescribeAccountSettingsResponse, Unit]): Request[DescribeAccountSettingsResponse, AWSError] = js.native
   /**
-    * Describes the settings that were used when your QuickSight subscription was first created in this AWS Account.
+    * Describes the settings that were used when your QuickSight subscription was first created in this AWS account.
     */
   def describeAccountSettings(params: DescribeAccountSettingsRequest): Request[DescribeAccountSettingsResponse, AWSError] = js.native
   def describeAccountSettings(
     params: DescribeAccountSettingsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ DescribeAccountSettingsResponse, Unit]
   ): Request[DescribeAccountSettingsResponse, AWSError] = js.native
+  
+  /**
+    * Provides a summary of the metadata for an analysis.
+    */
+  def describeAnalysis(): Request[DescribeAnalysisResponse, AWSError] = js.native
+  def describeAnalysis(callback: js.Function2[/* err */ AWSError, /* data */ DescribeAnalysisResponse, Unit]): Request[DescribeAnalysisResponse, AWSError] = js.native
+  /**
+    * Provides a summary of the metadata for an analysis.
+    */
+  def describeAnalysis(params: DescribeAnalysisRequest): Request[DescribeAnalysisResponse, AWSError] = js.native
+  def describeAnalysis(
+    params: DescribeAnalysisRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeAnalysisResponse, Unit]
+  ): Request[DescribeAnalysisResponse, AWSError] = js.native
+  
+  /**
+    * Provides the read and write permissions for an analysis.
+    */
+  def describeAnalysisPermissions(): Request[DescribeAnalysisPermissionsResponse, AWSError] = js.native
+  def describeAnalysisPermissions(callback: js.Function2[/* err */ AWSError, /* data */ DescribeAnalysisPermissionsResponse, Unit]): Request[DescribeAnalysisPermissionsResponse, AWSError] = js.native
+  /**
+    * Provides the read and write permissions for an analysis.
+    */
+  def describeAnalysisPermissions(params: DescribeAnalysisPermissionsRequest): Request[DescribeAnalysisPermissionsResponse, AWSError] = js.native
+  def describeAnalysisPermissions(
+    params: DescribeAnalysisPermissionsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ DescribeAnalysisPermissionsResponse, Unit]
+  ): Request[DescribeAnalysisPermissionsResponse, AWSError] = js.native
   
   /**
     * Provides a summary for a dashboard.
@@ -673,12 +729,12 @@ trait QuickSight extends Service {
   ): Request[DescribeUserResponse, AWSError] = js.native
   
   /**
-    * Generates a URL and authorization code that you can embed in your web server code. Before you use this command, make sure that you have configured the dashboards and permissions.  Currently, you can use GetDashboardEmbedURL only from the server, not from the user's browser. The following rules apply to the combination of URL and authorization code:   They must be used together.   They can be used one time only.   They are valid for 5 minutes after you run this command.   The resulting user session is valid for 10 hours.    For more information, see Embedding Amazon QuickSight Dashboards in the Amazon QuickSight User Guide or Embedding Amazon QuickSight Dashboards in the Amazon QuickSight API Reference.
+    * Generates a session URL and authorization code that you can use to embed an Amazon QuickSight read-only dashboard in your web server code. Before you use this command, make sure that you have configured the dashboards and permissions.  Currently, you can use GetDashboardEmbedURL only from the server, not from the user's browser. The following rules apply to the combination of URL and authorization code:   They must be used together.   They can be used one time only.   They are valid for 5 minutes after you run this command.   The resulting user session is valid for 10 hours.   For more information, see Embedding Amazon QuickSight in the Amazon QuickSight User Guide .
     */
   def getDashboardEmbedUrl(): Request[GetDashboardEmbedUrlResponse, AWSError] = js.native
   def getDashboardEmbedUrl(callback: js.Function2[/* err */ AWSError, /* data */ GetDashboardEmbedUrlResponse, Unit]): Request[GetDashboardEmbedUrlResponse, AWSError] = js.native
   /**
-    * Generates a URL and authorization code that you can embed in your web server code. Before you use this command, make sure that you have configured the dashboards and permissions.  Currently, you can use GetDashboardEmbedURL only from the server, not from the user's browser. The following rules apply to the combination of URL and authorization code:   They must be used together.   They can be used one time only.   They are valid for 5 minutes after you run this command.   The resulting user session is valid for 10 hours.    For more information, see Embedding Amazon QuickSight Dashboards in the Amazon QuickSight User Guide or Embedding Amazon QuickSight Dashboards in the Amazon QuickSight API Reference.
+    * Generates a session URL and authorization code that you can use to embed an Amazon QuickSight read-only dashboard in your web server code. Before you use this command, make sure that you have configured the dashboards and permissions.  Currently, you can use GetDashboardEmbedURL only from the server, not from the user's browser. The following rules apply to the combination of URL and authorization code:   They must be used together.   They can be used one time only.   They are valid for 5 minutes after you run this command.   The resulting user session is valid for 10 hours.   For more information, see Embedding Amazon QuickSight in the Amazon QuickSight User Guide .
     */
   def getDashboardEmbedUrl(params: GetDashboardEmbedUrlRequest): Request[GetDashboardEmbedUrlResponse, AWSError] = js.native
   def getDashboardEmbedUrl(
@@ -687,18 +743,32 @@ trait QuickSight extends Service {
   ): Request[GetDashboardEmbedUrlResponse, AWSError] = js.native
   
   /**
-    * Generates a session URL and authorization code that you can embed in your web server code. 
+    * Generates a session URL and authorization code that you can use to embed the Amazon QuickSight console in your web server code. Use GetSessionEmbedUrl where you want to provide an authoring portal that allows users to create data sources, datasets, analyses, and dashboards. The users who access an embedded QuickSight console need belong to the author or admin security cohort. If you want to restrict permissions to some of these features, add a custom permissions profile to the user with the  UpdateUser  API operation. Use  RegisterUser  API operation to add a new user with a custom permission profile attached. For more information, see the following sections in the Amazon QuickSight User Guide:    Embedding the Amazon QuickSight Console     Customizing Access to the Amazon QuickSight Console   
     */
   def getSessionEmbedUrl(): Request[GetSessionEmbedUrlResponse, AWSError] = js.native
   def getSessionEmbedUrl(callback: js.Function2[/* err */ AWSError, /* data */ GetSessionEmbedUrlResponse, Unit]): Request[GetSessionEmbedUrlResponse, AWSError] = js.native
   /**
-    * Generates a session URL and authorization code that you can embed in your web server code. 
+    * Generates a session URL and authorization code that you can use to embed the Amazon QuickSight console in your web server code. Use GetSessionEmbedUrl where you want to provide an authoring portal that allows users to create data sources, datasets, analyses, and dashboards. The users who access an embedded QuickSight console need belong to the author or admin security cohort. If you want to restrict permissions to some of these features, add a custom permissions profile to the user with the  UpdateUser  API operation. Use  RegisterUser  API operation to add a new user with a custom permission profile attached. For more information, see the following sections in the Amazon QuickSight User Guide:    Embedding the Amazon QuickSight Console     Customizing Access to the Amazon QuickSight Console   
     */
   def getSessionEmbedUrl(params: GetSessionEmbedUrlRequest): Request[GetSessionEmbedUrlResponse, AWSError] = js.native
   def getSessionEmbedUrl(
     params: GetSessionEmbedUrlRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ GetSessionEmbedUrlResponse, Unit]
   ): Request[GetSessionEmbedUrlResponse, AWSError] = js.native
+  
+  /**
+    * Lists Amazon QuickSight analyses that exist in the specified AWS account.
+    */
+  def listAnalyses(): Request[ListAnalysesResponse, AWSError] = js.native
+  def listAnalyses(callback: js.Function2[/* err */ AWSError, /* data */ ListAnalysesResponse, Unit]): Request[ListAnalysesResponse, AWSError] = js.native
+  /**
+    * Lists Amazon QuickSight analyses that exist in the specified AWS account.
+    */
+  def listAnalyses(params: ListAnalysesRequest): Request[ListAnalysesResponse, AWSError] = js.native
+  def listAnalyses(
+    params: ListAnalysesRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ ListAnalysesResponse, Unit]
+  ): Request[ListAnalysesResponse, AWSError] = js.native
   
   /**
     * Lists all the versions of the dashboards in the QuickSight subscription.
@@ -983,12 +1053,40 @@ trait QuickSight extends Service {
   ): Request[RegisterUserResponse, AWSError] = js.native
   
   /**
-    * Searchs for dashboards that belong to a user. 
+    * Restores an analysis.
+    */
+  def restoreAnalysis(): Request[RestoreAnalysisResponse, AWSError] = js.native
+  def restoreAnalysis(callback: js.Function2[/* err */ AWSError, /* data */ RestoreAnalysisResponse, Unit]): Request[RestoreAnalysisResponse, AWSError] = js.native
+  /**
+    * Restores an analysis.
+    */
+  def restoreAnalysis(params: RestoreAnalysisRequest): Request[RestoreAnalysisResponse, AWSError] = js.native
+  def restoreAnalysis(
+    params: RestoreAnalysisRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ RestoreAnalysisResponse, Unit]
+  ): Request[RestoreAnalysisResponse, AWSError] = js.native
+  
+  /**
+    * Searches for analyses that belong to the user specified in the filter.
+    */
+  def searchAnalyses(): Request[SearchAnalysesResponse, AWSError] = js.native
+  def searchAnalyses(callback: js.Function2[/* err */ AWSError, /* data */ SearchAnalysesResponse, Unit]): Request[SearchAnalysesResponse, AWSError] = js.native
+  /**
+    * Searches for analyses that belong to the user specified in the filter.
+    */
+  def searchAnalyses(params: SearchAnalysesRequest): Request[SearchAnalysesResponse, AWSError] = js.native
+  def searchAnalyses(
+    params: SearchAnalysesRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ SearchAnalysesResponse, Unit]
+  ): Request[SearchAnalysesResponse, AWSError] = js.native
+  
+  /**
+    * Searches for dashboards that belong to a user. 
     */
   def searchDashboards(): Request[SearchDashboardsResponse, AWSError] = js.native
   def searchDashboards(callback: js.Function2[/* err */ AWSError, /* data */ SearchDashboardsResponse, Unit]): Request[SearchDashboardsResponse, AWSError] = js.native
   /**
-    * Searchs for dashboards that belong to a user. 
+    * Searches for dashboards that belong to a user. 
     */
   def searchDashboards(params: SearchDashboardsRequest): Request[SearchDashboardsResponse, AWSError] = js.native
   def searchDashboards(
@@ -1025,12 +1123,12 @@ trait QuickSight extends Service {
   ): Request[UntagResourceResponse, AWSError] = js.native
   
   /**
-    * Updates customizations associated with the QuickSight subscription on your AWS account.
+    * Updates Amazon QuickSight customizations the current AWS Region. Currently, the only customization you can use is a theme. You can use customizations for your AWS account or, if you specify a namespace, for a QuickSight namespace instead. Customizations that apply to a namespace override customizations that apply to an AWS account. To find out which customizations apply, use the DescribeAccountCustomization API operation. 
     */
   def updateAccountCustomization(): Request[UpdateAccountCustomizationResponse, AWSError] = js.native
   def updateAccountCustomization(callback: js.Function2[/* err */ AWSError, /* data */ UpdateAccountCustomizationResponse, Unit]): Request[UpdateAccountCustomizationResponse, AWSError] = js.native
   /**
-    * Updates customizations associated with the QuickSight subscription on your AWS account.
+    * Updates Amazon QuickSight customizations the current AWS Region. Currently, the only customization you can use is a theme. You can use customizations for your AWS account or, if you specify a namespace, for a QuickSight namespace instead. Customizations that apply to a namespace override customizations that apply to an AWS account. To find out which customizations apply, use the DescribeAccountCustomization API operation. 
     */
   def updateAccountCustomization(params: UpdateAccountCustomizationRequest): Request[UpdateAccountCustomizationResponse, AWSError] = js.native
   def updateAccountCustomization(
@@ -1039,18 +1137,46 @@ trait QuickSight extends Service {
   ): Request[UpdateAccountCustomizationResponse, AWSError] = js.native
   
   /**
-    * Updates the settings for the Amazon QuickSight subscription in your AWS Account.
+    * Updates the Amazon QuickSight settings in your AWS account.
     */
   def updateAccountSettings(): Request[UpdateAccountSettingsResponse, AWSError] = js.native
   def updateAccountSettings(callback: js.Function2[/* err */ AWSError, /* data */ UpdateAccountSettingsResponse, Unit]): Request[UpdateAccountSettingsResponse, AWSError] = js.native
   /**
-    * Updates the settings for the Amazon QuickSight subscription in your AWS Account.
+    * Updates the Amazon QuickSight settings in your AWS account.
     */
   def updateAccountSettings(params: UpdateAccountSettingsRequest): Request[UpdateAccountSettingsResponse, AWSError] = js.native
   def updateAccountSettings(
     params: UpdateAccountSettingsRequest,
     callback: js.Function2[/* err */ AWSError, /* data */ UpdateAccountSettingsResponse, Unit]
   ): Request[UpdateAccountSettingsResponse, AWSError] = js.native
+  
+  /**
+    * Updates an analysis in Amazon QuickSight
+    */
+  def updateAnalysis(): Request[UpdateAnalysisResponse, AWSError] = js.native
+  def updateAnalysis(callback: js.Function2[/* err */ AWSError, /* data */ UpdateAnalysisResponse, Unit]): Request[UpdateAnalysisResponse, AWSError] = js.native
+  /**
+    * Updates an analysis in Amazon QuickSight
+    */
+  def updateAnalysis(params: UpdateAnalysisRequest): Request[UpdateAnalysisResponse, AWSError] = js.native
+  def updateAnalysis(
+    params: UpdateAnalysisRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateAnalysisResponse, Unit]
+  ): Request[UpdateAnalysisResponse, AWSError] = js.native
+  
+  /**
+    * Updates the read and write permissions for an analysis.
+    */
+  def updateAnalysisPermissions(): Request[UpdateAnalysisPermissionsResponse, AWSError] = js.native
+  def updateAnalysisPermissions(callback: js.Function2[/* err */ AWSError, /* data */ UpdateAnalysisPermissionsResponse, Unit]): Request[UpdateAnalysisPermissionsResponse, AWSError] = js.native
+  /**
+    * Updates the read and write permissions for an analysis.
+    */
+  def updateAnalysisPermissions(params: UpdateAnalysisPermissionsRequest): Request[UpdateAnalysisPermissionsResponse, AWSError] = js.native
+  def updateAnalysisPermissions(
+    params: UpdateAnalysisPermissionsRequest,
+    callback: js.Function2[/* err */ AWSError, /* data */ UpdateAnalysisPermissionsResponse, Unit]
+  ): Request[UpdateAnalysisPermissionsResponse, AWSError] = js.native
   
   /**
     * Updates a dashboard in an AWS account.
@@ -1167,12 +1293,12 @@ trait QuickSight extends Service {
   ): Request[UpdateGroupResponse, AWSError] = js.native
   
   /**
-    * Updates an existing IAM policy assignment. This operation updates only the optional parameter or parameters that are specified in the request.
+    * Updates an existing IAM policy assignment. This operation updates only the optional parameter or parameters that are specified in the request. This overwrites all of the users included in Identities. 
     */
   def updateIAMPolicyAssignment(): Request[UpdateIAMPolicyAssignmentResponse, AWSError] = js.native
   def updateIAMPolicyAssignment(callback: js.Function2[/* err */ AWSError, /* data */ UpdateIAMPolicyAssignmentResponse, Unit]): Request[UpdateIAMPolicyAssignmentResponse, AWSError] = js.native
   /**
-    * Updates an existing IAM policy assignment. This operation updates only the optional parameter or parameters that are specified in the request.
+    * Updates an existing IAM policy assignment. This operation updates only the optional parameter or parameters that are specified in the request. This overwrites all of the users included in Identities. 
     */
   def updateIAMPolicyAssignment(params: UpdateIAMPolicyAssignmentRequest): Request[UpdateIAMPolicyAssignmentResponse, AWSError] = js.native
   def updateIAMPolicyAssignment(

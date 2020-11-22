@@ -48,7 +48,7 @@ trait Authorizer extends js.Object {
   var name: js.UndefOr[String] = js.native
   
   /**
-    * A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer. Each element is of this format: arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}. For a TOKEN or REQUEST authorizer, this is not defined. 
+    * A list of the Amazon Cognito user pool ARNs for the COGNITO_USER_POOLS authorizer. Each element is of this format: arn:aws:cognito-idp:{region}:{account_id}:userpool/{user_pool_id}. For a TOKEN or REQUEST authorizer, this is not defined.
     */
   var providerARNs: js.UndefOr[ListOfARNs] = js.native
   

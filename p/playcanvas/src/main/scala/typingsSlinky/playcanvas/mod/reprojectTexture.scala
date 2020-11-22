@@ -19,6 +19,7 @@ object reprojectTexture extends js.Object {
     * @param [specularPower] - optional specular power. When specular power is specified,
     * the source is convolved by a phong-weighted kernel raised to the specified power. Otherwise
     * the function performs a standard resample.
+    * @param [numSamples] - optional number of samples (default is 1024).
     */
   def apply(
     device: typingsSlinky.playcanvas.pc.GraphicsDevice,
@@ -29,6 +30,20 @@ object reprojectTexture extends js.Object {
     device: typingsSlinky.playcanvas.pc.GraphicsDevice,
     source: typingsSlinky.playcanvas.pc.Texture,
     target: typingsSlinky.playcanvas.pc.Texture,
+    specularPower: js.UndefOr[scala.Nothing],
+    numSamples: Double
+  ): Unit = js.native
+  def apply(
+    device: typingsSlinky.playcanvas.pc.GraphicsDevice,
+    source: typingsSlinky.playcanvas.pc.Texture,
+    target: typingsSlinky.playcanvas.pc.Texture,
     specularPower: Double
+  ): Unit = js.native
+  def apply(
+    device: typingsSlinky.playcanvas.pc.GraphicsDevice,
+    source: typingsSlinky.playcanvas.pc.Texture,
+    target: typingsSlinky.playcanvas.pc.Texture,
+    specularPower: Double,
+    numSamples: Double
   ): Unit = js.native
 }

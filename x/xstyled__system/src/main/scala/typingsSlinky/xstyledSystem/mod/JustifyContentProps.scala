@@ -9,7 +9,7 @@ trait JustifyContentProps extends js.Object {
   
   val justifyContent: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.JustifyContentProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.JustifyContent */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object JustifyContentProps {
     }
     
     @scala.inline
+    def setJustifyContentVarargs(value: js.Any*): Self = this.set("justifyContent", js.Array(value :_*))
+    
+    @scala.inline
     def setJustifyContent(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.JustifyContentProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.JustifyContent */ _
         ]
     ): Self = this.set("justifyContent", value.asInstanceOf[js.Any])
     

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class CatalogIdMapping () extends js.Object {
   
   /**
-    * The client-supplied, temporary `#`-prefixed ID for a new `CatalogObject`.
+    * The client-supplied temporary `#`-prefixed ID for a new `CatalogObject`.
     */
   var client_object_id: js.UndefOr[String] = js.native
   

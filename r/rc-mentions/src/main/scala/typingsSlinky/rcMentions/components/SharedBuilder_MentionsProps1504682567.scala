@@ -24,8 +24,13 @@ import typingsSlinky.rcMentions.mentionsMod.MentionsProps
 import typingsSlinky.rcMentions.mentionsMod.Placement
 import typingsSlinky.rcMentions.optionMod.OptionProps
 import typingsSlinky.rcMentions.rcMentionsBooleans.`false`
+import typingsSlinky.rcMentions.rcMentionsStrings.`additions removals`
 import typingsSlinky.rcMentions.rcMentionsStrings.`additions text`
 import typingsSlinky.rcMentions.rcMentionsStrings.`inline`
+import typingsSlinky.rcMentions.rcMentionsStrings.`removals additions`
+import typingsSlinky.rcMentions.rcMentionsStrings.`removals text`
+import typingsSlinky.rcMentions.rcMentionsStrings.`text additions`
+import typingsSlinky.rcMentions.rcMentionsStrings.`text removals`
 import typingsSlinky.rcMentions.rcMentionsStrings.additions
 import typingsSlinky.rcMentions.rcMentionsStrings.all
 import typingsSlinky.rcMentions.rcMentionsStrings.ascending
@@ -196,7 +201,9 @@ class SharedBuilder_MentionsProps1504682567[R <: js.Object] (val args: js.Array[
   def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+  def `aria-relevant`(
+    value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
   
   @scala.inline
   def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

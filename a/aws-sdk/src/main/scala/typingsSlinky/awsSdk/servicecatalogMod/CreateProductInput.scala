@@ -43,7 +43,7 @@ trait CreateProductInput extends js.Object {
   var ProductType: typingsSlinky.awsSdk.servicecatalogMod.ProductType = js.native
   
   /**
-    * The configuration of the provisioning artifact.
+    * The configuration of the provisioning artifact. The info field accepts ImportFromPhysicalID.
     */
   var ProvisioningArtifactParameters: ProvisioningArtifactProperties = js.native
   

@@ -1,6 +1,6 @@
 package typingsSlinky.devtoolsProtocol.anon
 
-import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.StartScreencastRequest
+import typingsSlinky.devtoolsProtocol.mod.Protocol.Page.SetFontFamiliesRequest
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,14 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `153` extends js.Object {
   
-  var paramsType: js.Array[js.UndefOr[StartScreencastRequest]] = js.native
+  var paramsType: js.Array[SetFontFamiliesRequest] = js.native
   
   var returnType: Unit = js.native
 }
 object `153` {
   
   @scala.inline
-  def apply(paramsType: js.Array[js.UndefOr[StartScreencastRequest]], returnType: Unit): `153` = {
+  def apply(paramsType: js.Array[SetFontFamiliesRequest], returnType: Unit): `153` = {
     val __obj = js.Dynamic.literal(paramsType = paramsType.asInstanceOf[js.Any], returnType = returnType.asInstanceOf[js.Any])
     __obj.asInstanceOf[`153`]
   }
@@ -36,10 +36,10 @@ object `153` {
     }
     
     @scala.inline
-    def setParamsTypeVarargs(value: js.UndefOr[StartScreencastRequest]*): Self = this.set("paramsType", js.Array(value :_*))
+    def setParamsTypeVarargs(value: SetFontFamiliesRequest*): Self = this.set("paramsType", js.Array(value :_*))
     
     @scala.inline
-    def setParamsType(value: js.Array[js.UndefOr[StartScreencastRequest]]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
+    def setParamsType(value: js.Array[SetFontFamiliesRequest]): Self = this.set("paramsType", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReturnType(value: Unit): Self = this.set("returnType", value.asInstanceOf[js.Any])

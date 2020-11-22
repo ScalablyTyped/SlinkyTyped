@@ -1,16 +1,15 @@
 package typingsSlinky.reactToastify.toastPositionerMod
 
 import typingsSlinky.react.mod.CSSProperties
-import typingsSlinky.reactToastify.typesMod.ClassName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined std.Pick<react-toastify.react-toastify/dist/types.ToastProps, 'className' | 'style' | 'in'> */
+/* Inlined std.Pick<react-toastify.react-toastify/dist/types.ToastProps, 'style' | 'in'> & {  className :string | undefined} */
 @js.native
 trait ToastPositionerProps extends js.Object {
   
-  var className: js.UndefOr[ClassName] = js.native
+  var className: js.UndefOr[String] = js.native
   
   var in: js.UndefOr[Boolean] = js.native
   
@@ -40,13 +39,10 @@ object ToastPositionerProps {
     }
     
     @scala.inline
-    def setClassName(value: ClassName): Self = this.set("className", value.asInstanceOf[js.Any])
+    def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteClassName: Self = this.set("className", js.undefined)
-    
-    @scala.inline
-    def setClassNameNull: Self = this.set("className", null)
     
     @scala.inline
     def setIn(value: Boolean): Self = this.set("in", value.asInstanceOf[js.Any])

@@ -12,6 +12,8 @@ trait StartCondition extends js.Object {
     */
   var Description: js.UndefOr[string] = js.native
   
+  var EventStartCondition: js.UndefOr[typingsSlinky.awsSdk.pinpointMod.EventStartCondition] = js.native
+  
   /**
     * The segment that's associated with the first activity in the journey. This segment determines which users are participants in the journey.
     */
@@ -45,6 +47,12 @@ object StartCondition {
     
     @scala.inline
     def deleteDescription: Self = this.set("Description", js.undefined)
+    
+    @scala.inline
+    def setEventStartCondition(value: EventStartCondition): Self = this.set("EventStartCondition", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteEventStartCondition: Self = this.set("EventStartCondition", js.undefined)
     
     @scala.inline
     def setSegmentStartCondition(value: SegmentCondition): Self = this.set("SegmentStartCondition", value.asInstanceOf[js.Any])

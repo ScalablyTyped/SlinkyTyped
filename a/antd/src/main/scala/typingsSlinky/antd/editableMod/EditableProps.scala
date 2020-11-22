@@ -1,7 +1,7 @@
 package typingsSlinky.antd.editableMod
 
-import typingsSlinky.antd.antdStrings.ltr
-import typingsSlinky.antd.antdStrings.rtl
+import typingsSlinky.antd.configProviderContextMod.DirectionType
+import typingsSlinky.rcTextarea.resizableTextAreaMod.AutoSizeType
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,9 +12,13 @@ trait EditableProps extends js.Object {
   
   var `aria-label`: js.UndefOr[String] = js.native
   
+  var autoSize: js.UndefOr[Boolean | AutoSizeType] = js.native
+  
   var className: js.UndefOr[String] = js.native
   
-  var direction: js.UndefOr[ltr | rtl] = js.native
+  var direction: js.UndefOr[DirectionType] = js.native
+  
+  var maxLength: js.UndefOr[Double] = js.native
   
   def onCancel(): Unit = js.native
   
@@ -24,13 +28,13 @@ trait EditableProps extends js.Object {
   
   var style: js.UndefOr[CSSProperties] = js.native
   
-  var value: js.UndefOr[String] = js.native
+  var value: String = js.native
 }
 object EditableProps {
   
   @scala.inline
-  def apply(onCancel: () => Unit, onSave: String => Unit): EditableProps = {
-    val __obj = js.Dynamic.literal(onCancel = js.Any.fromFunction0(onCancel), onSave = js.Any.fromFunction1(onSave))
+  def apply(onCancel: () => Unit, onSave: String => Unit, value: String): EditableProps = {
+    val __obj = js.Dynamic.literal(onCancel = js.Any.fromFunction0(onCancel), onSave = js.Any.fromFunction1(onSave), value = value.asInstanceOf[js.Any])
     __obj.asInstanceOf[EditableProps]
   }
   
@@ -56,10 +60,19 @@ object EditableProps {
     def setOnSave(value: String => Unit): Self = this.set("onSave", js.Any.fromFunction1(value))
     
     @scala.inline
+    def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def `setAria-label`(value: String): Self = this.set("aria-label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `deleteAria-label`: Self = this.set("aria-label", js.undefined)
+    
+    @scala.inline
+    def setAutoSize(value: Boolean | AutoSizeType): Self = this.set("autoSize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAutoSize: Self = this.set("autoSize", js.undefined)
     
     @scala.inline
     def setClassName(value: String): Self = this.set("className", value.asInstanceOf[js.Any])
@@ -68,10 +81,16 @@ object EditableProps {
     def deleteClassName: Self = this.set("className", js.undefined)
     
     @scala.inline
-    def setDirection(value: ltr | rtl): Self = this.set("direction", value.asInstanceOf[js.Any])
+    def setDirection(value: DirectionType): Self = this.set("direction", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDirection: Self = this.set("direction", js.undefined)
+    
+    @scala.inline
+    def setMaxLength(value: Double): Self = this.set("maxLength", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxLength: Self = this.set("maxLength", js.undefined)
     
     @scala.inline
     def setPrefixCls(value: String): Self = this.set("prefixCls", value.asInstanceOf[js.Any])
@@ -84,11 +103,5 @@ object EditableProps {
     
     @scala.inline
     def deleteStyle: Self = this.set("style", js.undefined)
-    
-    @scala.inline
-    def setValue(value: String): Self = this.set("value", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def deleteValue: Self = this.set("value", js.undefined)
   }
 }

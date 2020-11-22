@@ -1,5 +1,6 @@
 package typingsSlinky.reactScrollspy.mod
 
+import org.scalajs.dom.raw.HTMLElement
 import slinky.core.ReactComponentClass
 import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
@@ -25,7 +26,7 @@ trait ScrollspyProps extends js.Object {
   var offset: js.UndefOr[Double] = js.native
   
   // Function to be executed when the active item has been updated
-  var onUpdate: js.UndefOr[js.Function1[/* item */ String, Unit]] = js.native
+  var onUpdate: js.UndefOr[js.Function1[/* item */ HTMLElement, Unit]] = js.native
   
   // Selector for the element of scrollable container that can be used with querySelector
   var rootEl: js.UndefOr[String] = js.native
@@ -93,7 +94,7 @@ object ScrollspyProps {
     def deleteOffset: Self = this.set("offset", js.undefined)
     
     @scala.inline
-    def setOnUpdate(value: /* item */ String => Unit): Self = this.set("onUpdate", js.Any.fromFunction1(value))
+    def setOnUpdate(value: /* item */ HTMLElement => Unit): Self = this.set("onUpdate", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteOnUpdate: Self = this.set("onUpdate", js.undefined)

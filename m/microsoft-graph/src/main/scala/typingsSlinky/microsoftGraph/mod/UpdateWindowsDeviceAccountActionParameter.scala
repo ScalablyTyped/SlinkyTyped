@@ -8,22 +8,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait UpdateWindowsDeviceAccountActionParameter extends js.Object {
   
   // Not yet documented
-  var calendarSyncEnabled: js.UndefOr[Boolean] = js.native
+  var calendarSyncEnabled: js.UndefOr[NullableOption[Boolean]] = js.native
   
   // Not yet documented
-  var deviceAccount: js.UndefOr[WindowsDeviceAccount] = js.native
+  var deviceAccount: js.UndefOr[NullableOption[WindowsDeviceAccount]] = js.native
   
   // Not yet documented
-  var deviceAccountEmail: js.UndefOr[String] = js.native
+  var deviceAccountEmail: js.UndefOr[NullableOption[String]] = js.native
   
   // Not yet documented
-  var exchangeServer: js.UndefOr[String] = js.native
+  var exchangeServer: js.UndefOr[NullableOption[String]] = js.native
   
   // Not yet documented
-  var passwordRotationEnabled: js.UndefOr[Boolean] = js.native
+  var passwordRotationEnabled: js.UndefOr[NullableOption[Boolean]] = js.native
   
   // Not yet documented
-  var sessionInitiationProtocalAddress: js.UndefOr[String] = js.native
+  var sessionInitiationProtocalAddress: js.UndefOr[NullableOption[String]] = js.native
 }
 object UpdateWindowsDeviceAccountActionParameter {
   
@@ -49,39 +49,57 @@ object UpdateWindowsDeviceAccountActionParameter {
     }
     
     @scala.inline
-    def setCalendarSyncEnabled(value: Boolean): Self = this.set("calendarSyncEnabled", value.asInstanceOf[js.Any])
+    def setCalendarSyncEnabled(value: NullableOption[Boolean]): Self = this.set("calendarSyncEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCalendarSyncEnabled: Self = this.set("calendarSyncEnabled", js.undefined)
     
     @scala.inline
-    def setDeviceAccount(value: WindowsDeviceAccount): Self = this.set("deviceAccount", value.asInstanceOf[js.Any])
+    def setCalendarSyncEnabledNull: Self = this.set("calendarSyncEnabled", null)
+    
+    @scala.inline
+    def setDeviceAccount(value: NullableOption[WindowsDeviceAccount]): Self = this.set("deviceAccount", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeviceAccount: Self = this.set("deviceAccount", js.undefined)
     
     @scala.inline
-    def setDeviceAccountEmail(value: String): Self = this.set("deviceAccountEmail", value.asInstanceOf[js.Any])
+    def setDeviceAccountNull: Self = this.set("deviceAccount", null)
+    
+    @scala.inline
+    def setDeviceAccountEmail(value: NullableOption[String]): Self = this.set("deviceAccountEmail", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDeviceAccountEmail: Self = this.set("deviceAccountEmail", js.undefined)
     
     @scala.inline
-    def setExchangeServer(value: String): Self = this.set("exchangeServer", value.asInstanceOf[js.Any])
+    def setDeviceAccountEmailNull: Self = this.set("deviceAccountEmail", null)
+    
+    @scala.inline
+    def setExchangeServer(value: NullableOption[String]): Self = this.set("exchangeServer", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteExchangeServer: Self = this.set("exchangeServer", js.undefined)
     
     @scala.inline
-    def setPasswordRotationEnabled(value: Boolean): Self = this.set("passwordRotationEnabled", value.asInstanceOf[js.Any])
+    def setExchangeServerNull: Self = this.set("exchangeServer", null)
+    
+    @scala.inline
+    def setPasswordRotationEnabled(value: NullableOption[Boolean]): Self = this.set("passwordRotationEnabled", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deletePasswordRotationEnabled: Self = this.set("passwordRotationEnabled", js.undefined)
     
     @scala.inline
-    def setSessionInitiationProtocalAddress(value: String): Self = this.set("sessionInitiationProtocalAddress", value.asInstanceOf[js.Any])
+    def setPasswordRotationEnabledNull: Self = this.set("passwordRotationEnabled", null)
+    
+    @scala.inline
+    def setSessionInitiationProtocalAddress(value: NullableOption[String]): Self = this.set("sessionInitiationProtocalAddress", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteSessionInitiationProtocalAddress: Self = this.set("sessionInitiationProtocalAddress", js.undefined)
+    
+    @scala.inline
+    def setSessionInitiationProtocalAddressNull: Self = this.set("sessionInitiationProtocalAddress", null)
   }
 }

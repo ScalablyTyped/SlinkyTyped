@@ -1,7 +1,7 @@
 package typingsSlinky.pouchReduxMiddleware.anon
 
 import typingsSlinky.pouchReduxMiddleware.mod.Document
-import typingsSlinky.redux.mod.Action
+import typingsSlinky.redux.mod.AnyAction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -9,22 +9,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BatchInsert[T] extends js.Object {
   
-  def batchInsert(docs: js.Array[Document[T]]): Action[_] = js.native
+  def batchInsert(docs: js.Array[Document[T]]): AnyAction = js.native
   
-  def insert(doc: Document[T]): Action[_] = js.native
+  def insert(doc: Document[T]): AnyAction = js.native
   
-  def remove(doc: Document[T]): Action[_] = js.native
+  def remove(doc: Document[T]): AnyAction = js.native
   
-  def update(doc: Document[T]): Action[_] = js.native
+  def update(doc: Document[T]): AnyAction = js.native
 }
 object BatchInsert {
   
   @scala.inline
   def apply[T](
-    batchInsert: js.Array[Document[T]] => Action[_],
-    insert: Document[T] => Action[_],
-    remove: Document[T] => Action[_],
-    update: Document[T] => Action[_]
+    batchInsert: js.Array[Document[T]] => AnyAction,
+    insert: Document[T] => AnyAction,
+    remove: Document[T] => AnyAction,
+    update: Document[T] => AnyAction
   ): BatchInsert[T] = {
     val __obj = js.Dynamic.literal(batchInsert = js.Any.fromFunction1(batchInsert), insert = js.Any.fromFunction1(insert), remove = js.Any.fromFunction1(remove), update = js.Any.fromFunction1(update))
     __obj.asInstanceOf[BatchInsert[T]]
@@ -46,15 +46,15 @@ object BatchInsert {
     }
     
     @scala.inline
-    def setBatchInsert(value: js.Array[Document[T]] => Action[_]): Self = this.set("batchInsert", js.Any.fromFunction1(value))
+    def setBatchInsert(value: js.Array[Document[T]] => AnyAction): Self = this.set("batchInsert", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setInsert(value: Document[T] => Action[_]): Self = this.set("insert", js.Any.fromFunction1(value))
+    def setInsert(value: Document[T] => AnyAction): Self = this.set("insert", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setRemove(value: Document[T] => Action[_]): Self = this.set("remove", js.Any.fromFunction1(value))
+    def setRemove(value: Document[T] => AnyAction): Self = this.set("remove", js.Any.fromFunction1(value))
     
     @scala.inline
-    def setUpdate(value: Document[T] => Action[_]): Self = this.set("update", js.Any.fromFunction1(value))
+    def setUpdate(value: Document[T] => AnyAction): Self = this.set("update", js.Any.fromFunction1(value))
   }
 }

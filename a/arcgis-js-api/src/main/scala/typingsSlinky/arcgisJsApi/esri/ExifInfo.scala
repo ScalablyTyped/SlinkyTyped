@@ -17,7 +17,7 @@ trait ExifInfo extends Object {
   var name: js.UndefOr[String] = js.native
   
   /**
-    * Array of tag objects containing the following properties:
+    * Array of tag objects containing the following properties:.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-layers-support-AttachmentInfo.html#ExifInfo)
     */

@@ -3,6 +3,7 @@ package typingsSlinky.reactNativeElements.anon
 import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.facade.ReactElement
+import typingsSlinky.reactNative.anon.Layout
 import typingsSlinky.reactNative.anon.ReadonlyactionNamestring
 import typingsSlinky.reactNative.mod.AccessibilityActionInfo
 import typingsSlinky.reactNative.mod.AccessibilityRole
@@ -17,7 +18,6 @@ import typingsSlinky.reactNative.mod.ImageSourcePropType
 import typingsSlinky.reactNative.mod.ImageStyle
 import typingsSlinky.reactNative.mod.ImageURISource
 import typingsSlinky.reactNative.mod.Insets
-import typingsSlinky.reactNative.mod.LayoutChangeEvent
 import typingsSlinky.reactNative.mod.NodeHandle
 import typingsSlinky.reactNative.mod.StyleProp
 import typingsSlinky.reactNative.mod.ViewStyle
@@ -41,6 +41,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 /* Inlined react-native-elements.react-native-elements.RecursivePartial<std.Partial<react-native-elements.react-native-elements.ImageProps>> */
 @js.native
 trait RecursivePartialPartialIm extends js.Object {
+  
+  var Component: js.UndefOr[RecursivePartial[js.UndefOr[ReactComponentClass[js.Object]]]] = js.native
   
   var ImageComponent: js.UndefOr[RecursivePartial[js.UndefOr[ReactComponentClass[_]]]] = js.native
   
@@ -114,7 +116,9 @@ trait RecursivePartialPartialIm extends js.Object {
     RecursivePartial[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, ImageErrorEventData], Unit]]]
   ] = js.native
   
-  var onLayout: js.UndefOr[RecursivePartial[js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]]] = js.native
+  var onLayout: js.UndefOr[
+    RecursivePartial[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]]]
+  ] = js.native
   
   var onLoad: js.UndefOr[
     RecursivePartial[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, ImageLoadEventData], Unit]]]
@@ -124,9 +128,13 @@ trait RecursivePartialPartialIm extends js.Object {
   
   var onLoadStart: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
   
+  var onLongPress: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
+  
   var onMagicTap: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
   
   var onPartialLoad: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
+  
+  var onPress: js.UndefOr[RecursivePartial[js.UndefOr[js.Function0[Unit]]]] = js.native
   
   var onProgress: js.UndefOr[
     RecursivePartial[
@@ -149,6 +157,8 @@ trait RecursivePartialPartialIm extends js.Object {
   var testID: js.UndefOr[RecursivePartial[js.UndefOr[String]]] = js.native
   
   var transition: js.UndefOr[RecursivePartial[js.UndefOr[Boolean]]] = js.native
+  
+  var transitionDuration: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.native
   
   var width: js.UndefOr[RecursivePartial[js.UndefOr[Double]]] = js.native
 }
@@ -174,6 +184,12 @@ object RecursivePartialPartialIm {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setComponent(value: RecursivePartial[js.UndefOr[ReactComponentClass[js.Object]]]): Self = this.set("Component", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteComponent: Self = this.set("Component", js.undefined)
     
     @scala.inline
     def setImageComponent(value: RecursivePartial[js.UndefOr[ReactComponentClass[_]]]): Self = this.set("ImageComponent", value.asInstanceOf[js.Any])
@@ -374,7 +390,7 @@ object RecursivePartialPartialIm {
     def deleteOnError: Self = this.set("onError", js.undefined)
     
     @scala.inline
-    def setOnLayout(value: RecursivePartial[js.UndefOr[js.Function1[/* event */ LayoutChangeEvent, Unit]]]): Self = this.set("onLayout", value.asInstanceOf[js.Any])
+    def setOnLayout(value: RecursivePartial[js.UndefOr[js.Function1[SyntheticEvent[NodeHandle, Layout], Unit]]]): Self = this.set("onLayout", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteOnLayout: Self = this.set("onLayout", js.undefined)
@@ -400,6 +416,12 @@ object RecursivePartialPartialIm {
     def deleteOnLoadStart: Self = this.set("onLoadStart", js.undefined)
     
     @scala.inline
+    def setOnLongPress(value: RecursivePartial[js.UndefOr[js.Function0[Unit]]]): Self = this.set("onLongPress", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOnLongPress: Self = this.set("onLongPress", js.undefined)
+    
+    @scala.inline
     def setOnMagicTap(value: RecursivePartial[js.UndefOr[js.Function0[Unit]]]): Self = this.set("onMagicTap", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -410,6 +432,12 @@ object RecursivePartialPartialIm {
     
     @scala.inline
     def deleteOnPartialLoad: Self = this.set("onPartialLoad", js.undefined)
+    
+    @scala.inline
+    def setOnPress(value: RecursivePartial[js.UndefOr[js.Function0[Unit]]]): Self = this.set("onPress", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOnPress: Self = this.set("onPress", js.undefined)
     
     @scala.inline
     def setOnProgress(
@@ -468,6 +496,12 @@ object RecursivePartialPartialIm {
     
     @scala.inline
     def deleteTransition: Self = this.set("transition", js.undefined)
+    
+    @scala.inline
+    def setTransitionDuration(value: RecursivePartial[js.UndefOr[Double]]): Self = this.set("transitionDuration", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTransitionDuration: Self = this.set("transitionDuration", js.undefined)
     
     @scala.inline
     def setWidth(value: RecursivePartial[js.UndefOr[Double]]): Self = this.set("width", value.asInstanceOf[js.Any])

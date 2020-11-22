@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class ^ protected () extends Notify {
   def this(title: String) = this()
-  def this(title: String, options: INotifyOption) = this()
+  def this(title: String, options: NotifyOption) = this()
 }
 @JSImport("notifyjs", JSImport.Namespace)
 @js.native

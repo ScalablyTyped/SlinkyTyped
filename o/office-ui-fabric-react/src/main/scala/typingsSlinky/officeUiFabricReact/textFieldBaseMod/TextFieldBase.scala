@@ -73,6 +73,8 @@ class TextFieldBase protected ()
   
   var _onRenderSuffix: js.Any = js.native
   
+  var _onRevealButtonClick: js.Any = js.native
+  
   var _renderInput: js.Any = js.native
   
   var _renderTextArea: js.Any = js.native

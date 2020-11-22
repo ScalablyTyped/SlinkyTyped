@@ -1,5 +1,6 @@
 package typingsSlinky.babylonjs.BABYLON
 
+import org.scalajs.dom.raw.File
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -51,7 +52,7 @@ trait MeshAssetTask extends AbstractAssetTask {
   var rootUrl: String = js.native
   
   /**
-    * Defines the filename of the scene to load from
+    * Defines the filename or File of the scene to load from
     */
-  var sceneFilename: String = js.native
+  var sceneFilename: String | File = js.native
 }

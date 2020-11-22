@@ -9,7 +9,7 @@ trait AlignSelfProps extends js.Object {
   
   val alignSelf: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignSelfProperty */ _
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignSelf */ _
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object AlignSelfProps {
     }
     
     @scala.inline
+    def setAlignSelfVarargs(value: js.Any*): Self = this.set("alignSelf", js.Array(value :_*))
+    
+    @scala.inline
     def setAlignSelf(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.AlignSelfProperty */ _
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.AlignSelf */ _
         ]
     ): Self = this.set("alignSelf", value.asInstanceOf[js.Any])
     

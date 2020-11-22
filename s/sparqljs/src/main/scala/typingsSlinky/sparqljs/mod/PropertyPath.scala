@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PropertyPath extends js.Object {
   
-  var items: js.Array[PropertyPath | Term] = js.native
+  var items: js.Array[IriTerm | PropertyPath] = js.native
   
   var pathType: Verticalline | Slash | ^  | Plussign | Asterisk | Exclamationmark = js.native
   
@@ -24,7 +24,7 @@ object PropertyPath {
   
   @scala.inline
   def apply(
-    items: js.Array[PropertyPath | Term],
+    items: js.Array[IriTerm | PropertyPath],
     pathType: Verticalline | Slash | ^  | Plussign | Asterisk | Exclamationmark,
     `type`: path
   ): PropertyPath = {
@@ -49,10 +49,10 @@ object PropertyPath {
     }
     
     @scala.inline
-    def setItemsVarargs(value: (PropertyPath | Term)*): Self = this.set("items", js.Array(value :_*))
+    def setItemsVarargs(value: (IriTerm | PropertyPath)*): Self = this.set("items", js.Array(value :_*))
     
     @scala.inline
-    def setItems(value: js.Array[PropertyPath | Term]): Self = this.set("items", value.asInstanceOf[js.Any])
+    def setItems(value: js.Array[IriTerm | PropertyPath]): Self = this.set("items", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPathType(value: Verticalline | Slash | ^  | Plussign | Asterisk | Exclamationmark): Self = this.set("pathType", value.asInstanceOf[js.Any])

@@ -7,6 +7,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait BankInfoOptions extends js.Object {
   
+  /**
+    * The routing number for a bank (ex: ‘123456780’)
+    */
   var routingNumber: String = js.native
 }
 object BankInfoOptions {

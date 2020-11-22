@@ -9,7 +9,7 @@ trait ZIndexProps extends js.Object {
   
   val zIndex: js.UndefOr[
     ResponsiveValue[
-      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _) | AliasKey
+      (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _) | AliasKey
     ]
   ] = js.native
 }
@@ -37,9 +37,12 @@ object ZIndexProps {
     }
     
     @scala.inline
+    def setZIndexVarargs(value: (js.Any | AliasKey)*): Self = this.set("zIndex", js.Array(value :_*))
+    
+    @scala.inline
     def setZIndex(
       value: ResponsiveValue[
-          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.ZIndexProperty */ _) | AliasKey
+          (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.ZIndex */ _) | AliasKey
         ]
     ): Self = this.set("zIndex", value.asInstanceOf[js.Any])
     

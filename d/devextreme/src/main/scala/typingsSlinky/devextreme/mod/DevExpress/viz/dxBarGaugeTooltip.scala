@@ -12,15 +12,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxBarGaugeTooltip extends BaseWidgetTooltip {
   
-  /** @name dxBarGauge.Options.tooltip.contentTemplate */
+  /**
+    * [descr:dxBarGauge.Options.tooltip.contentTemplate]
+    */
   var contentTemplate: js.UndefOr[
     template | (js.Function2[/* scaleValue */ Index, /* element */ dxElement, String | Element | JQuery])
   ] = js.native
   
-  /** @name dxBarGauge.Options.tooltip.customizeTooltip */
+  /**
+    * [descr:dxBarGauge.Options.tooltip.customizeTooltip]
+    */
   var customizeTooltip: js.UndefOr[js.Function1[/* scaleValue */ Index, _]] = js.native
   
-  /** @name dxBarGauge.Options.tooltip.interactive */
+  /**
+    * [descr:dxBarGauge.Options.tooltip.interactive]
+    */
   var interactive: js.UndefOr[Boolean] = js.native
 }
 object dxBarGaugeTooltip {

@@ -20,7 +20,7 @@ class Revwalk_ () extends js.Object {
   /**
     * Walk the history grabbing commits until the checkFn called with the current commit returns false.
     */
-  def getCommitsUntil(checkFn: js.Function): js.Promise[js.Array[_]] = js.native
+  def getCommitsUntil(checkFn: js.Function): js.Promise[js.Array[Commit]] = js.native
   
   def hide(commitId: Oid): Double = js.native
   

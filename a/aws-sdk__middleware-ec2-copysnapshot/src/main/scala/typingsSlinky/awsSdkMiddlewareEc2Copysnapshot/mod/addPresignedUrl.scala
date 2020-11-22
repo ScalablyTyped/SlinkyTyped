@@ -1,6 +1,5 @@
 package typingsSlinky.awsSdkMiddlewareEc2Copysnapshot.mod
 
-import typingsSlinky.awsSdkTypes.middlewareMod.Middleware
 import typingsSlinky.awsSdkTypes.responseMod.MetadataBearer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object addPresignedUrl extends js.Object {
   
-  def apply[Input /* <: CopySnapshotInput */, Output /* <: MetadataBearer */](hasRegionCredentialsEndpointBase64EncoderUtf8DecoderSha256: AddPresignedUrlParameters): Middleware[Input, Output] = js.native
+  def apply[Input /* <: CopySnapshotInput */, Output /* <: MetadataBearer */](hasRegionCredentialsEndpointBase64EncoderUtf8DecoderSha256: AddPresignedUrlParameters): js.Any = js.native
 }

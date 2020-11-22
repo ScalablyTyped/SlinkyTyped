@@ -2,6 +2,7 @@ package typingsSlinky.typedoc
 
 import typingsSlinky.typedoc.abstractMod.Reflection
 import typingsSlinky.typedoc.abstractMod.TypeContainer
+import typingsSlinky.typedoc.modelsTypesMod.Type
 import typingsSlinky.typedoc.modelsTypesMod.TypeParameterType
 import typingsSlinky.typedoc.reflectionsDeclarationMod.DeclarationReflection
 import scala.scalajs.js
@@ -16,6 +17,8 @@ object reflectionsTypeParameterMod extends js.Object {
   class TypeParameterReflection protected () extends TypeContainer {
     def this(`type`: TypeParameterType) = this()
     def this(`type`: TypeParameterType, parent: Reflection) = this()
+    
+    var default: js.UndefOr[Type] = js.native
     
     @JSName("parent")
     var parent_TypeParameterReflection: js.UndefOr[DeclarationReflection] = js.native

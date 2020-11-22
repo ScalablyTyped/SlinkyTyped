@@ -1,11 +1,13 @@
 package typingsSlinky.mendixmodelsdk.mappingsMod.mappings
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.mappingsMod.StructureVersionInfo
 import typingsSlinky.mendixmodelsdk.microflowsMod.microflows.IMicroflowParameter
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -13,14 +15,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("mendixmodelsdk/dist/gen/mappings", "mappings.MappingMicroflowParameter")
 @js.native
 class MappingMicroflowParameter protected ()
-  extends typingsSlinky.mendixmodelsdk.internalMod.Element {
+  extends typingsSlinky.mendixmodelsdk.internalMod.Element[IModel] {
   def this(
     model: AbstractModel,
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   def containerAsMappingMicroflowCall: MappingMicroflowCall = js.native
@@ -35,9 +37,6 @@ class MappingMicroflowParameter protected ()
   
   def levelOfParent: Double = js.native
   def levelOfParent_=(newValue: Double): Unit = js.native
-  
-  @JSName("model")
-  var model_FMappingMicroflowParameter: IModel = js.native
   
   def parameter: IMicroflowParameter | Null = js.native
   

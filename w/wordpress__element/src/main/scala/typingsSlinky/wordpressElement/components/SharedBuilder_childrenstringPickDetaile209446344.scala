@@ -21,8 +21,13 @@ import typingsSlinky.react.anon.Html
 import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.wordpressElement.wordpressElementStrings.`additions removals`
 import typingsSlinky.wordpressElement.wordpressElementStrings.`additions text`
 import typingsSlinky.wordpressElement.wordpressElementStrings.`inline`
+import typingsSlinky.wordpressElement.wordpressElementStrings.`removals additions`
+import typingsSlinky.wordpressElement.wordpressElementStrings.`removals text`
+import typingsSlinky.wordpressElement.wordpressElementStrings.`text additions`
+import typingsSlinky.wordpressElement.wordpressElementStrings.`text removals`
 import typingsSlinky.wordpressElement.wordpressElementStrings.additions
 import typingsSlinky.wordpressElement.wordpressElementStrings.all
 import typingsSlinky.wordpressElement.wordpressElementStrings.ascending
@@ -187,7 +192,9 @@ class SharedBuilder_childrenstringPickDetaile209446344 (val args: js.Array[js.An
   def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
   
   @scala.inline
-  def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+  def `aria-relevant`(
+    value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+  ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
   
   @scala.inline
   def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

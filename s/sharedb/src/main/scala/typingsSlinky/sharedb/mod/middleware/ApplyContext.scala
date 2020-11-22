@@ -1,9 +1,12 @@
 package typingsSlinky.sharedb.mod.middleware
 
 import typingsSlinky.sharedb.agentMod.^
-import typingsSlinky.sharedb.mod.Op
+import typingsSlinky.sharedb.mod.CreateOp
+import typingsSlinky.sharedb.mod.DeleteOp
+import typingsSlinky.sharedb.mod.EditOp
 import typingsSlinky.sharedb.mod.SubmitRequest
 import typingsSlinky.sharedb.mod.sharedb
+import typingsSlinky.sharedb.sharedbMod.Op
 import typingsSlinky.sharedb.sharedbStrings.afterSubmit
 import typingsSlinky.sharedb.sharedbStrings.apply
 import typingsSlinky.sharedb.sharedbStrings.commit
@@ -33,8 +36,8 @@ object ApplyContext {
     collection: String,
     id: String,
     index: String,
-    op: Op,
-    ops: js.Array[typingsSlinky.sharedb.sharedbMod.Op],
+    op: CreateOp | DeleteOp | EditOp,
+    ops: js.Array[Op],
     options: js.Any,
     retries: Double,
     start: Double

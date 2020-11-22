@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ListPortalsRequest extends js.Object {
   
   /**
-    * The maximum number of results to be returned per paginated request.
+    * The maximum number of results to be returned per paginated request. Default: 50
     */
   var maxResults: js.UndefOr[MaxResults] = js.native
   

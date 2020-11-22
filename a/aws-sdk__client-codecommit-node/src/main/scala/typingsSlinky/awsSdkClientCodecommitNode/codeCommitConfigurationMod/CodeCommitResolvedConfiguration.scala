@@ -2,16 +2,13 @@ package typingsSlinky.awsSdkClientCodecommitNode.codeCommitConfigurationMod
 
 import typingsSlinky.awsSdkTypes.credentialsMod.Credentials
 import typingsSlinky.awsSdkTypes.cryptoMod.HashConstructor
-import typingsSlinky.awsSdkTypes.httpMod.HttpEndpoint
-import typingsSlinky.awsSdkTypes.httpMod.HttpHandler
-import typingsSlinky.awsSdkTypes.httpMod.HttpOptions
-import typingsSlinky.awsSdkTypes.marshallerMod.RequestSerializer
-import typingsSlinky.awsSdkTypes.middlewareMod.FinalizeHandler
+import typingsSlinky.awsSdkTypes.httpMod.Endpoint
+import typingsSlinky.awsSdkTypes.middlewareMod.DeserializeHandler
 import typingsSlinky.awsSdkTypes.middlewareMod.HandlerExecutionContext
 import typingsSlinky.awsSdkTypes.middlewareMod.Terminalware
+import typingsSlinky.awsSdkTypes.serdeMod.RequestSerializer
+import typingsSlinky.awsSdkTypes.serdeMod.StreamCollector
 import typingsSlinky.awsSdkTypes.signatureMod.RequestSigner
-import typingsSlinky.awsSdkTypes.unmarshallerMod.ResponseParser
-import typingsSlinky.awsSdkTypes.unmarshallerMod.StreamCollector
 import typingsSlinky.awsSdkTypes.utilMod.Decoder
 import typingsSlinky.awsSdkTypes.utilMod.Encoder
 import typingsSlinky.awsSdkTypes.utilMod.Provider
@@ -44,17 +41,18 @@ trait CodeCommitResolvedConfiguration extends CodeCommitConfiguration {
   var credentials_Original: Provider[Credentials] = js.native
   
   @JSName("endpoint")
-  def endpoint_MCodeCommitResolvedConfiguration(): js.Promise[HttpEndpoint] = js.native
+  def endpoint_MCodeCommitResolvedConfiguration(): js.Promise[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.HttpEndpoint */ _
+  ] = js.native
   @JSName("endpoint")
-  var endpoint_Original: Provider[HttpEndpoint] = js.native
+  var endpoint_Original: Provider[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.HttpEndpoint */ _
+  ] = js.native
   
   @JSName("handler")
-  def handler_MCodeCommitResolvedConfiguration[Input /* <: js.Object */, Output /* <: js.Any */](context: HandlerExecutionContext): FinalizeHandler[Input, Output, Readable] = js.native
+  def handler_MCodeCommitResolvedConfiguration[Input /* <: js.Object */, Output /* <: js.Object */](context: HandlerExecutionContext): DeserializeHandler[Input, Output] = js.native
   @JSName("handler")
-  var handler_Original: Terminalware[_, Readable] = js.native
-  
-  @JSName("httpHandler")
-  var httpHandler_CodeCommitResolvedConfiguration: HttpHandler[Readable, HttpOptions] = js.native
+  var handler_Original: Terminalware = js.native
   
   @JSName("maxRedirects")
   var maxRedirects_CodeCommitResolvedConfiguration: Double = js.native
@@ -62,16 +60,16 @@ trait CodeCommitResolvedConfiguration extends CodeCommitConfiguration {
   @JSName("maxRetries")
   var maxRetries_CodeCommitResolvedConfiguration: Double = js.native
   
-  var parser: ResponseParser[Readable] = js.native
+  var parser: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_types.ResponseParser<_stream.Readable> */ js.Any = js.native
   
   @JSName("region")
   def region_MCodeCommitResolvedConfiguration(): js.Promise[String] = js.native
   @JSName("region")
   var region_Original: Provider[String] = js.native
   
-  def serializer(): js.Promise[RequestSerializer[Readable]] = js.native
+  def serializer(): js.Promise[RequestSerializer[Readable, _]] = js.native
   @JSName("serializer")
-  var serializer_Original: Provider[RequestSerializer[Readable]] = js.native
+  var serializer_Original: Provider[RequestSerializer[Readable, _]] = js.native
   
   @JSName("sha256")
   var sha256_CodeCommitResolvedConfiguration: HashConstructor = js.native
@@ -86,12 +84,12 @@ trait CodeCommitResolvedConfiguration extends CodeCommitConfiguration {
   var sslEnabled_CodeCommitResolvedConfiguration: Boolean = js.native
   
   @JSName("streamCollector")
-  def streamCollector_MCodeCommitResolvedConfiguration(stream: Readable): js.Promise[js.typedarray.Uint8Array] = js.native
+  def streamCollector_MCodeCommitResolvedConfiguration(stream: js.Any): js.Promise[js.typedarray.Uint8Array] = js.native
   @JSName("streamCollector")
-  var streamCollector_Original: StreamCollector[Readable] = js.native
+  var streamCollector_Original: StreamCollector = js.native
   
   @JSName("urlParser")
-  def urlParser_MCodeCommitResolvedConfiguration(url: String): HttpEndpoint = js.native
+  def urlParser_MCodeCommitResolvedConfiguration(url: String): Endpoint = js.native
   @JSName("urlParser")
   var urlParser_Original: UrlParser = js.native
   

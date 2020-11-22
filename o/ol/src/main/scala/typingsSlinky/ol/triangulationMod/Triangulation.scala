@@ -8,6 +8,9 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Triangulation extends js.Object {
   
+  /**
+    * Calculates extent of the 'source' coordinates from all the triangles.
+    */
   def calculateSourceExtent(): Extent = js.native
   
   def getTriangles(): js.Array[Triangle] = js.native

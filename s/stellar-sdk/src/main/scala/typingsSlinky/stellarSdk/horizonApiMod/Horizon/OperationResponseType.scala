@@ -25,6 +25,11 @@ object OperationResponseType extends js.Object {
   object allowTrust extends TopLevel[allowTrust with String]
   
   @js.native
+  sealed trait beginSponsoringFutureReserves extends OperationResponseType
+  /* "begin_sponsoring_future_reserves" */ @js.native
+  object beginSponsoringFutureReserves extends TopLevel[beginSponsoringFutureReserves with String]
+  
+  @js.native
   sealed trait bumpSequence extends OperationResponseType
   /* "bump_sequence" */ @js.native
   object bumpSequence extends TopLevel[bumpSequence with String]
@@ -35,14 +40,29 @@ object OperationResponseType extends js.Object {
   object changeTrust extends TopLevel[changeTrust with String]
   
   @js.native
+  sealed trait claimClaimableBalance extends OperationResponseType
+  /* "claim_claimable_balance" */ @js.native
+  object claimClaimableBalance extends TopLevel[claimClaimableBalance with String]
+  
+  @js.native
   sealed trait createAccount extends OperationResponseType
   /* "create_account" */ @js.native
   object createAccount extends TopLevel[createAccount with String]
   
   @js.native
+  sealed trait createClaimableBalance extends OperationResponseType
+  /* "create_claimable_balance" */ @js.native
+  object createClaimableBalance extends TopLevel[createClaimableBalance with String]
+  
+  @js.native
   sealed trait createPassiveOffer extends OperationResponseType
   /* "create_passive_sell_offer" */ @js.native
   object createPassiveOffer extends TopLevel[createPassiveOffer with String]
+  
+  @js.native
+  sealed trait endSponsoringFutureReserves extends OperationResponseType
+  /* "end_sponsoring_future_reserves" */ @js.native
+  object endSponsoringFutureReserves extends TopLevel[endSponsoringFutureReserves with String]
   
   @js.native
   sealed trait inflation extends OperationResponseType
@@ -78,6 +98,11 @@ object OperationResponseType extends js.Object {
   sealed trait payment extends OperationResponseType
   /* "payment" */ @js.native
   object payment extends TopLevel[payment with String]
+  
+  @js.native
+  sealed trait revokeSponsorship extends OperationResponseType
+  /* "revoke_sponsorship" */ @js.native
+  object revokeSponsorship extends TopLevel[revokeSponsorship with String]
   
   @js.native
   sealed trait setOptions extends OperationResponseType

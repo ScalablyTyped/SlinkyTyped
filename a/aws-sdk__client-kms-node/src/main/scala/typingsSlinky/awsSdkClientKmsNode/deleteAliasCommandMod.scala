@@ -5,10 +5,8 @@ import typingsSlinky.awsSdkClientKmsNode.kmsconfigurationMod.KMSResolvedConfigur
 import typingsSlinky.awsSdkClientKmsNode.outputTypesUnionMod.OutputTypesUnion
 import typingsSlinky.awsSdkClientKmsNode.typesDeleteAliasInputMod.DeleteAliasInput
 import typingsSlinky.awsSdkClientKmsNode.typesDeleteAliasOutputMod.DeleteAliasOutput
-import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
 import typingsSlinky.awsSdkTypes.commandMod.Command
 import typingsSlinky.awsSdkTypes.middlewareMod.Handler
-import typingsSlinky.node.streamMod.Readable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -23,15 +21,12 @@ object deleteAliasCommandMod extends js.Object {
           DeleteAliasInput, 
           OutputTypesUnion, 
           DeleteAliasOutput, 
-          KMSResolvedConfiguration, 
-          Readable
+          KMSResolvedConfiguration
         ] {
     def this(input: DeleteAliasInput) = this()
     
-    val middlewareStack: MiddlewareStack[DeleteAliasInput, DeleteAliasOutput, Readable] = js.native
-    
     def resolveMiddleware(
-      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      clientStack: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify __aws_sdk_middleware_stack.MiddlewareStack<InputTypesUnion, OutputTypesUnion, _stream.Readable> */ js.Any,
       configuration: KMSResolvedConfiguration
     ): Handler[DeleteAliasInput, DeleteAliasOutput] = js.native
   }

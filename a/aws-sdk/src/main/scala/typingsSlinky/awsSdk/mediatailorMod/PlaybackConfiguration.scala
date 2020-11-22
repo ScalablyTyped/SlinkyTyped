@@ -38,6 +38,11 @@ trait PlaybackConfiguration extends js.Object {
   var HlsConfiguration: js.UndefOr[typingsSlinky.awsSdk.mediatailorMod.HlsConfiguration] = js.native
   
   /**
+    * The configuration for manifest processing rules. Manifest processing rules enable customization of the personalized manifests created by MediaTailor.
+    */
+  var ManifestProcessingRules: js.UndefOr[typingsSlinky.awsSdk.mediatailorMod.ManifestProcessingRules] = js.native
+  
+  /**
     * The identifier for the playback configuration.
     */
   var Name: js.UndefOr[string] = js.native
@@ -140,6 +145,12 @@ object PlaybackConfiguration {
     
     @scala.inline
     def deleteHlsConfiguration: Self = this.set("HlsConfiguration", js.undefined)
+    
+    @scala.inline
+    def setManifestProcessingRules(value: ManifestProcessingRules): Self = this.set("ManifestProcessingRules", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteManifestProcessingRules: Self = this.set("ManifestProcessingRules", js.undefined)
     
     @scala.inline
     def setName(value: string): Self = this.set("Name", value.asInstanceOf[js.Any])

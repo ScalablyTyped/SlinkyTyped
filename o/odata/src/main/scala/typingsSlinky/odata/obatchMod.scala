@@ -48,6 +48,8 @@ object obatchMod extends js.Object {
     
     var getHeaders: js.Any = js.native
     
+    var getRequestURL: js.Any = js.native
+    
     var getUid: js.Any = js.native
     
     def parseResponse(responseData: String, contentTypeHeader: String): js.Any = js.native

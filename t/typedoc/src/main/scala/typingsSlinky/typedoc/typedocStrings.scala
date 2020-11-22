@@ -122,6 +122,9 @@ object typedocStrings {
   def json: json = "json".asInstanceOf[json]
   
   @scala.inline
+  def keyof: keyof = "keyof".asInstanceOf[keyof]
+  
+  @scala.inline
   def list: list = "list".asInstanceOf[list]
   
   @scala.inline
@@ -158,7 +161,13 @@ object typedocStrings {
   def plugin: plugin = "plugin".asInstanceOf[plugin]
   
   @scala.inline
+  def quit: quit = "quit".asInstanceOf[quit]
+  
+  @scala.inline
   def readme: readme = "readme".asInstanceOf[readme]
+  
+  @scala.inline
+  def readonly: readonly = "readonly".asInstanceOf[readonly]
   
   @scala.inline
   def removeComments: removeComments = "removeComments".asInstanceOf[removeComments]
@@ -180,6 +189,9 @@ object typedocStrings {
   
   @scala.inline
   def tsconfig: tsconfig = "tsconfig".asInstanceOf[tsconfig]
+  
+  @scala.inline
+  def unique: unique = "unique".asInstanceOf[unique]
   
   @scala.inline
   def version: version = "version".asInstanceOf[version]
@@ -302,6 +314,9 @@ object typedocStrings {
   sealed trait json extends js.Object
   
   @js.native
+  sealed trait keyof extends js.Object
+  
+  @js.native
   sealed trait list extends js.Object
   
   @js.native
@@ -338,7 +353,13 @@ object typedocStrings {
   sealed trait plugin extends js.Object
   
   @js.native
+  sealed trait quit extends js.Object
+  
+  @js.native
   sealed trait readme extends js.Object
+  
+  @js.native
+  sealed trait readonly extends js.Object
   
   @js.native
   sealed trait removeComments extends IgnoredTsOptionKeys
@@ -360,6 +381,9 @@ object typedocStrings {
   
   @js.native
   sealed trait tsconfig extends js.Object
+  
+  @js.native
+  sealed trait unique extends js.Object
   
   @js.native
   sealed trait version extends IgnoredTsOptionKeys

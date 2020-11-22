@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.HTMLTextAreaElement
 import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import typingsSlinky.antd.configProviderContextMod.ConfigConsumerProps
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import typingsSlinky.rcTextarea.mod.ResizableTextArea
 import typingsSlinky.react.mod.ChangeEvent
 import typingsSlinky.react.mod.Component
@@ -29,6 +30,7 @@ trait TextArea
   def renderComponent(hasGetPrefixClsDirection: ConfigConsumerProps): ReactElement = js.native
   
   def renderTextArea(prefixCls: String, bordered: Boolean): ReactElement = js.native
+  def renderTextArea(prefixCls: String, bordered: Boolean, size: SizeType): ReactElement = js.native
   
   var resizableTextArea: ResizableTextArea = js.native
   

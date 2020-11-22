@@ -10,9 +10,9 @@ trait BackgroundBorder extends js.Object {
   
   var background: js.UndefOr[BackgroundType] = js.native
   
-  var border: js.UndefOr[`0`] = js.native
+  var border: js.UndefOr[`3`] = js.native
   
-  var label: js.UndefOr[`0`] = js.native
+  var label: js.UndefOr[`3`] = js.native
 }
 object BackgroundBorder {
   
@@ -44,13 +44,13 @@ object BackgroundBorder {
     def deleteBackground: Self = this.set("background", js.undefined)
     
     @scala.inline
-    def setBorder(value: `0`): Self = this.set("border", value.asInstanceOf[js.Any])
+    def setBorder(value: `3`): Self = this.set("border", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteBorder: Self = this.set("border", js.undefined)
     
     @scala.inline
-    def setLabel(value: `0`): Self = this.set("label", value.asInstanceOf[js.Any])
+    def setLabel(value: `3`): Self = this.set("label", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteLabel: Self = this.set("label", js.undefined)

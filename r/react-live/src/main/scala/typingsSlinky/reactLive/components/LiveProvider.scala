@@ -24,8 +24,13 @@ import typingsSlinky.react.mod.Booleanish
 import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.mod.DragEvent
 import typingsSlinky.reactLive.mod.LiveProviderProps
+import typingsSlinky.reactLive.reactLiveStrings.`additions removals`
 import typingsSlinky.reactLive.reactLiveStrings.`additions text`
 import typingsSlinky.reactLive.reactLiveStrings.`inline`
+import typingsSlinky.reactLive.reactLiveStrings.`removals additions`
+import typingsSlinky.reactLive.reactLiveStrings.`removals text`
+import typingsSlinky.reactLive.reactLiveStrings.`text additions`
+import typingsSlinky.reactLive.reactLiveStrings.`text removals`
 import typingsSlinky.reactLive.reactLiveStrings.additions
 import typingsSlinky.reactLive.reactLiveStrings.all
 import typingsSlinky.reactLive.reactLiveStrings.ascending
@@ -214,7 +219,9 @@ object LiveProvider {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

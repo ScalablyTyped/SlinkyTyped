@@ -38,7 +38,7 @@ class Secret protected () extends CustomResource {
   val data: Output_[StringDictionary[String]] = js.native
   
   /**
-    * Immutable, if set to true, ensures that data stored in the Secret cannot be updated (only object metadata can be modified). If not set to true, the field can be modified at any time. Defaulted to nil. This is an alpha field enabled by ImmutableEphemeralVolumes feature gate.
+    * Immutable, if set to true, ensures that data stored in the Secret cannot be updated (only object metadata can be modified). If not set to true, the field can be modified at any time. Defaulted to nil. This is a beta field enabled by ImmutableEphemeralVolumes feature gate.
     */
   val immutable: Output_[Boolean] = js.native
   

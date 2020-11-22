@@ -6,5 +6,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSGlobal("AFRAME.THREE.WebGLClipping")
 @js.native
-class WebGLClipping ()
-  extends typingsSlinky.three.mod.WebGLClipping
+class WebGLClipping protected ()
+  extends typingsSlinky.three.mod.WebGLClipping {
+  def this(properties: typingsSlinky.three.webGLPropertiesMod.WebGLProperties) = this()
+}

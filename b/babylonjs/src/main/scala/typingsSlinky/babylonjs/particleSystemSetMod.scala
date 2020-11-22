@@ -29,9 +29,11 @@ object particleSystemSetMod extends js.Object {
     
     /**
       * Serialize the set into a JSON compatible object
+      * @param serializeTexture defines if the texture must be serialized as well
       * @returns a JSON compatible representation of the set
       */
     def serialize(): js.Any = js.native
+    def serialize(serializeTexture: Boolean): js.Any = js.native
     
     /**
       * Creates a new emitter mesh as a sphere

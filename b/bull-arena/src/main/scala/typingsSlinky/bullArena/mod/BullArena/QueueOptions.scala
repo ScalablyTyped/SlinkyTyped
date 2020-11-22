@@ -3,6 +3,7 @@ package typingsSlinky.bullArena.mod.BullArena
 import typingsSlinky.bullArena.bullArenaStrings.bee
 import typingsSlinky.bullArena.bullArenaStrings.bq
 import typingsSlinky.bullArena.bullArenaStrings.bull
+import typingsSlinky.bullArena.bullArenaStrings.bullmq
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -16,7 +17,7 @@ trait QueueOptions extends js.Object {
   
   var prefix: js.UndefOr[bull | bq | String] = js.native
   
-  var `type`: js.UndefOr[bull | bee] = js.native
+  var `type`: js.UndefOr[bull | bee | bullmq | String] = js.native
 }
 object QueueOptions {
   
@@ -57,7 +58,7 @@ object QueueOptions {
     def deletePrefix: Self = this.set("prefix", js.undefined)
     
     @scala.inline
-    def setType(value: bull | bee): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: bull | bee | bullmq | String): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimension extends js.Object {
   
   /**
-    * The name of the policy.
+    * The name of the policy. Must be between 1 and 255 characters in length.
     */
   var name: Input[String] = js.native
   

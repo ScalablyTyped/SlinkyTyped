@@ -1,7 +1,5 @@
 package typingsSlinky.jestSnapshot.stateMod
 
-import typingsSlinky.jestSnapshot.anon.Actual
-import typingsSlinky.jestSnapshot.anon.Deleted
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -48,13 +46,13 @@ trait SnapshotState extends js.Object {
   
   def markSnapshotsAsCheckedForTest(testName: String): Unit = js.native
   
-  def `match`(hasTestNameReceivedKeyInlineSnapshotError: SnapshotMatchOptions): Actual = js.native
+  def `match`(hasTestNameReceivedKeyInlineSnapshotIsInlineError: SnapshotMatchOptions): SnapshotReturnOptions = js.native
   
   var matched: Double = js.native
   
   def removeUncheckedKeys(): Unit = js.native
   
-  def save(): Deleted = js.native
+  def save(): SaveStatus = js.native
   
   var unmatched: Double = js.native
   

@@ -13,7 +13,7 @@ trait ShotSegment extends js.Object {
   var Confidence: js.UndefOr[SegmentConfidence] = js.native
   
   /**
-    * An Identifier for a shot detection segment detected in a video 
+    * An Identifier for a shot detection segment detected in a video. 
     */
   var Index: js.UndefOr[ULong] = js.native
 }

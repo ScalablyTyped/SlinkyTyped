@@ -7,11 +7,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 object CalloutContentBase {
   
-  @JSImport("office-ui-fabric-react/lib/components/Callout/CalloutContent.base", "CalloutContentBase")
+  @JSImport("office-ui-fabric-react", "CalloutContentBase")
   @js.native
   object component extends js.Object
   
-  def withProps(p: ICalloutProps): SharedBuilder_ICalloutProps988608940[typingsSlinky.officeUiFabricReact.calloutContentBaseMod.CalloutContentBase] = new SharedBuilder_ICalloutProps988608940[typingsSlinky.officeUiFabricReact.calloutContentBaseMod.CalloutContentBase](js.Array(this.component, p.asInstanceOf[js.Any]))
+  def withProps(p: ICalloutProps): SharedBuilder_ICalloutProps988608940[typingsSlinky.officeUiFabricReact.mod.CalloutContentBase] = new SharedBuilder_ICalloutProps988608940[typingsSlinky.officeUiFabricReact.mod.CalloutContentBase](js.Array(this.component, p.asInstanceOf[js.Any]))
   
-  implicit def make(companion: CalloutContentBase.type): SharedBuilder_ICalloutProps988608940[typingsSlinky.officeUiFabricReact.calloutContentBaseMod.CalloutContentBase] = new SharedBuilder_ICalloutProps988608940[typingsSlinky.officeUiFabricReact.calloutContentBaseMod.CalloutContentBase](js.Array(this.component, js.Dictionary.empty))()
+  implicit def make(companion: CalloutContentBase.type): SharedBuilder_ICalloutProps988608940[typingsSlinky.officeUiFabricReact.mod.CalloutContentBase] = new SharedBuilder_ICalloutProps988608940[typingsSlinky.officeUiFabricReact.mod.CalloutContentBase](js.Array(this.component, js.Dictionary.empty))()
 }

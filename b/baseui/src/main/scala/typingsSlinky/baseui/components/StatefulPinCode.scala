@@ -60,6 +60,9 @@ object StatefulPinCode {
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def clearOnEscape(value: Boolean): this.type = set("clearOnEscape", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def clearable(value: Boolean): this.type = set("clearable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -109,6 +112,9 @@ object StatefulPinCode {
     
     @scala.inline
     def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def maxLength(value: Double): this.type = set("maxLength", value.asInstanceOf[js.Any])
     
     @scala.inline
     def min(value: Double): this.type = set("min", value.asInstanceOf[js.Any])
@@ -163,6 +169,9 @@ object StatefulPinCode {
     
     @scala.inline
     def stateReducer(value: (change_, /* nextState */ State, /* currentState */ State) => State): this.type = set("stateReducer", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])

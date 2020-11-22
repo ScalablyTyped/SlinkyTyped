@@ -7,10 +7,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxChartPanes extends dxChartCommonPaneSettings {
   
-  /** @name dxChart.Options.panes.height */
+  /**
+    * [descr:dxChart.Options.panes.height]
+    */
   var height: js.UndefOr[Double | String] = js.native
   
-  /** @name dxChart.Options.panes.name */
+  /**
+    * [descr:dxChart.Options.panes.name]
+    */
   var name: js.UndefOr[String] = js.native
 }
 object dxChartPanes {

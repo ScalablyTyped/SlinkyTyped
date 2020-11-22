@@ -44,12 +44,6 @@ trait TaskArgs extends js.Object {
 object TaskArgs {
   
   @scala.inline
-  def apply(destinationLocationArn: Input[ARN], sourceLocationArn: Input[ARN]): TaskArgs = {
-    val __obj = js.Dynamic.literal(destinationLocationArn = destinationLocationArn.asInstanceOf[js.Any], sourceLocationArn = sourceLocationArn.asInstanceOf[js.Any])
-    __obj.asInstanceOf[TaskArgs]
-  }
-  
-  @scala.inline
   implicit class TaskArgsOps[Self <: TaskArgs] (val x: Self) extends AnyVal {
     
     @scala.inline

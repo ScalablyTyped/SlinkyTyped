@@ -5,6 +5,7 @@ import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import slinky.web.SyntheticKeyboardEvent
+import typingsSlinky.draftJs.anon.Html
 import typingsSlinky.draftJs.mod.Draft.Model.Constants.DraftDragType
 import typingsSlinky.draftJs.mod.Draft.Model.Constants.DraftHandleValue
 import typingsSlinky.draftJs.mod.Draft.Model.ImmutableData.ContentBlock
@@ -84,6 +85,8 @@ trait DraftEditorProps extends js.Object {
   var editorKey: js.UndefOr[String] = js.native
   
   var editorState: EditorState = js.native
+  
+  var formatPastedText: js.UndefOr[js.Function2[/* text */ String, /* html */ js.UndefOr[String], Html]] = js.native
   
   /**
     * Handle intended text insertion before the insertion occurs. This may be
@@ -352,6 +355,12 @@ object DraftEditorProps {
     
     @scala.inline
     def deleteEditorKey: Self = this.set("editorKey", js.undefined)
+    
+    @scala.inline
+    def setFormatPastedText(value: (/* text */ String, /* html */ js.UndefOr[String]) => Html): Self = this.set("formatPastedText", js.Any.fromFunction2(value))
+    
+    @scala.inline
+    def deleteFormatPastedText: Self = this.set("formatPastedText", js.undefined)
     
     @scala.inline
     def setHandleBeforeInput(

@@ -1,10 +1,11 @@
 package typingsSlinky.mendixmodelsdk.javaactionsMod.javaactions
 
-import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractElement
 import typingsSlinky.mendixmodelsdk.internalMod.AbstractModel
 import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.javaactionsMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -27,8 +28,8 @@ abstract class PrimitiveType protected () extends Type {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
   @JSName("containerAsBasicParameterType")
@@ -39,9 +40,6 @@ abstract class PrimitiveType protected () extends Type {
   
   @JSName("containerAsJavaAction")
   def containerAsJavaAction_MPrimitiveType: JavaAction = js.native
-  
-  @JSName("model")
-  var model_FPrimitiveType: IModel = js.native
 }
 /* static members */
 @JSImport("mendixmodelsdk/dist/gen/javaactions", "javaactions.PrimitiveType")

@@ -79,6 +79,11 @@ class SamplingRule protected () extends CustomResource {
   val serviceType: Output_[String] = js.native
   
   /**
+    * Key-value mapping of resource tags
+    */
+  val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
+  
+  /**
     * Matches the path from a request URL.
     */
   val urlPath: Output_[String] = js.native

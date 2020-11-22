@@ -13,7 +13,7 @@ trait KeyValuePair extends js.Object {
   var key: js.UndefOr[string] = js.native
   
   /**
-    * One part of a key-value pair that comprises a tag. A tag value acts as a descriptor for a tag key. A tag value can be empty or null.
+    * One part of a key-value pair that comprises a tag. A tag value acts as a descriptor for a tag key. A tag value can be an empty string.
     */
   var value: js.UndefOr[string] = js.native
 }

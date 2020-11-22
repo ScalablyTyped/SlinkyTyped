@@ -17,7 +17,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrCloseToken],
     /**
     * The index of the token currently being processed.
@@ -28,7 +27,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrCloseToken],
     /**
     * The index of the token currently being processed.
@@ -51,7 +49,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrCloseToken],
     /**
     * The index of the token currently being processed.
@@ -70,7 +67,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrCloseToken],
     /**
     * The index of the token currently being processed.
@@ -93,7 +89,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrCloseToken],
     /**
     * The index of the token currently being processed.
@@ -108,7 +103,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrCloseToken],
     /**
     * The index of the token currently being processed.
@@ -131,7 +125,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrCloseToken],
     /**
     * The index of the token currently being processed.
@@ -150,7 +143,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrCloseToken],
     /**
     * The index of the token currently being processed.
@@ -176,7 +168,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrOpenToken],
     /**
     * The index of the token currently being processed.
@@ -187,7 +178,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrOpenToken],
     /**
     * The index of the token currently being processed.
@@ -210,7 +200,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrOpenToken],
     /**
     * The index of the token currently being processed.
@@ -229,7 +218,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrOpenToken],
     /**
     * The index of the token currently being processed.
@@ -252,7 +240,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrOpenToken],
     /**
     * The index of the token currently being processed.
@@ -267,7 +254,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrOpenToken],
     /**
     * The index of the token currently being processed.
@@ -290,7 +276,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrOpenToken],
     /**
     * The index of the token currently being processed.
@@ -309,7 +294,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[AbbrOpenToken],
     /**
     * The index of the token currently being processed.
@@ -335,7 +319,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -346,7 +329,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -369,7 +351,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -388,7 +369,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -411,7 +391,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -426,7 +405,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -449,7 +427,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -468,7 +445,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -494,7 +470,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -505,7 +480,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -528,7 +502,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -547,7 +520,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -570,7 +542,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -585,7 +556,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -608,7 +578,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -627,7 +596,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BlockquoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -653,7 +621,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -664,7 +631,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -687,7 +653,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -706,7 +671,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -729,7 +693,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -744,7 +707,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -767,7 +729,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -786,7 +747,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -812,7 +772,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -823,7 +782,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -846,7 +804,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -865,7 +822,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -888,7 +844,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -903,7 +858,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -926,7 +880,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -945,7 +898,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[BulletListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -971,7 +923,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[CodeToken],
     /**
     * The index of the token currently being processed.
@@ -982,7 +933,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[CodeToken],
     /**
     * The index of the token currently being processed.
@@ -1005,7 +955,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[CodeToken],
     /**
     * The index of the token currently being processed.
@@ -1024,7 +973,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[CodeToken],
     /**
     * The index of the token currently being processed.
@@ -1047,7 +995,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[CodeToken],
     /**
     * The index of the token currently being processed.
@@ -1062,7 +1009,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[CodeToken],
     /**
     * The index of the token currently being processed.
@@ -1085,7 +1031,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[CodeToken],
     /**
     * The index of the token currently being processed.
@@ -1104,7 +1049,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[CodeToken],
     /**
     * The index of the token currently being processed.
@@ -1130,7 +1074,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1141,7 +1084,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1164,7 +1106,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1183,7 +1124,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1206,7 +1146,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1221,7 +1160,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1244,7 +1182,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1263,7 +1200,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1289,7 +1225,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1300,7 +1235,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1323,7 +1257,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1342,7 +1275,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1365,7 +1297,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1380,7 +1311,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1403,7 +1333,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1422,7 +1351,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DdOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1448,7 +1376,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1459,7 +1386,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1482,7 +1408,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1501,7 +1426,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1524,7 +1448,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1539,7 +1462,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1562,7 +1484,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1581,7 +1502,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1607,7 +1527,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1618,7 +1537,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1641,7 +1559,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1660,7 +1577,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1683,7 +1599,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1698,7 +1613,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1721,7 +1635,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1740,7 +1653,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DelOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1766,7 +1678,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1777,7 +1688,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1800,7 +1710,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1819,7 +1728,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1842,7 +1750,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1857,7 +1764,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1880,7 +1786,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1899,7 +1804,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlCloseToken],
     /**
     * The index of the token currently being processed.
@@ -1925,7 +1829,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1936,7 +1839,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1959,7 +1861,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlOpenToken],
     /**
     * The index of the token currently being processed.
@@ -1978,7 +1879,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2001,7 +1901,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2016,7 +1915,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2039,7 +1937,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2058,7 +1955,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DlOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2084,7 +1980,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2095,7 +1990,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2118,7 +2012,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2137,7 +2030,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2160,7 +2052,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2175,7 +2066,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2198,7 +2088,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2217,7 +2106,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2243,7 +2131,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2254,7 +2141,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2277,7 +2163,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2296,7 +2181,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2319,7 +2203,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2334,7 +2217,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2357,7 +2239,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2376,7 +2257,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[DtOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2402,7 +2282,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2413,7 +2292,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2436,7 +2314,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2455,7 +2332,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2478,7 +2354,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2493,7 +2368,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2516,7 +2390,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2535,7 +2408,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmCloseToken],
     /**
     * The index of the token currently being processed.
@@ -2561,7 +2433,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2572,7 +2443,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2595,7 +2465,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2614,7 +2483,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2637,7 +2505,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2652,7 +2519,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2675,7 +2541,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2694,7 +2559,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[EmOpenToken],
     /**
     * The index of the token currently being processed.
@@ -2720,7 +2584,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FenceToken],
     /**
     * The index of the token currently being processed.
@@ -2731,7 +2594,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FenceToken],
     /**
     * The index of the token currently being processed.
@@ -2754,7 +2616,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FenceToken],
     /**
     * The index of the token currently being processed.
@@ -2773,7 +2634,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FenceToken],
     /**
     * The index of the token currently being processed.
@@ -2796,7 +2656,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FenceToken],
     /**
     * The index of the token currently being processed.
@@ -2811,7 +2670,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FenceToken],
     /**
     * The index of the token currently being processed.
@@ -2834,7 +2692,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FenceToken],
     /**
     * The index of the token currently being processed.
@@ -2853,7 +2710,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FenceToken],
     /**
     * The index of the token currently being processed.
@@ -2881,7 +2737,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteAnchorToken],
     /**
     * The index of the token currently being processed.
@@ -2892,7 +2747,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteAnchorToken],
     /**
     * The index of the token currently being processed.
@@ -2915,7 +2769,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteAnchorToken],
     /**
     * The index of the token currently being processed.
@@ -2934,7 +2787,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteAnchorToken],
     /**
     * The index of the token currently being processed.
@@ -2957,7 +2809,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteAnchorToken],
     /**
     * The index of the token currently being processed.
@@ -2972,7 +2823,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteAnchorToken],
     /**
     * The index of the token currently being processed.
@@ -2995,7 +2845,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteAnchorToken],
     /**
     * The index of the token currently being processed.
@@ -3014,7 +2863,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteAnchorToken],
     /**
     * The index of the token currently being processed.
@@ -3040,7 +2888,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3051,7 +2898,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3074,7 +2920,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3093,7 +2938,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3116,7 +2960,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3131,7 +2974,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3154,7 +2996,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3173,7 +3014,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3199,7 +3039,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3210,7 +3049,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3233,7 +3071,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3252,7 +3089,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3275,7 +3111,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3290,7 +3125,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3313,7 +3147,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3332,7 +3165,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteBlockOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3358,7 +3190,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3369,7 +3200,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3392,7 +3222,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3411,7 +3240,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3434,7 +3262,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3449,7 +3276,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3472,7 +3298,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3491,7 +3316,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteCloseToken],
     /**
     * The index of the token currently being processed.
@@ -3517,7 +3341,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3528,7 +3351,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3551,7 +3373,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3570,7 +3391,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3593,7 +3413,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3608,7 +3427,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3631,7 +3449,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3650,7 +3467,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteOpenToken],
     /**
     * The index of the token currently being processed.
@@ -3676,7 +3492,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteInlineToken],
     /**
     * The index of the token currently being processed.
@@ -3687,7 +3502,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteInlineToken],
     /**
     * The index of the token currently being processed.
@@ -3710,7 +3524,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteInlineToken],
     /**
     * The index of the token currently being processed.
@@ -3729,7 +3542,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteInlineToken],
     /**
     * The index of the token currently being processed.
@@ -3752,7 +3564,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteInlineToken],
     /**
     * The index of the token currently being processed.
@@ -3767,7 +3578,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteInlineToken],
     /**
     * The index of the token currently being processed.
@@ -3790,7 +3600,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteInlineToken],
     /**
     * The index of the token currently being processed.
@@ -3809,7 +3618,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[FootnoteInlineToken],
     /**
     * The index of the token currently being processed.
@@ -3838,7 +3646,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.
@@ -3849,7 +3656,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.
@@ -3872,7 +3678,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.
@@ -3891,7 +3696,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.
@@ -3914,7 +3718,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.
@@ -3929,7 +3732,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.
@@ -3952,7 +3754,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.
@@ -3971,7 +3772,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ContentToken],
     /**
     * The index of the token currently being processed.
@@ -4000,7 +3800,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HardbreakToken],
     /**
     * The index of the token currently being processed.
@@ -4011,7 +3810,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HardbreakToken],
     /**
     * The index of the token currently being processed.
@@ -4034,7 +3832,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HardbreakToken],
     /**
     * The index of the token currently being processed.
@@ -4053,7 +3850,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HardbreakToken],
     /**
     * The index of the token currently being processed.
@@ -4076,7 +3872,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HardbreakToken],
     /**
     * The index of the token currently being processed.
@@ -4091,7 +3886,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HardbreakToken],
     /**
     * The index of the token currently being processed.
@@ -4114,7 +3908,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HardbreakToken],
     /**
     * The index of the token currently being processed.
@@ -4133,7 +3926,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HardbreakToken],
     /**
     * The index of the token currently being processed.
@@ -4159,7 +3951,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingCloseToken],
     /**
     * The index of the token currently being processed.
@@ -4170,7 +3961,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingCloseToken],
     /**
     * The index of the token currently being processed.
@@ -4193,7 +3983,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingCloseToken],
     /**
     * The index of the token currently being processed.
@@ -4212,7 +4001,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingCloseToken],
     /**
     * The index of the token currently being processed.
@@ -4235,7 +4023,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingCloseToken],
     /**
     * The index of the token currently being processed.
@@ -4250,7 +4037,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingCloseToken],
     /**
     * The index of the token currently being processed.
@@ -4273,7 +4059,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingCloseToken],
     /**
     * The index of the token currently being processed.
@@ -4292,7 +4077,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingCloseToken],
     /**
     * The index of the token currently being processed.
@@ -4318,7 +4102,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingOpenToken],
     /**
     * The index of the token currently being processed.
@@ -4329,7 +4112,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingOpenToken],
     /**
     * The index of the token currently being processed.
@@ -4352,7 +4134,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingOpenToken],
     /**
     * The index of the token currently being processed.
@@ -4371,7 +4152,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingOpenToken],
     /**
     * The index of the token currently being processed.
@@ -4394,7 +4174,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingOpenToken],
     /**
     * The index of the token currently being processed.
@@ -4409,7 +4188,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingOpenToken],
     /**
     * The index of the token currently being processed.
@@ -4432,7 +4210,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingOpenToken],
     /**
     * The index of the token currently being processed.
@@ -4451,7 +4228,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HeadingOpenToken],
     /**
     * The index of the token currently being processed.
@@ -4477,7 +4253,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HrToken],
     /**
     * The index of the token currently being processed.
@@ -4488,7 +4263,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HrToken],
     /**
     * The index of the token currently being processed.
@@ -4511,7 +4285,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HrToken],
     /**
     * The index of the token currently being processed.
@@ -4530,7 +4303,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HrToken],
     /**
     * The index of the token currently being processed.
@@ -4553,7 +4325,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HrToken],
     /**
     * The index of the token currently being processed.
@@ -4568,7 +4339,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HrToken],
     /**
     * The index of the token currently being processed.
@@ -4591,7 +4361,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HrToken],
     /**
     * The index of the token currently being processed.
@@ -4610,7 +4379,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HrToken],
     /**
     * The index of the token currently being processed.
@@ -4636,7 +4404,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlBlockToken],
     /**
     * The index of the token currently being processed.
@@ -4647,7 +4414,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlBlockToken],
     /**
     * The index of the token currently being processed.
@@ -4670,7 +4436,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlBlockToken],
     /**
     * The index of the token currently being processed.
@@ -4689,7 +4454,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlBlockToken],
     /**
     * The index of the token currently being processed.
@@ -4712,7 +4476,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlBlockToken],
     /**
     * The index of the token currently being processed.
@@ -4727,7 +4490,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlBlockToken],
     /**
     * The index of the token currently being processed.
@@ -4750,7 +4512,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlBlockToken],
     /**
     * The index of the token currently being processed.
@@ -4769,7 +4530,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlBlockToken],
     /**
     * The index of the token currently being processed.
@@ -4795,7 +4555,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlTagToken],
     /**
     * The index of the token currently being processed.
@@ -4806,7 +4565,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlTagToken],
     /**
     * The index of the token currently being processed.
@@ -4829,7 +4587,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlTagToken],
     /**
     * The index of the token currently being processed.
@@ -4848,7 +4605,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlTagToken],
     /**
     * The index of the token currently being processed.
@@ -4871,7 +4627,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlTagToken],
     /**
     * The index of the token currently being processed.
@@ -4886,7 +4641,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlTagToken],
     /**
     * The index of the token currently being processed.
@@ -4909,7 +4663,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlTagToken],
     /**
     * The index of the token currently being processed.
@@ -4928,7 +4681,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[HtmlTagToken],
     /**
     * The index of the token currently being processed.
@@ -4954,7 +4706,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ImageToken],
     /**
     * The index of the token currently being processed.
@@ -4965,7 +4716,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ImageToken],
     /**
     * The index of the token currently being processed.
@@ -4988,7 +4738,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ImageToken],
     /**
     * The index of the token currently being processed.
@@ -5007,7 +4756,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ImageToken],
     /**
     * The index of the token currently being processed.
@@ -5030,7 +4778,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ImageToken],
     /**
     * The index of the token currently being processed.
@@ -5045,7 +4792,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ImageToken],
     /**
     * The index of the token currently being processed.
@@ -5068,7 +4814,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ImageToken],
     /**
     * The index of the token currently being processed.
@@ -5087,7 +4832,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ImageToken],
     /**
     * The index of the token currently being processed.
@@ -5113,7 +4857,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5124,7 +4867,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5147,7 +4889,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5166,7 +4907,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5189,7 +4929,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5204,7 +4943,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5227,7 +4965,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5246,7 +4983,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5272,7 +5008,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5283,7 +5018,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5306,7 +5040,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5325,7 +5058,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5348,7 +5080,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5363,7 +5094,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5386,7 +5116,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5405,7 +5134,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[InsOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5431,7 +5159,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5442,7 +5169,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5465,7 +5191,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5484,7 +5209,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5507,7 +5231,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5522,7 +5245,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5545,7 +5267,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5564,7 +5285,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5590,7 +5310,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5601,7 +5320,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5624,7 +5342,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5643,7 +5360,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5666,7 +5382,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5681,7 +5396,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5704,7 +5418,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5723,7 +5436,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[LinkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5749,7 +5461,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5760,7 +5471,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5783,7 +5493,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5802,7 +5511,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5825,7 +5533,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5840,7 +5547,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5863,7 +5569,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5882,7 +5587,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemCloseToken],
     /**
     * The index of the token currently being processed.
@@ -5908,7 +5612,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5919,7 +5622,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5942,7 +5644,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5961,7 +5662,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5984,7 +5684,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemOpenToken],
     /**
     * The index of the token currently being processed.
@@ -5999,7 +5698,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6022,7 +5720,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6041,7 +5738,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ListItemOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6067,7 +5763,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6078,7 +5773,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6101,7 +5795,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6120,7 +5813,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6143,7 +5835,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6158,7 +5849,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6181,7 +5871,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6200,7 +5889,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6226,7 +5914,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6237,7 +5924,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6260,7 +5946,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6279,7 +5964,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6302,7 +5986,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6317,7 +6000,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6340,7 +6022,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6359,7 +6040,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[MarkOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6385,7 +6065,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6396,7 +6075,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6419,7 +6097,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6438,7 +6115,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6461,7 +6137,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6476,7 +6151,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6499,7 +6173,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6518,7 +6191,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6544,7 +6216,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6555,7 +6226,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6578,7 +6248,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6597,7 +6266,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6620,7 +6288,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6635,7 +6302,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6658,7 +6324,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6677,7 +6342,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[OrderedListOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6703,7 +6367,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6714,7 +6377,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6737,7 +6399,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6756,7 +6417,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6779,7 +6439,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6794,7 +6453,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6817,7 +6475,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6836,7 +6493,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphCloseToken],
     /**
     * The index of the token currently being processed.
@@ -6862,7 +6518,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6873,7 +6528,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6896,7 +6550,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6915,7 +6568,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6938,7 +6590,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6953,7 +6604,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6976,7 +6626,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphOpenToken],
     /**
     * The index of the token currently being processed.
@@ -6995,7 +6644,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[ParagraphOpenToken],
     /**
     * The index of the token currently being processed.
@@ -7021,7 +6669,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SoftbreakToken],
     /**
     * The index of the token currently being processed.
@@ -7032,7 +6679,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SoftbreakToken],
     /**
     * The index of the token currently being processed.
@@ -7055,7 +6701,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SoftbreakToken],
     /**
     * The index of the token currently being processed.
@@ -7074,7 +6719,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SoftbreakToken],
     /**
     * The index of the token currently being processed.
@@ -7097,7 +6741,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SoftbreakToken],
     /**
     * The index of the token currently being processed.
@@ -7112,7 +6755,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SoftbreakToken],
     /**
     * The index of the token currently being processed.
@@ -7135,7 +6777,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SoftbreakToken],
     /**
     * The index of the token currently being processed.
@@ -7154,7 +6795,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SoftbreakToken],
     /**
     * The index of the token currently being processed.
@@ -7180,7 +6820,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7191,7 +6830,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7214,7 +6852,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7233,7 +6870,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7256,7 +6892,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7271,7 +6906,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7294,7 +6928,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7313,7 +6946,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7339,7 +6971,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongOpenToken],
     /**
     * The index of the token currently being processed.
@@ -7350,7 +6981,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongOpenToken],
     /**
     * The index of the token currently being processed.
@@ -7373,7 +7003,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongOpenToken],
     /**
     * The index of the token currently being processed.
@@ -7392,7 +7021,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongOpenToken],
     /**
     * The index of the token currently being processed.
@@ -7415,7 +7043,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongOpenToken],
     /**
     * The index of the token currently being processed.
@@ -7430,7 +7057,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongOpenToken],
     /**
     * The index of the token currently being processed.
@@ -7453,7 +7079,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongOpenToken],
     /**
     * The index of the token currently being processed.
@@ -7472,7 +7097,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[StrongOpenToken],
     /**
     * The index of the token currently being processed.
@@ -7498,7 +7122,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SubToken],
     /**
     * The index of the token currently being processed.
@@ -7509,7 +7132,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SubToken],
     /**
     * The index of the token currently being processed.
@@ -7532,7 +7154,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SubToken],
     /**
     * The index of the token currently being processed.
@@ -7551,7 +7172,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SubToken],
     /**
     * The index of the token currently being processed.
@@ -7574,7 +7194,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SubToken],
     /**
     * The index of the token currently being processed.
@@ -7589,7 +7208,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SubToken],
     /**
     * The index of the token currently being processed.
@@ -7612,7 +7230,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SubToken],
     /**
     * The index of the token currently being processed.
@@ -7631,7 +7248,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SubToken],
     /**
     * The index of the token currently being processed.
@@ -7657,7 +7273,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SupToken],
     /**
     * The index of the token currently being processed.
@@ -7668,7 +7283,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SupToken],
     /**
     * The index of the token currently being processed.
@@ -7691,7 +7305,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SupToken],
     /**
     * The index of the token currently being processed.
@@ -7710,7 +7323,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SupToken],
     /**
     * The index of the token currently being processed.
@@ -7733,7 +7345,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SupToken],
     /**
     * The index of the token currently being processed.
@@ -7748,7 +7359,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SupToken],
     /**
     * The index of the token currently being processed.
@@ -7771,7 +7381,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SupToken],
     /**
     * The index of the token currently being processed.
@@ -7790,7 +7399,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[SupToken],
     /**
     * The index of the token currently being processed.
@@ -7816,7 +7424,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7827,7 +7434,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7850,7 +7456,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7869,7 +7474,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7892,7 +7496,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7907,7 +7510,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7930,7 +7532,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7949,7 +7550,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableCloseToken],
     /**
     * The index of the token currently being processed.
@@ -7975,7 +7575,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableOpenToken],
     /**
     * The index of the token currently being processed.
@@ -7986,7 +7585,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8009,7 +7607,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8028,7 +7625,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8051,7 +7647,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8066,7 +7661,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8089,7 +7683,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8108,7 +7701,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TableOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8134,7 +7726,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8145,7 +7736,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8168,7 +7758,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8187,7 +7776,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8210,7 +7798,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8225,7 +7812,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8248,7 +7834,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8267,7 +7852,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8293,7 +7877,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8304,7 +7887,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8327,7 +7909,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8346,7 +7927,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8369,7 +7949,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8384,7 +7963,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8407,7 +7985,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8426,7 +8003,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TBodyOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8452,7 +8028,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8463,7 +8038,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8486,7 +8060,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8505,7 +8078,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8528,7 +8100,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8543,7 +8114,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8566,7 +8136,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8585,7 +8154,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8611,7 +8179,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8622,7 +8189,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8645,7 +8211,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8664,7 +8229,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8687,7 +8251,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8702,7 +8265,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8725,7 +8287,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8744,7 +8305,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TDOpenToken],
     /**
     * The index of the token currently being processed.
@@ -8770,7 +8330,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TextToken],
     /**
     * The index of the token currently being processed.
@@ -8781,7 +8340,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TextToken],
     /**
     * The index of the token currently being processed.
@@ -8804,7 +8362,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TextToken],
     /**
     * The index of the token currently being processed.
@@ -8823,7 +8380,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TextToken],
     /**
     * The index of the token currently being processed.
@@ -8846,7 +8402,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TextToken],
     /**
     * The index of the token currently being processed.
@@ -8861,7 +8416,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TextToken],
     /**
     * The index of the token currently being processed.
@@ -8884,7 +8438,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TextToken],
     /**
     * The index of the token currently being processed.
@@ -8903,7 +8456,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TextToken],
     /**
     * The index of the token currently being processed.
@@ -8929,7 +8481,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8940,7 +8491,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8963,7 +8513,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THCloseToken],
     /**
     * The index of the token currently being processed.
@@ -8982,7 +8531,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9005,7 +8553,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9020,7 +8567,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9043,7 +8589,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9062,7 +8607,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9088,7 +8632,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9099,7 +8642,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9122,7 +8664,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9141,7 +8682,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9164,7 +8704,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9179,7 +8718,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9202,7 +8740,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9221,7 +8758,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9247,7 +8783,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9258,7 +8793,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9281,7 +8815,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9300,7 +8833,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9323,7 +8855,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9338,7 +8869,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9361,7 +8891,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9380,7 +8909,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9406,7 +8934,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9417,7 +8944,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9440,7 +8966,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9459,7 +8984,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9482,7 +9006,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9497,7 +9020,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9520,7 +9042,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9539,7 +9060,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[THeadOpenToken],
     /**
     * The index of the token currently being processed.
@@ -9565,7 +9085,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TRCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9576,7 +9095,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TRCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9599,7 +9117,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TRCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9618,7 +9135,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TRCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9641,7 +9157,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TRCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9656,7 +9171,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TRCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9679,7 +9193,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TRCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9698,7 +9211,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TRCloseToken],
     /**
     * The index of the token currently being processed.
@@ -9724,7 +9236,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TROpenToken],
     /**
     * The index of the token currently being processed.
@@ -9735,7 +9246,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TROpenToken],
     /**
     * The index of the token currently being processed.
@@ -9758,7 +9268,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TROpenToken],
     /**
     * The index of the token currently being processed.
@@ -9777,7 +9286,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TROpenToken],
     /**
     * The index of the token currently being processed.
@@ -9800,7 +9308,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TROpenToken],
     /**
     * The index of the token currently being processed.
@@ -9815,7 +9322,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TROpenToken],
     /**
     * The index of the token currently being processed.
@@ -9838,7 +9344,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TROpenToken],
     /**
     * The index of the token currently being processed.
@@ -9857,7 +9362,6 @@ trait Rules extends /* name */ StringDictionary[(Rule[TagToken, String]) | (Stri
     /**
     * The list of tokens currently being processed.
     */
-  // tslint:disable-next-line:no-unnecessary-generics
   tokens: js.Array[TROpenToken],
     /**
     * The index of the token currently being processed.

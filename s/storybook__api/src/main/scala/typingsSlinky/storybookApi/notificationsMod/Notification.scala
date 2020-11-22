@@ -1,5 +1,7 @@
 package typingsSlinky.storybookApi.notificationsMod
 
+import typingsSlinky.storybookApi.anon.Color
+import typingsSlinky.storybookApi.anon.Headline
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,15 +9,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Notification extends js.Object {
   
+  var content: Headline = js.native
+  
+  var icon: js.UndefOr[Color] = js.native
+  
   var id: String = js.native
+  
+  var link: String = js.native
   
   var onClear: js.UndefOr[js.Function0[Unit]] = js.native
 }
 object Notification {
   
   @scala.inline
-  def apply(id: String): Notification = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any])
+  def apply(content: Headline, id: String, link: String): Notification = {
+    val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any], id = id.asInstanceOf[js.Any], link = link.asInstanceOf[js.Any])
     __obj.asInstanceOf[Notification]
   }
   
@@ -35,7 +43,19 @@ object Notification {
     }
     
     @scala.inline
+    def setContent(value: Headline): Self = this.set("content", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setId(value: String): Self = this.set("id", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setLink(value: String): Self = this.set("link", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIcon(value: Color): Self = this.set("icon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
     
     @scala.inline
     def setOnClear(value: () => Unit): Self = this.set("onClear", js.Any.fromFunction0(value))

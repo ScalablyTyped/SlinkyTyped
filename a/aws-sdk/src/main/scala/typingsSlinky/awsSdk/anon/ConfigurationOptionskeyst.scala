@@ -6,10 +6,10 @@ import typingsSlinky.awsSdk.awsSdkStrings.regional_
 import typingsSlinky.awsSdk.awsSdkStrings.v2_
 import typingsSlinky.awsSdk.awsSdkStrings.v3
 import typingsSlinky.awsSdk.awsSdkStrings.v4
-import typingsSlinky.awsSdk.configMod.HTTPOptions
-import typingsSlinky.awsSdk.configMod.Logger
-import typingsSlinky.awsSdk.configMod.ParamValidation
-import typingsSlinky.awsSdk.configMod.RetryDelayOptions
+import typingsSlinky.awsSdk.configBaseMod.HTTPOptions
+import typingsSlinky.awsSdk.configBaseMod.Logger
+import typingsSlinky.awsSdk.configBaseMod.ParamValidation
+import typingsSlinky.awsSdk.configBaseMod.RetryDelayOptions
 import typingsSlinky.awsSdk.credentialProviderChainMod.CredentialProviderChain
 import typingsSlinky.awsSdk.credentialsMod.Credentials
 import typingsSlinky.awsSdk.credentialsMod.CredentialsOptions
@@ -17,7 +17,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/* Inlined aws-sdk.aws-sdk/lib/config.ConfigurationOptions & {[key: string] : any} */
+/* Inlined aws-sdk.aws-sdk/lib/config-base.ConfigurationOptions & {[key: string] : any} */
 @js.native
 trait ConfigurationOptionskeyst
   extends /* key */ StringDictionary[js.Any] {

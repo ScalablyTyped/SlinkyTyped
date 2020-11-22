@@ -10,25 +10,9 @@ abstract class NgControl () extends AbstractControlDirective {
   
   /**
     * @description
-    * The registered async validator function for the control
-    *
-    * @throws An exception that this method is not implemented
-    */
-  def asyncValidator: AsyncValidatorFn | Null = js.native
-  
-  /**
-    * @description
     * The name for the control
     */
   var name: String | Double | Null = js.native
-  
-  /**
-    * @description
-    * The registered synchronous validator function for the control
-    *
-    * @throws An exception that this method is not implemented
-    */
-  def validator: ValidatorFn | Null = js.native
   
   /**
     * @description

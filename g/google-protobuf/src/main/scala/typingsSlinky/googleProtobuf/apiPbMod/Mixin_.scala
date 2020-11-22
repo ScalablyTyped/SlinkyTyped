@@ -13,7 +13,7 @@ class Mixin_ () extends Message {
   
   def getRoot(): String = js.native
   
-  def setName(value: String): Unit = js.native
+  def setName(value: String): Mixin = js.native
   
-  def setRoot(value: String): Unit = js.native
+  def setRoot(value: String): Mixin = js.native
 }

@@ -2,7 +2,7 @@ package typingsSlinky.awsSdk.codedeployMod
 
 import typingsSlinky.awsSdk.anon.GetDeploymentInputwaiterW
 import typingsSlinky.awsSdk.awsSdkStrings.deploymentSuccessful
-import typingsSlinky.awsSdk.configMod.ConfigBase
+import typingsSlinky.awsSdk.configBaseMod.ConfigBase
 import typingsSlinky.awsSdk.errorMod.AWSError
 import typingsSlinky.awsSdk.requestMod.Request
 import typingsSlinky.awsSdk.serviceMod.Service

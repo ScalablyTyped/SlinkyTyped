@@ -12,12 +12,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("backbone", "Collection")
 @js.native
-class Collection[TModel /* <: Model[_, ModelSetOptions] */] () extends js.Object {
+class Collection[TModel /* <: Model[_, ModelSetOptions, js.Object] */] () extends js.Object {
   def this(models: js.Array[js.Object | TModel]) = this()
   def this(models: js.UndefOr[scala.Nothing], options: js.Any) = this()
   def this(models: js.Array[js.Object | TModel], options: js.Any) = this()
   
-  /* private */ def _isModel(obj: js.Any): /* is backbone.backbone.Model<any, backbone.backbone.ModelSetOptions> */ Boolean = js.native
+  /* private */ def _isModel(obj: js.Any): /* is backbone.backbone.Model<any, backbone.backbone.ModelSetOptions, {}> */ Boolean = js.native
   
   /* private */ def _onModelEvent(event: String, model: TModel, collection: Collection[TModel], options: js.Any): Unit = js.native
   
@@ -129,7 +129,7 @@ class Collection[TModel /* <: Model[_, ModelSetOptions] */] () extends js.Object
     * Get a model from a collection, specified by an id, a cid, or by passing in a model.
     **/
   def get(id: Double): TModel = js.native
-  def get(id: Model[_, ModelSetOptions]): TModel = js.native
+  def get(id: Model[_, ModelSetOptions, js.Object]): TModel = js.native
   
   def groupBy(iterator: String): Dictionary[js.Array[TModel]] = js.native
   def groupBy(iterator: String, context: js.Any): Dictionary[js.Array[TModel]] = js.native
@@ -138,7 +138,7 @@ class Collection[TModel /* <: Model[_, ModelSetOptions] */] () extends js.Object
   
   def has(key: String): Boolean = js.native
   def has(key: Double): Boolean = js.native
-  def has(key: Model[_, ModelSetOptions]): Boolean = js.native
+  def has(key: Model[_, ModelSetOptions, js.Object]): Boolean = js.native
   
   def head(): TModel = js.native
   def head(n: Double): js.Array[TModel] = js.native
@@ -259,8 +259,8 @@ class Collection[TModel /* <: Model[_, ModelSetOptions] */] () extends js.Object
   
   def reset(): js.Array[TModel] = js.native
   def reset(models: js.UndefOr[scala.Nothing], options: Silenceable): js.Array[TModel] = js.native
-  def reset(models: js.Array[TModel]): js.Array[TModel] = js.native
-  def reset(models: js.Array[TModel], options: Silenceable): js.Array[TModel] = js.native
+  def reset(models: js.Array[js.Object | TModel]): js.Array[TModel] = js.native
+  def reset(models: js.Array[js.Object | TModel], options: Silenceable): js.Array[TModel] = js.native
   
   def rest(): js.Array[TModel] = js.native
   def rest(n: Double): js.Array[TModel] = js.native
@@ -284,8 +284,8 @@ class Collection[TModel /* <: Model[_, ModelSetOptions] */] () extends js.Object
     */
   def set(): js.Array[TModel] = js.native
   def set(models: js.UndefOr[scala.Nothing], options: CollectionSetOptions): js.Array[TModel] = js.native
-  def set(models: js.Array[TModel]): js.Array[TModel] = js.native
-  def set(models: js.Array[TModel], options: CollectionSetOptions): js.Array[TModel] = js.native
+  def set(models: js.Array[js.Object | TModel]): js.Array[TModel] = js.native
+  def set(models: js.Array[js.Object | TModel], options: CollectionSetOptions): js.Array[TModel] = js.native
   
   def shift(): TModel = js.native
   def shift(options: Silenceable): TModel = js.native
@@ -330,8 +330,6 @@ class Collection[TModel /* <: Model[_, ModelSetOptions] */] () extends js.Object
   
   /**
     * Sets the url property (or function) on a collection to reference its location on the server.
-    *
-    * @memberof Collection
     */
   var url: String | js.Function0[String] = js.native
   

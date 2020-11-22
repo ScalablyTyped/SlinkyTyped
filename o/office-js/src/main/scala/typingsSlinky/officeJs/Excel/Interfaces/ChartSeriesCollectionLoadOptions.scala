@@ -263,7 +263,7 @@ trait ChartSeriesCollectionLoadOptions extends js.Object {
   
   /**
     *
-    * For EACH ITEM in the collection: Specifies the name of a series in a chart.
+    * For EACH ITEM in the collection: Specifies the name of a series in a chart. The name's length should not be greater than 255 characters.
     *
     * [Api set: ExcelApi 1.1]
     */

@@ -9,12 +9,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait dxContextMenu extends dxMenuBase {
   
-  /** @name dxContextMenu.hide() */
+  /**
+    * [descr:dxContextMenu.hide()]
+    */
   def hide(): Promise[Unit] with JQueryPromise[Unit] = js.native
   
-  /** @name dxContextMenu.show() */
+  /**
+    * [descr:dxContextMenu.show()]
+    */
   def show(): Promise[Unit] with JQueryPromise[Unit] = js.native
   
-  /** @name dxContextMenu.toggle(showing) */
+  /**
+    * [descr:dxContextMenu.toggle(showing)]
+    */
   def toggle(showing: Boolean): Promise[Unit] with JQueryPromise[Unit] = js.native
 }

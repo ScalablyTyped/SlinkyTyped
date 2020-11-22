@@ -1,6 +1,5 @@
 package typingsSlinky.storybookAddonStoryshots
 
-import typingsSlinky.storybookAddonStoryshots.anon.AsyncJest
 import typingsSlinky.storybookAddonStoryshots.storyshotsOptionsMod.StoryshotsOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,5 +9,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object ensureOptionsDefaultsMod extends js.Object {
   
-  def default(options: StoryshotsOptions): AsyncJest = js.native
+  def default(options: StoryshotsOptions): js.Any = js.native
 }

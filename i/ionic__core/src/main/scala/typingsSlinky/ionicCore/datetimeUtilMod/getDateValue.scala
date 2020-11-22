@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object getDateValue extends js.Object {
   
-  def apply(date: DatetimeData, format: String): Double = js.native
+  def apply(date: DatetimeData, format: String): Double | String = js.native
 }

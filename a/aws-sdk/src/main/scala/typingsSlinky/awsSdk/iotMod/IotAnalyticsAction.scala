@@ -8,6 +8,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait IotAnalyticsAction extends js.Object {
   
   /**
+    * Whether to process the action as a batch. The default value is false. When batchMode is true and the rule SQL statement evaluates to an Array, each Array element is delivered as a separate message when passed by  BatchPutMessage  to the AWS IoT Analytics channel. The resulting array can't have more than 100 messages.
+    */
+  var batchMode: js.UndefOr[BatchMode] = js.native
+  
+  /**
     * (deprecated) The ARN of the IoT Analytics channel to which message data will be sent.
     */
   var channelArn: js.UndefOr[AwsArn] = js.native
@@ -44,6 +49,12 @@ object IotAnalyticsAction {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setBatchMode(value: BatchMode): Self = this.set("batchMode", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteBatchMode: Self = this.set("batchMode", js.undefined)
     
     @scala.inline
     def setChannelArn(value: AwsArn): Self = this.set("channelArn", value.asInstanceOf[js.Any])

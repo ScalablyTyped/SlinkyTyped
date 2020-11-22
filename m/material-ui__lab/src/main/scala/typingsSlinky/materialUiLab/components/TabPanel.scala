@@ -19,8 +19,13 @@ import slinky.web.SyntheticWheelEvent
 import slinky.web.html.div.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.materialUiLab.anon.PartialClassNameMapTabPan
+import typingsSlinky.materialUiLab.materialUiLabStrings.`additions removals`
 import typingsSlinky.materialUiLab.materialUiLabStrings.`additions text`
 import typingsSlinky.materialUiLab.materialUiLabStrings.`inline`
+import typingsSlinky.materialUiLab.materialUiLabStrings.`removals additions`
+import typingsSlinky.materialUiLab.materialUiLabStrings.`removals text`
+import typingsSlinky.materialUiLab.materialUiLabStrings.`text additions`
+import typingsSlinky.materialUiLab.materialUiLabStrings.`text removals`
 import typingsSlinky.materialUiLab.materialUiLabStrings.additions
 import typingsSlinky.materialUiLab.materialUiLabStrings.all
 import typingsSlinky.materialUiLab.materialUiLabStrings.ascending
@@ -197,7 +202,9 @@ object TabPanel {
     def `aria-readonly`(value: Boolean): this.type = set("aria-readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def `aria-relevant`(value: additions | (`additions text`) | all | removals | text): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
+    def `aria-relevant`(
+      value: additions | (`additions removals`) | (`additions text`) | all | removals | (`removals additions`) | (`removals text`) | text | (`text additions`) | (`text removals`)
+    ): this.type = set("aria-relevant", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `aria-required`(value: Boolean): this.type = set("aria-required", value.asInstanceOf[js.Any])

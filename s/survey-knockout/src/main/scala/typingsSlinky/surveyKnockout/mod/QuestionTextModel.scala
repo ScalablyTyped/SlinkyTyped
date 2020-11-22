@@ -9,6 +9,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 class QuestionTextModel protected () extends Question {
   def this(name: String) = this()
   
+  var autoComplete: String = js.native
+  
   /* protected */ def correctValueType(newValue: js.Any): js.Any = js.native
   
   def getMaxLength(): js.Any = js.native
@@ -32,15 +34,23 @@ class QuestionTextModel protected () extends Question {
     */
   var maxLength: Double = js.native
   
+  var maxValueExpression: String = js.native
+  
   /**
     * The minimum value
     */
   var min: String = js.native
   
+  var minValueExpression: String = js.native
+  
   /**
     * The input place holder.
     */
   var placeHolder: String = js.native
+  
+  val renderedMax: js.Any = js.native
+  
+  val renderedMin: js.Any = js.native
   
   /**
     * The text input size

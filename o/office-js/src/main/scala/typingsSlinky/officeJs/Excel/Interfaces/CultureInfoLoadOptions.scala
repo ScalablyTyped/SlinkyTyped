@@ -21,6 +21,14 @@ trait CultureInfoLoadOptions extends js.Object {
   
   /**
     *
+    * Defines the culturally appropriate format of displaying date and time. This is based on current system culture settings.
+    *
+    * [Api set: ExcelApi 1.12]
+    */
+  var datetimeFormat: js.UndefOr[DatetimeFormatInfoLoadOptions] = js.native
+  
+  /**
+    *
     * Gets the culture name in the format languagecode2-country/regioncode2 (e.g., "zh-cn" or "en-us"). This is based on current system settings.
     *
     * [Api set: ExcelApi 1.11]
@@ -63,6 +71,12 @@ object CultureInfoLoadOptions {
     
     @scala.inline
     def delete$all: Self = this.set("$all", js.undefined)
+    
+    @scala.inline
+    def setDatetimeFormat(value: DatetimeFormatInfoLoadOptions): Self = this.set("datetimeFormat", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDatetimeFormat: Self = this.set("datetimeFormat", js.undefined)
     
     @scala.inline
     def setName(value: Boolean): Self = this.set("name", value.asInstanceOf[js.Any])

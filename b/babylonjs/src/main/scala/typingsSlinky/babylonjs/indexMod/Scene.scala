@@ -73,13 +73,13 @@ object Scene extends js.Object {
   
   /**
     * Gets or sets the maximum deltatime when deterministic lock step is enabled
-    * @see http://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
+    * @see https://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
     */
   var MaxDeltaTime: Double = js.native
   
   /**
     * Gets or sets the minimum deltatime when deterministic lock step is enabled
-    * @see http://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
+    * @see https://doc.babylonjs.com/babylon101/animations#deterministic-lockstep
     */
   var MinDeltaTime: Double = js.native
 }

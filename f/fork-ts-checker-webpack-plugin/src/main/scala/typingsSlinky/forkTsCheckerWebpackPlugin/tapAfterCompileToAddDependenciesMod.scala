@@ -1,6 +1,7 @@
 package typingsSlinky.forkTsCheckerWebpackPlugin
 
 import typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginConfigurationMod.ForkTsCheckerWebpackPluginConfiguration
+import typingsSlinky.forkTsCheckerWebpackPlugin.forkTsCheckerWebpackPluginStateMod.ForkTsCheckerWebpackPluginState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,6 +12,7 @@ object tapAfterCompileToAddDependenciesMod extends js.Object {
   
   def tapAfterCompileToAddDependencies(
     compiler: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify webpack.Compiler */ js.Any,
-    configuration: ForkTsCheckerWebpackPluginConfiguration
+    configuration: ForkTsCheckerWebpackPluginConfiguration,
+    state: ForkTsCheckerWebpackPluginState
   ): Unit = js.native
 }

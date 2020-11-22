@@ -38,7 +38,7 @@ trait DirectionsSearchProperties extends Object {
   var autoSelect: js.UndefOr[Boolean] = js.native
   
   /**
-    * Define the type of location, either `"street"` or `"rooftop"`. The default value will be `"street"` for any locator source that does not define a locationType.
+    * Define the type of location, either `"street"` or `"rooftop"`.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions.html#SearchProperties)
     */

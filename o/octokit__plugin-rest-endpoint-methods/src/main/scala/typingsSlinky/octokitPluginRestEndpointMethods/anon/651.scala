@@ -3,8 +3,8 @@ package typingsSlinky.octokitPluginRestEndpointMethods.anon
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.baseUrl
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.headers
 import typingsSlinky.octokitPluginRestEndpointMethods.octokitPluginRestEndpointMethodsStrings.mediaType
-import typingsSlinky.octokitTypes.endpointsMod.BillingGetGithubPackagesBillingUserEndpoint
-import typingsSlinky.octokitTypes.endpointsMod.BillingGetGithubPackagesBillingUserResponseData
+import typingsSlinky.octokitTypes.endpointsMod.BillingGetGithubActionsBillingOrgEndpoint
+import typingsSlinky.octokitTypes.endpointsMod.BillingGetGithubActionsBillingOrgResponseData
 import typingsSlinky.octokitTypes.octokitResponseMod.OctokitResponse
 import typingsSlinky.octokitTypes.requestParametersMod.RequestParameters
 import typingsSlinky.std.Omit
@@ -15,16 +15,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `651` extends js.Object {
   
-  var parameters: RequestParameters with (Omit[BillingGetGithubPackagesBillingUserEndpoint, baseUrl | headers | mediaType]) = js.native
+  var parameters: RequestParameters with (Omit[BillingGetGithubActionsBillingOrgEndpoint, baseUrl | headers | mediaType]) = js.native
   
-  var response: OctokitResponse[BillingGetGithubPackagesBillingUserResponseData] = js.native
+  var response: OctokitResponse[BillingGetGithubActionsBillingOrgResponseData] = js.native
 }
 object `651` {
   
   @scala.inline
   def apply(
-    parameters: RequestParameters with (Omit[BillingGetGithubPackagesBillingUserEndpoint, baseUrl | headers | mediaType]),
-    response: OctokitResponse[BillingGetGithubPackagesBillingUserResponseData]
+    parameters: RequestParameters with (Omit[BillingGetGithubActionsBillingOrgEndpoint, baseUrl | headers | mediaType]),
+    response: OctokitResponse[BillingGetGithubActionsBillingOrgResponseData]
   ): `651` = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])
     __obj.asInstanceOf[`651`]
@@ -47,10 +47,10 @@ object `651` {
     
     @scala.inline
     def setParameters(
-      value: RequestParameters with (Omit[BillingGetGithubPackagesBillingUserEndpoint, baseUrl | headers | mediaType])
+      value: RequestParameters with (Omit[BillingGetGithubActionsBillingOrgEndpoint, baseUrl | headers | mediaType])
     ): Self = this.set("parameters", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setResponse(value: OctokitResponse[BillingGetGithubPackagesBillingUserResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
+    def setResponse(value: OctokitResponse[BillingGetGithubActionsBillingOrgResponseData]): Self = this.set("response", value.asInstanceOf[js.Any])
   }
 }

@@ -20,10 +20,10 @@ package object mod {
   
   type Errback = js.Function1[/* err */ js.Error, scala.Unit]
   
-  type ErrorRequestHandler[P /* <: typingsSlinky.expressServeStaticCore.mod.Params */, ResBody, ReqBody, ReqQuery] = js.Function4[
+  type ErrorRequestHandler[P, ResBody, ReqBody, ReqQuery] = js.Function4[
     /* err */ js.Any, 
     /* req */ typingsSlinky.expressServeStaticCore.mod.Request[P, ResBody, ReqBody, ReqQuery], 
-    /* res */ typingsSlinky.expressServeStaticCore.mod.Response[ResBody], 
+    /* res */ typingsSlinky.expressServeStaticCore.mod.Response[ResBody, scala.Double], 
     /* next */ typingsSlinky.expressServeStaticCore.mod.NextFunction, 
     js.Any
   ]
@@ -45,14 +45,14 @@ package object mod {
   
   type Query = typingsSlinky.qs.mod.ParsedQs
   
-  type RequestHandler[P /* <: typingsSlinky.expressServeStaticCore.mod.Params */, ResBody, ReqBody, ReqQuery] = js.Function3[
+  type RequestHandler[P, ResBody, ReqBody, ReqQuery] = js.Function3[
     /* req */ typingsSlinky.expressServeStaticCore.mod.Request[P, ResBody, ReqBody, ReqQuery], 
-    /* res */ typingsSlinky.expressServeStaticCore.mod.Response[ResBody], 
+    /* res */ typingsSlinky.expressServeStaticCore.mod.Response[ResBody, scala.Double], 
     /* next */ typingsSlinky.expressServeStaticCore.mod.NextFunction, 
     js.Any
   ]
   
-  type RequestHandlerParams[P /* <: typingsSlinky.expressServeStaticCore.mod.Params */, ResBody, ReqBody, ReqQuery] = (typingsSlinky.expressServeStaticCore.mod.RequestHandler[P, ResBody, ReqBody, ReqQuery]) | (typingsSlinky.expressServeStaticCore.mod.ErrorRequestHandler[P, ResBody, ReqBody, ReqQuery]) | (js.Array[
+  type RequestHandlerParams[P, ResBody, ReqBody, ReqQuery] = (typingsSlinky.expressServeStaticCore.mod.RequestHandler[P, ResBody, ReqBody, ReqQuery]) | (typingsSlinky.expressServeStaticCore.mod.ErrorRequestHandler[P, ResBody, ReqBody, ReqQuery]) | (js.Array[
     (typingsSlinky.expressServeStaticCore.mod.RequestHandler[P, js.Any, js.Any, typingsSlinky.qs.mod.ParsedQs]) | (typingsSlinky.expressServeStaticCore.mod.ErrorRequestHandler[P, js.Any, js.Any, typingsSlinky.qs.mod.ParsedQs])
   ])
   
@@ -63,7 +63,7 @@ package object mod {
       js.Any, 
       typingsSlinky.qs.mod.ParsedQs
     ], 
-    /* res */ typingsSlinky.expressServeStaticCore.mod.Response[js.Any], 
+    /* res */ typingsSlinky.expressServeStaticCore.mod.Response[js.Any, scala.Double], 
     /* next */ typingsSlinky.expressServeStaticCore.mod.NextFunction, 
     /* value */ js.Any, 
     /* name */ java.lang.String, 

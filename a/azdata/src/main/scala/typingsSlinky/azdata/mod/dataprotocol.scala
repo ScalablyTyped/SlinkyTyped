@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object dataprotocol extends js.Object {
   
-  def getProvider[T /* <: DataProvider */](providerId: String, providerType: DataProviderType): DataProvider = js.native
+  def getProvider[T /* <: DataProvider */](providerId: String, providerType: DataProviderType): T = js.native
   
   def getProvidersByType[T /* <: DataProvider */](providerType: DataProviderType): js.Array[T] = js.native
   

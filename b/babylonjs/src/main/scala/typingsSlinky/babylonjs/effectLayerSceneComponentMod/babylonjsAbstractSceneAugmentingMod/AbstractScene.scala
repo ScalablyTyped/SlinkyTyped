@@ -16,8 +16,8 @@ trait AbstractScene extends js.Object {
   
   /**
     * The list of effect layers (highlights/glow) added to the scene
-    * @see http://doc.babylonjs.com/how_to/highlight_layer
-    * @see http://doc.babylonjs.com/how_to/glow_layer
+    * @see https://doc.babylonjs.com/how_to/highlight_layer
+    * @see https://doc.babylonjs.com/how_to/glow_layer
     */
   var effectLayers: js.Array[EffectLayer] = js.native
   

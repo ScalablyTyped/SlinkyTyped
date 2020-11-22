@@ -10,6 +10,7 @@ import typingsSlinky.reactVis.mod.AnimationParam
 import typingsSlinky.reactVis.mod.DecorativeAxisPoint
 import typingsSlinky.reactVis.mod.DecorativeAxisProps
 import typingsSlinky.reactVis.mod.RVNearestXData
+import typingsSlinky.reactVis.mod.RVNearestXYData
 import typingsSlinky.reactVis.mod.Scale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -154,7 +155,7 @@ object DecorativeAxis {
     def onNearestX(value: (DecorativeAxisPoint, /* data */ RVNearestXData[DecorativeAxisPoint]) => Unit): this.type = set("onNearestX", js.Any.fromFunction2(value))
     
     @scala.inline
-    def onNearestXY(value: (DecorativeAxisPoint, /* data */ RVNearestXData[DecorativeAxisPoint]) => Unit): this.type = set("onNearestXY", js.Any.fromFunction2(value))
+    def onNearestXY(value: (DecorativeAxisPoint, /* data */ RVNearestXYData[DecorativeAxisPoint]) => Unit): this.type = set("onNearestXY", js.Any.fromFunction2(value))
     
     @scala.inline
     def onSeriesClick(value: SyntheticMouseEvent[HTMLElement] => Unit): this.type = set("onSeriesClick", js.Any.fromFunction1(value))

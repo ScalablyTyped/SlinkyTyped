@@ -58,6 +58,9 @@ object Textarea {
     def autoFocus(value: Boolean): this.type = set("autoFocus", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def clearOnEscape(value: Boolean): this.type = set("clearOnEscape", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def clearable(value: Boolean): this.type = set("clearable", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -89,6 +92,9 @@ object Textarea {
     
     @scala.inline
     def max(value: Double): this.type = set("max", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def maxLength(value: Double): this.type = set("maxLength", value.asInstanceOf[js.Any])
     
     @scala.inline
     def min(value: Double): this.type = set("min", value.asInstanceOf[js.Any])
@@ -134,6 +140,9 @@ object Textarea {
     
     @scala.inline
     def size(value: mini | default_ | compact | large_): this.type = set("size", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def step(value: Double): this.type = set("step", value.asInstanceOf[js.Any])
     
     @scala.inline
     def `type`(value: String): this.type = set("type", value.asInstanceOf[js.Any])

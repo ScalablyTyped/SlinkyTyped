@@ -32,6 +32,8 @@ class Http2ServerCallStream[RequestType, ResponseType] protected () extends Even
   
   def deserializeMessage(bytes: Buffer): RequestType = js.native
   
+  def getPeer(): String = js.native
+  
   var handler: js.Any = js.native
   
   var isPushPending: js.Any = js.native

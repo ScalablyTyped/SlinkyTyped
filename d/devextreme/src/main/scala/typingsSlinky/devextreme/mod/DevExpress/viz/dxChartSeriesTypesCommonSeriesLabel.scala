@@ -12,50 +12,80 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
-/** @name dxChartSeriesTypes.CommonSeries.label */
+/**
+  * [descr:dxChartSeriesTypes.CommonSeries.label]
+  */
 @js.native
 trait dxChartSeriesTypesCommonSeriesLabel extends js.Object {
   
-  /** @name dxChartSeriesTypes.CommonSeries.label.alignment */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.label.alignment]
+    */
   var alignment: js.UndefOr[center | left | right] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.label.argumentFormat */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.label.argumentFormat]
+    */
   var argumentFormat: js.UndefOr[format] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.label.backgroundColor */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.label.backgroundColor]
+    */
   var backgroundColor: js.UndefOr[String] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.label.border */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.label.border]
+    */
   var border: js.UndefOr[ColorDashStyle] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.label.connector */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.label.connector]
+    */
   var connector: js.UndefOr[ColorVisible] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.label.customizeText */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.label.customizeText]
+    */
   var customizeText: js.UndefOr[js.Function1[/* pointInfo */ js.Any, String]] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.label.font */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.label.font]
+    */
   var font: js.UndefOr[Font] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.label.format */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.label.format]
+    */
   var format: js.UndefOr[typingsSlinky.devextreme.mod.DevExpress.ui.format] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.label.horizontalOffset */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.label.horizontalOffset]
+    */
   var horizontalOffset: js.UndefOr[Double] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.label.position */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.label.position]
+    */
   var position: js.UndefOr[inside | outside] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.label.rotationAngle */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.label.rotationAngle]
+    */
   var rotationAngle: js.UndefOr[Double] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.label.showForZeroValues */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.label.showForZeroValues]
+    */
   var showForZeroValues: js.UndefOr[Boolean] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.label.verticalOffset */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.label.verticalOffset]
+    */
   var verticalOffset: js.UndefOr[Double] = js.native
   
-  /** @name dxChartSeriesTypes.CommonSeries.label.visible */
+  /**
+    * [descr:dxChartSeriesTypes.CommonSeries.label.visible]
+    */
   var visible: js.UndefOr[Boolean] = js.native
 }
 object dxChartSeriesTypesCommonSeriesLabel {

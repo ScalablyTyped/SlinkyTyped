@@ -2,6 +2,8 @@ package typingsSlinky.three
 
 import typingsSlinky.three.anon.NeedsUpdate
 import typingsSlinky.three.cameraMod.Camera
+import typingsSlinky.three.materialMod.Material
+import typingsSlinky.three.webGLPropertiesMod.WebGLProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -11,7 +13,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object webGLClippingMod extends js.Object {
   
   @js.native
-  class WebGLClipping () extends js.Object {
+  class WebGLClipping protected () extends js.Object {
+    def this(properties: WebGLProperties) = this()
     
     def beginShadows(): Unit = js.native
     
@@ -19,18 +22,17 @@ object webGLClippingMod extends js.Object {
     
     def init(planes: js.Array[_], enableLocalClipping: Boolean, camera: Camera): Boolean = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var numIntersection: Double = js.native
     
+    /**
+    	 * @default 0
+    	 */
     var numPlanes: Double = js.native
     
-    def setState(
-      planes: js.Array[_],
-      clipIntersection: Boolean,
-      clipShadows: Boolean,
-      camera: Camera,
-      cache: js.Any,
-      fromCache: Boolean
-    ): Unit = js.native
+    def setState(material: Material, camera: Camera, useCache: Boolean): Unit = js.native
     
     var uniform: NeedsUpdate = js.native
   }

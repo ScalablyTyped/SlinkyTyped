@@ -13,7 +13,7 @@ trait DescribeChannelResponse extends js.Object {
   var channel: js.UndefOr[Channel] = js.native
   
   /**
-    * Statistics about the channel. Included if the 'includeStatistics' parameter is set to true in the request.
+    * Statistics about the channel. Included if the includeStatistics parameter is set to true in the request.
     */
   var statistics: js.UndefOr[ChannelStatistics] = js.native
 }

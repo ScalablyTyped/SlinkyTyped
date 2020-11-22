@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object modalMod {
   
-  type Modal = slinky.core.ReactComponentClass[typingsSlinky.reactOverlays.modalMod.ModalProps]
+  type ModalTransitionComponent = slinky.core.ReactComponentClass[typingsSlinky.reactOverlays.anon.inbooleanappearbooleanund]
 }

@@ -23,7 +23,7 @@ trait JobReport extends js.Object {
   var Format: js.UndefOr[JobReportFormat] = js.native
   
   /**
-    * An optional prefix to describe where in the specified bucket the job-completion report will be stored. Amazon S3 will store the job-completion report at &lt;prefix&gt;/job-&lt;job-id&gt;/report.json.
+    * An optional prefix to describe where in the specified bucket the job-completion report will be stored. Amazon S3 stores the job-completion report at &lt;prefix&gt;/job-&lt;job-id&gt;/report.json.
     */
   var Prefix: js.UndefOr[ReportPrefixString] = js.native
   

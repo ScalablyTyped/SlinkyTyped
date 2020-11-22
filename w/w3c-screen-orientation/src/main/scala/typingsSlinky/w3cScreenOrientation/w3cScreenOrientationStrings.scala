@@ -43,14 +43,10 @@ object w3cScreenOrientationStrings {
   sealed trait landscape extends ScreenOrientationLockType
   
   @js.native
-  sealed trait `landscape-primary`
-    extends OrientationType
-       with ScreenOrientationLockType
+  sealed trait `landscape-primary` extends ScreenOrientationLockType
   
   @js.native
-  sealed trait `landscape-secondary`
-    extends OrientationType
-       with ScreenOrientationLockType
+  sealed trait `landscape-secondary` extends ScreenOrientationLockType
   
   @js.native
   sealed trait natural extends ScreenOrientationLockType
@@ -59,12 +55,8 @@ object w3cScreenOrientationStrings {
   sealed trait portrait extends ScreenOrientationLockType
   
   @js.native
-  sealed trait `portrait-primary`
-    extends OrientationType
-       with ScreenOrientationLockType
+  sealed trait `portrait-primary` extends ScreenOrientationLockType
   
   @js.native
-  sealed trait `portrait-secondary`
-    extends OrientationType
-       with ScreenOrientationLockType
+  sealed trait `portrait-secondary` extends ScreenOrientationLockType
 }

@@ -29,6 +29,8 @@ trait IProviderOptions extends js.Object {
   
   var fork: js.UndefOr[String | js.Object] = js.native
   
+  var forkCacheSize: js.UndefOr[Double] = js.native
+  
   var fork_block_number: js.UndefOr[String | Double] = js.native
   
   var gasLimit: js.UndefOr[String | Double] = js.native
@@ -138,6 +140,12 @@ object IProviderOptions {
     
     @scala.inline
     def deleteFork: Self = this.set("fork", js.undefined)
+    
+    @scala.inline
+    def setForkCacheSize(value: Double): Self = this.set("forkCacheSize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteForkCacheSize: Self = this.set("forkCacheSize", js.undefined)
     
     @scala.inline
     def setFork_block_number(value: String | Double): Self = this.set("fork_block_number", value.asInstanceOf[js.Any])

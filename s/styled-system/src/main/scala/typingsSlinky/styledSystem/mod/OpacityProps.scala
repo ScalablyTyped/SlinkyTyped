@@ -15,7 +15,7 @@ trait OpacityProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends js.Obj
     */
   var opacity: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
       ThemeType
     ]
   ] = js.native
@@ -49,7 +49,7 @@ object OpacityProps {
     @scala.inline
     def setOpacity(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.GlobalsNumber */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.Opacity */ _, 
           ThemeType
         ]
     ): Self = this.set("opacity", value.asInstanceOf[js.Any])

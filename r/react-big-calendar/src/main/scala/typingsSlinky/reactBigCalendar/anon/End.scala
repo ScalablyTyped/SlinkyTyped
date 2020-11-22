@@ -1,30 +1,27 @@
 package typingsSlinky.reactBigCalendar.anon
 
+import typingsSlinky.reactBigCalendar.mod.stringOrDate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 @js.native
-trait End[TEvent /* <: js.Object */] extends js.Object {
+trait End extends js.Object {
   
-  var end: js.UndefOr[js.Function1[/* event */ TEvent, js.Date]] = js.native
+  var end: stringOrDate = js.native
   
-  var start: js.UndefOr[js.Function1[/* event */ TEvent, js.Date]] = js.native
-  
-  var title: js.UndefOr[js.Function1[/* event */ TEvent, String]] = js.native
-  
-  var tooltip: js.UndefOr[js.Function1[/* event */ TEvent, String]] = js.native
+  var start: stringOrDate = js.native
 }
 object End {
   
   @scala.inline
-  def apply[TEvent /* <: js.Object */](): End[TEvent] = {
-    val __obj = js.Dynamic.literal()
-    __obj.asInstanceOf[End[TEvent]]
+  def apply(end: stringOrDate, start: stringOrDate): End = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.asInstanceOf[End]
   }
   
   @scala.inline
-  implicit class EndOps[Self <: End[_], TEvent /* <: js.Object */] (val x: Self with End[TEvent]) extends AnyVal {
+  implicit class EndOps[Self <: End] (val x: Self) extends AnyVal {
     
     @scala.inline
     def duplicate: Self = (js.Dynamic.global.Object.assign(js.Dynamic.literal(), x)).asInstanceOf[Self]
@@ -39,27 +36,15 @@ object End {
     }
     
     @scala.inline
-    def setEnd(value: /* event */ TEvent => js.Date): Self = this.set("end", js.Any.fromFunction1(value))
+    def setEndDate(value: js.Date): Self = this.set("end", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteEnd: Self = this.set("end", js.undefined)
+    def setEnd(value: stringOrDate): Self = this.set("end", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setStart(value: /* event */ TEvent => js.Date): Self = this.set("start", js.Any.fromFunction1(value))
+    def setStartDate(value: js.Date): Self = this.set("start", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteStart: Self = this.set("start", js.undefined)
-    
-    @scala.inline
-    def setTitle(value: /* event */ TEvent => String): Self = this.set("title", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteTitle: Self = this.set("title", js.undefined)
-    
-    @scala.inline
-    def setTooltip(value: /* event */ TEvent => String): Self = this.set("tooltip", js.Any.fromFunction1(value))
-    
-    @scala.inline
-    def deleteTooltip: Self = this.set("tooltip", js.undefined)
+    def setStart(value: stringOrDate): Self = this.set("start", value.asInstanceOf[js.Any])
   }
 }

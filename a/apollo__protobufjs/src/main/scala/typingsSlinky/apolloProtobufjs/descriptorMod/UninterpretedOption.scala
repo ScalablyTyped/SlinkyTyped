@@ -43,7 +43,7 @@ object UninterpretedOption extends js.Object {
     * @param nestedJson Any nested object descriptors
     * @returns `this`
     */
-  def addJSON(nestedJson: StringDictionary[AnyNestedObject]): Namespace = js.native
+  def addJSON(nestedJson: StringDictionary[js.UndefOr[AnyNestedObject]]): Namespace = js.native
   
   /**
     * Adds a nested object to this namespace.
@@ -64,7 +64,7 @@ object UninterpretedOption extends js.Object {
     * @returns Message instance
     */
   def create(): Message[js.Object] = js.native
-  def create(properties: StringDictionary[js.Any]): Message[js.Object] = js.native
+  def create(properties: StringDictionary[js.UndefOr[js.Any]]): Message[js.Object] = js.native
   
   /**
     * The registered constructor, if any registered, otherwise a generic constructor.
@@ -106,8 +106,8 @@ object UninterpretedOption extends js.Object {
   def define(path: js.Array[String]): Namespace = js.native
   def define(path: js.Array[String], json: js.Any): Namespace = js.native
   
-  def encode(message: StringDictionary[js.Any]): Writer = js.native
-  def encode(message: StringDictionary[js.Any], writer: Writer): Writer = js.native
+  def encode(message: StringDictionary[js.UndefOr[js.Any]]): Writer = js.native
+  def encode(message: StringDictionary[js.UndefOr[js.Any]], writer: Writer): Writer = js.native
   /**
     * Encodes a message of this type. Does not implicitly {@link Type#verify|verify} messages.
     * @param message Message instance or plain object
@@ -117,8 +117,8 @@ object UninterpretedOption extends js.Object {
   def encode(message: Message[js.Object]): Writer = js.native
   def encode(message: Message[js.Object], writer: Writer): Writer = js.native
   
-  def encodeDelimited(message: StringDictionary[js.Any]): Writer = js.native
-  def encodeDelimited(message: StringDictionary[js.Any], writer: Writer): Writer = js.native
+  def encodeDelimited(message: StringDictionary[js.UndefOr[js.Any]]): Writer = js.native
+  def encodeDelimited(message: StringDictionary[js.UndefOr[js.Any]], writer: Writer): Writer = js.native
   /**
     * Encodes a message of this type preceeded by its byte length as a varint. Does not implicitly {@link Type#verify|verify} messages.
     * @param message Message instance or plain object
@@ -132,13 +132,13 @@ object UninterpretedOption extends js.Object {
   var extensions: js.Array[js.Array[Double]] = js.native
   
   /** Message fields. */
-  var fields: StringDictionary[Field] = js.native
+  var fields: StringDictionary[js.UndefOr[Field]] = js.native
   
   /** Fields of this message as an array for iteration. */
   val fieldsArray: js.Array[Field] = js.native
   
   /** Message fields by id. */
-  val fieldsById: NumberDictionary[Field] = js.native
+  val fieldsById: NumberDictionary[js.UndefOr[Field]] = js.native
   
   /** Defining file name. */
   var filename: String | Null = js.native
@@ -148,7 +148,7 @@ object UninterpretedOption extends js.Object {
     * @param object Plain object to convert
     * @returns Message instance
     */
-  def fromObject(`object`: StringDictionary[js.Any]): Message[js.Object] = js.native
+  def fromObject(`object`: StringDictionary[js.UndefOr[js.Any]]): Message[js.Object] = js.native
   
   /** Full name including leading dot. */
   val fullName: String = js.native
@@ -167,7 +167,7 @@ object UninterpretedOption extends js.Object {
     * @returns Enum values
     * @throws {Error} If there is no such enum
     */
-  def getEnum(name: String): StringDictionary[Double] = js.native
+  def getEnum(name: String): StringDictionary[js.UndefOr[Double]] = js.native
   
   /**
     * Gets an option value.
@@ -260,7 +260,7 @@ object UninterpretedOption extends js.Object {
   var name: String = js.native
   
   /** Nested objects by name. */
-  var nested: js.UndefOr[StringDictionary[ReflectionObject]] = js.native
+  var nested: js.UndefOr[StringDictionary[js.UndefOr[ReflectionObject]]] = js.native
   
   /** Nested objects of this namespace as an array for iteration. */
   val nestedArray: js.Array[ReflectionObject] = js.native
@@ -278,13 +278,13 @@ object UninterpretedOption extends js.Object {
   def onRemove(parent: ReflectionObject): Unit = js.native
   
   /** Oneofs declared within this namespace, if any. */
-  var oneofs: StringDictionary[OneOf] = js.native
+  var oneofs: StringDictionary[js.UndefOr[OneOf]] = js.native
   
   /** Oneofs of this message as an array for iteration. */
   val oneofsArray: js.Array[OneOf] = js.native
   
   /** Options. */
-  var options: js.UndefOr[StringDictionary[js.Any]] = js.native
+  var options: js.UndefOr[StringDictionary[js.UndefOr[js.Any]]] = js.native
   
   /** Parent namespace. */
   var parent: Namespace | Null = js.native
@@ -344,8 +344,8 @@ object UninterpretedOption extends js.Object {
     * @param [ifNotSet] Sets an option only if it isn't currently set
     * @returns `this`
     */
-  def setOptions(options: StringDictionary[js.Any]): ReflectionObject = js.native
-  def setOptions(options: StringDictionary[js.Any], ifNotSet: Boolean): ReflectionObject = js.native
+  def setOptions(options: StringDictionary[js.UndefOr[js.Any]]): ReflectionObject = js.native
+  def setOptions(options: StringDictionary[js.UndefOr[js.Any]], ifNotSet: Boolean): ReflectionObject = js.native
   
   /**
     * Sets up {@link Type#encode|encode}, {@link Type#decode|decode} and {@link Type#verify|verify}.
@@ -357,7 +357,7 @@ object UninterpretedOption extends js.Object {
     * Converts this reflection object to its descriptor representation.
     * @returns Descriptor
     */
-  def toJSON(): StringDictionary[js.Any] = js.native
+  def toJSON(): StringDictionary[js.UndefOr[js.Any]] = js.native
   def toJSON(toJSONOptions: IToJSONOptions): INamespace = js.native
   /**
     * Converts this namespace to a namespace descriptor.
@@ -382,13 +382,13 @@ object UninterpretedOption extends js.Object {
     * @param [options] Conversion options
     * @returns Plain object
     */
-  def toObject(message: Message[js.Object]): StringDictionary[js.Any] = js.native
-  def toObject(message: Message[js.Object], options: IConversionOptions): StringDictionary[js.Any] = js.native
+  def toObject(message: Message[js.Object]): StringDictionary[js.UndefOr[js.Any]] = js.native
+  def toObject(message: Message[js.Object], options: IConversionOptions): StringDictionary[js.UndefOr[js.Any]] = js.native
   
   /**
     * Verifies that field values are valid and that required fields are present.
     * @param message Plain object to verify
     * @returns `null` if valid, otherwise the reason why it is not
     */
-  def verify(message: StringDictionary[js.Any]): Null | String = js.native
+  def verify(message: StringDictionary[js.UndefOr[js.Any]]): Null | String = js.native
 }

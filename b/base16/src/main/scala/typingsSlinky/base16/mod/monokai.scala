@@ -7,4 +7,4 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("base16", "monokai")
 @js.native
-object monokai extends TopLevel[ColorScheme]
+object monokai extends TopLevel[Base16Theme]

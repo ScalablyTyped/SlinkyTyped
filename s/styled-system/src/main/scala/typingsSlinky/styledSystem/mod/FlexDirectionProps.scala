@@ -15,7 +15,7 @@ trait FlexDirectionProps[ThemeType /* <: Theme[TLengthStyledSystem] */] extends 
     */
   var flexDirection: js.UndefOr[
     ResponsiveValue[
-      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexDirectionProperty */ _, 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexDirection */ _, 
       ThemeType
     ]
   ] = js.native
@@ -49,7 +49,7 @@ object FlexDirectionProps {
     @scala.inline
     def setFlexDirection(
       value: ResponsiveValue[
-          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.FlexDirectionProperty */ _, 
+          /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify CSS.Property.FlexDirection */ _, 
           ThemeType
         ]
     ): Self = this.set("flexDirection", value.asInstanceOf[js.Any])

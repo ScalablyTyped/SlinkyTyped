@@ -10,7 +10,6 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.handsontable.handsontableStrings.left
   - typingsSlinky.handsontable.handsontableStrings.top_left_corner
   - typingsSlinky.handsontable.handsontableStrings.bottom_left_corner
-  - typingsSlinky.handsontable.handsontableStrings.debug
 */
 trait OverlayType extends js.Object
 object OverlayType {
@@ -20,9 +19,6 @@ object OverlayType {
   
   @scala.inline
   def bottom_left_corner: typingsSlinky.handsontable.handsontableStrings.bottom_left_corner = "bottom_left_corner".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.bottom_left_corner]
-  
-  @scala.inline
-  def debug: typingsSlinky.handsontable.handsontableStrings.debug = "debug".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.debug]
   
   @scala.inline
   def left: typingsSlinky.handsontable.handsontableStrings.left = "left".asInstanceOf[typingsSlinky.handsontable.handsontableStrings.left]

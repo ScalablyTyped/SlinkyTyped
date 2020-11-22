@@ -12,13 +12,6 @@ trait MeasurementValue extends Object {
   /**
     * State of the measured value.
     *
-    * Value | Description
-    * ------------|-------------
-    * available | measured value is available
-    * unavailable | measured value is not available due an incomplete measurement
-    * invalid | measured value is not available due to an invalid measurement configuration (e.g. self-intersecting polygon)
-    *
-    *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-AreaMeasurement3D-AreaMeasurement3DViewModel.html#MeasurementValue)
     */
   var state: String = js.native

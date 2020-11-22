@@ -12,6 +12,8 @@ package object typesMod {
   
   type ExpectationResult = typingsSlinky.expect.typesMod.SyncExpectationResult | typingsSlinky.expect.typesMod.AsyncExpectationResult
   
+  type ExpectedAssertionsErrors = js.Array[typingsSlinky.expect.anon.Actual]
+  
   type MatchersObject = org.scalablytyped.runtime.StringDictionary[typingsSlinky.expect.typesMod.RawMatcherFn]
   
   type PromiseMatcherFn = js.Function1[/* actual */ js.Any, js.Promise[scala.Unit]]

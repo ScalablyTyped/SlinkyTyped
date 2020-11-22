@@ -17,4 +17,22 @@ class TryCatchStmt protected ()
     catchStmts: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
     sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
   ) = this()
+  def this(
+    bodyStmts: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    catchStmts: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    sourceSpan: js.UndefOr[scala.Nothing],
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
+  def this(
+    bodyStmts: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    catchStmts: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    sourceSpan: Null,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
+  def this(
+    bodyStmts: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    catchStmts: js.Array[typingsSlinky.angularCompiler.outputAstMod.Statement],
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan,
+    leadingComments: js.Array[typingsSlinky.angularCompiler.outputAstMod.LeadingComment_]
+  ) = this()
 }

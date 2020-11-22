@@ -54,7 +54,7 @@ trait TypeScriptWorker extends js.Object {
     * Get transpiled output for the given file.
     * @returns `typescript.EmitOutput`
     */
-  def getEmitOutput(fileName: String): js.Promise[_] = js.native
+  def getEmitOutput(fileName: String): js.Promise[EmitOutput] = js.native
   
   /**
     * Get formatting changes which should be applied after the given keystroke.
@@ -109,6 +109,11 @@ trait TypeScriptWorker extends js.Object {
   def getRenameInfo(fileName: String, positon: Double, options: js.Any): js.Promise[_] = js.native
   
   /**
+    * Get the content of a given file.
+    */
+  def getScriptText(fileName: String): js.Promise[js.UndefOr[String]] = js.native
+  
+  /**
     * Get diagnostic messages for any semantic issues in the given file.
     */
   def getSemanticDiagnostics(fileName: String): js.Promise[js.Array[Diagnostic]] = js.native
@@ -139,7 +144,7 @@ object TypeScriptWorker {
     getCompletionEntryDetails: (String, Double, String) => js.Promise[js.UndefOr[_]],
     getCompletionsAtPosition: (String, Double) => js.Promise[js.UndefOr[_]],
     getDefinitionAtPosition: (String, Double) => js.Promise[js.UndefOr[js.Array[_]]],
-    getEmitOutput: String => js.Promise[_],
+    getEmitOutput: String => js.Promise[EmitOutput],
     getFormattingEditsAfterKeystroke: (String, Double, String, js.Any) => js.Promise[js.Array[_]],
     getFormattingEditsForDocument: (String, js.Any) => js.Promise[js.Array[_]],
     getFormattingEditsForRange: (String, Double, Double, js.Any) => js.Promise[js.Array[_]],
@@ -148,12 +153,13 @@ object TypeScriptWorker {
     getQuickInfoAtPosition: (String, Double) => js.Promise[js.UndefOr[_]],
     getReferencesAtPosition: (String, Double) => js.Promise[js.UndefOr[js.Array[_]]],
     getRenameInfo: (String, Double, js.Any) => js.Promise[_],
+    getScriptText: String => js.Promise[js.UndefOr[String]],
     getSemanticDiagnostics: String => js.Promise[js.Array[Diagnostic]],
     getSignatureHelpItems: (String, Double) => js.Promise[js.UndefOr[_]],
     getSuggestionDiagnostics: String => js.Promise[js.Array[Diagnostic]],
     getSyntacticDiagnostics: String => js.Promise[js.Array[Diagnostic]]
   ): TypeScriptWorker = {
-    val __obj = js.Dynamic.literal(findRenameLocations = js.Any.fromFunction5(findRenameLocations), getCodeFixesAtPosition = js.Any.fromFunction5(getCodeFixesAtPosition), getCompilerOptionsDiagnostics = js.Any.fromFunction1(getCompilerOptionsDiagnostics), getCompletionEntryDetails = js.Any.fromFunction3(getCompletionEntryDetails), getCompletionsAtPosition = js.Any.fromFunction2(getCompletionsAtPosition), getDefinitionAtPosition = js.Any.fromFunction2(getDefinitionAtPosition), getEmitOutput = js.Any.fromFunction1(getEmitOutput), getFormattingEditsAfterKeystroke = js.Any.fromFunction4(getFormattingEditsAfterKeystroke), getFormattingEditsForDocument = js.Any.fromFunction2(getFormattingEditsForDocument), getFormattingEditsForRange = js.Any.fromFunction4(getFormattingEditsForRange), getNavigationBarItems = js.Any.fromFunction1(getNavigationBarItems), getOccurrencesAtPosition = js.Any.fromFunction2(getOccurrencesAtPosition), getQuickInfoAtPosition = js.Any.fromFunction2(getQuickInfoAtPosition), getReferencesAtPosition = js.Any.fromFunction2(getReferencesAtPosition), getRenameInfo = js.Any.fromFunction3(getRenameInfo), getSemanticDiagnostics = js.Any.fromFunction1(getSemanticDiagnostics), getSignatureHelpItems = js.Any.fromFunction2(getSignatureHelpItems), getSuggestionDiagnostics = js.Any.fromFunction1(getSuggestionDiagnostics), getSyntacticDiagnostics = js.Any.fromFunction1(getSyntacticDiagnostics))
+    val __obj = js.Dynamic.literal(findRenameLocations = js.Any.fromFunction5(findRenameLocations), getCodeFixesAtPosition = js.Any.fromFunction5(getCodeFixesAtPosition), getCompilerOptionsDiagnostics = js.Any.fromFunction1(getCompilerOptionsDiagnostics), getCompletionEntryDetails = js.Any.fromFunction3(getCompletionEntryDetails), getCompletionsAtPosition = js.Any.fromFunction2(getCompletionsAtPosition), getDefinitionAtPosition = js.Any.fromFunction2(getDefinitionAtPosition), getEmitOutput = js.Any.fromFunction1(getEmitOutput), getFormattingEditsAfterKeystroke = js.Any.fromFunction4(getFormattingEditsAfterKeystroke), getFormattingEditsForDocument = js.Any.fromFunction2(getFormattingEditsForDocument), getFormattingEditsForRange = js.Any.fromFunction4(getFormattingEditsForRange), getNavigationBarItems = js.Any.fromFunction1(getNavigationBarItems), getOccurrencesAtPosition = js.Any.fromFunction2(getOccurrencesAtPosition), getQuickInfoAtPosition = js.Any.fromFunction2(getQuickInfoAtPosition), getReferencesAtPosition = js.Any.fromFunction2(getReferencesAtPosition), getRenameInfo = js.Any.fromFunction3(getRenameInfo), getScriptText = js.Any.fromFunction1(getScriptText), getSemanticDiagnostics = js.Any.fromFunction1(getSemanticDiagnostics), getSignatureHelpItems = js.Any.fromFunction2(getSignatureHelpItems), getSuggestionDiagnostics = js.Any.fromFunction1(getSuggestionDiagnostics), getSyntacticDiagnostics = js.Any.fromFunction1(getSyntacticDiagnostics))
     __obj.asInstanceOf[TypeScriptWorker]
   }
   
@@ -191,7 +197,7 @@ object TypeScriptWorker {
     def setGetDefinitionAtPosition(value: (String, Double) => js.Promise[js.UndefOr[js.Array[_]]]): Self = this.set("getDefinitionAtPosition", js.Any.fromFunction2(value))
     
     @scala.inline
-    def setGetEmitOutput(value: String => js.Promise[_]): Self = this.set("getEmitOutput", js.Any.fromFunction1(value))
+    def setGetEmitOutput(value: String => js.Promise[EmitOutput]): Self = this.set("getEmitOutput", js.Any.fromFunction1(value))
     
     @scala.inline
     def setGetFormattingEditsAfterKeystroke(value: (String, Double, String, js.Any) => js.Promise[js.Array[_]]): Self = this.set("getFormattingEditsAfterKeystroke", js.Any.fromFunction4(value))
@@ -216,6 +222,9 @@ object TypeScriptWorker {
     
     @scala.inline
     def setGetRenameInfo(value: (String, Double, js.Any) => js.Promise[_]): Self = this.set("getRenameInfo", js.Any.fromFunction3(value))
+    
+    @scala.inline
+    def setGetScriptText(value: String => js.Promise[js.UndefOr[String]]): Self = this.set("getScriptText", js.Any.fromFunction1(value))
     
     @scala.inline
     def setGetSemanticDiagnostics(value: String => js.Promise[js.Array[Diagnostic]]): Self = this.set("getSemanticDiagnostics", js.Any.fromFunction1(value))

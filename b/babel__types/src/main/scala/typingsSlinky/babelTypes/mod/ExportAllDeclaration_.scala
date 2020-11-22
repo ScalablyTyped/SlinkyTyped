@@ -14,6 +14,8 @@ trait ExportAllDeclaration_
      with ModuleDeclaration
      with Statement {
   
+  var assertions: ImportAttribute_ | Null = js.native
+  
   var source: StringLiteral_ = js.native
   
   @JSName("type")
@@ -48,5 +50,11 @@ object ExportAllDeclaration_ {
     
     @scala.inline
     def setType(value: ExportAllDeclaration): Self = this.set("type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAssertions(value: ImportAttribute_): Self = this.set("assertions", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setAssertionsNull: Self = this.set("assertions", null)
   }
 }

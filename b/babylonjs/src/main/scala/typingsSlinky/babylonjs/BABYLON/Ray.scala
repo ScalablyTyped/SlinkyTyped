@@ -34,6 +34,7 @@ trait Ray extends js.Object {
   
   /**
     * Checks if the ray intersects a box
+    * This does not account for the ray lenght by design to improve perfs.
     * @param box the bounding box to check
     * @param intersectionTreshold extra extend to be added to the BoundingBox in all direction
     * @returns if the box was hit
@@ -43,6 +44,7 @@ trait Ray extends js.Object {
   
   /**
     * Checks if the ray intersects a box
+    * This does not account for the ray lenght by design to improve perfs.
     * @param minimum bound of the box
     * @param maximum bound of the box
     * @param intersectionTreshold extra extend to be added to the box in all direction
@@ -54,7 +56,7 @@ trait Ray extends js.Object {
   /**
     * Checks if ray intersects a mesh
     * @param mesh the mesh to check
-    * @param fastCheck if only the bounding box should checked
+    * @param fastCheck defines if the first intersection will be used (and not the closest)
     * @returns picking info of the intersecton
     */
   def intersectsMesh(mesh: DeepImmutable[AbstractMesh]): PickingInfo = js.native
@@ -63,7 +65,7 @@ trait Ray extends js.Object {
   /**
     * Checks if ray intersects a mesh
     * @param meshes the meshes to check
-    * @param fastCheck if only the bounding box should checked
+    * @param fastCheck defines if the first intersection will be used (and not the closest)
     * @param results array to store result in
     * @returns Array of picking infos
     */

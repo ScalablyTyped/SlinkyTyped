@@ -14,9 +14,18 @@ object keyframeTrackMod extends js.Object {
   
   @js.native
   class KeyframeTrack protected () extends js.Object {
+    /**
+    	 * @param name
+    	 * @param times
+    	 * @param values
+    	 * @param [interpolation=THREE.InterpolateLinear]
+    	 */
     def this(name: String, times: js.Array[_], values: js.Array[_]) = this()
     def this(name: String, times: js.Array[_], values: js.Array[_], interpolation: InterpolationModes) = this()
     
+    /**
+    	 * @default THREE.InterpolateLinear
+    	 */
     var DefaultInterpolation: InterpolationModes = js.native
     
     def InterpolantFactoryMethodDiscrete(result: js.Any): DiscreteInterpolant = js.native

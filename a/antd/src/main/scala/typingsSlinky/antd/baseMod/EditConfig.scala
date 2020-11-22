@@ -1,5 +1,7 @@
 package typingsSlinky.antd.baseMod
 
+import slinky.core.facade.ReactElement
+import typingsSlinky.rcTextarea.resizableTextAreaMod.AutoSizeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -7,11 +9,19 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait EditConfig extends js.Object {
   
+  var autoSize: js.UndefOr[Boolean | AutoSizeType] = js.native
+  
   var editing: js.UndefOr[Boolean] = js.native
+  
+  var icon: js.UndefOr[ReactElement] = js.native
+  
+  var maxLength: js.UndefOr[Double] = js.native
   
   var onChange: js.UndefOr[js.Function1[/* value */ String, Unit]] = js.native
   
   var onStart: js.UndefOr[js.Function0[Unit]] = js.native
+  
+  var tooltip: js.UndefOr[Boolean | ReactElement] = js.native
 }
 object EditConfig {
   
@@ -37,10 +47,31 @@ object EditConfig {
     }
     
     @scala.inline
+    def setAutoSize(value: Boolean | AutoSizeType): Self = this.set("autoSize", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteAutoSize: Self = this.set("autoSize", js.undefined)
+    
+    @scala.inline
     def setEditing(value: Boolean): Self = this.set("editing", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteEditing: Self = this.set("editing", js.undefined)
+    
+    @scala.inline
+    def setIconReactElement(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setIcon(value: ReactElement): Self = this.set("icon", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteIcon: Self = this.set("icon", js.undefined)
+    
+    @scala.inline
+    def setMaxLength(value: Double): Self = this.set("maxLength", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteMaxLength: Self = this.set("maxLength", js.undefined)
     
     @scala.inline
     def setOnChange(value: /* value */ String => Unit): Self = this.set("onChange", js.Any.fromFunction1(value))
@@ -53,5 +84,14 @@ object EditConfig {
     
     @scala.inline
     def deleteOnStart: Self = this.set("onStart", js.undefined)
+    
+    @scala.inline
+    def setTooltipReactElement(value: ReactElement): Self = this.set("tooltip", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTooltip(value: Boolean | ReactElement): Self = this.set("tooltip", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteTooltip: Self = this.set("tooltip", js.undefined)
   }
 }

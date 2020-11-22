@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait FirebaseApp extends js.Object {
   
-  var functions: js.UndefOr[js.Function1[/* region */ js.UndefOr[String], FirebaseFunctions]] = js.native
+  var functions: js.UndefOr[js.Function1[/* regionOrCustomDomain */ js.UndefOr[String], FirebaseFunctions]] = js.native
 }
 object FirebaseApp {
   
@@ -34,7 +34,7 @@ object FirebaseApp {
     }
     
     @scala.inline
-    def setFunctions(value: /* region */ js.UndefOr[String] => FirebaseFunctions): Self = this.set("functions", js.Any.fromFunction1(value))
+    def setFunctions(value: /* regionOrCustomDomain */ js.UndefOr[String] => FirebaseFunctions): Self = this.set("functions", js.Any.fromFunction1(value))
     
     @scala.inline
     def deleteFunctions: Self = this.set("functions", js.undefined)

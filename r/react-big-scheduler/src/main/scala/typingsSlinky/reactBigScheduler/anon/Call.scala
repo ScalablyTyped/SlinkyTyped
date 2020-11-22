@@ -52,6 +52,8 @@ trait Call extends js.Object {
   def defineLocale(language: String, localeSpec: Unit): Locale_ = js.native
   def defineLocale(language: String, localeSpec: LocaleSpecification): Locale_ = js.native
   
+  var deprecationHandler: (js.Function2[/* name */ String | Unit, /* msg */ String, Unit]) | Unit = js.native
+  
   def duration(): Duration_ = js.native
   def duration(inp: js.UndefOr[DurationInputArg1], unit: DurationInputArg2): Duration_ = js.native
   def duration(inp: DurationInputArg1): Duration_ = js.native
@@ -132,6 +134,8 @@ trait Call extends js.Object {
   def relativeTimeThreshold(threshold: String): Double | Boolean = js.native
   def relativeTimeThreshold(threshold: String, limit: Double): Boolean = js.native
   
+  var suppressDeprecationWarnings: Boolean = js.native
+  
   val unitOfTime: js.Any = js.native
   
   def unix(timestamp: Double): Moment = js.native
@@ -155,6 +159,7 @@ trait Call extends js.Object {
   ): Moment = js.native
   def utc(inp: js.UndefOr[MomentInput], format: js.UndefOr[MomentFormatSpecification], strict: Boolean): Moment = js.native
   def utc(inp: js.UndefOr[MomentInput], format: MomentFormatSpecification): Moment = js.native
+  def utc(inp: js.UndefOr[MomentInput], strict: Boolean): Moment = js.native
   def utc(inp: MomentInput): Moment = js.native
   
   var version: String = js.native

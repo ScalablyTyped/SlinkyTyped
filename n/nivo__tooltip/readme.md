@@ -1,7 +1,7 @@
 
 # Scala.js typings for nivo__tooltip
 
-Typings are for version 0.62.0
+Typings are for version 0.65.1
 
 ## Library description:
 [![version](https://img.shields.io/npm/v/@nivo/tooltip.svg?style=flat-square)](https://www.npmjs.com/package/@nivo/tooltip)

@@ -1,10 +1,5 @@
 package typingsSlinky.dateFns.anon
 
-import typingsSlinky.dateFns.dateFnsStrings.basic
-import typingsSlinky.dateFns.dateFnsStrings.complete
-import typingsSlinky.dateFns.dateFnsStrings.date
-import typingsSlinky.dateFns.dateFnsStrings.extended
-import typingsSlinky.dateFns.dateFnsStrings.time
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -12,9 +7,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Format extends js.Object {
   
-  var format: js.UndefOr[extended | basic] = js.native
+  var delimiter: js.UndefOr[String] = js.native
   
-  var representation: js.UndefOr[complete | date | time] = js.native
+  var format: js.UndefOr[js.Array[String]] = js.native
+  
+  var locale: js.UndefOr[typingsSlinky.dateFns.Locale] = js.native
+  
+  var zero: js.UndefOr[Boolean] = js.native
 }
 object Format {
   
@@ -40,15 +39,30 @@ object Format {
     }
     
     @scala.inline
-    def setFormat(value: extended | basic): Self = this.set("format", value.asInstanceOf[js.Any])
+    def setDelimiter(value: String): Self = this.set("delimiter", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDelimiter: Self = this.set("delimiter", js.undefined)
+    
+    @scala.inline
+    def setFormatVarargs(value: String*): Self = this.set("format", js.Array(value :_*))
+    
+    @scala.inline
+    def setFormat(value: js.Array[String]): Self = this.set("format", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)
     
     @scala.inline
-    def setRepresentation(value: complete | date | time): Self = this.set("representation", value.asInstanceOf[js.Any])
+    def setLocale(value: typingsSlinky.dateFns.Locale): Self = this.set("locale", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteRepresentation: Self = this.set("representation", js.undefined)
+    def deleteLocale: Self = this.set("locale", js.undefined)
+    
+    @scala.inline
+    def setZero(value: Boolean): Self = this.set("zero", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteZero: Self = this.set("zero", js.undefined)
   }
 }

@@ -22,6 +22,8 @@ trait NodeMaterialBlock extends js.Object {
   /** @hidden */
   def _deserialize(serializationObject: js.Any, scene: Scene, rootUrl: String): Unit = js.native
   
+  var _deserializePortDisplayNamesAndExposedOnFrame: js.Any = js.native
+  
   /** @hidden */
   def _dumpCode(uniqueNames: js.Array[String], alreadyDumped: js.Array[NodeMaterialBlock]): String = js.native
   
@@ -42,6 +44,9 @@ trait NodeMaterialBlock extends js.Object {
   var _isUnique: Boolean = js.native
   
   /* protected */ def _linkConnectionTypes(inputIndex0: Double, inputIndex1: Double): Unit = js.native
+  /* protected */ def _linkConnectionTypes(inputIndex0: Double, inputIndex1: Double, looseCoupling: Boolean): Unit = js.native
+  
+  var _name: js.Any = js.native
   
   /* protected */ def _outputRename(name: String): String = js.native
   
@@ -70,9 +75,12 @@ trait NodeMaterialBlock extends js.Object {
     * @param effect defines the effect to bind data to
     * @param nodeMaterial defines the hosting NodeMaterial
     * @param mesh defines the mesh that will be rendered
+    * @param subMesh defines the submesh that will be rendered
     */
   def bind(effect: Effect, nodeMaterial: NodeMaterial): Unit = js.native
+  def bind(effect: Effect, nodeMaterial: NodeMaterial, mesh: js.UndefOr[scala.Nothing], subMesh: SubMesh): Unit = js.native
   def bind(effect: Effect, nodeMaterial: NodeMaterial, mesh: Mesh): Unit = js.native
+  def bind(effect: Effect, nodeMaterial: NodeMaterial, mesh: Mesh, subMesh: SubMesh): Unit = js.native
   
   /**
     * Compile the current node and generate the shader code
@@ -220,9 +228,13 @@ trait NodeMaterialBlock extends js.Object {
   def isUnique: Boolean = js.native
   
   /**
-    * Gets or sets the name of the block
+    * Gets the name of the block
     */
-  var name: String = js.native
+  def name: String = js.native
+  /**
+    * Sets the name of the block. Will check if the name is valid.
+    */
+  def name_=(newName: String): Unit = js.native
   
   /** Gets the list of output points */
   def outputs: js.Array[NodeMaterialConnectionPoint] = js.native
@@ -233,13 +245,28 @@ trait NodeMaterialBlock extends js.Object {
     * @param nodeMaterial defines the node material requesting the update
     * @param defines defines the material defines to update
     * @param useInstances specifies that instances should be used
+    * @param subMesh defines which submesh to render
     */
   def prepareDefines(mesh: AbstractMesh, nodeMaterial: NodeMaterial, defines: NodeMaterialDefines): Unit = js.native
   def prepareDefines(
     mesh: AbstractMesh,
     nodeMaterial: NodeMaterial,
     defines: NodeMaterialDefines,
+    useInstances: js.UndefOr[scala.Nothing],
+    subMesh: SubMesh
+  ): Unit = js.native
+  def prepareDefines(
+    mesh: AbstractMesh,
+    nodeMaterial: NodeMaterial,
+    defines: NodeMaterialDefines,
     useInstances: Boolean
+  ): Unit = js.native
+  def prepareDefines(
+    mesh: AbstractMesh,
+    nodeMaterial: NodeMaterial,
+    defines: NodeMaterialDefines,
+    useInstances: Boolean,
+    subMesh: SubMesh
   ): Unit = js.native
   
   /**
@@ -255,6 +282,7 @@ trait NodeMaterialBlock extends js.Object {
     * @param type defines the connection point type
     * @param isOptional defines a boolean indicating that this input can be omitted
     * @param target defines the target to use to limit the connection point (will be VertexAndFragment by default)
+    * @param point an already created connection point. If not provided, create a new one
     * @returns the current block
     */
   def registerInput(name: String, `type`: NodeMaterialBlockConnectionPointTypes): this.type = js.native
@@ -262,14 +290,42 @@ trait NodeMaterialBlock extends js.Object {
     name: String,
     `type`: NodeMaterialBlockConnectionPointTypes,
     isOptional: js.UndefOr[scala.Nothing],
+    target: js.UndefOr[scala.Nothing],
+    point: NodeMaterialConnectionPoint
+  ): this.type = js.native
+  def registerInput(
+    name: String,
+    `type`: NodeMaterialBlockConnectionPointTypes,
+    isOptional: js.UndefOr[scala.Nothing],
     target: NodeMaterialBlockTargets
+  ): this.type = js.native
+  def registerInput(
+    name: String,
+    `type`: NodeMaterialBlockConnectionPointTypes,
+    isOptional: js.UndefOr[scala.Nothing],
+    target: NodeMaterialBlockTargets,
+    point: NodeMaterialConnectionPoint
   ): this.type = js.native
   def registerInput(name: String, `type`: NodeMaterialBlockConnectionPointTypes, isOptional: Boolean): this.type = js.native
   def registerInput(
     name: String,
     `type`: NodeMaterialBlockConnectionPointTypes,
     isOptional: Boolean,
+    target: js.UndefOr[scala.Nothing],
+    point: NodeMaterialConnectionPoint
+  ): this.type = js.native
+  def registerInput(
+    name: String,
+    `type`: NodeMaterialBlockConnectionPointTypes,
+    isOptional: Boolean,
     target: NodeMaterialBlockTargets
+  ): this.type = js.native
+  def registerInput(
+    name: String,
+    `type`: NodeMaterialBlockConnectionPointTypes,
+    isOptional: Boolean,
+    target: NodeMaterialBlockTargets,
+    point: NodeMaterialConnectionPoint
   ): this.type = js.native
   
   /**
@@ -277,10 +333,23 @@ trait NodeMaterialBlock extends js.Object {
     * @param name defines the connection point name
     * @param type defines the connection point type
     * @param target defines the target to use to limit the connection point (will be VertexAndFragment by default)
+    * @param point an already created connection point. If not provided, create a new one
     * @returns the current block
     */
   def registerOutput(name: String, `type`: NodeMaterialBlockConnectionPointTypes): this.type = js.native
+  def registerOutput(
+    name: String,
+    `type`: NodeMaterialBlockConnectionPointTypes,
+    target: js.UndefOr[scala.Nothing],
+    point: NodeMaterialConnectionPoint
+  ): this.type = js.native
   def registerOutput(name: String, `type`: NodeMaterialBlockConnectionPointTypes, target: NodeMaterialBlockTargets): this.type = js.native
+  def registerOutput(
+    name: String,
+    `type`: NodeMaterialBlockConnectionPointTypes,
+    target: NodeMaterialBlockTargets,
+    point: NodeMaterialConnectionPoint
+  ): this.type = js.native
   
   /**
     * Function called when a block is declared as repeatable content generator
@@ -326,4 +395,14 @@ trait NodeMaterialBlock extends js.Object {
     defines: NodeMaterialDefines,
     uniformBuffers: js.Array[String]
   ): Unit = js.native
+  
+  /**
+    * Validates the new name for the block node.
+    * @param newName the new name to be given to the node.
+    * @returns false if the name is a reserve word, else true.
+    */
+  def validateBlockName(newName: String): Boolean = js.native
+  
+  /** Gets or sets a boolean indicating that this input can be edited in the Inspector (false by default) */
+  var visibleInInspector: Boolean = js.native
 }

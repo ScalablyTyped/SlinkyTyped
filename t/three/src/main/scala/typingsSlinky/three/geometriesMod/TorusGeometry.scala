@@ -6,6 +6,13 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @JSImport("three/src/geometries/Geometries", "TorusGeometry")
 @js.native
+/**
+	 * @param [radius=1]
+	 * @param [tube=0.4]
+	 * @param [radialSegments=8]
+	 * @param [tubularSegments=6]
+	 * @param [arc=Math.PI * 2]
+	 */
 class TorusGeometry ()
   extends typingsSlinky.three.torusGeometryMod.TorusGeometry {
   def this(radius: Double) = this()

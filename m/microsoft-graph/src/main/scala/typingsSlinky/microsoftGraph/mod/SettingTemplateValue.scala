@@ -8,16 +8,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait SettingTemplateValue extends js.Object {
   
   // Default value for the setting.
-  var defaultValue: js.UndefOr[String] = js.native
+  var defaultValue: js.UndefOr[NullableOption[String]] = js.native
   
   // Description of the setting.
-  var description: js.UndefOr[String] = js.native
+  var description: js.UndefOr[NullableOption[String]] = js.native
   
   // Name of the setting.
-  var name: js.UndefOr[String] = js.native
+  var name: js.UndefOr[NullableOption[String]] = js.native
   
   // Type of the setting.
-  var `type`: js.UndefOr[String] = js.native
+  var `type`: js.UndefOr[NullableOption[String]] = js.native
 }
 object SettingTemplateValue {
   
@@ -43,27 +43,39 @@ object SettingTemplateValue {
     }
     
     @scala.inline
-    def setDefaultValue(value: String): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
+    def setDefaultValue(value: NullableOption[String]): Self = this.set("defaultValue", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDefaultValue: Self = this.set("defaultValue", js.undefined)
     
     @scala.inline
-    def setDescription(value: String): Self = this.set("description", value.asInstanceOf[js.Any])
+    def setDefaultValueNull: Self = this.set("defaultValue", null)
+    
+    @scala.inline
+    def setDescription(value: NullableOption[String]): Self = this.set("description", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDescription: Self = this.set("description", js.undefined)
     
     @scala.inline
-    def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
+    def setDescriptionNull: Self = this.set("description", null)
+    
+    @scala.inline
+    def setName(value: NullableOption[String]): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteName: Self = this.set("name", js.undefined)
     
     @scala.inline
-    def setType(value: String): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setNameNull: Self = this.set("name", null)
+    
+    @scala.inline
+    def setType(value: NullableOption[String]): Self = this.set("type", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteType: Self = this.set("type", js.undefined)
+    
+    @scala.inline
+    def setTypeNull: Self = this.set("type", null)
   }
 }

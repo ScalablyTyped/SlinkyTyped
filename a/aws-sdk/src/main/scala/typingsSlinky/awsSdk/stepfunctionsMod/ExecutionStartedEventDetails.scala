@@ -8,9 +8,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ExecutionStartedEventDetails extends js.Object {
   
   /**
-    * The JSON data input to the execution.
+    * The JSON data input to the execution. Length constraints apply to the payload size, and are expressed as bytes in UTF-8 encoding.
     */
   var input: js.UndefOr[SensitiveData] = js.native
+  
+  /**
+    * Contains details about the input for an execution history event.
+    */
+  var inputDetails: js.UndefOr[HistoryEventExecutionDataDetails] = js.native
   
   /**
     * The Amazon Resource Name (ARN) of the IAM role used for executing AWS Lambda tasks.
@@ -45,6 +50,12 @@ object ExecutionStartedEventDetails {
     
     @scala.inline
     def deleteInput: Self = this.set("input", js.undefined)
+    
+    @scala.inline
+    def setInputDetails(value: HistoryEventExecutionDataDetails): Self = this.set("inputDetails", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteInputDetails: Self = this.set("inputDetails", js.undefined)
     
     @scala.inline
     def setRoleArn(value: Arn): Self = this.set("roleArn", value.asInstanceOf[js.Any])

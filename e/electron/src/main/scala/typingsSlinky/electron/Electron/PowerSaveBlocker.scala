@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait PowerSaveBlocker extends js.Object {
   
-  // Docs: http://electronjs.org/docs/api/power-save-blocker
+  // Docs: https://electronjs.org/docs/api/power-save-blocker
   /**
     * Whether the corresponding `powerSaveBlocker` has started.
     */

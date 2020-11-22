@@ -20,10 +20,21 @@ object numericInputUtilsMod extends js.Object {
   def getValueOrEmptyValue(value: Double): String = js.native
   
   def isValidNumericKeyboardEvent(e: SyntheticKeyboardEvent[Element]): Boolean = js.native
+  def isValidNumericKeyboardEvent(e: SyntheticKeyboardEvent[Element], locale: String): Boolean = js.native
   
   def isValueNumeric(value: String): Boolean = js.native
+  def isValueNumeric(value: String, locale: String): Boolean = js.native
+  
+  def parseStringToStringNumber(value: String): String = js.native
+  def parseStringToStringNumber(value: String, locale: String): String = js.native
+  def parseStringToStringNumber(value: Double): String = js.native
+  def parseStringToStringNumber(value: Double, locale: String): String = js.native
   
   def sanitizeNumericInput(value: String): String = js.native
+  def sanitizeNumericInput(value: String, locale: String): String = js.native
+  
+  def toLocaleString(num: Double): String = js.native
+  def toLocaleString(num: Double, locale: String): String = js.native
   
   def toMaxPrecision(value: Double, maxPrecision: Double): Double = js.native
 }

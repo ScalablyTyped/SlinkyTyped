@@ -160,7 +160,7 @@ trait BorderRadius extends js.Object {
     * "normal"
     * @see https://echarts.apache.org/en/option.html#series-tree.leaves.emphasis.label.fontWeight
     */
-  var fontWeight: js.UndefOr[String] = js.native
+  var fontWeight: js.UndefOr[String | Double] = js.native
   
   /**
     * Data label formatter, which supports string template
@@ -563,7 +563,7 @@ object BorderRadius {
     def deleteFontStyle: Self = this.set("fontStyle", js.undefined)
     
     @scala.inline
-    def setFontWeight(value: String): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
+    def setFontWeight(value: String | Double): Self = this.set("fontWeight", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteFontWeight: Self = this.set("fontWeight", js.undefined)

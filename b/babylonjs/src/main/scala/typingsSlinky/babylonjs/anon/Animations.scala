@@ -1,6 +1,6 @@
 package typingsSlinky.babylonjs.anon
 
-import typingsSlinky.babylonjs.mathVectorMod.Matrix
+import typingsSlinky.babylonjs.mathVectorMod.Quaternion
 import typingsSlinky.babylonjs.runtimeAnimationMod.RuntimeAnimation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -9,17 +9,27 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait Animations extends js.Object {
   
+  var additiveAnimations: js.Array[RuntimeAnimation] = js.native
+  
   var animations: js.Array[RuntimeAnimation] = js.native
   
-  var originalValue: Matrix = js.native
+  var originalValue: Quaternion = js.native
+  
+  var totalAdditiveWeight: Double = js.native
   
   var totalWeight: Double = js.native
 }
 object Animations {
   
   @scala.inline
-  def apply(animations: js.Array[RuntimeAnimation], originalValue: Matrix, totalWeight: Double): Animations = {
-    val __obj = js.Dynamic.literal(animations = animations.asInstanceOf[js.Any], originalValue = originalValue.asInstanceOf[js.Any], totalWeight = totalWeight.asInstanceOf[js.Any])
+  def apply(
+    additiveAnimations: js.Array[RuntimeAnimation],
+    animations: js.Array[RuntimeAnimation],
+    originalValue: Quaternion,
+    totalAdditiveWeight: Double,
+    totalWeight: Double
+  ): Animations = {
+    val __obj = js.Dynamic.literal(additiveAnimations = additiveAnimations.asInstanceOf[js.Any], animations = animations.asInstanceOf[js.Any], originalValue = originalValue.asInstanceOf[js.Any], totalAdditiveWeight = totalAdditiveWeight.asInstanceOf[js.Any], totalWeight = totalWeight.asInstanceOf[js.Any])
     __obj.asInstanceOf[Animations]
   }
   
@@ -39,13 +49,22 @@ object Animations {
     }
     
     @scala.inline
+    def setAdditiveAnimationsVarargs(value: RuntimeAnimation*): Self = this.set("additiveAnimations", js.Array(value :_*))
+    
+    @scala.inline
+    def setAdditiveAnimations(value: js.Array[RuntimeAnimation]): Self = this.set("additiveAnimations", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setAnimationsVarargs(value: RuntimeAnimation*): Self = this.set("animations", js.Array(value :_*))
     
     @scala.inline
     def setAnimations(value: js.Array[RuntimeAnimation]): Self = this.set("animations", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOriginalValue(value: Matrix): Self = this.set("originalValue", value.asInstanceOf[js.Any])
+    def setOriginalValue(value: Quaternion): Self = this.set("originalValue", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setTotalAdditiveWeight(value: Double): Self = this.set("totalAdditiveWeight", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setTotalWeight(value: Double): Self = this.set("totalWeight", value.asInstanceOf[js.Any])

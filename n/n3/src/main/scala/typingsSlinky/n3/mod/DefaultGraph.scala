@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 class DefaultGraph ()
   extends typingsSlinky.rdfJs.mod.DefaultGraph
-     with QuadGraph
-     with Term {
+     with _QuadGraph
+     with _Term {
   
   val id: String = js.native
   

@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object useCollapseMod extends js.Object {
   
-  def default[E /* <: HTMLElement */](collapsed: Boolean): ReturnValue[E] = js.native
-  def default[E /* <: HTMLElement */](
+  def useCollapse[E /* <: HTMLElement */](collapsed: Boolean): ReturnValue[E] = js.native
+  def useCollapse[E /* <: HTMLElement */](
     collapsed: Boolean,
     hasClassNameAppearTimeoutOnEnterOnEnteringOnEnteredOnExitOnExitingOnExitedMinHeightMinPaddingTopMinPaddingBottomTemporary: CollapseOptions[E]
   ): ReturnValue[E] = js.native

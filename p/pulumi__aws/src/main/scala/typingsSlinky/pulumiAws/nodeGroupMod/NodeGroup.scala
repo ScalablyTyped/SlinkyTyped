@@ -1,6 +1,7 @@
 package typingsSlinky.pulumiAws.nodeGroupMod
 
 import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.pulumiAws.outputMod.eks.NodeGroupLaunchTemplate
 import typingsSlinky.pulumiAws.outputMod.eks.NodeGroupRemoteAccess
 import typingsSlinky.pulumiAws.outputMod.eks.NodeGroupResource
 import typingsSlinky.pulumiAws.outputMod.eks.NodeGroupScalingConfig
@@ -27,7 +28,7 @@ class NodeGroup protected () extends CustomResource {
   def this(name: String, args: NodeGroupArgs, opts: CustomResourceOptions) = this()
   
   /**
-    * Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`. This provider will only perform drift detection if a configuration value is provided.
+    * Type of Amazon Machine Image (AMI) associated with the EKS Node Group. Defaults to `AL2_x86_64`. Valid values: `AL2_x86_64`, `AL2_x86_64_GPU`, `AL2_ARM_64`. This provider will only perform drift detection if a configuration value is provided.
     */
   val amiType: Output_[String] = js.native
   
@@ -60,6 +61,11 @@ class NodeGroup protected () extends CustomResource {
     * Key-value map of Kubernetes labels. Only labels that are applied with the EKS API are managed by this argument. Other Kubernetes labels applied to the EKS Node Group will not be managed.
     */
   val labels: Output_[js.UndefOr[StringDictionary[String]]] = js.native
+  
+  /**
+    * Configuration block with Launch Template settings. Detailed below.
+    */
+  val launchTemplate: Output_[js.UndefOr[NodeGroupLaunchTemplate]] = js.native
   
   /**
     * Name of the EKS Node Group.
@@ -106,9 +112,6 @@ class NodeGroup protected () extends CustomResource {
     */
   val tags: Output_[js.UndefOr[StringDictionary[String]]] = js.native
   
-  /**
-    * Kubernetes version. Defaults to EKS Cluster Kubernetes version. This provider will only perform drift detection if a configuration value is provided.
-    */
   val version: Output_[String] = js.native
 }
 /* static members */

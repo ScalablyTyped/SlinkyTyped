@@ -13,6 +13,11 @@ trait DataSetSummary extends js.Object {
   var Arn: js.UndefOr[typingsSlinky.awsSdk.quicksightMod.Arn] = js.native
   
   /**
+    * Indicates if the dataset has column level permission configured. 
+    */
+  var ColumnLevelPermissionRulesApplied: js.UndefOr[Boolean] = js.native
+  
+  /**
     * The time that this dataset was created.
     */
   var CreatedTime: js.UndefOr[js.Date] = js.native
@@ -70,6 +75,12 @@ object DataSetSummary {
     
     @scala.inline
     def deleteArn: Self = this.set("Arn", js.undefined)
+    
+    @scala.inline
+    def setColumnLevelPermissionRulesApplied(value: Boolean): Self = this.set("ColumnLevelPermissionRulesApplied", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteColumnLevelPermissionRulesApplied: Self = this.set("ColumnLevelPermissionRulesApplied", js.undefined)
     
     @scala.inline
     def setCreatedTime(value: js.Date): Self = this.set("CreatedTime", value.asInstanceOf[js.Any])

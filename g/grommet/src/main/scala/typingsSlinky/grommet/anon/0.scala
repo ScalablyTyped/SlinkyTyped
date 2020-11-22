@@ -1,6 +1,6 @@
 package typingsSlinky.grommet.anon
 
-import typingsSlinky.grommet.utilsMod.ColorType
+import typingsSlinky.grommet.dataChartMod.GranularityType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `0` extends js.Object {
   
-  var color: js.UndefOr[ColorType] = js.native
+  var granularity: js.UndefOr[GranularityType] = js.native
 }
 object `0` {
   
@@ -34,9 +34,9 @@ object `0` {
     }
     
     @scala.inline
-    def setColor(value: ColorType): Self = this.set("color", value.asInstanceOf[js.Any])
+    def setGranularity(value: GranularityType): Self = this.set("granularity", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def deleteColor: Self = this.set("color", js.undefined)
+    def deleteGranularity: Self = this.set("granularity", js.undefined)
   }
 }

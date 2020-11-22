@@ -202,7 +202,6 @@ object angularCoreNumbers {
     extends IcuType
        with OutputType
        with RootContextFlags
-       with TNodeType
        with TViewType
        with ViewState
        with ɵArgumentType
@@ -263,7 +262,9 @@ object angularCoreNumbers {
   sealed trait `11` extends LViewFlags
   
   @js.native
-  sealed trait `12` extends ViewState
+  sealed trait `12`
+    extends TNodeType
+       with ViewState
   
   @js.native
   sealed trait `128`
@@ -289,6 +290,7 @@ object angularCoreNumbers {
     extends LViewFlags
        with PreOrderHookFlags
        with TNodeFlags
+       with TNodeType
        with ViewState
        with ɵBindingFlags
        with ɵNodeFlags
@@ -374,6 +376,7 @@ object angularCoreNumbers {
   sealed trait `32`
     extends LViewFlags
        with TNodeFlags
+       with TNodeType
        with ViewState
        with ɵBindingFlags
        with ɵNodeFlags
@@ -410,9 +413,7 @@ object angularCoreNumbers {
   sealed trait `48` extends ɵBindingFlags
   
   @js.native
-  sealed trait `5`
-    extends TNodeType
-       with ɵAttributeMarker
+  sealed trait `5` extends ɵAttributeMarker
   
   @js.native
   sealed trait `512`
@@ -433,6 +434,7 @@ object angularCoreNumbers {
   sealed trait `64`
     extends LViewFlags
        with TNodeFlags
+       with TNodeType
        with ViewState
        with ɵNodeFlags
   
@@ -455,6 +457,7 @@ object angularCoreNumbers {
     extends LViewFlags
        with SelectorFlags
        with TNodeFlags
+       with TNodeType
        with ViewState
        with ɵBindingFlags
        with ɵDepFlags

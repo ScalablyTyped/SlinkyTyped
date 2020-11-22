@@ -5,12 +5,12 @@ import slinky.core.ReactComponentClass
 import slinky.core.facade.ReactElement
 import slinky.core.facade.ReactRef
 import typingsSlinky.fluentuiReactFocus.focusZoneTypesMod.IFocusZoneProps
+import typingsSlinky.fluentuiTheme.ithemeMod.ITheme
 import typingsSlinky.officeUiFabricReact.buttonTypesMod.IButtonProps
 import typingsSlinky.officeUiFabricReact.tooltipHostTypesMod.ITooltipHostProps
 import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.uifabricMergeStyles.deepPartialMod.DeepPartial
 import typingsSlinky.uifabricMergeStyles.istylefunctionMod.IStyleFunctionOrObject
-import typingsSlinky.uifabricStyling.ithemeMod.ITheme
 import typingsSlinky.uifabricUtilities.createRefMod.IRefObject
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAs
 import typingsSlinky.uifabricUtilities.icomponentasMod.IComponentAsProps
@@ -78,6 +78,11 @@ trait IBreadcrumbProps extends HTMLAttributes[HTMLElement] {
     * Aria label for the overflow button.
     */
   var overflowAriaLabel: js.UndefOr[String] = js.native
+  
+  /**
+    * Custom component for the overflow button.
+    */
+  var overflowButtonAs: js.UndefOr[IComponentAs[IButtonProps]] = js.native
   
   /**
     * Optional index where overflow items will be collapsed. Defaults to 0.
@@ -197,6 +202,18 @@ object IBreadcrumbProps {
     
     @scala.inline
     def deleteOverflowAriaLabel: Self = this.set("overflowAriaLabel", js.undefined)
+    
+    @scala.inline
+    def setOverflowButtonAsFunctionComponent(value: ReactComponentClass[IComponentAsProps[IButtonProps]]): Self = this.set("overflowButtonAs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOverflowButtonAsComponentClass(value: ReactComponentClass[IComponentAsProps[IButtonProps]]): Self = this.set("overflowButtonAs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setOverflowButtonAs(value: IComponentAs[IButtonProps]): Self = this.set("overflowButtonAs", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteOverflowButtonAs: Self = this.set("overflowButtonAs", js.undefined)
     
     @scala.inline
     def setOverflowIndex(value: Double): Self = this.set("overflowIndex", value.asInstanceOf[js.Any])

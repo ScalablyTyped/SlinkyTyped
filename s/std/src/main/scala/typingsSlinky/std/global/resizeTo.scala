@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 object resizeTo extends js.Object {
   
-  def apply(x: Double, y: Double): Unit = js.native
+  def apply(width: Double, height: Double): Unit = js.native
 }

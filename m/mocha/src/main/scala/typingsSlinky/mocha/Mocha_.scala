@@ -4,6 +4,7 @@ import typingsSlinky.mocha.Mocha.Interface
 import typingsSlinky.mocha.Mocha.MochaInstanceOptions
 import typingsSlinky.mocha.Mocha.Reporter
 import typingsSlinky.mocha.Mocha.ReporterConstructor
+import typingsSlinky.mocha.Mocha.RootHookObject
 import typingsSlinky.mocha.Mocha.Runner
 import typingsSlinky.mocha.Mocha.Suite
 import scala.scalajs.js
@@ -61,6 +62,14 @@ trait Mocha_ extends js.Object {
     * @see https://mochajs.org/api/mocha#delay
     */
   def delay(): Boolean = js.native
+  
+  /**
+    * Manually dispose this mocha instance. Mark this instance as `disposed` and unable to run more tests.
+    * It also removes function references to tests functions and hooks, so variables trapped in closures can be cleaned by the garbage collector.
+    *
+    * @see https://mochajs.org/api/mocha#dispose
+    */
+  def dispose(): Unit = js.native
   
   /**
     * Escape string and add it to grep as a RegExp.
@@ -183,6 +192,13 @@ trait Mocha_ extends js.Object {
     * @see https://mochajs.org/api/mocha#retries
     */
   def retries(n: Double): this.type = js.native
+  
+  /**
+    * Assigns hooks to the root suite.
+    *
+    * @see https://mochajs.org/api/mocha#rootHooks
+    */
+  def rootHooks(hooks: RootHookObject): this.type = js.native
   
   /**
     * Run tests and invoke `fn()` when complete.

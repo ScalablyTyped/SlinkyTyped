@@ -47,11 +47,6 @@ trait NotificationMessages extends js.Object {
   def addAsync(
     key: String,
     JSONmessage: NotificationMessageDetails,
-    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
-  ): Unit = js.native
-  def addAsync(
-    key: String,
-    JSONmessage: NotificationMessageDetails,
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
   ): Unit = js.native
@@ -80,7 +75,6 @@ trait NotificationMessages extends js.Object {
     *                 of type `Office.AsyncResult`. The `value` property of the result is an array of `NotificationMessageDetails` objects.
     */
   def getAllAsync(): Unit = js.native
-  def getAllAsync(callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[NotificationMessageDetails]], Unit]): Unit = js.native
   def getAllAsync(
     options: js.UndefOr[scala.Nothing],
     callback: js.Function1[/* asyncResult */ AsyncResult[js.Array[NotificationMessageDetails]], Unit]
@@ -109,7 +103,6 @@ trait NotificationMessages extends js.Object {
     *                 of type `Office.AsyncResult`.
     */
   def removeAsync(key: String): Unit = js.native
-  def removeAsync(key: String, callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]): Unit = js.native
   def removeAsync(
     key: String,
     options: js.UndefOr[scala.Nothing],
@@ -144,11 +137,6 @@ trait NotificationMessages extends js.Object {
     *                 of type `Office.AsyncResult`.
     */
   def replaceAsync(key: String, JSONmessage: NotificationMessageDetails): Unit = js.native
-  def replaceAsync(
-    key: String,
-    JSONmessage: NotificationMessageDetails,
-    callback: js.Function1[/* asyncResult */ AsyncResult[Unit], Unit]
-  ): Unit = js.native
   def replaceAsync(
     key: String,
     JSONmessage: NotificationMessageDetails,

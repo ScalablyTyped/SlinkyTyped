@@ -65,8 +65,8 @@ object ^ extends js.Object {
   	})();
   	```
   	*/
-  def fromFile(filePath: String): js.Promise[String | Null] = js.native
-  def fromFile(filePath: String, options: Options[ToStringEncoding]): js.Promise[String | Null] = js.native
+  def fromFile(filePath: String): js.Promise[String] = js.native
+  def fromFile(filePath: String, options: Options[ToStringEncoding]): js.Promise[String] = js.native
   
   /**
   	Synchronously calculate the hash for a file.
@@ -79,17 +79,17 @@ object ^ extends js.Object {
   def fromFileSync_buffer(filePath: String, options: Options[buffer]): Buffer = js.native
   
   @JSName("fromFile")
-  def fromFile_buffer(filePath: String, options: Options[buffer]): js.Promise[Buffer | Null] = js.native
+  def fromFile_buffer(filePath: String, options: Options[buffer]): js.Promise[Buffer] = js.native
   
   /**
   	Calculate the hash for a stream.
   	@param stream - A stream you want to hash.
   	@returns The calculated hash.
   	*/
-  def fromStream(stream: ReadableStream): js.Promise[String | Null] = js.native
-  def fromStream(stream: ReadableStream, options: Options[ToStringEncoding]): js.Promise[String | Null] = js.native
+  def fromStream(stream: ReadableStream): js.Promise[String] = js.native
+  def fromStream(stream: ReadableStream, options: Options[ToStringEncoding]): js.Promise[String] = js.native
   @JSName("fromStream")
-  def fromStream_buffer(stream: ReadableStream, options: Options[buffer]): js.Promise[Buffer | Null] = js.native
+  def fromStream_buffer(stream: ReadableStream, options: Options[buffer]): js.Promise[Buffer] = js.native
   
   /**
   	Create a [hash transform stream](https://nodejs.org/api/crypto.html#crypto_class_hash).

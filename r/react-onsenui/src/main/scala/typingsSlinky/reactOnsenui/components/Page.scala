@@ -35,6 +35,9 @@ object Page {
     def onHide(value: () => Unit): this.type = set("onHide", js.Any.fromFunction0(value))
     
     @scala.inline
+    def onInfiniteScroll(value: /* doneCallback */ js.Function0[Unit] => Unit): this.type = set("onInfiniteScroll", js.Any.fromFunction1(value))
+    
+    @scala.inline
     def onInit(value: () => Unit): this.type = set("onInit", js.Any.fromFunction0(value))
     
     @scala.inline

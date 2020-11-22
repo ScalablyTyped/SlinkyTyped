@@ -12,6 +12,10 @@ import typingsSlinky.pulumiAws.smbFileShareMod.SmbFileShareArgs
 import typingsSlinky.pulumiAws.smbFileShareMod.SmbFileShareState
 import typingsSlinky.pulumiAws.storagegatewayGatewayMod.GatewayArgs
 import typingsSlinky.pulumiAws.storagegatewayGatewayMod.GatewayState
+import typingsSlinky.pulumiAws.storedIscsiVolumeMod.StoredIscsiVolumeArgs
+import typingsSlinky.pulumiAws.storedIscsiVolumeMod.StoredIscsiVolumeState
+import typingsSlinky.pulumiAws.tapePoolMod.TapePoolArgs
+import typingsSlinky.pulumiAws.tapePoolMod.TapePoolState
 import typingsSlinky.pulumiAws.uploadBufferMod.UploadBufferArgs
 import typingsSlinky.pulumiAws.uploadBufferMod.UploadBufferState
 import typingsSlinky.pulumiAws.workingStorageMod.WorkingStorageArgs
@@ -219,6 +223,82 @@ object storagegatewayMod extends js.Object {
       * when multiple copies of the Pulumi SDK have been loaded into the same process.
       */
     def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/storagegateway/smbFileShare.SmbFileShare */ Boolean = js.native
+  }
+  
+  @js.native
+  class StoredIscsiVolume protected ()
+    extends typingsSlinky.pulumiAws.storedIscsiVolumeMod.StoredIscsiVolume {
+    /**
+      * Create a StoredIscsiVolume resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: StoredIscsiVolumeArgs) = this()
+    def this(name: String, args: StoredIscsiVolumeArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object StoredIscsiVolume extends js.Object {
+    
+    /**
+      * Get an existing StoredIscsiVolume resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.storedIscsiVolumeMod.StoredIscsiVolume = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.storedIscsiVolumeMod.StoredIscsiVolume = js.native
+    def get(name: String, id: Input[ID], state: StoredIscsiVolumeState): typingsSlinky.pulumiAws.storedIscsiVolumeMod.StoredIscsiVolume = js.native
+    def get(name: String, id: Input[ID], state: StoredIscsiVolumeState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.storedIscsiVolumeMod.StoredIscsiVolume = js.native
+    
+    /**
+      * Returns true if the given object is an instance of StoredIscsiVolume.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/storagegateway/storedIscsiVolume.StoredIscsiVolume */ Boolean = js.native
+  }
+  
+  @js.native
+  class TapePool protected ()
+    extends typingsSlinky.pulumiAws.tapePoolMod.TapePool {
+    /**
+      * Create a TapePool resource with the given unique name, arguments, and options.
+      *
+      * @param name The _unique_ name of the resource.
+      * @param args The arguments to use to populate this resource's properties.
+      * @param opts A bag of options that control this resource's behavior.
+      */
+    def this(name: String, args: TapePoolArgs) = this()
+    def this(name: String, args: TapePoolArgs, opts: CustomResourceOptions) = this()
+  }
+  /* static members */
+  @js.native
+  object TapePool extends js.Object {
+    
+    /**
+      * Get an existing TapePool resource's state with the given name, ID, and optional extra
+      * properties used to qualify the lookup.
+      *
+      * @param name The _unique_ name of the resulting resource.
+      * @param id The _unique_ provider ID of the resource to lookup.
+      * @param state Any extra arguments used during the lookup.
+      * @param opts Optional settings to control the behavior of the CustomResource.
+      */
+    def get(name: String, id: Input[ID]): typingsSlinky.pulumiAws.tapePoolMod.TapePool = js.native
+    def get(name: String, id: Input[ID], state: js.UndefOr[scala.Nothing], opts: CustomResourceOptions): typingsSlinky.pulumiAws.tapePoolMod.TapePool = js.native
+    def get(name: String, id: Input[ID], state: TapePoolState): typingsSlinky.pulumiAws.tapePoolMod.TapePool = js.native
+    def get(name: String, id: Input[ID], state: TapePoolState, opts: CustomResourceOptions): typingsSlinky.pulumiAws.tapePoolMod.TapePool = js.native
+    
+    /**
+      * Returns true if the given object is an instance of TapePool.  This is designed to work even
+      * when multiple copies of the Pulumi SDK have been loaded into the same process.
+      */
+    def isInstance(obj: js.Any): /* is @pulumi/aws.@pulumi/aws/storagegateway/tapePool.TapePool */ Boolean = js.native
   }
   
   @js.native

@@ -1,21 +1,15 @@
 package typingsSlinky.angularCookies.mod.angularAugmentingMod.cookies
 
-import org.scalablytyped.runtime.StringDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
 
 /**
-  * CookieService
-  * see http://docs.angularjs.org/api/ngCookies.$cookies
-  */
-/**
-  * CookieStoreService
-  * see http://docs.angularjs.org/api/ngCookies.$cookieStore
+  * CookiesService
+  * see https://docs.angularjs.org/api/ngCookies/service/$cookies
   */
 @js.native
-trait ICookiesService
-  extends /* index */ StringDictionary[js.Any] {
+trait ICookiesService extends js.Object {
   
   def get(key: String): String = js.native
   

@@ -11,12 +11,12 @@ object useScrollLockMod extends js.Object {
   
   val DATA_RMD_NOSCROLL: /* "data-rmd-noscroll" */ String = js.native
   
-  def default(enabled: Boolean): Unit = js.native
-  def default(enabled: Boolean, selectorOrElement: String): Unit = js.native
-  def default(enabled: Boolean, selectorOrElement: js.Function0[HTMLElement]): Unit = js.native
-  def default(enabled: Boolean, selectorOrElement: HTMLElement): Unit = js.native
-  
   def disable(element: HTMLElement): Unit = js.native
   
   def enable(element: HTMLElement): Unit = js.native
+  
+  def useScrollLock(enabled: Boolean): Unit = js.native
+  def useScrollLock(enabled: Boolean, selectorOrElement: String): Unit = js.native
+  def useScrollLock(enabled: Boolean, selectorOrElement: js.Function0[HTMLElement]): Unit = js.native
+  def useScrollLock(enabled: Boolean, selectorOrElement: HTMLElement): Unit = js.native
 }

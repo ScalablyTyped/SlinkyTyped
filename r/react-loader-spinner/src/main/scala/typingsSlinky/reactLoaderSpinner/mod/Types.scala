@@ -11,18 +11,18 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
   - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Circles
   - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Grid
   - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Hearts
-  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Oval
-  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Puff
-  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Rings
-  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.TailSpin
-  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.ThreeDots
-  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Watch
-  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.RevolvingDot
-  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Triangle
-  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Plane
   - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.MutatingDots
   - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.None
   - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.NotSpecified
+  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Oval
+  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Plane
+  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Puff
+  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.RevolvingDot
+  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Rings
+  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.TailSpin
+  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.ThreeDots
+  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Triangle
+  - typingsSlinky.reactLoaderSpinner.reactLoaderSpinnerStrings.Watch
 */
 trait Types extends js.Object
 object Types {

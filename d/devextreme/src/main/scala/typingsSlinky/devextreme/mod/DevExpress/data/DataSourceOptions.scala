@@ -9,64 +9,104 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait DataSourceOptions extends js.Object {
   
-  /** @name DataSource.Options.customQueryParams */
+  /**
+    * [descr:DataSource.Options.customQueryParams]
+    */
   var customQueryParams: js.UndefOr[js.Any] = js.native
   
-  /** @name DataSource.Options.expand */
+  /**
+    * [descr:DataSource.Options.expand]
+    */
   var expand: js.UndefOr[js.Array[String] | String] = js.native
   
-  /** @name DataSource.Options.filter */
+  /**
+    * [descr:DataSource.Options.filter]
+    */
   var filter: js.UndefOr[String | js.Array[_] | js.Function] = js.native
   
-  /** @name DataSource.Options.group */
+  /**
+    * [descr:DataSource.Options.group]
+    */
   var group: js.UndefOr[String | js.Array[_] | js.Function] = js.native
   
-  /** @name DataSource.Options.map */
+  /**
+    * [descr:DataSource.Options.map]
+    */
   var map: js.UndefOr[js.Function1[/* dataItem */ js.Any, _]] = js.native
   
-  /** @name DataSource.Options.onChanged */
+  /**
+    * [descr:DataSource.Options.onChanged]
+    */
   var onChanged: js.UndefOr[js.Function1[/* e */ Changes, _]] = js.native
   
-  /** @name DataSource.Options.onLoadError */
+  /**
+    * [descr:DataSource.Options.onLoadError]
+    */
   var onLoadError: js.UndefOr[js.Function1[/* error */ Message, _]] = js.native
   
-  /** @name DataSource.Options.onLoadingChanged */
+  /**
+    * [descr:DataSource.Options.onLoadingChanged]
+    */
   var onLoadingChanged: js.UndefOr[js.Function1[/* isLoading */ Boolean, _]] = js.native
   
-  /** @name DataSource.Options.pageSize */
+  /**
+    * [descr:DataSource.Options.pageSize]
+    */
   var pageSize: js.UndefOr[Double] = js.native
   
-  /** @name DataSource.Options.paginate */
+  /**
+    * [descr:DataSource.Options.paginate]
+    */
   var paginate: js.UndefOr[Boolean] = js.native
   
-  /** @name DataSource.Options.postProcess */
+  /**
+    * [descr:DataSource.Options.postProcess]
+    */
   var postProcess: js.UndefOr[js.Function1[/* data */ js.Array[_], js.Array[_]]] = js.native
   
-  /** @name DataSource.Options.pushAggregationTimeout */
+  /**
+    * [descr:DataSource.Options.pushAggregationTimeout]
+    */
   var pushAggregationTimeout: js.UndefOr[Double] = js.native
   
-  /** @name DataSource.Options.requireTotalCount */
+  /**
+    * [descr:DataSource.Options.requireTotalCount]
+    */
   var requireTotalCount: js.UndefOr[Boolean] = js.native
   
-  /** @name DataSource.Options.reshapeOnPush */
+  /**
+    * [descr:DataSource.Options.reshapeOnPush]
+    */
   var reshapeOnPush: js.UndefOr[Boolean] = js.native
   
-  /** @name DataSource.Options.searchExpr */
+  /**
+    * [descr:DataSource.Options.searchExpr]
+    */
   var searchExpr: js.UndefOr[String | js.Function | (js.Array[String | js.Function])] = js.native
   
-  /** @name DataSource.Options.searchOperation */
+  /**
+    * [descr:DataSource.Options.searchOperation]
+    */
   var searchOperation: js.UndefOr[String] = js.native
   
-  /** @name DataSource.Options.searchValue */
+  /**
+    * [descr:DataSource.Options.searchValue]
+    */
   var searchValue: js.UndefOr[js.Any] = js.native
   
-  /** @name DataSource.Options.select */
+  /**
+    * [descr:DataSource.Options.select]
+    */
   var select: js.UndefOr[String | js.Array[_] | js.Function] = js.native
   
-  /** @name DataSource.Options.sort */
+  /**
+    * [descr:DataSource.Options.sort]
+    */
   var sort: js.UndefOr[String | js.Array[_] | js.Function] = js.native
   
-  /** @name DataSource.Options.store */
+  /**
+    * [descr:DataSource.Options.store]
+    */
   var store: js.UndefOr[Store | StoreOptions[Store] | js.Array[_] | js.Any] = js.native
 }
 object DataSourceOptions {

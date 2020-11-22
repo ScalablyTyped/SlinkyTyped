@@ -11,7 +11,7 @@ class ArcFollowCamera protected ()
   extends typingsSlinky.babylonjs.BABYLON.ArcFollowCamera {
   /**
     * Instantiates a new ArcFollowCamera
-    * @see http://doc.babylonjs.com/features/cameras#follow-camera
+    * @see https://doc.babylonjs.com/features/cameras#follow-camera
     * @param name Define the name of the camera
     * @param alpha Define the rotation angle of the camera around the logitudinal axis
     * @param beta Define the rotation angle of the camera around the elevation axis
@@ -27,7 +27,7 @@ class ArcFollowCamera protected ()
   beta: Double,
     /** The radius of the camera from its target */
   radius: Double,
-    /** Define the camera target (the messh it should follow) */
+    /** Define the camera target (the mesh it should follow) */
   target: Nullable[typingsSlinky.babylonjs.BABYLON.AbstractMesh],
     scene: typingsSlinky.babylonjs.BABYLON.Scene
   ) = this()

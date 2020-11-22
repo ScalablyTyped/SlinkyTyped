@@ -54,7 +54,10 @@ object imageProcessingPostProcessMod extends js.Object {
       */
     var _imageProcessingObserver: js.Any = js.native
     
-    /* protected */ def _updateParameters(): Unit = js.native
+    /**
+      * @hidden
+      */
+    def _updateParameters(): Unit = js.native
     
     /**
       * Gets Color curves setup used in the effect if colorCurvesEnabled is set to true .

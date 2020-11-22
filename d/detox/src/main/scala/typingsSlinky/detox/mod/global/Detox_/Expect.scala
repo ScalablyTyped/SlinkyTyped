@@ -10,6 +10,18 @@ trait Expect[R] extends js.Object {
   def apply(element: Element): Expect[js.Promise[Unit]] = js.native
   
   /**
+    * Negate the expectation.
+    * @example await expect(element(by.id('UniqueId205'))).not.toBeVisible();
+    */
+  def not(element: Element): Expect[js.Promise[Unit]] = js.native
+  /**
+    * Negate the expectation.
+    * @example await expect(element(by.id('UniqueId205'))).not.toBeVisible();
+    */
+  @JSName("not")
+  var not_Original: Expect[js.Promise[Unit]] = js.native
+  
+  /**
     * Expect the view to not be visible.
     * @example await expect(element(by.id('UniqueId205'))).toBeNotVisible();
     */

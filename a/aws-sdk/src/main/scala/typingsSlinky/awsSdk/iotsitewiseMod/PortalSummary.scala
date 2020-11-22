@@ -38,15 +38,17 @@ trait PortalSummary extends js.Object {
   var roleArn: js.UndefOr[ARN] = js.native
   
   /**
-    * The public root URL for the AWS IoT AWS IoT SiteWise Monitor application portal.
+    * The URL for the AWS IoT SiteWise Monitor portal. You can use this URL to access portals that use AWS SSO for authentication. For portals that use IAM for authentication, you must use the CreatePresignedPortalUrl operation to create a URL that you can use to access the portal.
     */
   var startUrl: Url = js.native
+  
+  var status: PortalStatus = js.native
 }
 object PortalSummary {
   
   @scala.inline
-  def apply(id: ID, name: Name, startUrl: Url): PortalSummary = {
-    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], startUrl = startUrl.asInstanceOf[js.Any])
+  def apply(id: ID, name: Name, startUrl: Url, status: PortalStatus): PortalSummary = {
+    val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], startUrl = startUrl.asInstanceOf[js.Any], status = status.asInstanceOf[js.Any])
     __obj.asInstanceOf[PortalSummary]
   }
   
@@ -73,6 +75,9 @@ object PortalSummary {
     
     @scala.inline
     def setStartUrl(value: Url): Self = this.set("startUrl", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def setStatus(value: PortalStatus): Self = this.set("status", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setCreationDate(value: js.Date): Self = this.set("creationDate", value.asInstanceOf[js.Any])

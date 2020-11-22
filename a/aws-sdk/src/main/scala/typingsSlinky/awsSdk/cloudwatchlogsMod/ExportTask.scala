@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait ExportTask extends js.Object {
   
   /**
-    * The name of Amazon S3 bucket to which the log data was exported.
+    * The name of the S3 bucket to which the log data was exported.
     */
   var destination: js.UndefOr[ExportDestinationBucket] = js.native
   
@@ -18,7 +18,7 @@ trait ExportTask extends js.Object {
   var destinationPrefix: js.UndefOr[ExportDestinationPrefix] = js.native
   
   /**
-    * Execution info about the export task.
+    * Execution information about the export task.
     */
   var executionInfo: js.UndefOr[ExportTaskExecutionInfo] = js.native
   

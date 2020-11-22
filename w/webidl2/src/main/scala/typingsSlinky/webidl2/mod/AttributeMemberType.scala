@@ -9,11 +9,10 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 @js.native
 trait AttributeMemberType
-  extends IDLInterfaceMemberType
+  extends AbstractBase
+     with IDLInterfaceMemberType
+     with IDLInterfaceMixinMemberType
      with IDLNamespaceMemberType {
-  
-  /** A list of extended attributes. */
-  var extAttrs: js.Array[ExtendedAttribute] = js.native
   
   /** An IDL Type for the attribute. */
   var idlType: IDLTypeDescription = js.native
@@ -24,16 +23,17 @@ trait AttributeMemberType
   /** The attribute's name. */
   var name: String = js.native
   
-  /** The container of this type. */
-  var parent: InterfaceType | InterfaceMixinType | NamespaceType = js.native
+  @JSName("parent")
+  var parent_AttributeMemberType: InterfaceMixinType | InterfaceType | NamespaceType = js.native
   
   /** True if it's a read-only attribute. */
   var readonly: Boolean = js.native
   
   /** Special modifier if exists */
-  var special: static | stringifier = js.native
+  var special: static | stringifier | Null = js.native
   
-  var `type`: attribute = js.native
+  @JSName("type")
+  var type_AttributeMemberType: attribute = js.native
 }
 object AttributeMemberType {
   
@@ -43,12 +43,11 @@ object AttributeMemberType {
     idlType: IDLTypeDescription,
     inherit: Boolean,
     name: String,
-    parent: InterfaceType | InterfaceMixinType | NamespaceType,
+    parent: InterfaceMixinType | InterfaceType | NamespaceType,
     readonly: Boolean,
-    special: static | stringifier,
     `type`: attribute
   ): AttributeMemberType = {
-    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], idlType = idlType.asInstanceOf[js.Any], inherit = inherit.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], readonly = readonly.asInstanceOf[js.Any], special = special.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(extAttrs = extAttrs.asInstanceOf[js.Any], idlType = idlType.asInstanceOf[js.Any], inherit = inherit.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], readonly = readonly.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[AttributeMemberType]
   }
@@ -69,12 +68,6 @@ object AttributeMemberType {
     }
     
     @scala.inline
-    def setExtAttrsVarargs(value: ExtendedAttribute*): Self = this.set("extAttrs", js.Array(value :_*))
-    
-    @scala.inline
-    def setExtAttrs(value: js.Array[ExtendedAttribute]): Self = this.set("extAttrs", value.asInstanceOf[js.Any])
-    
-    @scala.inline
     def setIdlType(value: IDLTypeDescription): Self = this.set("idlType", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -84,15 +77,18 @@ object AttributeMemberType {
     def setName(value: String): Self = this.set("name", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setParent(value: InterfaceType | InterfaceMixinType | NamespaceType): Self = this.set("parent", value.asInstanceOf[js.Any])
+    def setParent(value: InterfaceMixinType | InterfaceType | NamespaceType): Self = this.set("parent", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setReadonly(value: Boolean): Self = this.set("readonly", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def setType(value: attribute): Self = this.set("type", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setSpecial(value: static | stringifier): Self = this.set("special", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setType(value: attribute): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setSpecialNull: Self = this.set("special", null)
   }
 }

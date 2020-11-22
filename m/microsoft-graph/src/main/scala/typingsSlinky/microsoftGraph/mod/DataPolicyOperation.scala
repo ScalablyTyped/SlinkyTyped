@@ -11,16 +11,16 @@ trait DataPolicyOperation extends Entity {
     * Represents when the request for this data policy operation was completed, in UTC time, using the ISO 8601 format. For
     * example, midnight UTC on Jan 1, 2014 would look like this: '2014-01-01T00:00:00Z'. Null until the operation completes.
     */
-  var completedDateTime: js.UndefOr[String] = js.native
+  var completedDateTime: js.UndefOr[NullableOption[String]] = js.native
   
   // Specifies the progress of an operation.
   var progress: js.UndefOr[Double] = js.native
   
   // Possible values are: notStarted, running, complete, failed, unknownFutureValue.
-  var status: js.UndefOr[DataPolicyOperationStatus] = js.native
+  var status: js.UndefOr[NullableOption[DataPolicyOperationStatus]] = js.native
   
   // The URL location to where data is being exported for export requests.
-  var storageLocation: js.UndefOr[String] = js.native
+  var storageLocation: js.UndefOr[NullableOption[String]] = js.native
   
   /**
     * Represents when the request for this data operation was submitted, in UTC time, using the ISO 8601 format. For example,
@@ -55,10 +55,13 @@ object DataPolicyOperation {
     }
     
     @scala.inline
-    def setCompletedDateTime(value: String): Self = this.set("completedDateTime", value.asInstanceOf[js.Any])
+    def setCompletedDateTime(value: NullableOption[String]): Self = this.set("completedDateTime", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteCompletedDateTime: Self = this.set("completedDateTime", js.undefined)
+    
+    @scala.inline
+    def setCompletedDateTimeNull: Self = this.set("completedDateTime", null)
     
     @scala.inline
     def setProgress(value: Double): Self = this.set("progress", value.asInstanceOf[js.Any])
@@ -67,16 +70,22 @@ object DataPolicyOperation {
     def deleteProgress: Self = this.set("progress", js.undefined)
     
     @scala.inline
-    def setStatus(value: DataPolicyOperationStatus): Self = this.set("status", value.asInstanceOf[js.Any])
+    def setStatus(value: NullableOption[DataPolicyOperationStatus]): Self = this.set("status", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStatus: Self = this.set("status", js.undefined)
     
     @scala.inline
-    def setStorageLocation(value: String): Self = this.set("storageLocation", value.asInstanceOf[js.Any])
+    def setStatusNull: Self = this.set("status", null)
+    
+    @scala.inline
+    def setStorageLocation(value: NullableOption[String]): Self = this.set("storageLocation", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteStorageLocation: Self = this.set("storageLocation", js.undefined)
+    
+    @scala.inline
+    def setStorageLocationNull: Self = this.set("storageLocation", null)
     
     @scala.inline
     def setSubmittedDateTime(value: String): Self = this.set("submittedDateTime", value.asInstanceOf[js.Any])

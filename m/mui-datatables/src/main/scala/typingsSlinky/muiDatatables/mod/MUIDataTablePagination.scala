@@ -13,7 +13,7 @@ trait MUIDataTablePagination extends js.Object {
   
   var count: Double = js.native
   
-  var options: js.Object = js.native
+  var options: MUIDataTableOptions = js.native
   
   var page: Double = js.native
   
@@ -25,7 +25,7 @@ object MUIDataTablePagination {
   def apply(
     changeRowsPerPage: js.Any => js.Any,
     count: Double,
-    options: js.Object,
+    options: MUIDataTableOptions,
     page: Double,
     rowsPerPage: Double
   ): MUIDataTablePagination = {
@@ -55,7 +55,7 @@ object MUIDataTablePagination {
     def setCount(value: Double): Self = this.set("count", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setOptions(value: js.Object): Self = this.set("options", value.asInstanceOf[js.Any])
+    def setOptions(value: MUIDataTableOptions): Self = this.set("options", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setPage(value: Double): Self = this.set("page", value.asInstanceOf[js.Any])

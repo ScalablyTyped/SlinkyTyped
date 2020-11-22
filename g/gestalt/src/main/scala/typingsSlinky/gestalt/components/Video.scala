@@ -1,6 +1,12 @@
 package typingsSlinky.gestalt.components
 
-import slinky.web.html.`*`.tag
+import org.scalajs.dom.raw.Event
+import org.scalajs.dom.raw.HTMLDivElement
+import org.scalajs.dom.raw.HTMLVideoElement
+import org.scalajs.dom.raw.Node
+import slinky.core.SyntheticEvent
+import slinky.web.SyntheticMouseEvent
+import slinky.web.html.video.tag
 import typingsSlinky.StBuildingComponent
 import typingsSlinky.gestalt.anon.Duration
 import typingsSlinky.gestalt.anon.Fullscreen
@@ -8,9 +14,13 @@ import typingsSlinky.gestalt.anon.Loaded
 import typingsSlinky.gestalt.anon.Src
 import typingsSlinky.gestalt.anon.Time
 import typingsSlinky.gestalt.anon.Volume
-import typingsSlinky.gestalt.anon.`4`
-import typingsSlinky.gestalt.anon.`5`
+import typingsSlinky.gestalt.gestaltStrings.`scale-down`
+import typingsSlinky.gestalt.gestaltStrings.`use-credentials`
+import typingsSlinky.gestalt.gestaltStrings.anonymous
 import typingsSlinky.gestalt.gestaltStrings.auto
+import typingsSlinky.gestalt.gestaltStrings.contain
+import typingsSlinky.gestalt.gestaltStrings.cover
+import typingsSlinky.gestalt.gestaltStrings.fill
 import typingsSlinky.gestalt.gestaltStrings.metadata
 import typingsSlinky.gestalt.gestaltStrings.none
 import typingsSlinky.gestalt.mod.VideoProps
@@ -48,40 +58,77 @@ object Video {
     def accessibilityUnmuteLabel(value: String): this.type = set("accessibilityUnmuteLabel", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def children(value: Node): this.type = set("children", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def controls(value: Boolean): this.type = set("controls", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def crossOrigin(value: anonymous | `use-credentials`): this.type = set("crossOrigin", value.asInstanceOf[js.Any])
     
     @scala.inline
     def loop(value: Boolean): this.type = set("loop", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def objectFit(value: fill | contain | cover | none | `scale-down`): this.type = set("objectFit", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def onDurationChange(value: /* args */ Duration => Unit): this.type = set("onDurationChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onEnded(value: /* args */ `4` => Unit): this.type = set("onEnded", js.Any.fromFunction1(value))
+    def onEnded(
+      value: /* arg */ js.Object with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLVideoElement]]) => Unit
+    ): this.type = set("onEnded", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onFullscreenChange(value: /* args */ Fullscreen => Unit): this.type = set("onFullscreenChange", js.Any.fromFunction1(value))
+    def onFullscreenChange(
+      value: /* arg */ Fullscreen with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLVideoElement]]) => Unit
+    ): this.type = set("onFullscreenChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onLoadedChange(value: /* args */ Loaded => Unit): this.type = set("onLoadedChange", js.Any.fromFunction1(value))
+    def onLoadedChange(
+      value: /* arg */ Loaded with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLVideoElement]]) => Unit
+    ): this.type = set("onLoadedChange", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onPause(value: /* args */ `5` => Unit): this.type = set("onPause", js.Any.fromFunction1(value))
+    def onPause(
+      value: /* arg */ js.Object with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLDivElement]]) => Unit
+    ): this.type = set("onPause", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onPlay(value: /* args */ `5` => Unit): this.type = set("onPlay", js.Any.fromFunction1(value))
+    def onPlay(
+      value: /* arg */ js.Object with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLDivElement]]) => Unit
+    ): this.type = set("onPlay", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onReady(value: /* args */ `4` => Unit): this.type = set("onReady", js.Any.fromFunction1(value))
+    def onPlayheadDown(
+      value: /* arg */ js.Object with typingsSlinky.gestalt.anon.Event[SyntheticMouseEvent[HTMLDivElement]] => Unit
+    ): this.type = set("onPlayheadDown", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onSeek(value: /* args */ `4` => Unit): this.type = set("onSeek", js.Any.fromFunction1(value))
+    def onPlayheadUp(
+      value: /* arg */ js.Object with typingsSlinky.gestalt.anon.Event[SyntheticMouseEvent[HTMLDivElement]] => Unit
+    ): this.type = set("onPlayheadUp", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onTimeChange(value: /* args */ Time => Unit): this.type = set("onTimeChange", js.Any.fromFunction1(value))
+    def onReady(
+      value: /* arg */ js.Object with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLVideoElement]]) => Unit
+    ): this.type = set("onReady", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onVolumeChange(value: /* args */ Volume => Unit): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
+    def onSeek(
+      value: /* arg */ js.Object with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLVideoElement]]) => Unit
+    ): this.type = set("onSeek", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onTimeChange(
+      value: /* arg */ Time with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLVideoElement]]) => Unit
+    ): this.type = set("onTimeChange", js.Any.fromFunction1(value))
+    
+    @scala.inline
+    def onVolumeChange(
+      value: /* arg */ Volume with (typingsSlinky.gestalt.anon.Event[SyntheticEvent[Event, HTMLDivElement]]) => Unit
+    ): this.type = set("onVolumeChange", js.Any.fromFunction1(value))
     
     @scala.inline
     def playbackRate(value: Double): this.type = set("playbackRate", value.asInstanceOf[js.Any])

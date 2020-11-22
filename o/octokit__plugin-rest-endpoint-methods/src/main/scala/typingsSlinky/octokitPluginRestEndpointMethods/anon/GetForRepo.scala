@@ -7,16 +7,16 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait GetForRepo extends js.Object {
   
-  var get: `751` = js.native
+  var get: `757` = js.native
   
-  var getAllCommonlyUsed: `752` = js.native
+  var getAllCommonlyUsed: `758` = js.native
   
-  var getForRepo: `753` = js.native
+  var getForRepo: `759` = js.native
 }
 object GetForRepo {
   
   @scala.inline
-  def apply(get: `751`, getAllCommonlyUsed: `752`, getForRepo: `753`): GetForRepo = {
+  def apply(get: `757`, getAllCommonlyUsed: `758`, getForRepo: `759`): GetForRepo = {
     val __obj = js.Dynamic.literal(get = get.asInstanceOf[js.Any], getAllCommonlyUsed = getAllCommonlyUsed.asInstanceOf[js.Any], getForRepo = getForRepo.asInstanceOf[js.Any])
     __obj.asInstanceOf[GetForRepo]
   }
@@ -37,12 +37,12 @@ object GetForRepo {
     }
     
     @scala.inline
-    def setGet(value: `751`): Self = this.set("get", value.asInstanceOf[js.Any])
+    def setGet(value: `757`): Self = this.set("get", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetAllCommonlyUsed(value: `752`): Self = this.set("getAllCommonlyUsed", value.asInstanceOf[js.Any])
+    def setGetAllCommonlyUsed(value: `758`): Self = this.set("getAllCommonlyUsed", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setGetForRepo(value: `753`): Self = this.set("getForRepo", value.asInstanceOf[js.Any])
+    def setGetForRepo(value: `759`): Self = this.set("getForRepo", value.asInstanceOf[js.Any])
   }
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.DebuggerStatement
+import typingsSlinky.babelTraverse.babelTraverseStrings.FunctionDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `133` extends js.Object {
   
-  var `type`: DebuggerStatement = js.native
+  var `type`: FunctionDeclaration = js.native
 }
 object `133` {
   
   @scala.inline
-  def apply(`type`: DebuggerStatement): `133` = {
+  def apply(`type`: FunctionDeclaration): `133` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`133`]
@@ -35,6 +35,6 @@ object `133` {
     }
     
     @scala.inline
-    def setType(value: DebuggerStatement): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: FunctionDeclaration): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

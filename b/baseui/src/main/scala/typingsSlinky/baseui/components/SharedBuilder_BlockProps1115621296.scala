@@ -75,6 +75,9 @@ class SharedBuilder_BlockProps1115621296[R <: js.Object] (val args: js.Array[js.
   def bottom(value: Responsive[Scale]): this.type = set("bottom", value.asInstanceOf[js.Any])
   
   @scala.inline
+  def className(value: String): this.type = set("className", value.asInstanceOf[js.Any])
+  
+  @scala.inline
   def colorVarargs(value: String*): this.type = set("color", js.Array(value :_*))
   
   @scala.inline

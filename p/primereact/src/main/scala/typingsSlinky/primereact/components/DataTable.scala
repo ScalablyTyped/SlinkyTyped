@@ -183,10 +183,10 @@ object DataTable {
     def onRowEditCancel(value: /* e */ DataIndex => Unit): this.type = set("onRowEditCancel", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onRowEditInit(value: /* e */ DataOriginalEvent => Unit): this.type = set("onRowEditInit", js.Any.fromFunction1(value))
+    def onRowEditInit(value: /* e */ DataIndex => Unit): this.type = set("onRowEditInit", js.Any.fromFunction1(value))
     
     @scala.inline
-    def onRowEditSave(value: /* e */ DataOriginalEvent => Unit): this.type = set("onRowEditSave", js.Any.fromFunction1(value))
+    def onRowEditSave(value: /* e */ DataIndex => Unit): this.type = set("onRowEditSave", js.Any.fromFunction1(value))
     
     @scala.inline
     def onRowExpand(value: /* e */ DataOriginalEvent => Unit): this.type = set("onRowExpand", js.Any.fromFunction1(value))
@@ -228,6 +228,9 @@ object DataTable {
     def paginator(value: Boolean): this.type = set("paginator", value.asInstanceOf[js.Any])
     
     @scala.inline
+    def paginatorDropdownAppendTo(value: js.Any): this.type = set("paginatorDropdownAppendTo", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def paginatorLeft(value: js.Any): this.type = set("paginatorLeft", value.asInstanceOf[js.Any])
     
     @scala.inline
@@ -247,9 +250,6 @@ object DataTable {
     
     @scala.inline
     def resizableColumns(value: Boolean): this.type = set("resizableColumns", value.asInstanceOf[js.Any])
-    
-    @scala.inline
-    def responsive(value: Boolean): this.type = set("responsive", value.asInstanceOf[js.Any])
     
     @scala.inline
     def rowClassName(value: /* rowData */ js.Any => js.Object): this.type = set("rowClassName", js.Any.fromFunction1(value))

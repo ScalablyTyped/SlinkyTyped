@@ -22,8 +22,14 @@ class WebGLRenderTarget protected () extends EventDispatcher {
   
   def copy(source: WebGLRenderTarget): this.type = js.native
   
+  /**
+  	 * @default true
+  	 */
   var depthBuffer: Boolean = js.native
   
+  /**
+  	 * @default null
+  	 */
   var depthTexture: DepthTexture = js.native
   
   def dispose(): Unit = js.native
@@ -64,10 +70,16 @@ class WebGLRenderTarget protected () extends EventDispatcher {
   
   var scissor: Vector4 = js.native
   
+  /**
+  	 * @default false
+  	 */
   var scissorTest: Boolean = js.native
   
   def setSize(width: Double, height: Double): Unit = js.native
   
+  /**
+  	 * @default true
+  	 */
   var stencilBuffer: Boolean = js.native
   
   var texture: Texture = js.native

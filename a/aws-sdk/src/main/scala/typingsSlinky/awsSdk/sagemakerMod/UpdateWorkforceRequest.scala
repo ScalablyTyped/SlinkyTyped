@@ -18,7 +18,7 @@ trait UpdateWorkforceRequest extends js.Object {
   var SourceIpConfig: js.UndefOr[typingsSlinky.awsSdk.sagemakerMod.SourceIpConfig] = js.native
   
   /**
-    * The name of the private workforce whose access you want to restrict. WorkforceName is automatically set to default when a workforce is created and cannot be modified. 
+    * The name of the private workforce that you want to update. You can find your workforce name by using the operation.
     */
   var WorkforceName: typingsSlinky.awsSdk.sagemakerMod.WorkforceName = js.native
 }

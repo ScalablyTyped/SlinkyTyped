@@ -1,6 +1,7 @@
 package typingsSlinky.baseui.menuMod
 
 import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.baseui.baseuiStrings.enter_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,7 +9,11 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait STATE_CHANGE_TYPES extends js.Object {
   
+  var character: typingsSlinky.baseui.baseuiStrings.character = js.native
+  
   var click: typingsSlinky.baseui.baseuiStrings.click = js.native
+  
+  var enter: enter_ = js.native
   
   var focus: typingsSlinky.baseui.baseuiStrings.focus = js.native
   

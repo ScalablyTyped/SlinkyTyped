@@ -40,6 +40,11 @@ object CascadedShadowGenerator extends js.Object {
   val DEFAULT_CASCADES_COUNT: Double = js.native
   
   /**
+    *  Support test.
+    */
+  def IsSupported: Boolean = js.native
+  
+  /**
     * Defines the maximum number of cascades used by the CSM.
     */
   val MAX_CASCADES_COUNT: Double = js.native

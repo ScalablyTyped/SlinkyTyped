@@ -7,6 +7,8 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait SigningOptions extends js.Object {
   
+  var dsaEncoding: js.UndefOr[DSAEncoding] = js.native
+  
   /**
     * @See crypto.constants.RSA_PKCS1_PADDING
     */
@@ -36,6 +38,12 @@ object SigningOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setDsaEncoding(value: DSAEncoding): Self = this.set("dsaEncoding", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteDsaEncoding: Self = this.set("dsaEncoding", js.undefined)
     
     @scala.inline
     def setPadding(value: Double): Self = this.set("padding", value.asInstanceOf[js.Any])

@@ -18,7 +18,7 @@ trait DescribeDashboardResponse extends js.Object {
   var dashboardCreationDate: js.Date = js.native
   
   /**
-    * The dashboard's definition JSON literal. For detailed information, see Creating Dashboards (CLI) in the AWS IoT SiteWise User Guide.
+    * The dashboard's definition JSON literal. For detailed information, see Creating dashboards (CLI) in the AWS IoT SiteWise User Guide.
     */
   var dashboardDefinition: DashboardDefinition = js.native
   

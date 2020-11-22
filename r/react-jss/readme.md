@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-jss
 
-Typings are for version 10.3.0
+Typings are for version 10.5.0
 
 ## Library description:
 JSS integration with React

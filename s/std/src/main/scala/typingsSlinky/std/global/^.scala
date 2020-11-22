@@ -25,6 +25,7 @@ import typingsSlinky.std.DateConstructor
 import typingsSlinky.std.EnumeratorConstructor
 import typingsSlinky.std.ErrorConstructor
 import typingsSlinky.std.EvalErrorConstructor
+import typingsSlinky.std.FinalizationRegistryConstructor
 import typingsSlinky.std.Float32ArrayConstructor
 import typingsSlinky.std.Float64ArrayConstructor
 import typingsSlinky.std.FunctionConstructor
@@ -52,7 +53,9 @@ import typingsSlinky.std.Uint32ArrayConstructor
 import typingsSlinky.std.Uint8ArrayConstructor
 import typingsSlinky.std.Uint8ClampedArrayConstructor
 import typingsSlinky.std.VBArrayConstructor
+import typingsSlinky.std.VisualViewport
 import typingsSlinky.std.WeakMapConstructor
+import typingsSlinky.std.WeakRefConstructor
 import typingsSlinky.std.WeakSetConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -89,6 +92,8 @@ object ^ extends js.Object {
   var Error: ErrorConstructor = js.native
   
   var EvalError: EvalErrorConstructor = js.native
+  
+  var FinalizationRegistry: FinalizationRegistryConstructor = js.native
   
   var Float32Array: Float32ArrayConstructor = js.native
   
@@ -165,6 +170,8 @@ object ^ extends js.Object {
   var VBArray: VBArrayConstructor = js.native
   
   var WeakMap: WeakMapConstructor = js.native
+  
+  var WeakRef: WeakRefConstructor = js.native
   
   var WeakSet: WeakSetConstructor = js.native
   
@@ -745,6 +752,8 @@ object ^ extends js.Object {
   var toolbar: typingsSlinky.std.BarProp = js.native
   
   var top: Window = js.native
+  
+  var visualViewport: VisualViewport = js.native
   
   var window: Window with (/* globalThis */ js.Any) = js.native
 }

@@ -32,7 +32,7 @@ object webRequestMod extends js.Object {
     
     var _injectCustomRequestHeaders: js.Any = js.native
     
-    var _xhr: js.Any = js.native
+    val _xhr: js.Any = js.native
     
     /**
       * Cancels any network activity

@@ -3,7 +3,7 @@ package typingsSlinky.serviceWorkerMock.mod
 import org.scalajs.dom.experimental.Notification
 import org.scalajs.dom.experimental.Request
 import typingsSlinky.serviceWorkerMock.anon.FnCall
-import typingsSlinky.serviceWorkerMock.anon.PartialMessageEvent
+import typingsSlinky.serviceWorkerMock.anon.PartialMessageEventany
 import typingsSlinky.serviceWorkerMock.serviceWorkerMockStrings.fetch
 import typingsSlinky.serviceWorkerMock.serviceWorkerMockStrings.message
 import typingsSlinky.serviceWorkerMock.serviceWorkerMockStrings.notificationclick
@@ -39,7 +39,7 @@ object global extends js.Object {
   @JSName("trigger")
   def trigger_fetch(name: fetch, request: Request): js.Promise[Unit] = js.native
   @JSName("trigger")
-  def trigger_message(name: message, args: PartialMessageEvent): js.Promise[Unit] = js.native
+  def trigger_message(name: message, args: PartialMessageEventany): js.Promise[Unit] = js.native
   @JSName("trigger")
   def trigger_notificationclick(name: notificationclick, args: Notification): js.Promise[Unit] = js.native
   @JSName("trigger")
@@ -71,7 +71,7 @@ object global extends js.Object {
     @JSName("trigger")
     def trigger_fetch(name: fetch, request: Request): js.Promise[Unit] = js.native
     @JSName("trigger")
-    def trigger_message(name: message, args: PartialMessageEvent): js.Promise[Unit] = js.native
+    def trigger_message(name: message, args: PartialMessageEventany): js.Promise[Unit] = js.native
     @JSName("trigger")
     def trigger_notificationclick(name: notificationclick, args: Notification): js.Promise[Unit] = js.native
     @JSName("trigger")

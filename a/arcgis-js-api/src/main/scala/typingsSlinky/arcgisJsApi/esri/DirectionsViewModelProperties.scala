@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DirectionsViewModelProperties extends GoToProperties {
   
   /**
-    * The network attribute name to be used as the impedance attribute in the analysis. The default is as defined in the specific routing network layer used in your [RouteTask](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-RouteTask.html). You can specify any attribute names listed in the Service Directory under `Network Dataset -> Network Attributes` as `Usage Type: esriNAUTCost`. You can also specify a value of `none` to indicate that no network attributes should be used for impedance. If you specify an empty array, it will default to the default of the service.  For example, set `impedanceAttribute = "Time"` for the quickest route and `impedanceAttribute = "Length"` for shortest drive, assuming the service has those two esriNAUTCost attributes.  For more information, see [Understanding the network attribute](http://resources.arcgis.com/en/help/main/10.2/index.html#//00470000000m000000).
+    * The network attribute name to be used as the impedance attribute in the analysis.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#impedanceAttribute)
     */
@@ -18,13 +18,11 @@ trait DirectionsViewModelProperties extends GoToProperties {
     * The maximum number of stops allowed for routing.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#maxStops)
-    *
-    * @default 50
     */
   var maxStops: js.UndefOr[Double] = js.native
   
   /**
-    * Route Parameters object used to call the service. Please refer to the [RouteParameters](https://developers.arcgis.com/javascript/latest/api-reference/esri-tasks-support-RouteParameters.html) documentation for the list of available settings.
+    * Route Parameters object used to call the service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#routeParameters)
     */
@@ -34,8 +32,6 @@ trait DirectionsViewModelProperties extends GoToProperties {
     * The URL of the REST endpoint of the Route service.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#routeServiceUrl)
-    *
-    * @default "https://route.arcgis.com/arcgis/rest/services/World/Route/NAServer/Route_World"
     */
   var routeServiceUrl: js.UndefOr[String] = js.native
   
@@ -47,11 +43,9 @@ trait DirectionsViewModelProperties extends GoToProperties {
   var routeSymbol: js.UndefOr[SimpleLineSymbolProperties] = js.native
   
   /**
-    * The selected travel mode. More information can be found in the [ArcGIS Online documentation](https://doc.arcgis.com/en/arcgis-online/reference/travel-modes.htm#GUID-96DF7F50-E0B2-4BF3-8271-EB515D3F0107).
+    * The selected travel mode.
     *
     * [Read more...](https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Directions-DirectionsViewModel.html#selectedTravelMode)
-    *
-    * @default null | 'Driving Time'
     */
   var selectedTravelMode: js.UndefOr[DirectionsViewModelSelectedTravelMode] = js.native
   

@@ -1,5 +1,6 @@
 package typingsSlinky.mendixmodelsdk.pagesMod.pages
 
+import typingsSlinky.mendixmodelsdk.abstractModelMod.IAbstractModel
 import typingsSlinky.mendixmodelsdk.baseModelMod.IModel
 import typingsSlinky.mendixmodelsdk.customwidgetsMod.customwidgets.WidgetValue
 import typingsSlinky.mendixmodelsdk.instancesMod.IList
@@ -9,6 +10,7 @@ import typingsSlinky.mendixmodelsdk.internalMod.ModelUnit
 import typingsSlinky.mendixmodelsdk.menusMod.menus.MenuItem
 import typingsSlinky.mendixmodelsdk.nativepagesMod.nativepages.BottomBarItem
 import typingsSlinky.mendixmodelsdk.pagesMod.StructureVersionInfo
+import typingsSlinky.mendixmodelsdk.structuresMod.aliases.Container
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -21,17 +23,24 @@ class PageClientAction protected () extends ClientAction {
     structureTypeName: String,
     id: String,
     isPartial: Boolean,
-    unit: ModelUnit,
-    container: AbstractElement
+    unit: ModelUnit[IAbstractModel],
+    container: AbstractElement[IAbstractModel, Container]
   ) = this()
   
-  @JSName("model")
-  var model_FPageClientAction: IModel = js.native
-  
   /**
+    * In version 8.14.0: deleted
     * In version 8.11.0: introduced
     */
   def numberOfPagesToClose: Double = js.native
+  
+  /**
+    * The value of this property is conceptually of type microflowExpressions.MicroflowExpression.
+    *
+    * In version 8.14.0: introduced
+    */
+  def numberOfPagesToClose2: String = js.native
+  def numberOfPagesToClose2_=(newValue: String): Unit = js.native
+  
   def numberOfPagesToClose_=(newValue: Double): Unit = js.native
   
   def pageSettings: PageSettings = js.native
@@ -114,7 +123,7 @@ object PageClientAction extends js.Object {
     * of the parent nativepages.BottomBarItem element passed as argument.
     *
     * Warning! Can only be used on models with the following Mendix meta model versions:
-    *  8.0.0 and higher
+    *  8.0.0 to 8.14.0
     */
   def createInBottomBarItemUnderAction(container: BottomBarItem): PageClientAction = js.native
   

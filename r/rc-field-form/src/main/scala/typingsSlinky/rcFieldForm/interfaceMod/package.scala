@@ -18,10 +18,15 @@ package object interfaceMod {
   
   type NamePath = java.lang.String | scala.Double | typingsSlinky.rcFieldForm.interfaceMod.InternalNamePath
   
+  /** Only return partial when type is not any */
+  type RecursivePartial[T] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in keyof T ]:? T[P] extends std.Array<infer U>? std.Array</ * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias rc-field-form.rc-field-form/es/interface.RecursivePartial<U> * / object> : T[P] extends object? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias rc-field-form.rc-field-form/es/interface.RecursivePartial<T[P]> * / object : T[P]}
+    */ typingsSlinky.rcFieldForm.rcFieldFormStrings.RecursivePartial with org.scalablytyped.runtime.TopLevel[js.Any]
+  
   type Rule = typingsSlinky.rcFieldForm.interfaceMod.RuleObject | typingsSlinky.rcFieldForm.interfaceMod.RuleRender
   
   type RuleRender = js.Function1[
-    /* form */ typingsSlinky.rcFieldForm.interfaceMod.FormInstance, 
+    /* form */ typingsSlinky.rcFieldForm.interfaceMod.FormInstance[js.Any], 
     typingsSlinky.rcFieldForm.interfaceMod.RuleObject
   ]
   
@@ -40,7 +45,7 @@ package object interfaceMod {
     /* rule */ typingsSlinky.rcFieldForm.interfaceMod.RuleObject, 
     /* value */ typingsSlinky.rcFieldForm.interfaceMod.StoreValue, 
     /* callback */ js.Function1[/* error */ js.UndefOr[java.lang.String], scala.Unit], 
-    js.Promise[scala.Unit] | scala.Unit
+    (js.Promise[scala.Unit | js.Any]) | scala.Unit
   ]
   
   type ValuedNotifyInfo = typingsSlinky.rcFieldForm.interfaceMod.NotifyInfo with typingsSlinky.rcFieldForm.anon.Store

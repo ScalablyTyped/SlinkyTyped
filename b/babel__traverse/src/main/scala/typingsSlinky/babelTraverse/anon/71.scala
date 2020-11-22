@@ -1,6 +1,6 @@
 package typingsSlinky.babelTraverse.anon
 
-import typingsSlinky.babelTraverse.babelTraverseStrings.JSXOpeningElement
+import typingsSlinky.babelTraverse.babelTraverseStrings.JSXSpreadChild
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}
@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @js.native
 trait `71` extends js.Object {
   
-  var `type`: JSXOpeningElement = js.native
+  var `type`: JSXSpreadChild = js.native
 }
 object `71` {
   
   @scala.inline
-  def apply(`type`: JSXOpeningElement): `71` = {
+  def apply(`type`: JSXSpreadChild): `71` = {
     val __obj = js.Dynamic.literal()
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[`71`]
@@ -35,6 +35,6 @@ object `71` {
     }
     
     @scala.inline
-    def setType(value: JSXOpeningElement): Self = this.set("type", value.asInstanceOf[js.Any])
+    def setType(value: JSXSpreadChild): Self = this.set("type", value.asInstanceOf[js.Any])
   }
 }

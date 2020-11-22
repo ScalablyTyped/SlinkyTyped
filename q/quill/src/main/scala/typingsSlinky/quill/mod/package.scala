@@ -6,6 +6,14 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object mod {
   
+  type ClipboardMatcherCallback = js.Function2[
+    /* node */ js.Any, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Delta */ /* delta */ js.Any, 
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Delta */ js.Any
+  ]
+  
+  type ClipboardMatcherNode = java.lang.String | scala.Double
+  
   type EditorChangeHandler = js.Function4[
     typingsSlinky.quill.quillStrings.`text-change` | typingsSlinky.quill.quillStrings.`selection-change`, 
     (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify Delta */ /* delta */ js.Any) | (/* range */ typingsSlinky.quill.mod.RangeStatic), 

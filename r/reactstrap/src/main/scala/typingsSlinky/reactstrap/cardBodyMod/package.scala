@@ -6,5 +6,5 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 
 package object cardBodyMod {
   
-  type CardBody[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.cardBodyMod.CardBodyProps]
+  type CardBody = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.cardBodyMod.CardBodyProps]
 }

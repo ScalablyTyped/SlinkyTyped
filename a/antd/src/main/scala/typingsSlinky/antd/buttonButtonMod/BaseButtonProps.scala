@@ -2,7 +2,7 @@ package typingsSlinky.antd.buttonButtonMod
 
 import slinky.core.facade.ReactElement
 import typingsSlinky.antd.anon.Delay
-import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.configProviderSizeContextMod.SizeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, JSBracketAccess}

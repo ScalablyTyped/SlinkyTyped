@@ -10,7 +10,7 @@ trait RecurrenceSpecDateRange extends js.Object {
   /**
     * Ending date in date range.
     */
-  var end: js.Date | String | Double = js.native
+  var end: js.UndefOr[js.Date | String | Double] = js.native
   
   /**
     * Cron expression string.
@@ -20,7 +20,7 @@ trait RecurrenceSpecDateRange extends js.Object {
   /**
     * Starting date in date range.
     */
-  var start: js.Date | String | Double = js.native
+  var start: js.UndefOr[js.Date | String | Double] = js.native
   
   /**
     * Timezone
@@ -30,8 +30,8 @@ trait RecurrenceSpecDateRange extends js.Object {
 object RecurrenceSpecDateRange {
   
   @scala.inline
-  def apply(end: js.Date | String | Double, rule: String, start: js.Date | String | Double): RecurrenceSpecDateRange = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], rule = rule.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+  def apply(rule: String): RecurrenceSpecDateRange = {
+    val __obj = js.Dynamic.literal(rule = rule.asInstanceOf[js.Any])
     __obj.asInstanceOf[RecurrenceSpecDateRange]
   }
   
@@ -51,19 +51,25 @@ object RecurrenceSpecDateRange {
     }
     
     @scala.inline
+    def setRule(value: String): Self = this.set("rule", value.asInstanceOf[js.Any])
+    
+    @scala.inline
     def setEndDate(value: js.Date): Self = this.set("end", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setEnd(value: js.Date | String | Double): Self = this.set("end", value.asInstanceOf[js.Any])
     
     @scala.inline
-    def setRule(value: String): Self = this.set("rule", value.asInstanceOf[js.Any])
+    def deleteEnd: Self = this.set("end", js.undefined)
     
     @scala.inline
     def setStartDate(value: js.Date): Self = this.set("start", value.asInstanceOf[js.Any])
     
     @scala.inline
     def setStart(value: js.Date | String | Double): Self = this.set("start", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteStart: Self = this.set("start", js.undefined)
     
     @scala.inline
     def setTz(value: Timezone): Self = this.set("tz", value.asInstanceOf[js.Any])

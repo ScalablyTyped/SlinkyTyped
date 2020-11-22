@@ -11,6 +11,8 @@ trait Zero extends js.Object {
   
   var format: js.UndefOr[js.Array[String]] = js.native
   
+  var locale: js.UndefOr[typingsSlinky.dateFns.Locale] = js.native
+  
   var zero: js.UndefOr[Boolean] = js.native
 }
 object Zero {
@@ -50,6 +52,12 @@ object Zero {
     
     @scala.inline
     def deleteFormat: Self = this.set("format", js.undefined)
+    
+    @scala.inline
+    def setLocale(value: typingsSlinky.dateFns.Locale): Self = this.set("locale", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteLocale: Self = this.set("locale", js.undefined)
     
     @scala.inline
     def setZero(value: Boolean): Self = this.set("zero", value.asInstanceOf[js.Any])

@@ -13,7 +13,7 @@ trait CreateConfigurationRequest extends js.Object {
   var AuthenticationStrategy: js.UndefOr[typingsSlinky.awsSdk.mqMod.AuthenticationStrategy] = js.native
   
   /**
-    * Required. The type of broker engine. Note: Currently, Amazon MQ supports only ACTIVEMQ.
+    * Required. The type of broker engine. Note: Currently, Amazon MQ supports ACTIVEMQ and RABBITMQ.
     */
   var EngineType: js.UndefOr[typingsSlinky.awsSdk.mqMod.EngineType] = js.native
   

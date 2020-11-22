@@ -7,13 +7,22 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 object ineumStrings {
   
   @scala.inline
-  def autoClearResourceTimings: autoClearResourceTimings = "autoClearResourceTimings".asInstanceOf[autoClearResourceTimings]
+  def allowedOrigins: allowedOrigins = "allowedOrigins".asInstanceOf[allowedOrigins]
+  
+  @scala.inline
+  def apiKey: apiKey = "apiKey".asInstanceOf[apiKey]
+  
+  @scala.inline
+  def beaconBatchingTime: beaconBatchingTime = "beaconBatchingTime".asInstanceOf[beaconBatchingTime]
   
   @scala.inline
   def getPageLoadId: getPageLoadId = "getPageLoadId".asInstanceOf[getPageLoadId]
   
   @scala.inline
   def ignoreErrorMessages: ignoreErrorMessages = "ignoreErrorMessages".asInstanceOf[ignoreErrorMessages]
+  
+  @scala.inline
+  def ignorePings: ignorePings = "ignorePings".asInstanceOf[ignorePings]
   
   @scala.inline
   def ignoreUrls: ignoreUrls = "ignoreUrls".asInstanceOf[ignoreUrls]
@@ -23,6 +32,12 @@ object ineumStrings {
   
   @scala.inline
   def key: key = "key".asInstanceOf[key]
+  
+  @scala.inline
+  def maxMaitForPageLoadMetricsMillis: maxMaitForPageLoadMetricsMillis = "maxMaitForPageLoadMetricsMillis".asInstanceOf[maxMaitForPageLoadMetricsMillis]
+  
+  @scala.inline
+  def maxWaitForResourceTimingsMillis: maxWaitForResourceTimingsMillis = "maxWaitForResourceTimingsMillis".asInstanceOf[maxWaitForResourceTimingsMillis]
   
   @scala.inline
   def meta: meta = "meta".asInstanceOf[meta]
@@ -49,6 +64,9 @@ object ineumStrings {
   def trackSessions: trackSessions = "trackSessions".asInstanceOf[trackSessions]
   
   @scala.inline
+  def urlsToCheckForGraphQlInsights: urlsToCheckForGraphQlInsights = "urlsToCheckForGraphQlInsights".asInstanceOf[urlsToCheckForGraphQlInsights]
+  
+  @scala.inline
   def user: user = "user".asInstanceOf[user]
   
   @scala.inline
@@ -60,14 +78,26 @@ object ineumStrings {
   @scala.inline
   def wrapTimers: wrapTimers = "wrapTimers".asInstanceOf[wrapTimers]
   
+  @scala.inline
+  def xhrTransmissionTimeout: xhrTransmissionTimeout = "xhrTransmissionTimeout".asInstanceOf[xhrTransmissionTimeout]
+  
   @js.native
-  sealed trait autoClearResourceTimings extends js.Object
+  sealed trait allowedOrigins extends js.Object
+  
+  @js.native
+  sealed trait apiKey extends js.Object
+  
+  @js.native
+  sealed trait beaconBatchingTime extends js.Object
   
   @js.native
   sealed trait getPageLoadId extends js.Object
   
   @js.native
   sealed trait ignoreErrorMessages extends js.Object
+  
+  @js.native
+  sealed trait ignorePings extends js.Object
   
   @js.native
   sealed trait ignoreUrls extends js.Object
@@ -77,6 +107,12 @@ object ineumStrings {
   
   @js.native
   sealed trait key extends js.Object
+  
+  @js.native
+  sealed trait maxMaitForPageLoadMetricsMillis extends js.Object
+  
+  @js.native
+  sealed trait maxWaitForResourceTimingsMillis extends js.Object
   
   @js.native
   sealed trait meta extends js.Object
@@ -103,6 +139,9 @@ object ineumStrings {
   sealed trait trackSessions extends js.Object
   
   @js.native
+  sealed trait urlsToCheckForGraphQlInsights extends js.Object
+  
+  @js.native
   sealed trait user extends js.Object
   
   @js.native
@@ -113,4 +152,7 @@ object ineumStrings {
   
   @js.native
   sealed trait wrapTimers extends js.Object
+  
+  @js.native
+  sealed trait xhrTransmissionTimeout extends js.Object
 }

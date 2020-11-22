@@ -8,6 +8,21 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 trait DomainEndpointOptions extends js.Object {
   
   /**
+    * Specify the fully qualified domain for your custom endpoint.
+    */
+  var CustomEndpoint: js.UndefOr[DomainNameFqdn] = js.native
+  
+  /**
+    * Specify ACM certificate ARN for your custom endpoint.
+    */
+  var CustomEndpointCertificateArn: js.UndefOr[ARN] = js.native
+  
+  /**
+    * Specify if custom endpoint should be enabled for the Elasticsearch domain.
+    */
+  var CustomEndpointEnabled: js.UndefOr[Boolean] = js.native
+  
+  /**
     * Specify if only HTTPS endpoint should be enabled for the Elasticsearch domain.
     */
   var EnforceHTTPS: js.UndefOr[Boolean] = js.native
@@ -39,6 +54,24 @@ object DomainEndpointOptions {
       x.asInstanceOf[js.Dynamic].updateDynamic(key)(value)
       x
     }
+    
+    @scala.inline
+    def setCustomEndpoint(value: DomainNameFqdn): Self = this.set("CustomEndpoint", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomEndpoint: Self = this.set("CustomEndpoint", js.undefined)
+    
+    @scala.inline
+    def setCustomEndpointCertificateArn(value: ARN): Self = this.set("CustomEndpointCertificateArn", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomEndpointCertificateArn: Self = this.set("CustomEndpointCertificateArn", js.undefined)
+    
+    @scala.inline
+    def setCustomEndpointEnabled(value: Boolean): Self = this.set("CustomEndpointEnabled", value.asInstanceOf[js.Any])
+    
+    @scala.inline
+    def deleteCustomEndpointEnabled: Self = this.set("CustomEndpointEnabled", js.undefined)
     
     @scala.inline
     def setEnforceHTTPS(value: Boolean): Self = this.set("EnforceHTTPS", value.asInstanceOf[js.Any])

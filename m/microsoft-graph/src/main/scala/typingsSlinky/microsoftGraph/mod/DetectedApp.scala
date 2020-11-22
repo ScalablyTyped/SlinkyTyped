@@ -11,16 +11,16 @@ trait DetectedApp extends Entity {
   var deviceCount: js.UndefOr[Double] = js.native
   
   // Name of the discovered application. Read-only
-  var displayName: js.UndefOr[String] = js.native
+  var displayName: js.UndefOr[NullableOption[String]] = js.native
   
   // The devices that have the discovered application installed
-  var managedDevices: js.UndefOr[js.Array[ManagedDevice]] = js.native
+  var managedDevices: js.UndefOr[NullableOption[js.Array[ManagedDevice]]] = js.native
   
   // Discovered application size in bytes. Read-only
   var sizeInByte: js.UndefOr[Double] = js.native
   
   // Version of the discovered application. Read-only
-  var version: js.UndefOr[String] = js.native
+  var version: js.UndefOr[NullableOption[String]] = js.native
 }
 object DetectedApp {
   
@@ -52,19 +52,25 @@ object DetectedApp {
     def deleteDeviceCount: Self = this.set("deviceCount", js.undefined)
     
     @scala.inline
-    def setDisplayName(value: String): Self = this.set("displayName", value.asInstanceOf[js.Any])
+    def setDisplayName(value: NullableOption[String]): Self = this.set("displayName", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteDisplayName: Self = this.set("displayName", js.undefined)
     
     @scala.inline
+    def setDisplayNameNull: Self = this.set("displayName", null)
+    
+    @scala.inline
     def setManagedDevicesVarargs(value: ManagedDevice*): Self = this.set("managedDevices", js.Array(value :_*))
     
     @scala.inline
-    def setManagedDevices(value: js.Array[ManagedDevice]): Self = this.set("managedDevices", value.asInstanceOf[js.Any])
+    def setManagedDevices(value: NullableOption[js.Array[ManagedDevice]]): Self = this.set("managedDevices", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteManagedDevices: Self = this.set("managedDevices", js.undefined)
+    
+    @scala.inline
+    def setManagedDevicesNull: Self = this.set("managedDevices", null)
     
     @scala.inline
     def setSizeInByte(value: Double): Self = this.set("sizeInByte", value.asInstanceOf[js.Any])
@@ -73,9 +79,12 @@ object DetectedApp {
     def deleteSizeInByte: Self = this.set("sizeInByte", js.undefined)
     
     @scala.inline
-    def setVersion(value: String): Self = this.set("version", value.asInstanceOf[js.Any])
+    def setVersion(value: NullableOption[String]): Self = this.set("version", value.asInstanceOf[js.Any])
     
     @scala.inline
     def deleteVersion: Self = this.set("version", js.undefined)
+    
+    @scala.inline
+    def setVersionNull: Self = this.set("version", null)
   }
 }

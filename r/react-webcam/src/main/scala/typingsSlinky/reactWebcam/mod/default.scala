@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.{JSGlobalScope, JSGlobal, JSImport, JSName, J
 @JSImport("react-webcam", JSImport.Default)
 @js.native
 class default protected () extends Webcam {
-  def this(props: js.Any) = this()
+  def this(props: WebcamProps) = this()
 }
 /* static members */
 @JSImport("react-webcam", JSImport.Default)
@@ -16,4 +16,6 @@ class default protected () extends Webcam {
 object default extends js.Object {
   
   var defaultProps: Audio = js.native
+  
+  var stopMediaStream: js.Any = js.native
 }
